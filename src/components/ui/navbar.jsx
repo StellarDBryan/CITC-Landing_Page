@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import NavButtons from './nav_buttons';
 
 
 export default function Nav() {
@@ -11,26 +12,7 @@ export default function Nav() {
                     width={250} 
                     height={50}
                 />
-                <div className="px-10 h-full w-full border-2 border-solid flex flex-row items-center justify-center space-x-20">
-                    <button className="text-gray-dark-citc h-auto w-auto px-2 border-2 border-solid">
-                        Inicio
-                    </button>
-                    <button className="text-gray-dark-citc h-full w-auto px-2 border-2 border-solid">
-                        Servicios
-                    </button>
-                    <button className="text-gray-dark-citc h-full w-auto px-2 border-2 border-solid">
-                        Afiliaciones
-                    </button>
-                    <button className="text-gray-dark-citc h-full w-auto px-2 border-2 border-solid">
-                        Eventos
-                    </button>
-                    <button className="text-gray-dark-citc h-full w-auto px-2 border-2 border-solid">
-                        Noticias
-                    </button>
-                    <button className="text-gray-dark-citc h-full w-auto px-2 border-2 border-solid">
-                        Contacto
-                    </button>
-                </div>
+                <NavButtons />
             </nav>
         </>
     );
