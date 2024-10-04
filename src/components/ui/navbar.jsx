@@ -1,7 +1,19 @@
+import Image from 'next/image';
+import NavButtons from './nav_buttons';
+
+
 export default function Nav() {
     return (
-        <nav>
-            Aqui va el NAV
-        </nav>
+        <>
+            <nav className="bg-gray-clear-citc py-6 px-3 items-center flex flex-row">
+                <Image 
+                    src="/images/citc_logo_y_texto.jpg" 
+                    alt="CITC Logo" 
+                    width={250} 
+                    height={50}
+                />
+                <NavButtons />
+            </nav>
+        </>
     );
 }
