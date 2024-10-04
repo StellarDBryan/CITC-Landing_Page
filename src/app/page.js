@@ -3,6 +3,8 @@ import Nav from "@/components/ui/navbar.jsx";
 
 export default function Home() {
   return (
-    <Nav></Nav>
+    <div className="h-full w-full border-2 border-solid">
+      <Nav />
+    </div>
   );
 }
