@@ -12,6 +12,17 @@ module.exports = {
         'gray-dark-citc': '#838383'
       },
     },
+    fontSize: {
+      'h1': '61.04px', 
+      'h2': '48.83px',
+      'h3': '39.06px', 
+      'h4': '31.25px', 
+      'h5': '25px', 
+      'h6': '20px',  
+      'regular': '16px',  
+      'small-1': '12.8px', 
+      'small-2': '10.24px',   
+    }, 
   },
   plugins: [
     require('@tailwindcss/forms'),
