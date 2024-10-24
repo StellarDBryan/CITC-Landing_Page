@@ -2,6 +2,7 @@ import Image from 'next/image';
 import NavButtons from './nav_buttons';
 
 
+// Componente Nav
 export default function Nav() {
     return (
         <>
