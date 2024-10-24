@@ -6,11 +6,11 @@ import NavButtons from './nav_buttons';
 export default function Nav() {
     return (
         <>
-            <nav className="bg-gray-clear-citc py-6 px-3 items-center flex flex-row">
+            <nav className="bg-gradient-to-b from-neutral-800 to-transparent py-6 px-3 items-center flex flex-row">
                 <Image 
-                    src="/images/citc_logo_y_texto.jpg" 
+                    src="/images/citc_logos/CITC_horiz-04.png" 
                     alt="CITC Logo" 
-                    width={250} 
+                    width={200} 
                     height={50}
                 />
                 <NavButtons />

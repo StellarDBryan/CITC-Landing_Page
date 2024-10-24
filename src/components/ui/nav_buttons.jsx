@@ -10,12 +10,6 @@ export default function NavButtons() {
                         Servicios
                     </button>
                     <button className="text-gray-dark-citc h-full w-auto px-2 text-regular">
-                        Afiliaciones
-                    </button>
-                    <button className="text-gray-dark-citc h-full w-auto px-2 text-regular">
-                        Eventos
-                    </button>
-                    <button className="text-gray-dark-citc h-full w-auto px-2 text-regular">
                         Noticias
                     </button>
                     <button className="text-gray-dark-citc h-full w-auto px-2 text-regular">
