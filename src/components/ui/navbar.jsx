@@ -7,7 +7,9 @@ import NavButtons from './nav_buttons';
 export default function Nav() {
     return (
         <>
-            <nav className="fixed top-0 z-10  px-3 h-[95px] w-full flex items-center justify-center flex-row">
+            <nav 
+                className="fixed top-0 z-10 hover:bg-gradient-to-b hover:from-blue-light-citc hover:from-20% hover:transition-colors hover:duration-300 hover:ease-in-out hover:delay-1000 px-3 h-[95px] w-full flex items-center justify-center flex-row"
+            >
                 <Link href="/">
                     <Image 
                         src="/images/citc_logos/CITC_horiz-04.png" 

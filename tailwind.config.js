@@ -11,7 +11,7 @@ module.exports = {
         'gray-clear-citc': '#F7F7F7', 
         'gray-dark-citc': '#838383', 
         'regular-dark': '#1E1E1E', 
-        'blue-light-citc': '#126FB2'
+        'blue-light-citc': '#126FB2',
       },
     },
     fontSize: {
@@ -27,4 +27,5 @@ module.exports = {
     }, 
   },
   plugins: [],
+  safelist: ['bg-blue-light-citc'], 
 };
