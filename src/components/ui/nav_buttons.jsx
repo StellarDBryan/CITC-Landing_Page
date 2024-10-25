@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function NavButtons() {
     return(
         <>
-            <div className="font-medium px-10 h-full w-full flex flex-row items-center justify-center space-x-20">
+            <div className="font-medium lg:ml-[200px] px-10 h-full w-full flex flex-row items-center space-x-20">
                     <Link href="/">
                         <button className="text-gray-clear-citc-citc h-auto w-auto px-2 text-regular">
                             Inicio

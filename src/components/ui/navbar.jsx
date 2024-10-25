@@ -7,13 +7,14 @@ import NavButtons from './nav_buttons';
 export default function Nav() {
     return (
         <>
-            <nav className="bg-gradient-to-b from-neutral-800 px-3 items-center flex flex-row">
+            <nav className="relative bg-gradient-to-b from-[#656565] via-[#bdbdbd] via-70% to-transparent to-100% px-3 h-[95px] flex items-center justify-center flex-row">
                 <Link href="/">
                     <Image 
                         src="/images/citc_logos/CITC_horiz-04.png" 
                         alt="CITC Logo" 
                         width={250} 
-                        height={50} 
+                        height={10} 
+                        className='lg:mx-4 lg:mb-4 w-auto'
                     />
                 </Link>
                 <NavButtons />
