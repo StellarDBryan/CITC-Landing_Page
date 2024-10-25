@@ -9,7 +9,8 @@ module.exports = {
     extend: {
       colors: {
         'gray-clear-citc': '#F7F7F7', 
-        'gray-dark-citc': '#838383'
+        'gray-dark-citc': '#838383', 
+        'regular-dark': '#1E1E1E'
       },
     },
     fontSize: {
