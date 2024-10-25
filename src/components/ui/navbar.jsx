@@ -12,7 +12,7 @@ export default function Nav() {
                     <Image 
                         src="/images/citc_logos/CITC_horiz-04.png" 
                         alt="CITC Logo" 
-                        width={200} 
+                        width={250} 
                         height={50} 
                     />
                 </Link>
