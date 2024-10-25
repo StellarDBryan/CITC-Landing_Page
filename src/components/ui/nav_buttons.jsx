@@ -14,12 +14,16 @@ export default function NavButtons() {
                             Servicios
                         </button>
                     </Link>
-                    <button className="text-gray-clear-citc-citc h-full w-auto px-2 text-regular">
-                        Noticias
-                    </button>
-                    <button className="text-gray-clear-citc-citc h-full w-auto px-2 text-regular">
-                        Contacto
-                    </button>
+                    <Link href="/noticias">
+                        <button className="text-gray-clear-citc-citc h-full w-auto px-2 text-regular">
+                            Noticias
+                        </button>
+                    </Link>
+                    <Link href="/contacto">
+                        <button className="text-gray-clear-citc-citc h-full w-auto px-2 text-regular">
+                            Contacto
+                        </button>
+                    </Link>
                 </div>
         </>
     );
