@@ -10,7 +10,8 @@ module.exports = {
       colors: {
         'gray-clear-citc': '#F7F7F7', 
         'gray-dark-citc': '#838383', 
-        'regular-dark': '#1E1E1E'
+        'regular-dark': '#1E1E1E', 
+        'blue-light-citc': '#126FB2'
       },
     },
     fontSize: {
