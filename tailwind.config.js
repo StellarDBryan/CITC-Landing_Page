@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       colors: {
         'gray-clear-citc': '#F7F7F7', 
-        'gray-dark-citc': '#838383', 
+        'gray-dark-citc': '#656565', 
         'regular-dark': '#1E1E1E', 
         'blue-light-citc': '#126FB2',
       },
@@ -18,7 +18,7 @@ module.exports = {
         'opacity': 'opacity',
       },
       backgroundImage: {
-        'navbar-gradient': 'linear-gradient(to top, rgba(18, 111, 178, 0) 0%, rgba(18, 111, 178, 0.30) 13%, rgba(18, 111, 178, 0.50) 25%, rgba(18, 111, 178, 0.9) 50%, rgba(18, 111, 178, 1) 100%)',
+        'navbar-gradient': 'linear-gradient(to top, rgba(18, 111, 178, 0) 0%, rgba(18, 111, 178, 0.50) 13%, rgba(18, 111, 178, 0.7) 25%, rgba(18, 111, 178, 0.9) 50%, rgba(18, 111, 178, 1) 100%)',
       }
     },
     fontSize: {

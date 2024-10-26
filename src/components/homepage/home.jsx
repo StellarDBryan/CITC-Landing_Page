@@ -17,8 +17,22 @@ export default function Home(){
                     </div>
                 </div>
             </section>
-            <section className="my-10">
-                <h1 className="text-h1">PRUEBA DE SCROLL</h1>
+        </>
+    );
+}
+
+export function About(){
+
+    const text = {
+        'title': '¿Quiénes somos?', 
+        'description': 'Somos un grupo de empresas dedicadas a las TICs que trabajamos y colaboramos estratégicamente para la obtención de beneficios mutuos con los cuales brindamos a nuestros asociados oportunidades enfocadas a mejoras en sus procesos, certificaciones, capacidades, recursos; con la intención de alcanzar proyecciones a nivel local, nacional e internacional en beneficio de la comunidad Chihuahuense.'
+    }
+
+    return (
+        <>
+            <section className="my-10 text-gray-dark-citc">
+                <h2 className="text-h1 font-semibold">{text.title}</h2>
+                <p className="text-regular font-medium">{text.description}</p>
             </section>
         </>
     );
