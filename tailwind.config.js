@@ -13,6 +13,10 @@ module.exports = {
         'regular-dark': '#1E1E1E', 
         'blue-light-citc': '#126FB2',
       },
+      transitionProperty: {
+        'color': 'background-color, border-color, color',
+        'opacity': 'opacity',
+      },
     },
     fontSize: {
       'h1': '61.04px', 

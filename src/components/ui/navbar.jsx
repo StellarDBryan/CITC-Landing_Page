@@ -7,19 +7,20 @@ import NavButtons from './nav_buttons';
 export default function Nav() {
     return (
         <>
-            <nav 
-                className="fixed top-0 z-10 hover:bg-gradient-to-b hover:from-blue-light-citc hover:from-20% hover:transition-colors hover:duration-300 hover:ease-in-out hover:delay-1000 px-3 h-[95px] w-full flex items-center justify-center flex-row"
-            >
-                <Link href="/">
-                    <Image 
-                        src="/images/citc_logos/CITC_horiz-04.png" 
-                        alt="CITC Logo" 
-                        width={250} 
-                        height={10} 
-                        className='lg:mx-4 lg:mb-4 w-auto'
-                    />
-                </Link>
-                <NavButtons />
+            <nav className="fixed group top-0 z-10 hover:h-[120px] w-full flex items-center justify-center flex-row">
+                <div className="absolute inset-0 bg-gradient-to-b from-blue-light-citc opacity-0 group-hover:opacity-100" />
+                <div className='bg-transparent relative z-10 px-3 h-[90px] w-full flex items-center justify-center flex-row'>
+                    <Link href="/">
+                        <Image 
+                            src="/images/citc_logos/CITC_horiz-04.png" 
+                            alt="CITC Logo" 
+                            width={250} 
+                            height={10} 
+                            className='lg:mx-4 lg:mb-4 w-auto' 
+                        />
+                    </Link>
+                    <NavButtons />
+                </div>
             </nav>
         </>
     );
