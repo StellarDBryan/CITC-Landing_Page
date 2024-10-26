@@ -17,6 +17,9 @@ module.exports = {
         'color': 'background-color, border-color, color',
         'opacity': 'opacity',
       },
+      backgroundImage: {
+        'navbar-gradient': 'linear-gradient(to bottom, rgba(18,111,178,100) 100%, rgba(18,111,178, 70) 50%, rgba(18,111,178,45) 25%, rgba(18,111,178,25) 13%, rgba(18,111,178,0) 0%)',
+      }
     },
     fontSize: {
       'h1': '61.04px', 
