@@ -18,7 +18,7 @@ module.exports = {
         'opacity': 'opacity',
       },
       backgroundImage: {
-        'navbar-gradient': 'linear-gradient(to bottom, rgba(18,111,178,100) 100%, rgba(18,111,178, 70) 50%, rgba(18,111,178,45) 25%, rgba(18,111,178,25) 13%, rgba(18,111,178,0) 0%)',
+        'navbar-gradient': 'linear-gradient(to top, rgba(18, 111, 178, 0) 0%, rgba(18, 111, 178, 0.30) 13%, rgba(18, 111, 178, 0.50) 25%, rgba(18, 111, 178, 0.9) 50%, rgba(18, 111, 178, 1) 100%)',
       }
     },
     fontSize: {
