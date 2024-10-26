@@ -31,8 +31,12 @@ export function About(){
     return (
         <>
             <section className="my-10 text-gray-dark-citc">
-                <h2 className="text-h1 font-semibold">{text.title}</h2>
-                <p className="text-regular font-medium">{text.description}</p>
+                <div className="p-10 w-full h-auto">
+                    <div className="border-solid border-black border-2 p-3 space-y-5 lg:w-5/12">
+                        <h2 className="text-h1 font-semibold">{text.title}</h2>
+                        <p className="text-regular font-medium text-justify">{text.description}</p>
+                    </div>
+                </div>
             </section>
         </>
     );

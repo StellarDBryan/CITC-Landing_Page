@@ -11,14 +11,14 @@ module.exports = {
         'gray-clear-citc': '#F7F7F7', 
         'gray-dark-citc': '#656565', 
         'regular-dark': '#1E1E1E', 
-        'blue-light-citc': '#126FB2',
+        'blue-light-citc': '#126FB2', 
       },
       transitionProperty: {
         'color': 'background-color, border-color, color',
         'opacity': 'opacity',
       },
       backgroundImage: {
-        'navbar-gradient': 'linear-gradient(to top, rgba(18, 111, 178, 0) 0%, rgba(18, 111, 178, 0.50) 13%, rgba(18, 111, 178, 0.7) 25%, rgba(18, 111, 178, 0.9) 50%, rgba(18, 111, 178, 1) 100%)',
+        'navbar-gradient': 'linear-gradient(to top, rgba(18, 111, 178, 0) 0%, rgba(18, 111, 178, 0.35) 13%, rgba(18, 111, 178, 0.7) 25%, rgba(18, 111, 178, 0.9) 50%, rgba(18, 111, 178, 1) 100%)',
       }
     },
     fontSize: {
