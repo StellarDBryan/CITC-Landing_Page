@@ -4,7 +4,7 @@ export default function Home(){
 
     return (
         <>
-            <section className="relative bg-gray-700 bg-[url('/images/cuu_2.jpg')] bg-cover bg-center h-screen">
+            <section className="relative bg-gray-700 bg-[url('/images/backgrounds/cuu_2.jpg')] bg-cover bg-center h-screen">
                 <div className="flex items-center h-full w-3/4 bg-gradient-to-r from-regular-dark to-transparent to-100% bg-opacity-10">
                     <div className="lg:m-10 lg:h-2/3">
                         <Image src="/images/citc_logos/CITC_horiz-04.png"
@@ -30,7 +30,7 @@ export function About(){
 
     return (
         <>
-            <section className="lg:my-10 lg:py-10 lg:h-auto text-gray-dark-citc">
+            <section className="relative bg-[url('/images/backgrounds/LP_01.jpg')] bg-cover bg-center lg:my-10 lg:py-10 lg:h-auto text-gray-dark-citc">
                 <div className="p-10 w-full h-auto flex flex-row items-center space-x-36">
                     <div className="border-solid border-black border-2 p-3 lg:mx-10 space-y-5 lg:w-5/12 bg-gray-clear-citc bg-opacity-50">
                         <h2 className="text-h1 font-semibold">{text.title}</h2>
