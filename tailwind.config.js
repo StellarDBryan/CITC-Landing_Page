@@ -12,6 +12,7 @@ module.exports = {
         'gray-dark-citc': '#656565', 
         'regular-dark': '#1E1E1E', 
         'blue-light-citc': '#136FB2', 
+        'blue-dark-citc': '#125193',
       },
       transitionProperty: {
         'color': 'background-color, border-color, color',
