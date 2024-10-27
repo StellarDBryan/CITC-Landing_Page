@@ -30,18 +30,18 @@ export function About(){
 
     return (
         <>
-            <section className="relative bg-[url('/images/backgrounds/LP_01.jpg')] bg-cover bg-center lg:my-10 lg:py-10 lg:h-auto text-gray-dark-citc">
-                <div className="p-10 w-full h-auto flex flex-row items-center space-x-36">
+            <section className="relative bg-[url('/images/backgrounds/LP_01.jpg')] bg-cover bg-center lg:my-10 lg:items-center lg:h-auto text-gray-dark-citc">
+                <div className="p-10 w-full h-full bg-light-gradient flex flex-row items-center justify-center space-x-30">
                     <div className="rounded-3xl p-3 lg:mx-10 space-y-5 lg:w-5/12 bg-gray-clear-citc bg-opacity-50">
-                        <h2 className="text-h1 font-semibold">{text.title}</h2>
-                        <p className="text-regular font-medium text-justify">{text.description}</p>
+                        <h2 className="text-h1 font-semibold text-blue-light-citc">{text.title}</h2>
+                        <p className="text-regular font-semibold text-justify">{text.description}</p>
                     </div>
                     <Image 
                         src="/images/citc_logos/CITC_Vert_Mesa_1.png"
                         alt="Chihuahua IT Cluster Logo"
                         width={432}
                         height={460}
-                        className="opacity-70"
+                        className="opacity-60"
                     />
                 </div>
             </section>

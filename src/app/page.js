@@ -4,7 +4,7 @@ import Homepage, { About } from "@/components/homepage/home.jsx";
 
 export default function Home() {
   return (
-    <div className="h-full w-full">
+    <div className="h-full w-full space-y-32">
       <Homepage />
       <About />
     </div>
