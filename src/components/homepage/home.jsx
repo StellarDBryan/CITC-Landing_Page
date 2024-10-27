@@ -32,7 +32,7 @@ export function About(){
         <>
             <section className="relative bg-[url('/images/backgrounds/LP_01.jpg')] bg-cover bg-center lg:my-10 lg:py-10 lg:h-auto text-gray-dark-citc">
                 <div className="p-10 w-full h-auto flex flex-row items-center space-x-36">
-                    <div className="border-solid border-black border-2 p-3 lg:mx-10 space-y-5 lg:w-5/12 bg-gray-clear-citc bg-opacity-50">
+                    <div className="rounded-3xl p-3 lg:mx-10 space-y-5 lg:w-5/12 bg-gray-clear-citc bg-opacity-50">
                         <h2 className="text-h1 font-semibold">{text.title}</h2>
                         <p className="text-regular font-medium text-justify">{text.description}</p>
                     </div>
