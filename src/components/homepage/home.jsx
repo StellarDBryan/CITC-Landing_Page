@@ -1,7 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
-import { Button, ButtonGroup } from "@nextui-org/button";
-import { Card, CardBody, CardHeader, CardFooter } from "@nextui-org/card";
+import { SolutionCard } from "@/components/ui/cards.jsx";
 
 const text = {
     'about': {
@@ -12,12 +10,12 @@ const text = {
         'text': 'Impulso al crecimiento tecnológico', 
         's1': 'Conexión con empresas', 
         's2': 'Eventos del Sector de TI e Innovación', 
-        's3': 'Espacio de trabajo y cowork',
+        's3': 'Espacio de trabajo y cowork', 
         'button': 'Ver más',
     },
 }
 
-export default function Home(){
+export default function Home(){ 
 
     return (
         <>
@@ -69,67 +67,36 @@ export function Solutions(){
                 <div className="bg-light-gradient h-full flex flex-col justify-center items-center space-y-10">
                     <h4 className="font-semibold text-blue-dark-citc text-h4">{text.solutions.text}</h4>
                     <div className="w-auto h-auto flex flex-wrap space-x-10">
-                        <Solution_Card 
+                        <SolutionCard 
                             img_src={'/images/icons/networking_gray.png'}
                             img_alt={'Networking Icon'}
                             img_w={199}
                             img_h={194}
                             solution_text={text.solutions.s1}
                             redirection_url={'/contacto'}
+                            button_text={text.solutions.button}
                         />
-                        <Solution_Card 
+                        <SolutionCard 
                             img_src={'/images/icons/calendar_gray.png'}
                             img_alt={'Calendar Icon'}
                             img_w={199}
                             img_h={194}
                             solution_text={text.solutions.s2}
                             redirection_url={'https://www.facebook.com/ChihITCluster/?locale=es_LA'}
+                            button_text={text.solutions.button}
                         />
-                        <Solution_Card 
+                        <SolutionCard 
                             img_src={'/images/icons/cowork_gray.png'}
                             img_alt={'Cowork Icon'}
                             img_w={199}
                             img_h={194}
                             solution_text={text.solutions.s3}
                             redirection_url={'https://livinglab.io/home?&v=latest'}
+                            button_text={text.solutions.button}
                         />
                     </div>
                 </div>
             </section>
-        </>
-    );
-}
-
-function Solution_Card({ img_src, img_alt, img_w, img_h, solution_text, redirection_url}){
-
-    return (
-        <>
-            <Card className="bg-white-darker w-[300px] h-full max-h-[400px] p-5 flex flex-col justify-center rounded-3xl shadow-xl">
-                <CardBody className="w-auto space-y-5 flex flex-col items-center">
-                    <Image 
-                        src={img_src}
-                        alt={img_alt}
-                        width={img_w}
-                        height={img_h}
-                    />
-                    <p className="font-semibold text-regular w-auto text-center max-h-10">{solution_text}</p>
-                </CardBody>
-                <CardFooter className="flex flex-col justify-end items-end h-full w-auto max-h-[80px]">
-                    <a href={redirection_url} className="w-full" target="_blank" rel="noopener noreferrer">
-                        <Button
-                            fullWidth
-                            endContent={
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                                </svg>
-                            }
-                            className="bg-gray-clear-citc p-2 flex flex-row justify-center rounded-full space-x-3 overflow-hidden drop-shadow-md hover:drop-shadow-lg"
-                        >
-                            <p className="font-semibold text-regular">{text.solutions.button}</p>
-                        </Button>
-                    </a>
-                </CardFooter>
-            </Card>
         </>
     );
 }
