@@ -66,9 +66,9 @@ export function Solutions(){
     return (
         <>
             <section className=" bg-[url('/images/backgrounds/LP_02.jpg')] bg-cover bg-center lg:my-10 lg:items-center lg:h-[600px] text-gray-dark-citc">
-                <div className="bg-light-gradient h-full flex flex-col items-center">
+                <div className="bg-light-gradient h-full flex flex-col justify-center items-center space-y-10">
                     <h4 className="font-semibold text-blue-dark-citc text-h4">{text.solutions.text}</h4>
-                    <div className="w-auto h-auto flex flex-wrap space-x-5">
+                    <div className="w-auto h-auto flex flex-wrap space-x-10">
                         <Solution_Card 
                             img_src={'/images/icons/networking_gray.png'}
                             img_alt={'Networking Icon'}
@@ -104,7 +104,7 @@ function Solution_Card({ img_src, img_alt, img_w, img_h, solution_text, redirect
 
     return (
         <>
-            <Card className="bg-white-darker w-[300px] h-full max-h-[400px] p-5 flex flex-col justify-center rounded-3xl">
+            <Card className="bg-white-darker w-[300px] h-full max-h-[400px] p-5 flex flex-col justify-center rounded-3xl shadow-xl">
                 <CardBody className="w-auto space-y-5 flex flex-col items-center">
                     <Image 
                         src={img_src}
@@ -114,7 +114,7 @@ function Solution_Card({ img_src, img_alt, img_w, img_h, solution_text, redirect
                     />
                     <p className="font-semibold text-regular w-auto text-center max-h-10">{solution_text}</p>
                 </CardBody>
-                <CardFooter className="flex flex-col justify-center h-full items-end w-auto max-h-[60px]">
+                <CardFooter className="flex flex-col justify-end items-end h-full w-auto max-h-[80px]">
                     <a href={redirection_url} className="w-full" target="_blank" rel="noopener noreferrer">
                         <Button
                             fullWidth
@@ -123,7 +123,7 @@ function Solution_Card({ img_src, img_alt, img_w, img_h, solution_text, redirect
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                                 </svg>
                             }
-                            className="bg-gray-clear-citc p-2 flex flex-row justify-center rounded-full space-x-3 overflow-hidden hover:drop-shadow-md"
+                            className="bg-gray-clear-citc p-2 flex flex-row justify-center rounded-full space-x-3 overflow-hidden drop-shadow-md hover:drop-shadow-lg"
                         >
                             <p className="font-semibold text-regular">{text.solutions.button}</p>
                         </Button>
