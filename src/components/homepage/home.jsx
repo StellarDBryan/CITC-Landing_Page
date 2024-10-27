@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { Button, ButtonGroup } from "@nextui-org/button";
+import { Card, CardBody, CardHeader, CardFooter } from "@nextui-org/card";
 
 const text = {
     'about': {
@@ -6,10 +8,11 @@ const text = {
         'description': 'Somos un grupo de empresas dedicadas a las TICs que trabajamos y colaboramos estratégicamente para la obtención de beneficios mutuos con los cuales brindamos a nuestros asociados oportunidades enfocadas a mejoras en sus procesos, certificaciones, capacidades, recursos; con la intención de alcanzar proyecciones a nivel local, nacional e internacional en beneficio de la comunidad Chihuahuense.'
     },
     'solutions': {
-        'text': 'Impulso al crecimiento tecnológico',
+        'text': 'Impulso al crecimiento tecnológico', 
         's1': 'Conexión con empresas', 
         's2': 'Eventos del Sector de TI e Innovación', 
         's3': 'Espacio de trabajo y cowork',
+        'button': 'Ver más',
     },
 }
 
@@ -64,11 +67,50 @@ export function Solutions(){
             <section className=" bg-[url('/images/backgrounds/LP_02.jpg')] bg-cover bg-center lg:my-10 lg:items-center lg:h-[600px] text-gray-dark-citc">
                 <div className="bg-light-gradient h-full flex flex-col items-center">
                     <h4 className="font-semibold text-blue-dark-citc text-h4">{text.solutions.text}</h4>
-                    <div className="w-full">
-                        
+                    <div className="w-auto h-auto">
+                        <Solution_Card 
+                            img_src={'/images/icons/networking_gray.png'}
+                            img_alt={'Networking Icon'}
+                            img_w={196}
+                            img_h={194}
+                            solution_text={text.solutions.s1}
+                        />
                     </div>
                 </div>
             </section>
+        </>
+    );
+}
+
+function Solution_Card({ img_src, img_alt, img_w, img_h, solution_text}){
+
+    return (
+        <>
+            <Card className="bg-white-darker w-auto h-full p-5 flex flex-col justify-center rounded-3xl">
+                <CardBody className="w-auto space-y-5 flex flex-col items-center">
+                    <Image 
+                        src={img_src}
+                        alt={img_alt}
+                        width={img_w}
+                        height={img_h}
+                    />
+                    <p className="font-semibold text-regular w-5/6 text-center">{solution_text}</p>
+                </CardBody>
+                <CardFooter className="flex justify-center">
+                    <Button
+                        radius="full"
+                        fullWidth
+                        endContent={
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                            </svg>
+                        }
+                        className="bg-gray-clear-citc p-2 flex flex-row justify-center space-x-3 overflow-hidden hover:drop-shadow-md"
+                    >
+                        <p className="font-semibold text-regular">{text.solutions.button}</p>
+                    </Button>
+                </CardFooter>
+            </Card>
         </>
     );
 }

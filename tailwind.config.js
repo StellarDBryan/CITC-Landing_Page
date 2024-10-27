@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         'gray-clear-citc': '#F7F7F7', 
         'gray-dark-citc': '#656565', 
+        'white-darker': '#ECECEC',
         'regular-dark': '#1E1E1E', 
         'blue-light-citc': '#136FB2', 
         'blue-dark-citc': '#125193',
