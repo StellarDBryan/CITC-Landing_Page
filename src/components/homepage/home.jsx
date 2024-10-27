@@ -62,8 +62,11 @@ export function Solutions(){
     return (
         <>
             <section className=" bg-[url('/images/backgrounds/LP_02.jpg')] bg-cover bg-center lg:my-10 lg:items-center lg:h-[600px] text-gray-dark-citc">
-                <div className="bg-light-gradient h-full">
+                <div className="bg-light-gradient h-full flex flex-col items-center">
                     <h4 className="font-semibold text-blue-dark-citc text-h4">{text.solutions.text}</h4>
+                    <div className="w-full">
+                        
+                    </div>
                 </div>
             </section>
         </>
