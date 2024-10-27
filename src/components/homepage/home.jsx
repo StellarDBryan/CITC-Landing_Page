@@ -68,7 +68,7 @@ export function Solutions(){
             <section className=" bg-[url('/images/backgrounds/LP_02.jpg')] bg-cover bg-center lg:my-10 lg:items-center lg:h-[600px] text-gray-dark-citc">
                 <div className="bg-light-gradient h-full flex flex-col items-center">
                     <h4 className="font-semibold text-blue-dark-citc text-h4">{text.solutions.text}</h4>
-                    <div className="w-auto h-auto">
+                    <div className="w-auto h-auto flex flex-wrap space-x-5">
                         <Solution_Card 
                             img_src={'/images/icons/networking_gray.png'}
                             img_alt={'Networking Icon'}
@@ -76,6 +76,22 @@ export function Solutions(){
                             img_h={194}
                             solution_text={text.solutions.s1}
                             redirection_url={'/contacto'}
+                        />
+                        <Solution_Card 
+                            img_src={'/images/icons/calendar_gray.png'}
+                            img_alt={'Calendar Icon'}
+                            img_w={202}
+                            img_h={194}
+                            solution_text={text.solutions.s2}
+                            redirection_url={'https://www.facebook.com/ChihITCluster/?locale=es_LA'}
+                        />
+                        <Solution_Card 
+                            img_src={'/images/icons/cowork_gray.png'}
+                            img_alt={'Cowork Icon'}
+                            img_w={199}
+                            img_h={192}
+                            solution_text={text.solutions.s3}
+                            redirection_url={'https://livinglab.io/home?&v=latest'}
                         />
                     </div>
                 </div>
@@ -96,10 +112,10 @@ function Solution_Card({ img_src, img_alt, img_w, img_h, solution_text, redirect
                         width={img_w}
                         height={img_h}
                     />
-                    <p className="font-semibold text-regular w-5/6 text-center">{solution_text}</p>
+                    <p className="font-semibold text-regular w-auto text-center">{solution_text}</p>
                 </CardBody>
-                <CardFooter className="flex justify-center">
-                    <Link href={redirection_url} className="w-full">
+                <CardFooter className="flex justify-center w-auto">
+                    <a href={redirection_url} className="w-full" target="_blank" rel="noopener noreferrer">
                         <Button
                             fullWidth
                             endContent={
@@ -111,7 +127,7 @@ function Solution_Card({ img_src, img_alt, img_w, img_h, solution_text, redirect
                         >
                             <p className="font-semibold text-regular">{text.solutions.button}</p>
                         </Button>
-                    </Link>
+                    </a>
                 </CardFooter>
             </Card>
         </>
