@@ -4,7 +4,7 @@ import Homepage, { About, Solutions } from "@/components/homepage/home.jsx";
 
 export default function Home() {
   return (
-    <div className="h-full w-full space-y-32">
+    <div className="h-full w-full mb-20 space-y-32">
       <Homepage />
       <About />
       <Solutions />

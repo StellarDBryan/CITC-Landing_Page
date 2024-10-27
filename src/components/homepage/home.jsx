@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Button, ButtonGroup } from "@nextui-org/button";
 import { Card, CardBody, CardHeader, CardFooter } from "@nextui-org/card";
 
@@ -74,6 +75,7 @@ export function Solutions(){
                             img_w={196}
                             img_h={194}
                             solution_text={text.solutions.s1}
+                            redirection_url={'/contacto'}
                         />
                     </div>
                 </div>
@@ -82,7 +84,7 @@ export function Solutions(){
     );
 }
 
-function Solution_Card({ img_src, img_alt, img_w, img_h, solution_text}){
+function Solution_Card({ img_src, img_alt, img_w, img_h, solution_text, redirection_url}){
 
     return (
         <>
@@ -97,18 +99,19 @@ function Solution_Card({ img_src, img_alt, img_w, img_h, solution_text}){
                     <p className="font-semibold text-regular w-5/6 text-center">{solution_text}</p>
                 </CardBody>
                 <CardFooter className="flex justify-center">
-                    <Button
-                        radius="full"
-                        fullWidth
-                        endContent={
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                            </svg>
-                        }
-                        className="bg-gray-clear-citc p-2 flex flex-row justify-center space-x-3 overflow-hidden hover:drop-shadow-md"
-                    >
-                        <p className="font-semibold text-regular">{text.solutions.button}</p>
-                    </Button>
+                    <Link href={redirection_url} className="w-full">
+                        <Button
+                            fullWidth
+                            endContent={
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                                </svg>
+                            }
+                            className="bg-gray-clear-citc p-2 flex flex-row justify-center rounded-full space-x-3 overflow-hidden hover:drop-shadow-md"
+                        >
+                            <p className="font-semibold text-regular">{text.solutions.button}</p>
+                        </Button>
+                    </Link>
                 </CardFooter>
             </Card>
         </>
