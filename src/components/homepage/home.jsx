@@ -72,7 +72,7 @@ export function Solutions(){
                         <Solution_Card 
                             img_src={'/images/icons/networking_gray.png'}
                             img_alt={'Networking Icon'}
-                            img_w={196}
+                            img_w={199}
                             img_h={194}
                             solution_text={text.solutions.s1}
                             redirection_url={'/contacto'}
@@ -80,7 +80,7 @@ export function Solutions(){
                         <Solution_Card 
                             img_src={'/images/icons/calendar_gray.png'}
                             img_alt={'Calendar Icon'}
-                            img_w={202}
+                            img_w={199}
                             img_h={194}
                             solution_text={text.solutions.s2}
                             redirection_url={'https://www.facebook.com/ChihITCluster/?locale=es_LA'}
@@ -89,7 +89,7 @@ export function Solutions(){
                             img_src={'/images/icons/cowork_gray.png'}
                             img_alt={'Cowork Icon'}
                             img_w={199}
-                            img_h={192}
+                            img_h={194}
                             solution_text={text.solutions.s3}
                             redirection_url={'https://livinglab.io/home?&v=latest'}
                         />
@@ -104,7 +104,7 @@ function Solution_Card({ img_src, img_alt, img_w, img_h, solution_text, redirect
 
     return (
         <>
-            <Card className="bg-white-darker w-auto h-full p-5 flex flex-col justify-center rounded-3xl">
+            <Card className="bg-white-darker w-[300px] h-full max-h-[400px] p-5 flex flex-col justify-center rounded-3xl">
                 <CardBody className="w-auto space-y-5 flex flex-col items-center">
                     <Image 
                         src={img_src}
@@ -112,9 +112,9 @@ function Solution_Card({ img_src, img_alt, img_w, img_h, solution_text, redirect
                         width={img_w}
                         height={img_h}
                     />
-                    <p className="font-semibold text-regular w-auto text-center">{solution_text}</p>
+                    <p className="font-semibold text-regular w-auto text-center max-h-10">{solution_text}</p>
                 </CardBody>
-                <CardFooter className="flex justify-center w-auto">
+                <CardFooter className="flex flex-col justify-center h-full items-end w-auto max-h-[60px]">
                     <a href={redirection_url} className="w-full" target="_blank" rel="noopener noreferrer">
                         <Button
                             fullWidth
