@@ -22,11 +22,26 @@ const text = {
             'bg_img': '/images/photos/LivingLabCUU_01.jpg', 
             'bg_alt': 'Living Lab CUU',
             'icon': '/images/icons/service_white.png',
-            'icon_alt': 'Service Icon'
+            'icon_alt': 'Service Icon',
         }, 
         'news': {
-            'intro': '¡Enterate de nuestras ultimas tendencias!'
-        }
+            'intro': '¡Entérate de nuestras ultimas tendencias!', 
+            'go_to': 'Ir a Noticias →',
+            'description': 'Mantente al día con las novedades, eventos y logros que impulsan la tecnología en Chihuahua.',
+            'bg_img': '/images/photos/news_img_01.jpeg', 
+            'bg_alt': 'Conference on Living Lab CUU',
+            'icon': '/images/icons/news_white.png',
+            'icon_alt': 'News Icon',
+        }, 
+        'contact': {
+            'intro': '¡Conéctate con nosotros y apoya el ecosistema tecnológico!', 
+            'go_to': 'Ir a Contacto →',
+            'description': 'Contáctanos y descubre cómo podemos impulsar juntos la innovación. ',
+            'bg_img': '/images/photos/contact_img_01.jpeg', 
+            'bg_alt': 'Cluster members in Living Lab CUU',
+            'icon': '/images/icons/contact_white.png',
+            'icon_alt': 'Contact Icon',
+        }, 
     }
 }
 
@@ -123,7 +138,7 @@ export function Services(){
             <section className="w-full h-[800px]">
                 <div className="w-full h-full flex flex-col items-center space-y-5">
                     <h4 className="text-h4 font-semibold text-blue-dark-citc">{text.services.intro}</h4>
-                    <div className="w-full h-auto flex flex-row flex-wrap">
+                    <div className="w-full h-auto flex flex-row flex-wrap items'center justify-center space-x-10">
                         <ServiceCard 
                             text_intro={text.services.services.intro}
                             go_to_text={text.services.services.go_to}
@@ -133,6 +148,26 @@ export function Services(){
                             icon={text.services.services.icon}
                             icon_alt={text.services.services.icon_alt}
                             img_position={'73% 95%'}
+                        />
+                        <ServiceCard 
+                            text_intro={text.services.news.intro}
+                            go_to_text={text.services.news.go_to}
+                            text_description={text.services.news.description}
+                            bg_img={text.services.news.bg_img}
+                            bg_alt={text.services.news.bg_alt}
+                            icon={text.services.news.icon}
+                            icon_alt={text.services.news.icon_alt}
+                            img_position={'50% 80%'}
+                        />
+                        <ServiceCard 
+                            text_intro={text.services.contact.intro}
+                            go_to_text={text.services.contact.go_to}
+                            text_description={text.services.contact.description}
+                            bg_img={text.services.contact.bg_img}
+                            bg_alt={text.services.contact.bg_alt}
+                            icon={text.services.contact.icon}
+                            icon_alt={text.services.contact.icon_alt}
+                            img_position={'35% 75%'}
                         />
                     </div>
                 </div>
