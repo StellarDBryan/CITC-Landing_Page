@@ -57,7 +57,7 @@ export function ServiceCard({ text_intro, go_to_text, text_description, bg_img, 
                     }}
                 />
                 <div className="absolute inset-0 group-hover:bg-regular-dark group-hover:opacity-80 bg-gradient-to-t from-regular-dark from-10% to-transparent to-40%" />
-                <CardBody className="hidden group-hover:block">
+                <CardBody className="hidden h-full w-full group-hover:flex space-y-5 items-center justify-center">
                     <h5 className="font-semibold text-h5">{go_to_text}</h5>
                     <p className="text-h6 font-medium">{text_description}</p>
                     <Image 
