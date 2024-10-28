@@ -37,3 +37,30 @@ export function SolutionCard({ img_src, img_alt, img_w, img_h, solution_text, re
         </>
     );
 }
+
+export function ServiceCard({ text_intro, go_to_text, text_description, bg_img, bg_alt, icon, icon_alt, img_position}){
+
+    return (
+        <>
+            <Card
+                isPressable
+                isHoverable
+                className="relative shadow-2xl rounded-3xl lg:w-[350px] lg:h-[500px] overflow-hidden"
+            >
+                <Image
+                    src={bg_img}
+                    alt={bg_alt}
+                    layout="fill"
+                    className="object-cover"
+                    style={{
+                        objectPosition: `${img_position}`
+                    }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-regular-dark from-10% to-transparent to-40%" />
+                <CardFooter className="z-10 mt-auto">
+                    <h5 className="font-semibold text-h5">{text_intro}</h5>
+                </CardFooter>
+            </Card>
+        </>
+    );
+}

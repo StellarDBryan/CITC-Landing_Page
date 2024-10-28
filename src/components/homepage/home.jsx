@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { SolutionCard } from "@/components/ui/cards.jsx";
+import { SolutionCard, ServiceCard } from "@/components/ui/cards.jsx";
 
 const text = {
     'about': {
@@ -17,9 +17,12 @@ const text = {
         'intro': 'Descubre todo lo que tenemos por ofrecer',
         'services': {
             'intro': '¡Ven a conocernos en nuestras instalaciones!', 
+            'go_to': 'Ir a Servicios →',
             'description': 'Conoce nuestras instalaciones y apoyos que ofrecemos para el impulso tecnológico en Chihuahua',
             'bg_img': '/images/photos/LivingLabCUU_01.jpg', 
+            'bg_alt': 'Living Lab CUU',
             'icon': '/images/icons/news_white.png',
+            'icon_alt': 'Service Icon'
         }
     }
 }
@@ -114,9 +117,21 @@ export function Services(){
 
     return (
         <>
-            <section className="w-full">
-                <div>
-                    <h4></h4>
+            <section className="w-full h-[800px]">
+                <div className="w-full h-full flex flex-col items-center space-y-5">
+                    <h4 className="text-h4 font-semibold text-blue-dark-citc">{text.services.intro}</h4>
+                    <div className="w-full h-auto flex flex-row flex-wrap">
+                        <ServiceCard 
+                            text_intro={text.services.services.intro}
+                            go_to_text={text.services.services.go_to}
+                            text_description={text.services.services.description}
+                            bg_img={text.services.services.bg_img}
+                            bg_alt={text.services.services.bg_alt}
+                            icon={text.services.services.icon}
+                            icon_alt={text.services.services.icon_alt}
+                            img_position={'73% 95%'}
+                        />
+                    </div>
                 </div>
             </section>
         </>
