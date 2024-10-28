@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { SolutionCard, ServiceCard } from "@/components/ui/cards.jsx";
+import Link from "next/link";
 
 const text = {
     'about': {
@@ -139,36 +140,42 @@ export function Services(){
                 <div className="w-full h-full flex flex-col items-center space-y-5">
                     <h4 className="text-h4 font-semibold text-blue-dark-citc">{text.services.intro}</h4>
                     <div className="w-full h-auto flex flex-row flex-wrap items'center justify-center space-x-10">
-                        <ServiceCard 
-                            text_intro={text.services.services.intro}
-                            go_to_text={text.services.services.go_to}
-                            text_description={text.services.services.description}
-                            bg_img={text.services.services.bg_img}
-                            bg_alt={text.services.services.bg_alt}
-                            icon={text.services.services.icon}
-                            icon_alt={text.services.services.icon_alt}
-                            img_position={'73% 95%'}
-                        />
-                        <ServiceCard 
-                            text_intro={text.services.news.intro}
-                            go_to_text={text.services.news.go_to}
-                            text_description={text.services.news.description}
-                            bg_img={text.services.news.bg_img}
-                            bg_alt={text.services.news.bg_alt}
-                            icon={text.services.news.icon}
-                            icon_alt={text.services.news.icon_alt}
-                            img_position={'50% 80%'}
-                        />
-                        <ServiceCard 
-                            text_intro={text.services.contact.intro}
-                            go_to_text={text.services.contact.go_to}
-                            text_description={text.services.contact.description}
-                            bg_img={text.services.contact.bg_img}
-                            bg_alt={text.services.contact.bg_alt}
-                            icon={text.services.contact.icon}
-                            icon_alt={text.services.contact.icon_alt}
-                            img_position={'35% 75%'}
-                        />
+                        <Link href="/servicios" className="w-auto h-auto">
+                            <ServiceCard 
+                                text_intro={text.services.services.intro}
+                                go_to_text={text.services.services.go_to}
+                                text_description={text.services.services.description}
+                                bg_img={text.services.services.bg_img}
+                                bg_alt={text.services.services.bg_alt}
+                                icon={text.services.services.icon}
+                                icon_alt={text.services.services.icon_alt}
+                                img_position={'73% 95%'}
+                            />
+                        </Link>
+                        <Link href="/noticias" className="w-auto h-auto">
+                            <ServiceCard 
+                                text_intro={text.services.news.intro}
+                                go_to_text={text.services.news.go_to}
+                                text_description={text.services.news.description}
+                                bg_img={text.services.news.bg_img}
+                                bg_alt={text.services.news.bg_alt}
+                                icon={text.services.news.icon}
+                                icon_alt={text.services.news.icon_alt}
+                                img_position={'50% 80%'}
+                            />
+                        </Link>
+                        <Link href="/contacto" className="w-auto h-auto">
+                            <ServiceCard 
+                                text_intro={text.services.contact.intro}
+                                go_to_text={text.services.contact.go_to}
+                                text_description={text.services.contact.description}
+                                bg_img={text.services.contact.bg_img}
+                                bg_alt={text.services.contact.bg_alt}
+                                icon={text.services.contact.icon}
+                                icon_alt={text.services.contact.icon_alt}
+                                img_position={'35% 75%'}
+                            />
+                        </Link>
                     </div>
                 </div>
             </section>
