@@ -13,6 +13,15 @@ const text = {
         's3': 'Espacio de trabajo y cowork', 
         'button': 'Ver más',
     },
+    'services': {
+        'intro': 'Descubre todo lo que tenemos por ofrecer',
+        'services': {
+            'intro': '¡Ven a conocernos en nuestras instalaciones!', 
+            'description': 'Conoce nuestras instalaciones y apoyos que ofrecemos para el impulso tecnológico en Chihuahua',
+            'bg_img': '/images/photos/LivingLabCUU_01.jpg', 
+            'icon': '/images/icons/news_white.png',
+        }
+    }
 }
 
 export default function Home(){ 
@@ -95,6 +104,19 @@ export function Solutions(){
                             button_text={text.solutions.button}
                         />
                     </div>
+                </div>
+            </section>
+        </>
+    );
+}
+
+export function Services(){
+
+    return (
+        <>
+            <section className="w-full">
+                <div>
+                    <h4></h4>
                 </div>
             </section>
         </>
