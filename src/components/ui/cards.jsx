@@ -45,19 +45,29 @@ export function ServiceCard({ text_intro, go_to_text, text_description, bg_img, 
             <Card
                 isPressable
                 isHoverable
-                className="relative shadow-2xl rounded-3xl lg:w-[350px] lg:h-[500px] overflow-hidden"
+                className="relativ group shadow-2xl rounded-3xl w-[350px] h-[500px] overflow-hidden"
             >
                 <Image
                     src={bg_img}
                     alt={bg_alt}
                     layout="fill"
-                    className="object-cover"
+                    className="object-cover filter group-hover:blur-sm"
                     style={{
                         objectPosition: `${img_position}`
                     }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-regular-dark from-10% to-transparent to-40%" />
-                <CardFooter className="z-10 mt-auto">
+                <div className="absolute inset-0 group-hover:bg-regular-dark group-hover:opacity-80 bg-gradient-to-t from-regular-dark from-10% to-transparent to-40%" />
+                <CardBody className="hidden group-hover:block">
+                    <h5 className="font-semibold text-h5">{go_to_text}</h5>
+                    <p className="text-h6 font-medium">{text_description}</p>
+                    <Image 
+                        src={icon}
+                        alt={icon_alt}
+                        width={150}
+                        height={150}
+                    />
+                </CardBody>
+                <CardFooter className="z-10 mt-auto group-hover:hidden">
                     <h5 className="font-semibold text-h5">{text_intro}</h5>
                 </CardFooter>
             </Card>

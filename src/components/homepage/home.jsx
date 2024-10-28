@@ -23,6 +23,9 @@ const text = {
             'bg_alt': 'Living Lab CUU',
             'icon': '/images/icons/news_white.png',
             'icon_alt': 'Service Icon'
+        }, 
+        'news': {
+            'intro': '¡Enterate de nuestras ultimas tendencias!'
         }
     }
 }
