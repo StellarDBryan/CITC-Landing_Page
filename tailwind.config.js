@@ -39,11 +39,8 @@ module.exports = {
     }, 
   },
 
-  plugins: [],
-  safelist: ['bg-blue-light-citc'], 
-
   plugins: [
     require('@tailwindcss/forms'),
   ],
-
+  safelist: ['bg-blue-light-citc'], 
 };
