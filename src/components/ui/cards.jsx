@@ -45,7 +45,7 @@ export function ServiceCard({ text_intro, go_to_text, text_description, bg_img, 
             <Card
                 isPressable
                 isHoverable
-                className="relativ group shadow-2xl rounded-3xl w-[350px] h-[500px] overflow-hidden"
+                className="relativ group shadow-2xl rounded-3xl w-[350px] h-[500px] overflow-hidden text-gray-clear-citc"
             >
                 <Image
                     src={bg_img}
