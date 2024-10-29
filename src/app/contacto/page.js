@@ -1,8 +1,15 @@
+import Form from '@/components/form';
+import Nav from "@/components/ui/navbar.jsx";
 
-export default function Contacto(){
+export default function Contact() {
+
     return (
-        <div className="text-black">
-            Aqui va lo de Contactos
-        </div>
+        <>
+            <div>
+                <main>
+                    <Form />
+                </main>
+            </div>
+        </>
     );
 }

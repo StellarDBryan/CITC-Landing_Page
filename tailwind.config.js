@@ -38,6 +38,10 @@ module.exports = {
       'small-2': '10.24px',   
     }, 
   },
-  plugins: [],
+
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('daisyui'),
+  ],
   safelist: ['bg-blue-light-citc'], 
 };
