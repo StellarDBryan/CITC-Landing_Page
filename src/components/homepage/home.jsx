@@ -28,7 +28,7 @@ const text = {
         'news': {
             'intro': '¡Entérate de nuestras ultimas tendencias!', 
             'go_to': 'Ir a Noticias →',
-            'description': 'Mantente al día con las novedades, eventos y logros que impulsan la tecnología en Chihuahua.',
+            'description': 'Mantente al día con las novedades, eventos y logros que impulsan la tecnología en Chihuahua',
             'bg_img': '/images/photos/news_img_01.jpeg', 
             'bg_alt': 'Conference on Living Lab CUU',
             'icon': '/images/icons/news_white.png',
@@ -37,7 +37,7 @@ const text = {
         'contact': {
             'intro': '¡Conéctate con nosotros y apoya el ecosistema tecnológico!', 
             'go_to': 'Ir a Contacto →',
-            'description': 'Contáctanos y descubre cómo podemos impulsar juntos la innovación. ',
+            'description': 'Contáctanos y descubre cómo podemos impulsar juntos la innovación ',
             'bg_img': '/images/photos/contact_img_01.jpeg', 
             'bg_alt': 'Cluster members in Living Lab CUU',
             'icon': '/images/icons/contact_white.png',
