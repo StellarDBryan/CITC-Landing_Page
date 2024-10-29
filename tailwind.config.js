@@ -38,6 +38,12 @@ module.exports = {
       'small-2': '10.24px',   
     }, 
   },
+
   plugins: [],
   safelist: ['bg-blue-light-citc'], 
+
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
+
 };
