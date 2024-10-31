@@ -128,7 +128,7 @@ export default function Footer(){
                 </div>
                 <div className="h-full ">
                     <ul className="space-y-1">
-                        <li><h6 className="text-regular font-semibold">{text.Links.title}</h6></li>
+                        <li><h6 className="text-regular font-semibold">{text.Legal.title}</h6></li>
                         <li>
                             <a href="">
                                 <p className="text-small-1">
