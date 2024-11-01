@@ -186,21 +186,81 @@ export function Services(){
 
 export function Associates(){
 
-    const prueba = [
-        'hola mundo 1', 
-        'hola mundo 2', 
-        'hola mundo 3',
-        'hola mundo 4',
-        'hola mundo 5',
-        'hola mundo 6',
-        'hola mundo 7',
-        'hola mundo 8',
+    const associate_logos_1 = [
+        {
+            name: '360Solutions', 
+            image: '/images/associates/360Solutions_black.png', 
+        },
+        {
+            name: 'AdNConsulting', 
+            image: '/images/associates/AdNConsulting_black.png', 
+        }, 
+        {
+            name: 'BuildBinder', 
+            image: '/images/associates/BuildBinder_black.png', 
+        }, 
+        {
+            name: 'AutoZone', 
+            image: '/images/associates/DataZone_black.png', 
+        }, 
+        {
+            name: 'IntegralVending', 
+            image: '/images/associates/IntegralVending_black.png', 
+        }, 
+        {
+            name: 'Intelectix', 
+            image: '/images/associates/Intelectix_black.png', 
+        }, 
+        {
+            name: 'JobSistemas', 
+            image: '/images/associates/JobSistemas_black.png', 
+        }, 
+        {
+            name: 'LeadingTech', 
+            image: '/images/associates/LeadingTech_black.png', 
+        }, 
+    ];
+
+    const associate_logos_2 = [
+        {
+            name: 'Madata', 
+            image: '/images/associates/madata_black.png', 
+        }, 
+        {
+            name: 'Pax', 
+            image: '/images/associates/pax_black.png', 
+        }, 
+        {
+            name: 'PIDElectronics', 
+            image: '/images/associates/PIDElectronics.jpg', 
+        }, 
+        {
+            name: 'PPAPManger', 
+            image: '/images/associates/PPAPManger.jpg', 
+        },
+        {
+            name: 'Resideo', 
+            image: '/images/associates/resideo.jpg', 
+        }, 
+        {
+            name: 'Sitek', 
+            image: '/images/associates/Sitek.jpg', 
+        }, 
+        {
+            name: 'TGC', 
+            image: '/images/associates/TGC.jpg', 
+        }, 
+        {
+            name: 'Tisco', 
+            image: '/images/associates/Tisco.jpg', 
+        },
     ]
 
     return (
         <>
             <section className="w-full h-[800px]">
-                <InfiniteMovingCards items={prueba} />
+                <InfiniteMovingCards items={associate_logos_1} direction="right" />
+                <InfiniteMovingCards items={associate_logos_2} direction="left" />
             </section>
         </>
     );
