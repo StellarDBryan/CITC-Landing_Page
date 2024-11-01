@@ -44,6 +44,9 @@ const text = {
             'icon': '/images/icons/contact_white.png',
             'icon_alt': 'Contact Icon',
         }, 
+    }, 
+    'associates': {
+        'intro': 'Se parte de los que impulsan la tecnología e innvación en la región'
     }
 }
 
@@ -258,7 +261,8 @@ export function Associates(){
 
     return (
         <>
-            <section className="w-full h-[800px]">
+            <section className="w-full h-[800px] flex flex-col items-center justify-center">
+                <h4 className="lg:my-5 text-h4 font-semibold text-blue-dark-citc">{text.associates.intro}</h4>
                 <InfiniteMovingCards items={associate_logos_1} direction="right" />
                 <InfiniteMovingCards items={associate_logos_2} direction="left" />
             </section>
