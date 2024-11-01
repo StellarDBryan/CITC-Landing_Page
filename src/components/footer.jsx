@@ -104,7 +104,7 @@ export default function Footer(){
                             </a>
                         </li>
                         <li>
-                            <a href={text.Links.living_lab_url}>
+                            <a href={text.Links.living_lab_url} target="_blank" rel="noopener noreferrer">
                                 <p className="text-small-1">
                                     {text.Links.living_lab}
                                 </p>
