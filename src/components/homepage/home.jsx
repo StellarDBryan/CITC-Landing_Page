@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { SolutionCard, ServiceCard } from "@/components/ui/cards.jsx";
+import { InfiniteMovingCards } from "../ui/infinite_moving_cards";
 import Link from "next/link";
 
 const text = {
@@ -178,6 +179,28 @@ export function Services(){
                         </Link>
                     </div>
                 </div>
+            </section>
+        </>
+    );
+}
+
+export function Associates(){
+
+    const prueba = [
+        'hola mundo 1', 
+        'hola mundo 2', 
+        'hola mundo 3',
+        'hola mundo 4',
+        'hola mundo 5',
+        'hola mundo 6',
+        'hola mundo 7',
+        'hola mundo 8',
+    ]
+
+    return (
+        <>
+            <section className="w-full h-[800px]">
+                <InfiniteMovingCards items={prueba} />
             </section>
         </>
     );

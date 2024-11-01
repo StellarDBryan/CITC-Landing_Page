@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Nav from "@/components/ui/navbar.jsx";
-import Homepage, { About, Solutions, Services } from "@/components/homepage/home.jsx";
+import Homepage, { About, Solutions, Services, Associate, Associates } from "@/components/homepage/home.jsx";
 
 export default function Home() {
   return (
@@ -9,6 +9,7 @@ export default function Home() {
       <About />
       <Solutions />
       <Services />
+      <Associates />
     </div>
   );
 }
