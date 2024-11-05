@@ -1,12 +1,13 @@
 import Image from "next/image";
 import { SolutionCard, ServiceCard } from "@/components/ui/cards.jsx";
+import { InfiniteMovingCards } from "../ui/infinite_moving_cards";
 import Link from "next/link";
 
 const text = {
     'about': {
         'title': '¿Quiénes somos?', 
         'description': 'Somos un grupo de empresas dedicadas a las TICs que trabajamos y colaboramos estratégicamente para la obtención de beneficios mutuos con los cuales brindamos a nuestros asociados oportunidades enfocadas a mejoras en sus procesos, certificaciones, capacidades, recursos; con la intención de alcanzar proyecciones a nivel local, nacional e internacional en beneficio de la comunidad Chihuahuense.'
-    },
+    }, 
     'solutions': {
         'text': 'Impulso al crecimiento tecnológico', 
         's1': 'Conexión con empresas', 
@@ -28,7 +29,7 @@ const text = {
         'news': {
             'intro': '¡Entérate de nuestras ultimas tendencias!', 
             'go_to': 'Ir a Noticias →',
-            'description': 'Mantente al día con las novedades, eventos y logros que impulsan la tecnología en Chihuahua.',
+            'description': 'Mantente al día con las novedades, eventos y logros que impulsan la tecnología en Chihuahua',
             'bg_img': '/images/photos/news_img_01.jpeg', 
             'bg_alt': 'Conference on Living Lab CUU',
             'icon': '/images/icons/news_white.png',
@@ -37,12 +38,15 @@ const text = {
         'contact': {
             'intro': '¡Conéctate con nosotros y apoya el ecosistema tecnológico!', 
             'go_to': 'Ir a Contacto →',
-            'description': 'Contáctanos y descubre cómo podemos impulsar juntos la innovación. ',
+            'description': 'Contáctanos y descubre cómo podemos impulsar juntos la innovación ',
             'bg_img': '/images/photos/contact_img_01.jpeg', 
             'bg_alt': 'Cluster members in Living Lab CUU',
             'icon': '/images/icons/contact_white.png',
             'icon_alt': 'Contact Icon',
         }, 
+    }, 
+    'associates': {
+        'intro': 'Se parte de los que impulsan la tecnología e innvación en la región'
     }
 }
 
@@ -136,7 +140,7 @@ export function Services(){
 
     return (
         <>
-            <section className="w-full h-[800px]">
+            <section className="w-full h-[600px]">
                 <div className="w-full h-full flex flex-col items-center space-y-5">
                     <h4 className="text-h4 font-semibold text-blue-dark-citc">{text.services.intro}</h4>
                     <div className="w-full h-auto flex flex-row flex-wrap items'center justify-center space-x-10">
@@ -178,6 +182,89 @@ export function Services(){
                         </Link>
                     </div>
                 </div>
+            </section>
+        </>
+    );
+}
+
+export function Associates(){
+
+    const associate_logos_1 = [
+        {
+            name: '360Solutions', 
+            image: '/images/associates/360Solutions_edited.png', 
+        },
+        {
+            name: 'AdNConsulting', 
+            image: '/images/associates/AdNConsulting.png', 
+        }, 
+        {
+            name: 'BuildBinder', 
+            image: '/images/associates/BuildBinder_edited.png', 
+        }, 
+        {
+            name: 'AutoZone', 
+            image: '/images/associates/DataZone_edited.png', 
+        }, 
+        {
+            name: 'IntegralVending', 
+            image: '/images/associates/IntegralVending_edited.png', 
+        }, 
+        {
+            name: 'Intelectix', 
+            image: '/images/associates/Intelectix_edited.png', 
+        }, 
+        {
+            name: 'JobSistemas', 
+            image: '/images/associates/JobSistemas_edited.png', 
+        }, 
+        {
+            name: 'LeadingTech', 
+            image: '/images/associates/LeadingTech_edited.png', 
+        }, 
+    ];
+
+    const associate_logos_2 = [
+        {
+            name: 'Madata', 
+            image: '/images/associates/madata_edited.png', 
+        }, 
+        {
+            name: 'Pax', 
+            image: '/images/associates/pax_edited.png', 
+        }, 
+        {
+            name: 'PIDElectronics', 
+            image: '/images/associates/PIDElectronics_edited.png', 
+        }, 
+        {
+            name: 'PPAPManger', 
+            image: '/images/associates/PPAPManger_edited.png', 
+        },
+        {
+            name: 'Resideo', 
+            image: '/images/associates/resideo_edited.png', 
+        }, 
+        {
+            name: 'Sitek', 
+            image: '/images/associates/Sitek_edited.png', 
+        }, 
+        {
+            name: 'TGC', 
+            image: '/images/associates/TGC_edited.png', 
+        }, 
+        {
+            name: 'Tisco', 
+            image: '/images/associates/Tisco_edited.png', 
+        },
+    ]
+
+    return (
+        <>
+            <section className="w-full h-[600px] flex flex-col items-center justify-center">
+                <h4 className="lg:my-5 text-h4 font-semibold text-blue-dark-citc">{text.associates.intro}</h4>
+                <InfiniteMovingCards items={associate_logos_1} direction="right" />
+                <InfiniteMovingCards items={associate_logos_2} direction="left" />
             </section>
         </>
     );

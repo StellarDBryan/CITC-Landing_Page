@@ -1,4 +1,5 @@
 import Nav from "@/components/ui/navbar";
+import Footer from "@/components/footer";
 import { Montserrat } from 'next/font/google';
 import "./globals.css";
 
@@ -18,7 +19,7 @@ export default function RootLayout({ children }) {
       <body>
         <Nav />
         {children}
-        {/* Aqui puede ir el footer */}
+        <Footer />
       </body>
     </html>
   );

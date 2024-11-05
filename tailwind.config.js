@@ -1,3 +1,10 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
+const colors = require("tailwindcss/colors");
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -24,7 +31,18 @@ module.exports = {
           'linear-gradient(to top, rgba(19, 111, 178, 0) 0%, rgba(19, 111, 178, 0.35) 13%, rgba(19, 111, 178, 0.7) 25%, rgba(19, 111, 178, 0.9) 50%, rgba(19, 111, 178, 1) 100%)',
         'light-gradient': 
           'linear-gradient(to bottom, rgba(247, 247, 247, 1) 0%, rgba(247, 247, 247, 0.85) 17%, rgba(247, 247, 247, 0.8) 34%, rgba(247, 247, 247, 0.75) 50%, rgba(247, 247, 247, 0.8) 67%, rgba(247, 247, 247, 0.85) 82%, rgba(247, 247, 247, 1) 100%)',
-      }
+      }, 
+      animation: {
+        scroll:
+          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+      }, 
+      keyframes: {
+        scroll: {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
+          },
+        },
+      },
     },
     fontSize: {
       'h1': '61.04px', 
@@ -42,6 +60,19 @@ module.exports = {
   plugins: [
     require('@tailwindcss/forms'),
     require('daisyui'),
+    addVariablesForColors, 
   ],
   safelist: ['bg-blue-light-citc'], 
 };
+
+function addVariablesForColors({
+  addBase,
+  theme
+}) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(Object.entries(allColors).map(([key, val]) => [`--${key}`, val]));
+
+  addBase({
+    ":root": newVars,
+  });
+}
