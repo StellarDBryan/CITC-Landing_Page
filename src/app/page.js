@@ -4,7 +4,7 @@ import Homepage, { About, Solutions, Services, Associate, Associates } from "@/c
 
 export default function Home() {
   return (
-    <div className="h-full w-full mb-20 space-y-32">
+    <div className="h-full w-full mb-20 space-y-28">
       <Homepage />
       <About />
       <Solutions />

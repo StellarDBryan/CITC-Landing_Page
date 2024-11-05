@@ -140,7 +140,7 @@ export function Services(){
 
     return (
         <>
-            <section className="w-full h-[800px]">
+            <section className="w-full h-[600px]">
                 <div className="w-full h-full flex flex-col items-center space-y-5">
                     <h4 className="text-h4 font-semibold text-blue-dark-citc">{text.services.intro}</h4>
                     <div className="w-full h-auto flex flex-row flex-wrap items'center justify-center space-x-10">
@@ -261,7 +261,7 @@ export function Associates(){
 
     return (
         <>
-            <section className="w-full h-[800px] flex flex-col items-center justify-center">
+            <section className="w-full h-[600px] flex flex-col items-center justify-center">
                 <h4 className="lg:my-5 text-h4 font-semibold text-blue-dark-citc">{text.associates.intro}</h4>
                 <InfiniteMovingCards items={associate_logos_1} direction="right" />
                 <InfiniteMovingCards items={associate_logos_2} direction="left" />
