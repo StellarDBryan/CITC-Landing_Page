@@ -78,7 +78,7 @@ export const InfiniteMovingCards = ({
                     src={item.image}
                     alt={item.name}
                     fill
-                    className="object-contain"
+                    className="object-contain grayscale"
                 />
             </Card>
           </li>

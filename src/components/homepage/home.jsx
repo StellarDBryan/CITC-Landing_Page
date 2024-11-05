@@ -7,7 +7,7 @@ const text = {
     'about': {
         'title': '¿Quiénes somos?', 
         'description': 'Somos un grupo de empresas dedicadas a las TICs que trabajamos y colaboramos estratégicamente para la obtención de beneficios mutuos con los cuales brindamos a nuestros asociados oportunidades enfocadas a mejoras en sus procesos, certificaciones, capacidades, recursos; con la intención de alcanzar proyecciones a nivel local, nacional e internacional en beneficio de la comunidad Chihuahuense.'
-    },
+    }, 
     'solutions': {
         'text': 'Impulso al crecimiento tecnológico', 
         's1': 'Conexión con empresas', 
@@ -192,70 +192,70 @@ export function Associates(){
     const associate_logos_1 = [
         {
             name: '360Solutions', 
-            image: '/images/associates/360Solutions_black.png', 
+            image: '/images/associates/360Solutions_edited.png', 
         },
         {
             name: 'AdNConsulting', 
-            image: '/images/associates/AdNConsulting_black.png', 
+            image: '/images/associates/AdNConsulting.png', 
         }, 
         {
             name: 'BuildBinder', 
-            image: '/images/associates/BuildBinder_black.png', 
+            image: '/images/associates/BuildBinder_edited.png', 
         }, 
         {
             name: 'AutoZone', 
-            image: '/images/associates/DataZone_black.png', 
+            image: '/images/associates/DataZone_edited.png', 
         }, 
         {
             name: 'IntegralVending', 
-            image: '/images/associates/IntegralVending_black.png', 
+            image: '/images/associates/IntegralVending_edited.png', 
         }, 
         {
             name: 'Intelectix', 
-            image: '/images/associates/Intelectix_black.png', 
+            image: '/images/associates/Intelectix_edited.png', 
         }, 
         {
             name: 'JobSistemas', 
-            image: '/images/associates/JobSistemas_black.png', 
+            image: '/images/associates/JobSistemas_edited.png', 
         }, 
         {
             name: 'LeadingTech', 
-            image: '/images/associates/LeadingTech_black.png', 
+            image: '/images/associates/LeadingTech_edited.png', 
         }, 
     ];
 
     const associate_logos_2 = [
         {
             name: 'Madata', 
-            image: '/images/associates/madata_black.png', 
+            image: '/images/associates/madata_edited.png', 
         }, 
         {
             name: 'Pax', 
-            image: '/images/associates/pax_black.png', 
+            image: '/images/associates/pax_edited.png', 
         }, 
         {
             name: 'PIDElectronics', 
-            image: '/images/associates/PIDElectronics.jpg', 
+            image: '/images/associates/PIDElectronics_edited.png', 
         }, 
         {
             name: 'PPAPManger', 
-            image: '/images/associates/PPAPManger.jpg', 
+            image: '/images/associates/PPAPManger_edited.png', 
         },
         {
             name: 'Resideo', 
-            image: '/images/associates/resideo.jpg', 
+            image: '/images/associates/resideo_edited.png', 
         }, 
         {
             name: 'Sitek', 
-            image: '/images/associates/Sitek.jpg', 
+            image: '/images/associates/Sitek_edited.png', 
         }, 
         {
             name: 'TGC', 
-            image: '/images/associates/TGC.jpg', 
+            image: '/images/associates/TGC_edited.png', 
         }, 
         {
             name: 'Tisco', 
-            image: '/images/associates/Tisco.jpg', 
+            image: '/images/associates/Tisco_edited.png', 
         },
     ]
 
