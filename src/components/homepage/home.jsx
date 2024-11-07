@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { SolutionCard, ServiceCard } from "@/components/ui/cards.jsx";
+import { SolutionCard, ServiceCardLP } from "@/components/ui/cards.jsx";
 import { InfiniteMovingCards } from "../ui/infinite_moving_cards";
 import Link from "next/link";
 
@@ -145,7 +145,7 @@ export function Services(){
                     <h4 className="text-h4 font-semibold text-blue-dark-citc">{text.services.intro}</h4>
                     <div className="w-full h-auto flex flex-row flex-wrap items'center justify-center space-x-10">
                         <Link href="/servicios" className="w-auto h-auto">
-                            <ServiceCard 
+                            <ServiceCardLP 
                                 text_intro={text.services.services.intro}
                                 go_to_text={text.services.services.go_to}
                                 text_description={text.services.services.description}
@@ -157,7 +157,7 @@ export function Services(){
                             />
                         </Link>
                         <Link href="/noticias" className="w-auto h-auto">
-                            <ServiceCard 
+                            <ServiceCardLP 
                                 text_intro={text.services.news.intro}
                                 go_to_text={text.services.news.go_to}
                                 text_description={text.services.news.description}
@@ -169,7 +169,7 @@ export function Services(){
                             />
                         </Link>
                         <Link href="/contacto" className="w-auto h-auto">
-                            <ServiceCard 
+                            <ServiceCardLP 
                                 text_intro={text.services.contact.intro}
                                 go_to_text={text.services.contact.go_to}
                                 text_description={text.services.contact.description}
