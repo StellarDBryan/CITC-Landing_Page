@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import { SolutionCard, ServiceCardLP } from "@/components/ui/cards.jsx";
 import { InfiniteMovingCards } from "../ui/infinite_moving_cards";
+import { motion } from 'framer-motion';
 import Link from "next/link";
 
 const text = {
@@ -56,7 +59,12 @@ export default function Home(){
         <>
             <section className="relative bg-gray-700 bg-[url('/images/backgrounds/cuu_2.jpg')] bg-cover bg-center h-screen">
                 <div className="flex items-center h-full w-3/4 bg-gradient-to-r from-regular-dark to-transparent to-100% bg-opacity-10">
-                    <div className="lg:m-10 lg:h-2/3">
+                    <motion.div 
+                        initial={{translateX:-50, opacity:0}}
+                        animate={{translateX: 0, opacity: 1}}
+                        transition={{type:"spring", duration:1.5, delay:0.2}}
+                        className="lg:m-10 lg:h-2/3"
+                    >
                         <Image src="/images/citc_logos/CITC_horiz-04.png"
                             alt="CITC Logo"
                             width={600}
@@ -64,7 +72,7 @@ export default function Home(){
                         <h2 className="font-medium text-h4 text-gray-clear-citc">
                             Colaboración y Evolución Tecnológica <br /> en el corazón de Chihuahua
                         </h2>
-                    </div>
+                    </motion.div>
                 </div>
             </section>
         </>
