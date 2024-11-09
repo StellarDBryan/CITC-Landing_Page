@@ -2,8 +2,8 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { usePathname } from 'next/navigation';
+import { useState, useEffect } from 'react';
 import NavButtons from './nav_buttons';
 import { motion, useScroll } from 'framer-motion';
 
@@ -40,46 +40,62 @@ export default function Nav() {
 
 export function Navbar() {
 
-    const router = useRouter();
+    const pathname = usePathname();
     const{scrollYProgress} = useScroll();
-    const isLandingPage = router.pathname == "/";
+    const [isLandingPage, setIsLandingPage] = useState(pathname === "/");
+    const [hasScrolled, setHasScrolled] = useState(false); // Estado para controlar el scroll
+
+    
+
+    useEffect(( ) => {
+        const handleScroll = () => {
+            if (window.scrollY > 0 && pathname === "/") {
+                setHasScrolled(true); // Cambia el estado si se ha desplazado
+            } else { setHasScrolled(false);}
+        };
+        setIsLandingPage(pathname === "/");
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [pathname]);
 
     return (
         <>
             <motion.nav 
-                initial={
+                animate={
                     {
-                        // backgroundImage: (isLandingPage && scrollY > 0)
-                        // ? 'linear-gradient(to top, rgba(247, 247, 247, 0) 0%, rgba(247, 247, 247, 0.35) 13%, rgba(247, 247, 247, 0.7) 25%, rgba(247, 247, 247, 0.9) 50%, rgba(247, 247, 247, 1) 100%)'
-                        // : 'linear-gradient(to top, rgba(247, 247, 247, 0) 0%, rgba(247, 247, 247, 0) 13%, rgba(247, 247, 247, 0) 25%, rgba(247, 247, 247, 0) 50%, rgba(247, 247, 247, 0) 100%)',
-                        backgroundImage: 'linear-gradient(to top, rgba(247, 247, 247, 0) 0%, rgba(247, 247, 247, 0.35) 13%, rgba(247, 247, 247, 0.7) 25%, rgba(247, 247, 247, 0.9) 50%, rgba(247, 247, 247, 1) 100%)',
+                        backgroundImage: ((hasScrolled && isLandingPage) || (pathname != "/"))
+                        ? 'linear-gradient(to top, rgba(247, 247, 247, 0) 0%, rgba(247, 247, 247, 0.35) 13%, rgba(247, 247, 247, 0.7) 25%, rgba(247, 247, 247, 0.9) 50%, rgba(247, 247, 247, 1) 100%)'
+                        : 'linear-gradient(to top, rgba(247, 247, 247, 0) 0%, rgba(247, 247, 247, 0) 13%, rgba(247, 247, 247, 0) 25%, rgba(247, 247, 247, 0) 50%, rgba(247, 247, 247, 0) 100%)',
+                        //backgroundImage: 'linear-gradient(to top, rgba(247, 247, 247, 0) 0%, rgba(247, 247, 247, 0.35) 13%, rgba(247, 247, 247, 0.7) 25%, rgba(247, 247, 247, 0.9) 50%, rgba(247, 247, 247, 1) 100%)',
+                        color: ((hasScrolled && isLandingPage) || (pathname != "/")) ? '#1e1e1e' : '#f7f7f7',
                         height: 90, 
                     }
                 }
                 whileHover={
                     {
                         backgroundImage: 'linear-gradient(to top, rgba(19, 111, 178, 0) 0%, rgba(19, 111, 178, 0.35) 13%, rgba(19, 111, 178, 0.7) 25%, rgba(19, 111, 178, 0.9) 50%, rgba(19, 111, 178, 1) 100%)', 
+                        color: '#f7f7f7',
                         height: 110,
                     }
                 }
                 className="fixed group top-0 z-50 hover:h-[110px] w-full flex items-center justify-center flex-row">
-                {console.log(router.pathname)}
-                {console.log(scrollYProgress.get())}
-                <div className='relative z-10 px-3 h-[90px] w-full flex items-center justify-center flex-row text-regular-dark group-hover:text-gray-clear-citc'>
+                <div className='relative z-10 px-3 h-[90px] w-full flex items-center justify-center flex-row'>
                     <Link href="/">
                         <Image 
-                            src="/images/citc_logos/CITC_horiz-04.png" 
+                            src="/images/citc_logos/CITC_horiz-04.png"
                             alt="CITC Logo" 
                             width={250} 
                             height={10} 
                             className='lg:mx-4 lg:mb-4 w-auto hidden group-hover:block max-w-[250]' 
                         />
                         <Image 
-                            src="/images/citc_logos/CITC_horiz_Mesa_1.png" 
+                            src={`/images/citc_logos/${(hasScrolled && isLandingPage) || (pathname != "/") ? 'CITC_horiz_Mesa_1.png' : 'CITC_horiz-04.png'}`} 
                             alt="CITC Logo" 
                             width={250} 
                             height={10} 
-                            className='lg:mx-4 lg:mb-4 w-auto group-hover:hidden max-w-[250]' 
+                            className='lg:mx-4 lg:mb-4 w-auto block group-hover:hidden max-w-[250]' 
                         />
                     </Link>
                     <NavButtons />
