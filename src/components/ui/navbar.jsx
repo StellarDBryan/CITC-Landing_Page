@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
-import NavButtons from './nav_buttons';
+import NavButtons from './buttons';
 import { motion, useScroll } from 'framer-motion';
 
 
