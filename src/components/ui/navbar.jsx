@@ -88,14 +88,14 @@ export function Navbar() {
                             alt="CITC Logo" 
                             width={250} 
                             height={10} 
-                            className='lg:mx-4 lg:mb-4 w-auto hidden group-hover:block max-w-[250]' 
+                            className='lg:mx-4 lg:mb-4 w-auto hidden group-hover:block max-w-[250] max-h-[140px]' 
                         />
                         <Image 
-                            src={`/images/citc_logos/${(hasScrolled && isLandingPage) || (pathname != "/") ? 'CITC_horiz_Mesa_1.png' : 'CITC_horiz-04.png'}`} 
+                            src={`/images/citc_logos/CITC_horiz${(hasScrolled && isLandingPage) || (pathname != "/") ? '_Mesa_1' : '-04'}.png`} 
                             alt="CITC Logo" 
                             width={250} 
                             height={10} 
-                            className='lg:mx-4 lg:mb-4 w-auto block group-hover:hidden max-w-[250]' 
+                            className='lg:mx-4 lg:mb-4 w-auto block group-hover:hidden max-w-[250] max-h-[140px]' 
                         />
                     </Link>
                     <NavButtons />
