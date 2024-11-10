@@ -62,7 +62,7 @@ export default function Home(){
                     <motion.div 
                         initial={{translateX:-50, opacity:0}}
                         animate={{translateX: 0, opacity: 1}}
-                        transition={{type:"spring", duration:1.5, delay:0.2}}
+                        transition={{type:"spring", duration:1.8, delay:0.2}}
                         className="lg:m-10 lg:h-2/3"
                     >
                         <Image src="/images/citc_logos/CITC_horiz-04.png"
