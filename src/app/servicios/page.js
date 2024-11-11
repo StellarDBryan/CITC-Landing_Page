@@ -1,6 +1,9 @@
+"use client";
+
 import { Tabs } from "@/components/ui/tabs";
 import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Servicios(){
 
@@ -24,7 +27,7 @@ export default function Servicios(){
                         <Card
                             isPressable
                             isHoverable
-                            className="relative group shadow-2xl rounded-none w-[350px] h-[500px] overflow-hidden text-regular-dark"
+                            className="relative group shadow-2xl rounded-none w-[300px] h-[500px] overflow-hidden text-regular-dark"
                         >
                             <CardBody className=" h-full w-full flex space-y-5 items-center justify-center">
                                 <h5 className="font-semibold text-h5">{text.citc.title_1}</h5>
