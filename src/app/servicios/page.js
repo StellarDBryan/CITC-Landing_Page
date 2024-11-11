@@ -7,11 +7,11 @@ export default function Servicios(){
     const text = {
         'citc': {
             'title_1': 'Conexión', 
-            'content_1': 'Colaboramos con distintas empresas del sector de IT y universidades con las que puedes conectar y establecer buenas relaciones apoyadas por nosotros. ',
+            'content_1': 'Establece conexiones clave con empresas líderes y universidades del sector IT. Facilitamos relaciones estratégicas que potencian tu crecimiento profesional y empresarial. ',
             'title_2': 'Espacio', 
-            'content_2': 'Contamos con una instalación para trabajo y cowork, el Living Lab CUU. Donde puedes encontrarnos y ser parte de un Networking importante en Chihuahua. ', 
+            'content_2': 'Trabaja y colabora en el corazón del Networking de Chihuahua. Nuestro Living Lab CUU es más que un espacio de coworking; es un hub de innovación donde las ideas florecen y las oportunidades surgen. ', 
             'title_3': 'Eventos', 
-            'content_3': 'Apoyamos, patrocinamos e invitamos a nuestro espacio distintos eventos relacionados al sector de IT e Innovación, como: conferencias, talleres, hackathones, pitches y eventos de comunidades. ',
+            'content_3': 'Sé parte de eventos que transforman la industria IT. Desde conferencias hasta hackathones, fomentamos el aprendizaje, la innovación y el crecimiento en cada encuentro. ',
         }
     }
 
@@ -20,15 +20,37 @@ export default function Servicios(){
             title: 'CITC', 
             content: (
                 <>
-                    <div>
+                    <div className="flex flex-row flex-wrap">
                         <Card
                             isPressable
                             isHoverable
-                            className="relative group shadow-2xl rounded-3xl w-[350px] h-[500px] overflow-hidden text-regular-dark"
+                            className="relative group shadow-2xl rounded-none w-[350px] h-[500px] overflow-hidden text-regular-dark"
                         >
                             <CardBody className=" h-full w-full flex space-y-5 items-center justify-center">
                                 <h5 className="font-semibold text-h5">{text.citc.title_1}</h5>
                                 <p className="text-h6 font-medium">{text.citc.content_1}</p>
+                                
+                            </CardBody>
+                        </Card>
+                        <Card
+                            isPressable
+                            isHoverable
+                            className="relative group shadow-2xl rounded-none w-[350px] h-[500px] overflow-hidden text-regular-dark"
+                        >
+                            <CardBody className=" h-full w-full flex space-y-5 items-center justify-center">
+                                <h5 className="font-semibold text-h5">{text.citc.title_2}</h5>
+                                <p className="text-h6 font-medium">{text.citc.content_2}</p>
+                                
+                            </CardBody>
+                        </Card>
+                        <Card
+                            isPressable
+                            isHoverable
+                            className="relative group shadow-2xl rounded-none w-[350px] h-[500px] overflow-hidden text-regular-dark"
+                        >
+                            <CardBody className=" h-full w-full flex space-y-5 items-center justify-center">
+                                <h5 className="font-semibold text-h5">{text.citc.title_3}</h5>
+                                <p className="text-h6 font-medium">{text.citc.content_3}</p>
                                 
                             </CardBody>
                         </Card>
