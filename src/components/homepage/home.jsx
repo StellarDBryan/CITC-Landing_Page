@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
-import { SolutionCard, ServiceCard } from "@/components/ui/cards.jsx";
+import { SolutionCard, ServiceCardLP } from "@/components/ui/cards.jsx";
 import { InfiniteMovingCards } from "../ui/infinite_moving_cards";
+import { motion } from 'framer-motion';
 import Link from "next/link";
 
 const text = {
@@ -56,7 +59,12 @@ export default function Home(){
         <>
             <section className="relative bg-gray-700 bg-[url('/images/backgrounds/cuu_2.jpg')] bg-cover bg-center h-screen">
                 <div className="flex items-center h-full w-3/4 bg-gradient-to-r from-regular-dark to-transparent to-100% bg-opacity-10">
-                    <div className="lg:m-10 lg:h-2/3">
+                    <motion.div 
+                        initial={{translateX:-50, opacity:0}}
+                        animate={{translateX: 0, opacity: 1}}
+                        transition={{type:"spring", duration:1.8, delay:0.2}}
+                        className="lg:m-10 lg:h-2/3"
+                    >
                         <Image src="/images/citc_logos/CITC_horiz-04.png"
                             alt="CITC Logo"
                             width={600}
@@ -64,7 +72,7 @@ export default function Home(){
                         <h2 className="font-medium text-h4 text-gray-clear-citc">
                             Colaboración y Evolución Tecnológica <br /> en el corazón de Chihuahua
                         </h2>
-                    </div>
+                    </motion.div>
                 </div>
             </section>
         </>
@@ -145,7 +153,7 @@ export function Services(){
                     <h4 className="text-h4 font-semibold text-blue-dark-citc">{text.services.intro}</h4>
                     <div className="w-full h-auto flex flex-row flex-wrap items'center justify-center space-x-10">
                         <Link href="/servicios" className="w-auto h-auto">
-                            <ServiceCard 
+                            <ServiceCardLP 
                                 text_intro={text.services.services.intro}
                                 go_to_text={text.services.services.go_to}
                                 text_description={text.services.services.description}
@@ -157,7 +165,7 @@ export function Services(){
                             />
                         </Link>
                         <Link href="/noticias" className="w-auto h-auto">
-                            <ServiceCard 
+                            <ServiceCardLP 
                                 text_intro={text.services.news.intro}
                                 go_to_text={text.services.news.go_to}
                                 text_description={text.services.news.description}
@@ -169,7 +177,7 @@ export function Services(){
                             />
                         </Link>
                         <Link href="/contacto" className="w-auto h-auto">
-                            <ServiceCard 
+                            <ServiceCardLP 
                                 text_intro={text.services.contact.intro}
                                 go_to_text={text.services.contact.go_to}
                                 text_description={text.services.contact.description}

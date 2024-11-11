@@ -38,7 +38,7 @@ export function SolutionCard({ img_src, img_alt, img_w, img_h, solution_text, re
     );
 }
 
-export function ServiceCard({ text_intro, go_to_text, text_description, bg_img, bg_alt, icon, icon_alt, img_position}){
+export function ServiceCardLP({ text_intro, go_to_text, text_description, bg_img, bg_alt, icon, icon_alt, img_position}){
 
     return (
         <>
@@ -50,7 +50,7 @@ export function ServiceCard({ text_intro, go_to_text, text_description, bg_img, 
                 <Image
                     src={bg_img}
                     alt={bg_alt}
-                    layout="fill"
+                    fill
                     className="object-cover filter group-hover:blur-sm"
                     style={{
                         objectPosition: `${img_position}`
