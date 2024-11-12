@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { Button } from "@nextui-org/button";
 import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
+import { motion } from "framer-motion";
+import { ServiceButton } from "@/components/ui/buttons";
 
 export function SolutionCard({ img_src, img_alt, img_w, img_h, solution_text, redirection_url, button_text}){
 
@@ -70,6 +72,39 @@ export function ServiceCardLP({ text_intro, go_to_text, text_description, bg_img
                 <CardFooter className="z-10 mt-auto group-hover:hidden">
                     <h5 className="font-semibold text-h5">{text_intro}</h5>
                 </CardFooter>
+            </Card>
+        </>
+    );
+}
+
+export function CITC_Card({ title, content, button_text }){
+
+    const paragraphs = content.split('\n');
+
+    return(
+        <>
+            <Card
+                isHoverable
+                className="w-auto h-auto rounded-none"
+            >
+                <motion.div
+                    initial={{width: 500, height:550}}
+                    transition={{type: "spring",  duration: 0.5}} 
+                    className="card group p-5 flex flex-col justify-center items-center rounded-none text-regular-dark"
+                >
+                    <h5 className="font-semibold text-h5">{title}</h5>
+                    <div className="w-auto h-auto flex flex-col items-center ">
+                        {paragraphs.map((paragraph, index) => (
+                            <>
+                                <p key={index} className="font-medium text-regular">{paragraph}</p>
+                                <br key={index} />
+                            </>
+                        ))}
+                    </div>
+                    <ServiceButton>
+                        {button_text}
+                    </ServiceButton>
+                </motion.div>
             </Card>
         </>
     );

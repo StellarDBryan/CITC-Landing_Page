@@ -14,3 +14,14 @@ export function NavButton({ children, redirect_url, isSelected, hasScrolled, isL
         </>
     );
 }
+
+export function ServiceButton({ children }){
+
+    return(
+        <>
+            <button className="btn btn-ghost">
+                {children}
+            </button>
+        </>
+    );
+}
