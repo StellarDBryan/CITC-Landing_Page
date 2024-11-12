@@ -5,6 +5,7 @@ import { Button } from "@nextui-org/button";
 import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
 import { motion } from "framer-motion";
 import { ServiceButton } from "@/components/ui/buttons";
+import { useState } from "react";
 
 export function SolutionCard({ img_src, img_alt, img_w, img_h, solution_text, redirection_url, button_text}){
 
@@ -77,27 +78,39 @@ export function ServiceCardLP({ text_intro, go_to_text, text_description, bg_img
     );
 }
 
-export function CITC_Card({ title, content, button_text }){
+export function CITC_Card({ title, content, icon, button_text }){
 
+    const [hover, setHover] = useState(false);
     const paragraphs = content.split('\n');
 
     return(
         <>
             <Card
                 isHoverable
-                className="w-auto h-auto rounded-none"
+                className="w-11/12 h-auto group rounded-none border-2 border-solid border-regular-dark"
+                onMouseEnter={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
             >
                 <motion.div
                     initial={{width: 500, height:550}}
                     transition={{type: "spring",  duration: 0.5}} 
-                    className="card group p-5 flex flex-col justify-center items-center rounded-none text-regular-dark"
+                    className="card group p-5 flex flex-col justify-center items-center rounded-none text-regular-dark lg:space-y-5"
                 >
-                    <h5 className="font-semibold text-h5">{title}</h5>
-                    <div className="w-auto h-auto flex flex-col items-center ">
+                    <motion.div
+                        animate={{translateX: hover ? 5 : 0}}
+                        className="group-hover:text-blue-dark-citc flex flex-row items-center justify-center w-full h-auto space-x-3"
+                    >
+                        {icon}
+                        <h4 
+                            className="font-semibold text-h4"
+                        >
+                            {title}
+                        </h4>
+                    </motion.div>
+                    <div className="w-auto h-auto flex flex-col items-center lg:space-y-3">
                         {paragraphs.map((paragraph, index) => (
                             <>
-                                <p key={index} className="font-medium text-regular text-center w-full">{paragraph}</p>
-                                <br key={index} />
+                                <p key={index} className="font-medium text-regular t w-full">{paragraph}</p>
                             </>
                         ))}
                     </div>
