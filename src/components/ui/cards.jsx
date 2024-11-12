@@ -96,7 +96,7 @@ export function CITC_Card({ title, content, button_text }){
                     <div className="w-auto h-auto flex flex-col items-center ">
                         {paragraphs.map((paragraph, index) => (
                             <>
-                                <p key={index} className="font-medium text-regular">{paragraph}</p>
+                                <p key={index} className="font-medium text-regular text-center w-full">{paragraph}</p>
                                 <br key={index} />
                             </>
                         ))}
