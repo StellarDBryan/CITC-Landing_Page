@@ -78,7 +78,7 @@ export function ServiceCardLP({ text_intro, go_to_text, text_description, bg_img
     );
 }
 
-export function CITC_Card({ title, content, icon, button_text }){
+export function CITC_Card({ title, content, icon, button_text, visuals }){
 
     const [hover, setHover] = useState(false);
     const paragraphs = content.split('\n');
@@ -87,7 +87,7 @@ export function CITC_Card({ title, content, icon, button_text }){
         <>
             <Card
                 isHoverable
-                className="w-11/12 h-auto group rounded-none border-2 border-solid border-regular-dark"
+                className="w-11/12 flex flex-row items-center justify-center h-auto group rounded-none"
                 onMouseEnter={() => setHover(true)}
                 onMouseLeave={() => setHover(false)}
             >
@@ -110,7 +110,7 @@ export function CITC_Card({ title, content, icon, button_text }){
                     <div className="w-auto h-auto flex flex-col items-center lg:space-y-3">
                         {paragraphs.map((paragraph, index) => (
                             <>
-                                <p key={index} className="font-medium text-regular t w-full">{paragraph}</p>
+                                <p key={index} className="font-medium text-center text-regular t w-full">{paragraph}</p>
                             </>
                         ))}
                     </div>
@@ -118,6 +118,7 @@ export function CITC_Card({ title, content, icon, button_text }){
                         {button_text}
                     </ServiceButton>
                 </motion.div>
+                {visuals}
             </Card>
         </>
     );
