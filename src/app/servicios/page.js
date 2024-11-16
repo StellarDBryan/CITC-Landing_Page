@@ -1,7 +1,9 @@
 "use client";
 
+import { useState, useEffect } from 'react';
 import { Tabs } from "@/components/ui/tabs";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import Image from 'next/image';
 import { CITC_Card } from "@/components/ui/cards";
 import { InfiniteMovingCards, CITCMovingCards } from "@/components/ui/infinite_moving_cards";
 
@@ -45,6 +47,7 @@ export default function Servicios(){
                                         d="M17 9h2V7h-2zm0 4h2v-2h-2zm0 4h2v-2h-2zM1 21V11l7-5l7 5v10h-5v-6H6v6zm16 0V10l-7-5.05V3h13v18z"/>
                                 </svg>
                             }
+                            visuals={<Workspace />}
                         />
                         <CITC_Card title={text.citc.title_3} content={text.citc.content_3} button_text={text.citc.button_3}
                             icon={
@@ -162,5 +165,105 @@ export function Conections(){
                 {/* <InfiniteMovingCards direction="left" /> */}
             </div>
         </>
+    );
+}
+
+function wrap(min, max, value) {
+    // Asegúrate de que el valor esté dentro del rango
+    return ((value - min) % (max - min + 1) + (max - min + 1)) % (max - min + 1) + min;
+}
+
+export function Workspace(){
+
+    const variants = {
+        enter: (direction) => {
+          return {
+            x: direction > 0 ? 1000 : -1000,
+            opacity: 0,
+          };
+        },
+        center: {
+          zIndex: 1,
+          x: 0,
+          opacity: 1,
+        },
+        exit: (direction) => {
+          return {
+            zIndex: 0,
+            x: direction < 0 ? 1000 : -1000,
+            opacity: 0,
+          };
+        }
+      };
+      
+      /**
+       * Experimenting with distilling swipe offset and velocity into a single variable, so the
+       * less distance a user has swiped, the more velocity they need to register as a swipe.
+       * Should accomodate longer swipes and short flicks without having binary checks on
+       * just distance thresholds and velocity > 0.
+       */
+      const swipeConfidenceThreshold = 10000;
+      const swipePower = (offset, velocity) => {
+        return Math.abs(offset) * velocity;
+      };
+    
+    const images = [
+        '/images/photos/contact_img_01.jpeg', 
+        '/images/photos/LivingLabCUU_01.jpg', 
+        '/images/photos/news_img_01.jpeg'
+    ];
+    const [[page, direction], setPage] = useState([0, 0]);
+
+    // We only have 3 images, but we paginate them absolutely (ie 1, 2, 3, 4, 5...) and
+    // then wrap that within 0-2 to find our image ID in the array below. By passing an
+    // absolute page index as the `motion` component's `key` prop, `AnimatePresence` will
+    // detect it as an entirely new image. So you can infinitely paginate as few as 1 images.
+    const imageIndex = wrap(0, images.length, page);
+  
+    const paginate = (newDirection) => {
+      setPage([page + newDirection, newDirection]);
+    };
+
+    const MotionImage = motion(Image);
+  
+    return (
+        <div className='lg:w-[50vw] lg:h-[60vh] overflow-hidden flex flex-row items-center justify-center lg:space-x-3'>
+            <button className='btn btn-outline rounded-full text-blue-dark-citc hover:bg-blue-dark-citc hover:border-blue-dark-citc' onClick={() => paginate(-1)}>
+                ←
+            </button>
+            <div className='relative lg:w-[75%] lg:h-full rounded-lg overflow-hidden'>
+                <MotionImage 
+                    key={page}
+                    src={images[imageIndex]}
+                    alt={`Image ${images[imageIndex]}`}
+                    fill
+                    objectFit="cover"
+                    custom={direction}
+                    variants={variants}
+                    initial="enter"
+                    animate="center"
+                    exit="exit"
+                    transition={{
+                    x: { type: "spring", stiffness: 300, damping: 30 },
+                    opacity: { duration: 0.2 }
+                    }}
+                    drag="x"
+                    dragConstraints={{ left: 0, right: 0 }}
+                    dragElastic={1}
+                    onDragEnd={(e, { offset, velocity }) => {
+                    const swipe = swipePower(offset.x, velocity.x);
+        
+                    if (swipe < -swipeConfidenceThreshold) {
+                        paginate(1);
+                    } else if (swipe > swipeConfidenceThreshold) {
+                        paginate(-1);
+                    }
+                    }}
+                />
+            </div>
+            <button className='btn btn-outline rounded-full text-blue-dark-citc hover:bg-blue-dark-citc hover:border-blue-dark-citc' onClick={() => paginate(1)}>
+                →
+            </button>
+        </div>
     );
 }
