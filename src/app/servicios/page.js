@@ -5,7 +5,8 @@ import { Tabs } from "@/components/ui/tabs";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from 'next/image';
 import { CITC_Card } from "@/components/ui/cards";
-import { InfiniteMovingCards, CITCMovingCards } from "@/components/ui/infinite_moving_cards";
+import { CITCMovingCards } from "@/components/ui/infinite_moving_cards";
+import { FeaturesSectionDemo } from '@/components/ui/feature_section';
 
 const text = {
     'citc': {
@@ -24,6 +25,18 @@ const text = {
 }
 
 export default function Servicios(){
+
+    const workspaceImg = [
+        '/images/photos/contact_img_01.jpeg', 
+        '/images/photos/LivingLabCUU_01.jpg', 
+        '/images/photos/news_img_01.jpeg'
+    ];
+
+    const eventsImg = [
+        '/images/photos/contact_img_01.jpeg', 
+        '/images/photos/LivingLabCUU_01.jpg', 
+        '/images/photos/news_img_01.jpeg'
+    ];
 
     const services = [
         {
@@ -47,7 +60,7 @@ export default function Servicios(){
                                         d="M17 9h2V7h-2zm0 4h2v-2h-2zm0 4h2v-2h-2zM1 21V11l7-5l7 5v10h-5v-6H6v6zm16 0V10l-7-5.05V3h13v18z"/>
                                 </svg>
                             }
-                            visuals={<Workspace />}
+                            visuals={<ServiceCarousel images={workspaceImg} />}
                         />
                         <CITC_Card title={text.citc.title_3} content={text.citc.content_3} button_text={text.citc.button_3}
                             icon={
@@ -56,13 +69,19 @@ export default function Servicios(){
                                         d="M10 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1" class="clr-i-solid clr-i-solid-path-1"/>
                                 <path fill="currentColor" d="M26 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1" class="clr-i-solid clr-i-solid-path-2"/><path fill="currentColor" d="M32.25 6h-4v3a2.2 2.2 0 0 1-4.4 0V6H12.2v3a2.2 2.2 0 0 1-4.4 0V6h-4A1.78 1.78 0 0 0 2 7.81v22.38A1.78 1.78 0 0 0 3.75 32h28.5A1.78 1.78 0 0 0 34 30.19V7.81A1.78 1.78 0 0 0 32.25 6m-6.31 10.58l-9.67 9.67L11 20.94A1.36 1.36 0 0 1 12.9 19l3.38 3.38L24 14.66a1.36 1.36 0 1 1 1.93 1.93Z" class="clr-i-solid clr-i-solid-path-3"/><path fill="none" d="M0 0h36v36H0z"/></svg>
                             }
+                            visuals={<ServiceCarousel images={eventsImg} />}
                         />
                     </div>
                 </>
             ),
         }, 
         {
-            title: 'Living Lab CUU'
+            title: 'Living Lab CUU', 
+            content: (
+                <>
+                    <FeaturesSectionDemo />
+                </>
+            ),
         }
     ]
 
@@ -173,7 +192,7 @@ function wrap(min, max, value) {
     return ((value - min) % (max - min + 1) + (max - min + 1)) % (max - min + 1) + min;
 }
 
-export function Workspace(){
+export function ServiceCarousel({ images }){
 
     const variants = {
         enter: (direction) => {
@@ -207,11 +226,6 @@ export function Workspace(){
         return Math.abs(offset) * velocity;
       };
     
-    const images = [
-        '/images/photos/contact_img_01.jpeg', 
-        '/images/photos/LivingLabCUU_01.jpg', 
-        '/images/photos/news_img_01.jpeg'
-    ];
     const [[page, direction], setPage] = useState([0, 0]);
 
     // We only have 3 images, but we paginate them absolutely (ie 1, 2, 3, 4, 5...) and
@@ -228,8 +242,10 @@ export function Workspace(){
   
     return (
         <div className='lg:w-[50vw] lg:h-[60vh] overflow-hidden flex flex-row items-center justify-center lg:space-x-3'>
-            <button className='btn btn-outline rounded-full text-blue-dark-citc hover:bg-blue-dark-citc hover:border-blue-dark-citc' onClick={() => paginate(-1)}>
-                ←
+            <button className="btn btn-outline group rounded-full hover:text-gray-clear-citc hover:bg-blue-dark-citc" onClick={() => {paginate(-1)}}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" className='rotate-180'>
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.5 12h15m0 0l-5.625-6m5.625 6l-5.625 6"/>
+                </svg>
             </button>
             <div className='relative lg:w-[75%] lg:h-full rounded-lg overflow-hidden'>
                 <MotionImage 
@@ -261,8 +277,10 @@ export function Workspace(){
                     }}
                 />
             </div>
-            <button className='btn btn-outline rounded-full text-blue-dark-citc hover:bg-blue-dark-citc hover:border-blue-dark-citc' onClick={() => paginate(1)}>
-                →
+            <button className="btn btn-outline group rounded-full hover:text-gray-clear-citc hover:bg-blue-dark-citc" onClick={() => {paginate(1)}}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24">
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.5 12h15m0 0l-5.625-6m5.625 6l-5.625 6"/>
+                </svg>
             </button>
         </div>
     );
