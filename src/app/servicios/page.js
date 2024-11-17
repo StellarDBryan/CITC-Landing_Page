@@ -21,6 +21,34 @@ const text = {
         'title_3': 'Eventos', 
         'content_3': '¡Sé parte de eventos que transforman la industria IT!\n Desde conferencias hasta hackathones, fomentamos el aprendizaje, la innovación y el crecimiento en cada encuentro. \n Por medio de nuestras redes sociales y el Living Lab, promocionamos distintos eventos empresariales y de innovación, y ofrecemos nuestro espacio como sede para estas iniciativas. \n ¡Contáctanos y conoce muchos más eventos en nuestras redes sociales!', 
         'button_3': 'Ver eventos en redes',
+    }, 
+    'livingLab': {
+        features: [
+            {
+                title: "Espacio de Trabajo",
+                description: "Ofrecemos un entorno colaborativo exclusivo y equipado con tecnología de punta para que empresas y emprendedores desarrollen sus proyectos y trabajen en equipo de manera eficiente y productiva."
+            },
+            {
+                title: "Salas de reuniones",
+                description: "Disponemos de un auditorio y salas equipadas con las herramientas necesarias para llevar a cabo reuniones estratégicas, presentaciones y sesiones de trabajo en un ambiente profesional y cómodo."
+            },
+            {
+                title: "Eventos",
+                description: "Somos sede de distintos eventos donde se abordan temas relevantes del sector tecnológico, innovación y emprendimiento, tales como conferencias y talleres, con el objetivo de fomentar el aprendizaje continuo, la actualización profesional y el networking entre los participantes."
+            },
+            {
+                title: "Cursos",
+                description: "En nuestras instalaciones ofrecemos distintos cursos relacionados con desarrollo tecnológico, validados y apoyados por instituciones como CENALTEC, con el fin de ofrecer formación y capacitación de calidad en nuestra región."
+            },
+            {
+                title: "Impresión 3D",
+                description: "Descubre un medio de fabricación con nuestras 6 impresoras 3D. En el Living Lab CUU, ponemos la innovación al alcance de la comunidad, permitiendo la creación de prototipos, piezas personalizadas y mucho más. ¡Imagina, diseña e imprime con nosotros!"
+            },
+            {
+                title: "Cowork",
+                description: "Brindamos un espacio de trabajo para la comunidad, en el cual se podrá hacer networking con más empresas. Un espacio diseñado para inspirar colaboración, innovación y crecimiento. Conéctate con empresas y profesionales, amplía tu red de contactos, y trabaja en un ambiente que impulsa tu éxito."
+            }
+        ]
     }
 }
 
@@ -79,7 +107,7 @@ export default function Servicios(){
             title: 'Living Lab CUU', 
             content: (
                 <>
-                    <FeaturesSectionDemo />
+                    <FeaturesSectionDemo features={text.livingLab.features} />
                 </>
             ),
         }
