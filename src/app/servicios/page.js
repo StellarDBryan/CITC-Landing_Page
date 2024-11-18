@@ -342,7 +342,13 @@ export function ServiceCarousel({ images }){
     const imageIndex = wrap(0, images.length, page);
   
     const paginate = (newDirection) => {
-      setPage([page + newDirection, newDirection]);
+        const newPage = page + newDirection; 
+        if(newPage >= 0 && newPage < images.length)
+            setPage([page + newDirection, newDirection]);
+        else if(newPage < 0)
+            setPage([images.length-1], newDirection);
+        else if(newPage >= images.length)
+            setPage([newPage-images.length], newDirection);
     };
 
     const MotionImage = motion(Image);
