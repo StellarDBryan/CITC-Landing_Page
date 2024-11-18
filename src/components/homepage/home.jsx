@@ -24,7 +24,7 @@ const text = {
             'intro': '¡Ven a conocernos en nuestras instalaciones!', 
             'go_to': 'Ir a Servicios →',
             'description': 'Conoce nuestras instalaciones y apoyos que ofrecemos para el impulso tecnológico en Chihuahua',
-            'bg_img': '/images/photos/LivingLabCUU_01.jpg', 
+            'bg_img': '/images/photos/workspace/LivingLabCUU_01.jpg', 
             'bg_alt': 'Living Lab CUU',
             'icon': '/images/icons/service_white.png',
             'icon_alt': 'Service Icon',

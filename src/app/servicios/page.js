@@ -59,9 +59,16 @@ const text = {
 export default function Servicios(){
 
     const workspaceImg = [
-        '/images/photos/contact_img_01.jpeg', 
-        '/images/photos/LivingLabCUU_01.jpg', 
-        '/images/photos/news_img_01.jpeg',
+        '/images/photos/workspace/LivingLabCUU_01.jpg', 
+        '/images/photos/workspace/LivingLabCUU_02.jpg', 
+        '/images/photos/workspace/LivingLabCUU_03.jpg', 
+        '/images/photos/workspace/LivingLabCUU_04.jpg', 
+        '/images/photos/workspace/LivingLabCUU_05.jpg', 
+        '/images/photos/workspace/LivingLabCUU_06.jpg', 
+        '/images/photos/workspace/LivingLabCUU_07.jpg', 
+        '/images/photos/workspace/LivingLabCUU_08.jpg', 
+        '/images/photos/workspace/LivingLabCUU_09.jpg', 
+        '/images/photos/workspace/LivingLabCUU_10.jpg'
     ];
 
     const eventsImg = [
@@ -128,7 +135,7 @@ export default function Servicios(){
 
     return(
         <>
-            <section className="w-full lg:h-auto flex flex-col items-center justify-center dark:text-gray-clear-citc">
+            <section className="w-full lg:h-auto space-y-5 flex flex-col items-center justify-center dark:text-gray-clear-citc">
                 <div className='relative flex items-center w-full lg:h-[70vh] [mask-image:linear-gradient(to_top,transparent,white_20%,white_80%,transparent)]'>
                     <Image 
                         src="/images/photos/events/events_01.jpg"
@@ -173,11 +180,11 @@ export default function Servicios(){
                 </div>
                 <div className='relative flex items-center w-full lg:h-[70vh] [mask-image:linear-gradient(to_top,transparent,white_20%,white_80%,transparent)]'>
                     <Image 
-                        src="/images/photos/LivingLabCUU_01.jpg"
+                        src="/images/photos/workspace/LivingLabCUU_01.jpg"
                         alt="LivingLabCUU Image"
                         fill
                         objectFit='cover'
-                        style={{ objectPosition: 'center left', opacity: 0.8}}
+                        style={{ objectPosition: 'center left', opacity: 1}}
                     />
                     <div className='flex flex-col lg:w-[50vw] lg:pl-20 lg:space-y-5 h-full justify-center p-5 z-20 bg-gradient-to-r from-gray-clear-citc from-70% rounded-lg'>
                         <Image 
