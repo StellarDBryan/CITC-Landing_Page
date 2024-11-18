@@ -25,6 +25,8 @@ const text = {
         'button_3': 'Ver eventos en redes',
     }, 
     'livingLab': {
+        'title': 'Living Lab CUU', 
+        'intro': 'El Laboratorio de Innovación Tecnológica de Chihuahua. Un espacio donde la tecnología y la creatividad se unen para impulsar proyectos y fomentar la colaboración', 
         features: [
             {
                 title: "Espacio de Trabajo",
@@ -136,7 +138,7 @@ export default function Servicios(){
                         style={{ objectPosition: '0% 45%', opacity: 0.8}}
                     />
                     <div className='flex flex-col lg:w-[50vw] lg:pl-20 h-full justify-center p-5 z-20 bg-gradient-to-r from-gray-clear-citc from-50% rounded-lg'>
-                        <h3 className='text-h1 text-blue-dark-citc font-semibold items-center justify-center'>{text.citc.title}</h3>
+                        <h3 className='text-h1 text-blue-dark-citc font-bold items-center justify-center'>{text.citc.title}</h3>
                         <h6 className='text-h6 text-regular-dark font-semibold lg:w-9/12'>{text.citc.intro}</h6>
                     </div>
                 </div>
@@ -168,6 +170,24 @@ export default function Servicios(){
                         }
                         visuals={<ServiceCarousel images={eventsImg} />}
                     />
+                </div>
+                <div className='relative flex items-center w-full lg:h-[70vh] [mask-image:linear-gradient(to_top,transparent,white_20%,white_80%,transparent)]'>
+                    <Image 
+                        src="/images/photos/LivingLabCUU_01.jpg"
+                        alt="LivingLabCUU Image"
+                        fill
+                        objectFit='cover'
+                        style={{ objectPosition: 'center left', opacity: 0.8}}
+                    />
+                    <div className='flex flex-col lg:w-[50vw] lg:pl-20 lg:space-y-5 h-full justify-center p-5 z-20 bg-gradient-to-r from-gray-clear-citc from-70% rounded-lg'>
+                        <Image 
+                            src="/images/citc_logos/LivingLabCUU_logo.png"
+                            alt="Living Lab CUU Logo"
+                            width={500}
+                            height={500}
+                        />
+                        <h6 className='text-h6 text-regular-dark font-semibold lg:w-9/12'>{text.livingLab.intro}</h6>
+                    </div>
                 </div>
                 <FeaturesSectionDemo features={text.livingLab.features} icons={livingLabIcons} />
             </section>
@@ -262,7 +282,6 @@ export function Conections(){
                 >
                     <CITCMovingCards items={associates} direction="left" />
                 </motion.div>
-                {/* <InfiniteMovingCards direction="left" /> */}
             </div>
         </>
     );
