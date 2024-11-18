@@ -10,15 +10,17 @@ import { FeaturesSectionDemo } from '@/components/ui/feature_section';
 
 const text = {
     'citc': {
-        'title_1': 'Conexión', 
-        'subtitle_11': 'Nuestros socios',
-        'subtitle_12': 'Universidades con las que contactamos',
+        'title': 'Servicios',
+        'intro': 'Explora y descubre nuestros servicios que impulsan el desarrollo tecnológico en Chihuahua y conecta al sector IT ',
+        'subtitle_1': 'Conexión', 
+        'associates': 'Nuestros socios',
+        'universities': 'Universidades con las que contactamos',
         'content_1': '¡Establece conexiones clave!\n Acércate con empresas líderes del sector de TI y universidades. Facilitamos relaciones estratégicas que potencian tu crecimiento profesional y empresarial. \n Contactamos con distintas instituciones con las que tenemos convenio para que nuestros socios tengan más cercanía y contacto directo con la comunidad estudiantil y empresarial. \n Empieza por contactarnos en el apartado de Contacto. ',
         'button_1': 'Contactar',
-        'title_2': 'Espacio', 
+        'subtitle_2': 'Espacio', 
         'button_2': 'Ver Living Lab CUU',
         'content_2': '¡Trabaja y colabora en el corazón del Networking de Chihuahua!\n Nuestro Living Lab CUU es más que un espacio de coworking; es un hub de innovación donde las ideas florecen y las oportunidades surgen. \nNuestras instalaciones cuentan con distintos planes de servicio de renta por el espacio, desde tener una oficina exclusiva para ti, como hasta usar nuestro auditorio y el espacio de cowork. \nCheca cada servicio en el apartado de Living Lab CUU. ', 
-        'title_3': 'Eventos', 
+        'subtitle_3': 'Eventos', 
         'content_3': '¡Sé parte de eventos que transforman la industria IT!\n Desde conferencias hasta hackathones, fomentamos el aprendizaje, la innovación y el crecimiento en cada encuentro. \n Por medio de nuestras redes sociales y el Living Lab, promocionamos distintos eventos empresariales y de innovación, y ofrecemos nuestro espacio como sede para estas iniciativas. \n ¡Contáctanos y conoce muchos más eventos en nuestras redes sociales!', 
         'button_3': 'Ver eventos en redes',
     }, 
@@ -81,7 +83,7 @@ export default function Servicios(){
             content: (
                 <>
                     <div className="flex flex-col flex-wrap items-center justify-center">
-                        <CITC_Card title={text.citc.title_1} content={text.citc.content_1} button_text={text.citc.button_1}
+                        <CITC_Card title={text.citc.subtitle_1} content={text.citc.content_1} button_text={text.citc.button_1}
                             icon={
                                 <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 24 24">
                                     <path fill="currentColor" 
@@ -90,7 +92,7 @@ export default function Servicios(){
                             }
                             visuals={<Conections />}
                         />
-                        <CITC_Card title={text.citc.title_2} content={text.citc.content_2} button_text={text.citc.button_2}
+                        <CITC_Card title={text.citc.subtitle_2} content={text.citc.content_2} button_text={text.citc.button_2}
                             icon={
                                 <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 24 24">
                                     <path fill="currentColor" 
@@ -99,7 +101,7 @@ export default function Servicios(){
                             }
                             visuals={<ServiceCarousel images={workspaceImg} />}
                         />
-                        <CITC_Card title={text.citc.title_3} content={text.citc.content_3} button_text={text.citc.button_3}
+                        <CITC_Card title={text.citc.subtitle_3} content={text.citc.content_3} button_text={text.citc.button_3}
                             icon={
                                 <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 36 36">
                                     <path fill="currentColor" 
@@ -125,8 +127,14 @@ export default function Servicios(){
     return(
         <>
             <section className="w-full lg:h-auto flex flex-col items-center justify-center lg:pt-28 dark:text-gray-clear-citc">
+                <div className='flex items-center w-full lg:h-[50vh] border border-solid border-black'>
+                    <div className='flex flex-col lg:w-[50vw] h-auto p-5'>
+                        <h3 className='text-h1 text-blue-dark-citc font-semibold items-center justify-center'>{text.citc.title}</h3>
+                        <h6 className='text-h6 text-regular-dark font-medium'>{text.citc.intro}</h6>
+                    </div>
+                </div>
                 <div className="flex flex-col items-center justify-center">
-                    <CITC_Card title={text.citc.title_1} content={text.citc.content_1} button_text={text.citc.button_1}
+                    <CITC_Card title={text.citc.subtitle_1} content={text.citc.content_1} button_text={text.citc.button_1}
                         icon={
                             <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 24 24">
                                 <path fill="currentColor" 
@@ -135,7 +143,7 @@ export default function Servicios(){
                         }
                         visuals={<Conections />}
                     />
-                    <CITC_Card title={text.citc.title_2} content={text.citc.content_2} button_text={text.citc.button_2}
+                    <CITC_Card title={text.citc.subtitle_2} content={text.citc.content_2} button_text={text.citc.button_2}
                         icon={
                             <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 24 24">
                                 <path fill="currentColor" 
@@ -144,7 +152,7 @@ export default function Servicios(){
                         }
                         visuals={<ServiceCarousel images={workspaceImg} />}
                     />
-                    <CITC_Card title={text.citc.title_3} content={text.citc.content_3} button_text={text.citc.button_3}
+                    <CITC_Card title={text.citc.subtitle_3} content={text.citc.content_3} button_text={text.citc.button_3}
                         icon={
                             <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 36 36">
                                 <path fill="currentColor" 
@@ -233,14 +241,14 @@ export function Conections(){
     return(
         <>
             <div className="lg:max-w-[45vw] flex flex-col h-full overflow-hidden">
-                <h5 className="w-full text-center text-h5 font-semibold text-blue-dark-citc">{text.citc.subtitle_11}</h5>
+                <h5 className="w-full text-center text-h5 font-semibold text-blue-dark-citc">{text.citc.associates}</h5>
                 <motion.div 
                     initial={{scale: 0.8}}
                     className="w-auto h-auto max-h-52"
                 >
                     <CITCMovingCards items={associates} direction="right" />
                 </motion.div>
-                <h5 className="w-full text-center text-h5 font-semibold text-blue-dark-citc">{text.citc.subtitle_12}</h5>
+                <h5 className="w-full text-center text-h5 font-semibold text-blue-dark-citc">{text.citc.universities}</h5>
                 <motion.div 
                     initial={{scale: 0.8}}
                     className="w-auto h-auto max-h-52"
