@@ -126,11 +126,18 @@ export default function Servicios(){
 
     return(
         <>
-            <section className="w-full lg:h-auto flex flex-col items-center justify-center lg:pt-28 dark:text-gray-clear-citc">
-                <div className='flex items-center w-full lg:h-[50vh] border border-solid border-black'>
-                    <div className='flex flex-col lg:w-[50vw] h-auto p-5'>
+            <section className="w-full lg:h-auto flex flex-col items-center justify-center dark:text-gray-clear-citc">
+                <div className='relative flex items-center w-full lg:h-[70vh] [mask-image:linear-gradient(to_top,transparent,white_20%,white_80%,transparent)]'>
+                    <Image 
+                        src="/images/photos/events/events_01.jpg"
+                        alt="Events Image"
+                        fill
+                        objectFit='cover'
+                        style={{ objectPosition: '0% 45%', opacity: 0.8}}
+                    />
+                    <div className='flex flex-col lg:w-[50vw] lg:pl-20 h-full justify-center p-5 z-20 bg-gradient-to-r from-gray-clear-citc from-50% rounded-lg'>
                         <h3 className='text-h1 text-blue-dark-citc font-semibold items-center justify-center'>{text.citc.title}</h3>
-                        <h6 className='text-h6 text-regular-dark font-medium'>{text.citc.intro}</h6>
+                        <h6 className='text-h6 text-regular-dark font-semibold lg:w-9/12'>{text.citc.intro}</h6>
                     </div>
                 </div>
                 <div className="flex flex-col items-center justify-center">
