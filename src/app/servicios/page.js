@@ -72,9 +72,15 @@ export default function Servicios(){
     ];
 
     const eventsImg = [
-        '/images/photos/contact_img_01.jpeg', 
-        '/images/photos/LivingLabCUU_01.jpg', 
-        '/images/photos/news_img_01.jpeg', 
+        '/images/photos/events/events_01.jpg', 
+        '/images/photos/events/events_02.jpeg', 
+        '/images/photos/events/events_03.jpeg', 
+        '/images/photos/events/events_04.jpeg', 
+        '/images/photos/events/events_05.jpg', 
+        '/images/photos/events/events_06.jpeg', 
+        '/images/photos/events/events_07.jpeg', 
+        '/images/photos/events/events_08.jpeg', 
+        '/images/photos/events/events_09.jpeg', 
     ];
 
     const livingLabIcons = [
