@@ -77,7 +77,7 @@ export function ServiceCardLP({ text_intro, go_to_text, text_description, bg_img
     );
 }
 
-export function CITC_Card({ title, content, icon, buttons, visuals }){
+export function CITC_Card({id, title, content, icon, buttons, visuals }){
 
     const [hover, setHover] = useState(false);
     const paragraphs = content.split('\n');
@@ -85,6 +85,7 @@ export function CITC_Card({ title, content, icon, buttons, visuals }){
     return(
         <>
             <Card
+                id={id}
                 isHoverable
                 className="w-11/12 flex flex-row items-center justify-center h-auto group rounded-none"
                 onMouseEnter={() => setHover(true)}

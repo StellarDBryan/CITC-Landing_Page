@@ -83,7 +83,7 @@ export function About(){
 
     return (
         <>
-            <section className="relative bg-[url('/images/backgrounds/LP_01.jpg')] bg-cover bg-center lg:my-10 lg:items-center lg:h-auto text-gray-dark-citc">
+            <section id="AboutUs" className="relative bg-[url('/images/backgrounds/LP_01.jpg')] bg-cover bg-center lg:my-10 lg:items-center lg:h-auto text-gray-dark-citc">
                 <div className="p-10 w-full h-full bg-light-gradient flex flex-row items-center justify-center space-x-30">
                     <div className="rounded-3xl p-3 lg:mx-10 space-y-5 lg:w-5/12 bg-gray-clear-citc bg-opacity-50">
                         <h2 className="text-h1 font-semibold text-blue-dark-citc">{text.about.title}</h2>

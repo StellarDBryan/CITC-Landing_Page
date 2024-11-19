@@ -152,7 +152,7 @@ export default function Servicios(){
                         }
                         visuals={<ServiceCarousel images={workspaceImg} />}
                     />
-                    <CITC_Card title={text.citc.subtitle_3} content={text.citc.content_3} 
+                    <CITC_Card id="Events" title={text.citc.subtitle_3} content={text.citc.content_3} 
                         icon={
                             <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 36 36">
                                 <path fill="currentColor" 
