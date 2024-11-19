@@ -66,23 +66,23 @@ export default function Servicios(){
 
     const workspaceImg = [
         '/images/photos/workspace/LivingLabCUU_01.jpg', 
-        '/images/photos/workspace/LivingLabCUU_02.jpg', 
-        '/images/photos/workspace/LivingLabCUU_03.jpg', 
-        '/images/photos/workspace/LivingLabCUU_04.jpg', 
+        '/images/photos/workspace/LivingLabCUU_02.JPG', 
+        '/images/photos/workspace/LivingLabCUU_03.JPG', 
+        '/images/photos/workspace/LivingLabCUU_04.JPG', 
         '/images/photos/workspace/LivingLabCUU_05.jpg', 
-        '/images/photos/workspace/LivingLabCUU_06.jpg', 
-        '/images/photos/workspace/LivingLabCUU_07.jpg', 
-        '/images/photos/workspace/LivingLabCUU_08.jpg', 
-        '/images/photos/workspace/LivingLabCUU_09.jpg', 
-        '/images/photos/workspace/LivingLabCUU_10.jpg'
-    ];
+        '/images/photos/workspace/LivingLabCUU_06.JPG', 
+        '/images/photos/workspace/LivingLabCUU_07.JPG', 
+        '/images/photos/workspace/LivingLabCUU_08.JPG', 
+        '/images/photos/workspace/LivingLabCUU_09.JPG', 
+        '/images/photos/workspace/LivingLabCUU_10.JPG', 
+    ]; 
 
     const eventsImg = [
         '/images/photos/events/events_01.jpg', 
         '/images/photos/events/events_02.jpeg', 
         '/images/photos/events/events_03.jpeg', 
         '/images/photos/events/events_04.jpeg', 
-        '/images/photos/events/events_05.jpg', 
+        '/images/photos/events/events_05.JPG', 
         '/images/photos/events/events_06.jpeg', 
         '/images/photos/events/events_07.jpeg', 
         '/images/photos/events/events_08.jpeg', 
@@ -179,7 +179,7 @@ export default function Servicios(){
                     />
                     <div className='flex flex-col lg:w-[50vw] lg:pl-20 lg:space-y-5 h-full justify-center p-5 z-20 bg-gradient-to-r from-gray-clear-citc from-70% rounded-lg'>
                         <Image 
-                            src="/images/citc_logos/LivingLabCUU_logo.png"
+                            src="/images/logos/citc/LivingLabCUU_logo.png"
                             alt="Living Lab CUU Logo"
                             width={500}
                             height={500}
@@ -372,7 +372,7 @@ export function ServiceCarousel({ images }){
   
     return (
         <div className='lg:w-[50vw] lg:h-[60vh] overflow-hidden flex flex-row items-center justify-center lg:space-x-3'>
-            <button className="btn btn-outline group rounded-full hover:text-gray-clear-citc hover:bg-blue-dark-citc" onClick={() => {paginate(-1)}}>
+            <button className="btn btn-outline group rounded-full hover:text-gray-clear-citc hover:bg-blue-dark-citc text-regular-dark hover:border-blue-dark-citc" onClick={() => {paginate(-1)}}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" className='rotate-180'>
                     <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.5 12h15m0 0l-5.625-6m5.625 6l-5.625 6"/>
                 </svg>
@@ -407,7 +407,7 @@ export function ServiceCarousel({ images }){
                     }}
                 />
             </div>
-            <button className="btn btn-outline group rounded-full hover:text-gray-clear-citc hover:bg-blue-dark-citc" onClick={() => {paginate(1)}}>
+            <button className="btn btn-outline group rounded-full hover:text-gray-clear-citc hover:bg-blue-dark-citc text-regular-dark hover:border-blue-dark-citc" onClick={() => {paginate(1)}}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24">
                     <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.5 12h15m0 0l-5.625-6m5.625 6l-5.625 6"/>
                 </svg>

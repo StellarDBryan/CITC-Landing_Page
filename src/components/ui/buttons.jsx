@@ -23,7 +23,7 @@ export function ServiceButton({ children }){
 
     return(
         <>
-            <button className="btn btn-outline max-w-96 group rounded-full hover:text-gray-clear-citc hover:bg-blue-dark-citc"
+            <button className="btn btn-outline max-w-96 group rounded-full text-regular-dark hover:text-gray-clear-citc hover:bg-blue-dark-citc hover:border-blue-dark-citc"
                 onMouseEnter={() => setHover(true)} 
                 onMouseLeave={() => setHover(false)}
             >

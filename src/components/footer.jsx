@@ -53,13 +53,13 @@ export default function Footer(){
                 <div className="h-full">
                     <Link href="/" className="w-auto h-auto">
                         <Image 
-                            src="/images/citc_logos/CITC_horiz-04.png"
+                            src="/images/logos/citc/CITC_horiz-04.png"
                             alt="CITC Logo"
                             width={250}
                             height={250}
                         />
                     </Link>
-                    <h6 className="text-small-1">© 2024 Chihuahua IT Cluster. Todos los derechos reservados.</h6>
+                    <small className="text-small-1">© 2024 Chihuahua IT Cluster. Todos los derechos reservados.</small>
                 </div>
                 <div className="h-full space-y-4 lg:w-full">
                     <ul className="space-y-1">
