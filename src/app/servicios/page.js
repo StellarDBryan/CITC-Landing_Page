@@ -185,7 +185,7 @@ export default function Servicios(){
                             height={500}
                         />
                         <h6 className='text-h6 text-regular-dark font-semibold lg:w-9/12'>{text.livingLab.intro}</h6>
-                        <a href='https://livinglab.io/home?&v=latest' target="_blank" rel="noopener noreferrer">
+                        <a href='https://livinglab.io/home?&v=latest' target="_blank" rel="noopener noreferrer" className="inline-block max-w-[27%] rounded-full">
                             <ServiceButton>
                                 {text.livingLab.button}{text.livingLab.officialSite}
                             </ServiceButton>
