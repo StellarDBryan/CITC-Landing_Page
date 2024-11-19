@@ -4,7 +4,6 @@ import Image from "next/image";
 import { Button } from "@nextui-org/button";
 import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
 import { motion } from "framer-motion";
-import { ServiceButton } from "@/components/ui/buttons";
 import { useState } from "react";
 
 export function SolutionCard({ img_src, img_alt, img_w, img_h, solution_text, redirection_url, button_text}){
@@ -78,7 +77,7 @@ export function ServiceCardLP({ text_intro, go_to_text, text_description, bg_img
     );
 }
 
-export function CITC_Card({ title, content, icon, button_text, visuals }){
+export function CITC_Card({ title, content, icon, buttons, visuals }){
 
     const [hover, setHover] = useState(false);
     const paragraphs = content.split('\n');
@@ -114,9 +113,9 @@ export function CITC_Card({ title, content, icon, button_text, visuals }){
                             </>
                         ))}
                     </div>
-                    <ServiceButton>
-                        {button_text}
-                    </ServiceButton>
+                    <div className="w-full h-auto lg:space-x-3 flex flex-wrap items-center justify-center">
+                        { buttons }
+                    </div>
                 </motion.div>
                 {visuals}
             </Card>
