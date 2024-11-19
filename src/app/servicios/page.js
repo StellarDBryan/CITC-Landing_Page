@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { Tabs } from "@/components/ui/tabs";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from 'next/image';
+import Link from 'next/link';
 import { CITC_Card } from "@/components/ui/cards";
 import { ServiceButton } from "@/components/ui/buttons";
 import { CITCMovingCards } from "@/components/ui/infinite_moving_cards";
@@ -120,9 +121,11 @@ export default function Servicios(){
                         }
                         buttons={
                             <>
-                                <ServiceButton>
-                                    {text.citc.button_11}
-                                </ServiceButton>
+                                <Link href={'/contacto'} className='w-auto h-auto'>
+                                    <ServiceButton>
+                                        {text.citc.button_11}
+                                    </ServiceButton>
+                                </Link>
                                 <ServiceButton>
                                     {text.citc.button_12}
                                 </ServiceButton>
@@ -138,9 +141,11 @@ export default function Servicios(){
                             </svg>
                         }
                         buttons={
-                            <ServiceButton>
-                                {text.citc.button_2}
-                            </ServiceButton>
+                            <Link href={'#LivingLabCUU'} className='w-auto h-auto'>
+                                <ServiceButton>
+                                    {text.citc.button_2}
+                                </ServiceButton>
+                            </Link>
                         }
                         visuals={<ServiceCarousel images={workspaceImg} />}
                     />
@@ -152,14 +157,16 @@ export default function Servicios(){
                             <path fill="currentColor" d="M26 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1" class="clr-i-solid clr-i-solid-path-2"/><path fill="currentColor" d="M32.25 6h-4v3a2.2 2.2 0 0 1-4.4 0V6H12.2v3a2.2 2.2 0 0 1-4.4 0V6h-4A1.78 1.78 0 0 0 2 7.81v22.38A1.78 1.78 0 0 0 3.75 32h28.5A1.78 1.78 0 0 0 34 30.19V7.81A1.78 1.78 0 0 0 32.25 6m-6.31 10.58l-9.67 9.67L11 20.94A1.36 1.36 0 0 1 12.9 19l3.38 3.38L24 14.66a1.36 1.36 0 1 1 1.93 1.93Z" class="clr-i-solid clr-i-solid-path-3"/><path fill="none" d="M0 0h36v36H0z"/></svg>
                         }
                         buttons={
-                            <ServiceButton>
-                                {text.citc.button_3}
-                            </ServiceButton>
+                            <a href='https://www.facebook.com/ChihITCluster/?locale=es_LA' target="_blank" rel="noopener noreferrer">
+                                <ServiceButton>
+                                    {text.citc.button_3}
+                                </ServiceButton>
+                            </a>
                         }
                         visuals={<ServiceCarousel images={eventsImg} />}
                     />
                 </div>
-                <div className='relative flex items-center w-full lg:h-[70vh] [mask-image:linear-gradient(to_top,transparent,white_20%,white_80%,transparent)]'>
+                <div id='LivingLabCUU' className='relative flex items-center w-full lg:h-[70vh] [mask-image:linear-gradient(to_top,transparent,white_20%,white_80%,transparent)]'>
                     <Image 
                         src="/images/photos/workspace/LivingLabCUU_01.jpg"
                         alt="LivingLabCUU Image"
@@ -251,7 +258,20 @@ export function Conections(){
             image: '/images/logos/associates/Tisco_edited.png', 
         },
     ];
-    const universities = [];
+    const universities = [
+        {
+            name: 'ITCHII', 
+            image: '/images/logos/universities/ITCHII.png', 
+        }, 
+        {
+            name: 'Tec Milenio CUU', 
+            image: '/images/logos/universities/TecMilenio.png', 
+        }, 
+        {
+            name: 'ULSA CUU', 
+            image: '/images/logos/universities/ULSA.png', 
+        }, 
+    ];
 
     return(
         <>
@@ -268,7 +288,7 @@ export function Conections(){
                     initial={{scale: 0.8}}
                     className="w-auto h-auto max-h-52"
                 >
-                    <CITCMovingCards items={associates} direction="left" />
+                    <CITCMovingCards items={universities} direction="left" />
                 </motion.div>
             </div>
         </>
