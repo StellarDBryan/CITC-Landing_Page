@@ -30,6 +30,9 @@ const text = {
     'livingLab': {
         'title': 'Living Lab CUU', 
         'intro': 'El Laboratorio de Innovación Tecnológica de Chihuahua. Un espacio donde la tecnología y la creatividad se unen para impulsar proyectos y fomentar la colaboración', 
+        'officialSite': 'Sitio Oficial',
+        'button': 'Ir al ', 
+        'closing': 'Tenemos distintos planes para el acceso a distintos servicios que ofrecemos en Living Lab CUU. Ve precios, disponibilidad y todos lo detalles en su ',
         features: [
             {
                 title: "Espacio de Trabajo",
@@ -182,9 +185,22 @@ export default function Servicios(){
                             height={500}
                         />
                         <h6 className='text-h6 text-regular-dark font-semibold lg:w-9/12'>{text.livingLab.intro}</h6>
+                        <a href='https://livinglab.io/home?&v=latest' target="_blank" rel="noopener noreferrer">
+                            <ServiceButton>
+                                {text.livingLab.button}{text.livingLab.officialSite}
+                            </ServiceButton>
+                        </a>
                     </div>
                 </div>
-                <FeaturesSectionDemo features={text.livingLab.features} icons={livingLabIcons} />
+                <div className='flex flex-col items-center justify-around space-y-3 w-auto h-auto pb-5'>
+                    <FeaturesSectionDemo features={text.livingLab.features} icons={livingLabIcons} />
+                    <p className='text-regular text-center font-medium p-5 max-w-[80%]'>
+                        {text.livingLab.closing}
+                        <a href='https://livinglab.io/home?&v=latest' target="_blank" rel="noopener noreferrer" className='underline underline-offset-2 hover:text-blue-dark-citc hover:font-bold'>
+                            {text.livingLab.officialSite}
+                        </a>
+                    </p>
+                </div>
             </section>
         </>
     );
@@ -281,14 +297,14 @@ export function Conections(){
                     initial={{scale: 0.8}}
                     className="w-auto h-auto max-h-52"
                 >
-                    <CITCMovingCards items={associates} direction="right" />
+                    <CITCMovingCards items={associates} direction="right" speed='slow' />
                 </motion.div>
                 <h5 className="w-full text-center text-h5 font-semibold text-blue-dark-citc">{text.citc.universities}</h5>
                 <motion.div 
                     initial={{scale: 0.8}}
                     className="w-auto h-auto max-h-52"
                 >
-                    <CITCMovingCards items={universities} direction="left" />
+                    <CITCMovingCards items={universities} direction="left" speed='normal' />
                 </motion.div>
             </div>
         </>

@@ -91,7 +91,7 @@ export const InfiniteMovingCards = ({
 export const CITCMovingCards = ({
   items,
   direction,
-  speed = "slow",
+  speed,
   pauseOnHover = false,
   className
 }) => {
