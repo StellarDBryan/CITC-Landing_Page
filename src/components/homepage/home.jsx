@@ -65,7 +65,7 @@ export default function Home(){
                         transition={{type:"spring", duration:1.8, delay:0.2}}
                         className="lg:m-10 lg:h-2/3"
                     >
-                        <Image src="/images/citc_logos/CITC_horiz-04.png"
+                        <Image src="/images/logos/citc/CITC_horiz-04.png"
                             alt="CITC Logo"
                             width={600}
                             height={250}/>
@@ -90,7 +90,7 @@ export function About(){
                         <p className="text-regular font-semibold text-justify">{text.about.description}</p>
                     </div>
                     <Image 
-                        src="/images/citc_logos/CITC_Vert_Mesa_1.png"
+                        src="/images/logos/citc/CITC_Vert_Mesa_1.png"
                         alt="Chihuahua IT Cluster Logo"
                         width={432}
                         height={460}

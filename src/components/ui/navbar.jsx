@@ -102,14 +102,14 @@ export function Navbar() {
                 <div className='relative z-10 px-3 h-[90px] w-full flex items-center justify-center flex-row'>
                     <Link href="/">
                         <Image 
-                            src="/images/citc_logos/CITC_horiz-04.png"
+                            src="/images/logos/citc/CITC_horiz-04.png"
                             alt="CITC Logo" 
                             width={250} 
                             height={10} 
                             className='lg:mx-4 lg:mb-2 w-auto hidden group-hover:block max-w-[230px] max-h-[160px]' 
                         />
                         <Image 
-                            src={`/images/citc_logos/CITC_horiz${(hasScrolled && isLandingPage) || (pathname != "/") ? '_Mesa_1' : '-04'}.png`} 
+                            src={`/images/logos/citc/CITC_horiz${(hasScrolled && isLandingPage) || (pathname != "/") ? '_Mesa_1' : '-04'}.png`} 
                             alt="CITC Logo" 
                             width={250} 
                             height={10} 
