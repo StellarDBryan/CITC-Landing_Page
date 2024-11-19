@@ -21,6 +21,8 @@ export default function Footer(){
             'title': 'Links', 
             'about': 'Nosotros',  
             'about_url': '/#AboutUs', 
+            'workspace': 'Espacio', 
+            'workspace_url': '/servicios#Workspace',
             'events': 'Eventos', 
             'events_url': '/servicios#Events', 
             'living_lab': 'Living Lab CUU', 
@@ -122,6 +124,13 @@ export default function Footer(){
                             <Link href={text.Links.about_url}>
                                 <p className="text-small-1 hover:underline hover:underline-offset-2 hover:font-semibold">
                                     {text.Links.about}
+                                </p>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href={text.Links.workspace_url}>
+                                <p className="text-small-1 hover:underline hover:underline-offset-2 hover:font-semibold">
+                                    {text.Links.workspace}
                                 </p>
                             </Link>
                         </li>

@@ -115,7 +115,7 @@ export default function Servicios(){
                     </div>
                 </div>
                 <div className="flex flex-col items-center justify-center">
-                    <CITC_Card title={text.citc.subtitle_1} content={text.citc.content_1} 
+                    <CITC_Card id="Conection" title={text.citc.subtitle_1} content={text.citc.content_1} 
                         icon={
                             <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 24 24">
                                 <path fill="currentColor" 
@@ -136,7 +136,7 @@ export default function Servicios(){
                         }
                         visuals={<Conections />}
                     />
-                    <CITC_Card title={text.citc.subtitle_2} content={text.citc.content_2} 
+                    <CITC_Card id="Workspace" title={text.citc.subtitle_2} content={text.citc.content_2} 
                         icon={
                             <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 24 24">
                                 <path fill="currentColor" 
