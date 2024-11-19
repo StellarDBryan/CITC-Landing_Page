@@ -101,12 +101,13 @@ export default function Servicios(){
     return(
         <>
             <section className="w-full lg:h-auto space-y-5 flex flex-col items-center justify-center dark:text-gray-clear-citc">
-                <div className='relative flex items-center w-full lg:h-[70vh] [mask-image:linear-gradient(to_top,transparent,white_20%,white_80%,transparent)]'>
+                <div className='relative flex items-center w-full lg:h-[70vh]'>
                     <Image 
                         src="/images/photos/events/events_01.jpg"
                         alt="Events Image"
                         fill
                         objectFit='cover'
+                        className='[mask-image:linear-gradient(to_top,transparent,white_20%,white_80%,transparent)]'
                         style={{ objectPosition: '0% 45%', opacity: 1}}
                     />
                     <div className='flex flex-col lg:w-[50vw] lg:pl-20 h-full justify-center p-5 z-20 bg-gradient-to-r from-gray-clear-citc from-50% rounded-lg'>
@@ -169,12 +170,13 @@ export default function Servicios(){
                         visuals={<ServiceCarousel images={eventsImg} />}
                     />
                 </div>
-                <div id='LivingLabCUU' className='relative flex items-center w-full lg:h-[70vh] [mask-image:linear-gradient(to_top,transparent,white_20%,white_80%,transparent)]'>
+                <div id='LivingLabCUU' className='relative flex items-center w-full lg:h-[70vh] '>
                     <Image 
                         src="/images/photos/workspace/LivingLabCUU_01.jpg"
                         alt="LivingLabCUU Image"
                         fill
                         objectFit='cover'
+                        className='[mask-image:linear-gradient(to_top,transparent,white_20%,white_80%,transparent)]'
                         style={{ objectPosition: 'center left', opacity: 1}}
                     />
                     <div className='flex flex-col lg:w-[50vw] lg:pl-20 lg:space-y-5 h-full justify-center p-5 z-20 bg-gradient-to-r from-gray-clear-citc from-70% rounded-lg'>
