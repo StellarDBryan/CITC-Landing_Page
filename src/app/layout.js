@@ -14,9 +14,9 @@ const montserrat = Montserrat({
   display: 'swap',
 });
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children, lang = "es" }) {
   return (
-    <html lang="en" className={montserrat.className}>
+    <html lang={lang} className={montserrat.className}>
       <head>
         <link rel="icon" href="/images/logos/citc/CITC_Logo.png" type="image/png" sizes="32x32" />
       </head>
