@@ -1,6 +1,6 @@
-import Image from "next/image";
-import Nav from "@/components/ui/navbar.jsx";
-import Homepage, { About, Solutions, Services, Associate, Associates } from "@/components/homepage/home.jsx";
+
+import Homepage, { Solutions, Services } from "@/components/homepage/home.jsx";
+import About, { Associates } from '@/components/about.jsx';
 
 export default function Home() {
   return (
