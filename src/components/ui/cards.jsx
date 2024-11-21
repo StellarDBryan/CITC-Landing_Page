@@ -123,3 +123,21 @@ export function CITC_Card({id, title, content, icon, buttons, visuals }){
         </>
     );
 }
+
+export function AlliedCard({ image, name }){
+    
+    return(
+        <>
+            <div className="card relative bg-gray-clear-citc flex items-center justify-center p-2 lg:w-[200px] lg:h-[200px] lg:mx-5">
+                <div className="card-body relative w-full h-full">
+                    <Image 
+                        src={image}
+                        alt={name}
+                        fill
+                        style={{ objectFit: 'contain'}}
+                    />
+                </div>
+            </div>
+        </>
+    );
+}
