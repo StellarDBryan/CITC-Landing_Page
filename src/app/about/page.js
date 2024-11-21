@@ -6,7 +6,6 @@ export default function AboutUs(){
         <>
             <About />
             <Allies />
-            <AssociatesLanding />
         </>
     );
 }

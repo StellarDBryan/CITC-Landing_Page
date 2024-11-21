@@ -10,6 +10,7 @@ const text = {
         description: 'Somos un grupo de empresas dedicadas a las TICs que trabajamos y colaboramos estratégicamente para la obtención de beneficios mutuos con los cuales brindamos a nuestros asociados oportunidades enfocadas a mejoras en sus procesos, certificaciones, capacidades, recursos; con la intención de alcanzar proyecciones a nivel local, nacional e internacional en beneficio de la comunidad Chihuahuense.', 
     }, 
     allies: {
+        title: 'Aliados del CITC',
         intro: 'Agradecemos a todos todos nuestros aliados por apoyarnos a impulsar al sector IT',
         associates: 'Socios', 
         members: 'Afiliados', 
@@ -102,7 +103,11 @@ const alliesImages = {
         },
         {
             name: 'MxTI', 
-            image: '/images/logos/members/',
+            image: '/images/logos/members/MXTI.png',
+        },
+        {
+            name: 'Ilum', 
+            image: '/images/logos/members/Ilum.png',
         },
     ],
     universities: [
@@ -148,8 +153,9 @@ export function Allies(){
 
     return(
         <>
-            <section className="text-regular-dark flex flex-col items-center justify-center">
-                <h4 className="text-blue-dark-citc text-h4 font-semibold">{text.allies.intro}</h4>
+            <section className="text-regular-dark flex flex-col items-center justify-center lg:space-y-5">
+                <h2 className="text-h2 font-bold text-blue-dark-citc">{text.allies.title}</h2>
+                <h4 className="text-blue-dark-citc text-h5 font-medium">{text.allies.intro}</h4>
                 <AlliesShowcase type={text.allies.associates} alliesImages={alliesImages.associates} />
                 <AlliesShowcase type={text.allies.members} alliesImages={alliesImages.members} />
                 <AlliesShowcase type={text.allies.universities} alliesImages={alliesImages.universities} />
@@ -162,8 +168,8 @@ export function AlliesShowcase({ type, alliesImages }){
 
     return(
         <>
-            <div className="flex flex-col items-center justify-center">
-                <h5 className="text-h5 text-blue-dark-citc font-semibold">{type}</h5>
+            <div className="flex flex-col w-full items-center justify-center lg:space-y-0">
+                <h3 className="text-h3 text-blue-dark-citc font-semibold">{type}</h3>
                 <div className="flex flex-wrap p-5 justify-around lg:w-3/4">
                     {
                         alliesImages.map((allied, id) => (
