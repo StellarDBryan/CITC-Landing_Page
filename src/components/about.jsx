@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { InfiniteMovingCards } from "@/components/ui/infinite_moving_cards";
-import { AlliedCard } from "./ui/cards";
+import { AlliedCard, AboutCard } from "./ui/cards";
 import { AboutButton } from "./ui/buttons";
 
 const text = {
@@ -12,6 +12,12 @@ const text = {
         description: 'Somos un grupo de empresas dedicadas a las TICs que trabajamos y colaboramos estratégicamente para la obtención de beneficios mutuos con los cuales brindamos a nuestros asociados oportunidades enfocadas a mejoras en sus procesos, certificaciones, capacidades, recursos; con la intención de alcanzar proyecciones a nivel local, nacional e internacional en beneficio de la comunidad Chihuahuense.', 
         button1: 'Asóciate con nosotros',
         button2: 'Living Lab CUU',
+    }, 
+    misionVision: {
+        mision: 'Mision',
+        mision_text: 'Nuestra misión es fomentar el crecimiento y la innovación en la industria de tecnología de Chihuahua.',
+        vision: 'Vision',
+        vision_text: 'Nuestra visión es ser líderes en el desarrollo de tecnología, impulsando la economía local y global.',
     }, 
     allies: {
         title: 'Aliados del CITC',
@@ -161,13 +167,25 @@ export default function About(){
     );
 }
 
+export function MisionVision(){
+
+    return (
+        <>
+            <section className="flex p-5 flex-row flex-wrap w-full items-center justify-center space-x-5">
+                <AboutCard title={text.misionVision.mision} text={text.misionVision.mision_text} />
+                <AboutCard title={text.misionVision.vision} text={text.misionVision.vision_text} />
+            </section>
+        </>
+    );
+}
+
 export function Allies(){
 
     return(
         <>
             <section className="text-regular-dark flex flex-col items-center justify-center lg:space-y-5">
                 <h2 className="text-h2 font-bold text-blue-dark-citc">{text.allies.title}</h2>
-                <h4 className="text-blue-dark-citc text-h5 font-medium">{text.allies.intro}</h4>
+                <h5 className="text-blue-dark-citc text-h5 font-medium">{text.allies.intro}</h5>
                 <AlliesShowcase type={text.allies.associates} alliesImages={alliesImages.associates} />
                 <AlliesShowcase type={text.allies.members} alliesImages={alliesImages.members} />
                 <AlliesShowcase type={text.allies.universities} alliesImages={alliesImages.universities} />

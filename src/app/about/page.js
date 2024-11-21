@@ -1,10 +1,11 @@
-import About, { Allies, AssociatesLanding } from "@/components/about";
+import About, { Allies, MisionVision } from "@/components/about";
 
 export default function AboutUs(){
 
     return(
         <>
             <About />
+            <MisionVision />
             <Allies />
         </>
     );

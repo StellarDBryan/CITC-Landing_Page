@@ -141,3 +141,15 @@ export function AlliedCard({ image, name }){
         </>
     );
 }
+
+export function AboutCard({ title, text }){
+
+    return(
+        <>
+            <div className="card p-3 flex items-center justify-center w-1/3">
+                <h3 className="card-title text-h3 text-blue-dark-citc font-bold text-center mt-5">{title}</h3>
+                <h5 className="card-body text-h6 text-regular-dark font-medium text-center">{text}</h5>
+            </div>
+        </>
+    );
+}
