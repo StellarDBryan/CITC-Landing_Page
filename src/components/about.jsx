@@ -1,13 +1,17 @@
 "use client"; 
 
 import Image from "next/image";
+import Link from "next/link";
 import { InfiniteMovingCards } from "@/components/ui/infinite_moving_cards";
 import { AlliedCard } from "./ui/cards";
+import { AboutButton } from "./ui/buttons";
 
 const text = {
     about: {
         title: '¿Quiénes somos?', 
         description: 'Somos un grupo de empresas dedicadas a las TICs que trabajamos y colaboramos estratégicamente para la obtención de beneficios mutuos con los cuales brindamos a nuestros asociados oportunidades enfocadas a mejoras en sus procesos, certificaciones, capacidades, recursos; con la intención de alcanzar proyecciones a nivel local, nacional e internacional en beneficio de la comunidad Chihuahuense.', 
+        button1: 'Asóciate con nosotros',
+        button2: 'Living Lab CUU',
     }, 
     allies: {
         title: 'Aliados del CITC',
@@ -135,6 +139,14 @@ export default function About(){
                     <div className="rounded-3xl p-3 lg:mx-10 space-y-5 lg:w-5/12">
                         <h2 className="text-h1 font-semibold text-blue-dark-citc">{text.about.title}</h2>
                         <p className="text-regular font-semibold text-center">{text.about.description}</p>
+                        <div className="w-auto h-auto flex items-center justify-center space-x-3">
+                            <Link href="/contacto">
+                                <AboutButton>{text.about.button1}</AboutButton>
+                            </Link>
+                            <a href='https://livinglab.io/home?&v=latest' target="_blank" rel="noopener noreferrer">
+                                <AboutButton>{text.about.button2}</AboutButton>
+                            </a>
+                        </div>
                     </div>
                     <Image 
                         src="/images/logos/citc/CITC_Vert_Mesa_1.png"
