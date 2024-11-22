@@ -19,6 +19,37 @@ const text = {
         vision: 'Vision',
         vision_text: 'Nuestra visión es ser líderes en el desarrollo de tecnología, impulsando la economía local y global.',
     }, 
+    team: {
+        title: 'Consejo del CITC', 
+        intro: 'Conoce a nuestro equipo', 
+        members: [
+            {
+                name: 'Luis Alonso Ramos', 
+                role: 'Presidente', 
+                img: '', 
+            }, 
+            {
+                name: 'René Pons', 
+                role: 'Miembro del consejo', 
+                img: '', 
+            }, 
+            {
+                name: 'Oscar Nuñez Elias', 
+                role: 'Miembro del consejo', 
+                img: '', 
+            }, 
+            {
+                name: 'Bani Carrasco', 
+                role: 'Directora', 
+                img: '', 
+            }, 
+            {
+                name: 'Erica Rodriguez', 
+                role: 'Auxiliar Administrativo', 
+                img: '', 
+            }, 
+        ]
+    },
     allies: {
         title: 'Aliados del CITC',
         intro: 'Agradecemos a todos todos nuestros aliados por apoyarnos a impulsar al sector IT',
@@ -292,6 +323,18 @@ export function AssociatesLanding(){
                 <h4 className="lg:my-5 text-h4 font-semibold text-blue-dark-citc">{text.associates.intro}</h4>
                 <InfiniteMovingCards items={associate_logos_1} direction="right" />
                 <InfiniteMovingCards items={associate_logos_2} direction="left" />
+            </section>
+        </>
+    );
+} 
+
+export function Team(){
+
+    return(
+        <>
+            <section className="text-regular-dark flex flex-col items-center justify-center lg:space-y-5">
+                <h2 className="text-h2 font-bold text-blue-dark-citc">{text.allies.title}</h2>
+                <h5 className="text-blue-dark-citc text-h5 font-medium">{text.allies.intro}</h5>
             </section>
         </>
     );
