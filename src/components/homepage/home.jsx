@@ -133,6 +133,7 @@ export function Services(){
                                 img_position={'73% 95%'}
                             />
                         </Link>
+                        {/* Cambiar tarjeta por una de ABOUT PAGE */}
                         <Link href="/news" className="w-auto h-auto">
                             <ServiceCardLP 
                                 text_intro={text.services.news.intro}
