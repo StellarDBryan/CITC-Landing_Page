@@ -125,7 +125,7 @@ export default function Servicios(){
                         }
                         buttons={
                             <>
-                                <Link href={'/contacto'} className='w-auto h-auto'>
+                                <Link href={'/contact'} className='w-auto h-auto'>
                                     <ServiceButton>
                                         {text.citc.button_11}
                                     </ServiceButton>
