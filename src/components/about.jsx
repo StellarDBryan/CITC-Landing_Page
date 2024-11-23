@@ -33,28 +33,28 @@ const text = {
             {
                 name: 'René Pons', 
                 role: 'Miembro del consejo', 
-                img: '/images/photos/citcTeam/', 
+                img: '/images/photos/citcTeam/renePons.png', 
                 x: 'https://x.com/renepons', 
                 linkedIn: 'https://www.linkedin.com/in/renepons/',
             }, 
             {
                 name: 'Oscar Nuñez Elias', 
                 role: 'Miembro del consejo', 
-                img: '/images/photos/citcTeam/', 
+                img: '/images/photos/citcTeam/oscarNunezElias.jpeg', 
                 x: 'https://x.com/onuneze', 
                 linkedIn: 'https://www.linkedin.com/in/onuneze',
             }, 
             {
                 name: 'Bani Carrasco', 
                 role: 'Directora', 
-                img: '/images/photos/citcTeam/', 
+                img: '/images/photos/citcTeam/baniCarrasco.jpg', 
                 x: 'https://x.com/BaniGiselle', 
                 linkedIn: 'https://www.linkedin.com/in/banicarrasco',
             }, 
             {
                 name: 'Erica Rodriguez', 
                 role: 'Auxiliar Administrativo', 
-                img: '/images/photos/citcTeam/', 
+                img: '/images/photos/citcTeam/ericaRodriguez.jpg', 
                 x: 'https://x.com/EricaRo01465829', 
                 linkedIn: 'https://www.linkedin.com/in/erica-rodr%C3%ADguez/',
             }, 
@@ -342,15 +342,22 @@ export function Team(){
 
     return(
         <>
-            <section className="text-regular-dark flex flex-col items-center justify-center lg:space-y-5">
+            <section className="text-regular-dark w-full h-auto flex flex-col items-center justify-center lg:space-y-5">
                 <h2 className="text-h2 font-bold text-blue-dark-citc">{text.team.title}</h2>
                 <h5 className="text-blue-dark-citc text-h5 font-medium">{text.team.intro}</h5>
-                <TeamMemberCard 
-                    name={text.team.members[0].name} 
-                    role={text.team.members[0].role} 
-                    img={text.team.members[0].img}
-                    xAccount={text.team.members[0].x} 
-                    linkedIn={text.team.members[0].linkedIn} />
+                <div className="flex flex-row flex-wrap items-center justify-around w-3/5 space-y-3">
+                    {
+                        text.team.members.map((member, id) => (
+                            <TeamMemberCard 
+                                key={id} 
+                                name={member.name} 
+                                role={member.role} 
+                                img={member.img}
+                                xAccount={member.x} 
+                                linkedIn={member.linkedIn} />
+                        ))
+                    }
+                </div>
             </section>
         </>
     );
