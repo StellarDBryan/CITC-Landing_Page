@@ -128,10 +128,10 @@ export function NavButtons({ isSelected, hasScrolled, isLandingPage }) {
                     <NavButton redirect_url="/about" isSelected={isSelected} hasScrolled={hasScrolled} isLandingPage={isLandingPage}>
                         {text.español.about}
                     </NavButton>
-                    <NavButton redirect_url="/servicios" isSelected={isSelected} hasScrolled={hasScrolled} isLandingPage={isLandingPage}>
+                    <NavButton redirect_url="/services" isSelected={isSelected} hasScrolled={hasScrolled} isLandingPage={isLandingPage}>
                         {text.español.services}
                     </NavButton>
-                    <NavButton redirect_url="/contacto" isSelected={isSelected} hasScrolled={hasScrolled} isLandingPage={isLandingPage}>
+                    <NavButton redirect_url="/contact" isSelected={isSelected} hasScrolled={hasScrolled} isLandingPage={isLandingPage}>
                         {text.español.contact}
                     </NavButton>
                 </div>
