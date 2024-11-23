@@ -61,8 +61,8 @@ export default function Home(){
                             alt="CITC Logo"
                             width={600}
                             height={250}/>
-                        <h2 className="font-medium text-h4 text-gray-clear-citc">
-                            Colaboración y Evolución Tecnológica <br /> en el corazón de Chihuahua
+                        <h2 className="font-medium text-h4 text-gray-clear-citc w-2/3">
+                            Asociación de empresas tecnológicas impulsando la innovación en Chihuahua
                         </h2>
                     </motion.div>
                 </div>
