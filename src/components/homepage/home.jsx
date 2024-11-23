@@ -85,7 +85,7 @@ export function Solutions(){
                             img_w={199}
                             img_h={194}
                             solution_text={text.solutions.s1}
-                            redirection_url={'/contacto'}
+                            redirection_url={'/contact'}
                             button_text={text.solutions.button}
                         />
                         <SolutionCard 
@@ -121,7 +121,7 @@ export function Services(){
                 <div className="w-full h-full flex flex-col items-center space-y-5">
                     <h4 className="text-h4 font-semibold text-blue-dark-citc">{text.services.intro}</h4>
                     <div className="w-full h-auto flex flex-row flex-wrap items'center justify-center space-x-10">
-                        <Link href="/servicios" className="w-auto h-auto">
+                        <Link href="/services" className="w-auto h-auto">
                             <ServiceCardLP 
                                 text_intro={text.services.services.intro}
                                 go_to_text={text.services.services.go_to}
@@ -133,7 +133,7 @@ export function Services(){
                                 img_position={'73% 95%'}
                             />
                         </Link>
-                        <Link href="/noticias" className="w-auto h-auto">
+                        <Link href="/news" className="w-auto h-auto">
                             <ServiceCardLP 
                                 text_intro={text.services.news.intro}
                                 go_to_text={text.services.news.go_to}
@@ -145,7 +145,7 @@ export function Services(){
                                 img_position={'50% 80%'}
                             />
                         </Link>
-                        <Link href="/contacto" className="w-auto h-auto">
+                        <Link href="/contact" className="w-auto h-auto">
                             <ServiceCardLP 
                                 text_intro={text.services.contact.intro}
                                 go_to_text={text.services.contact.go_to}
