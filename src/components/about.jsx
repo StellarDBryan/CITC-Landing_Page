@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { InfiniteMovingCards } from "@/components/ui/infinite_moving_cards";
-import { AlliedCard, AboutCard } from "./ui/cards";
+import { AlliedCard, AboutCard, TeamMemberCard } from "./ui/cards";
 import { AboutButton } from "./ui/buttons";
 
 const text = {
@@ -26,27 +26,37 @@ const text = {
             {
                 name: 'Luis Alonso Ramos', 
                 role: 'Presidente', 
-                img: '', 
+                img: '/images/photos/citcTeam/luisAlonsoRamos.jpg', 
+                x: 'https://x.com/luisalonsoramos', 
+                linkedIn: 'https://www.linkedin.com/in/luisalonsoramos/',
             }, 
             {
                 name: 'René Pons', 
                 role: 'Miembro del consejo', 
-                img: '', 
+                img: '/images/photos/citcTeam/', 
+                x: 'https://x.com/renepons', 
+                linkedIn: 'https://www.linkedin.com/in/renepons/',
             }, 
             {
                 name: 'Oscar Nuñez Elias', 
                 role: 'Miembro del consejo', 
-                img: '', 
+                img: '/images/photos/citcTeam/', 
+                x: 'https://x.com/onuneze', 
+                linkedIn: 'https://www.linkedin.com/in/onuneze',
             }, 
             {
                 name: 'Bani Carrasco', 
                 role: 'Directora', 
-                img: '', 
+                img: '/images/photos/citcTeam/', 
+                x: 'https://x.com/BaniGiselle', 
+                linkedIn: 'https://www.linkedin.com/in/banicarrasco',
             }, 
             {
                 name: 'Erica Rodriguez', 
                 role: 'Auxiliar Administrativo', 
-                img: '', 
+                img: '/images/photos/citcTeam/', 
+                x: 'https://x.com/EricaRo01465829', 
+                linkedIn: 'https://www.linkedin.com/in/erica-rodr%C3%ADguez/',
             }, 
         ]
     },
@@ -58,7 +68,7 @@ const text = {
         universities: 'Universidades',
     },
     associates: {
-        intro: 'Se parte de los que impulsan la tecnología e innvación en la región',
+        intro: 'Se parte de los que impulsan la tecnología e innvación en la región', 
     }, 
 };
 
@@ -333,8 +343,14 @@ export function Team(){
     return(
         <>
             <section className="text-regular-dark flex flex-col items-center justify-center lg:space-y-5">
-                <h2 className="text-h2 font-bold text-blue-dark-citc">{text.allies.title}</h2>
-                <h5 className="text-blue-dark-citc text-h5 font-medium">{text.allies.intro}</h5>
+                <h2 className="text-h2 font-bold text-blue-dark-citc">{text.team.title}</h2>
+                <h5 className="text-blue-dark-citc text-h5 font-medium">{text.team.intro}</h5>
+                <TeamMemberCard 
+                    name={text.team.members[0].name} 
+                    role={text.team.members[0].role} 
+                    img={text.team.members[0].img}
+                    xAccount={text.team.members[0].x} 
+                    linkedIn={text.team.members[0].linkedIn} />
             </section>
         </>
     );
