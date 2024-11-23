@@ -20,17 +20,17 @@ export default function Footer(){
         'Links': {
             'title': 'Links', 
             'about': 'Nosotros',  
-            'about_url': '/#AboutUs', 
+            'about_url': '/about', 
             'workspace': 'Espacio', 
-            'workspace_url': '/servicios#Workspace',
+            'workspace_url': '/services#Workspace',
             'events': 'Eventos', 
-            'events_url': '/servicios#Events', 
+            'events_url': '/services#Events', 
             'living_lab': 'Living Lab CUU', 
             'living_lab_url': 'https://livinglab.io/home?&v=latest', 
             'news': 'Noticias', 
-            'news_url': '/noticias', 
+            'news_url': '/news', 
             'contact': 'Contacto', 
-            'contact_url': '/contacto'
+            'contact_url': '/contact'
         }, 
         'Legal': {
             'title': 'Legal', 
