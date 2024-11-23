@@ -4,10 +4,12 @@ export default function AboutUs(){
 
     return(
         <>
-            <About />
-            <MisionVision />
-            <Team />
-            <Allies />
+            <div className="h-full w-full py-14 space-y-28">
+                <About />
+                <MisionVision />
+                <Team />
+                <Allies />
+            </div>
         </>
     );
 }

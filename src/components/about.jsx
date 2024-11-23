@@ -9,7 +9,7 @@ import { AboutButton } from "./ui/buttons";
 const text = {
     about: {
         title: '¿Quiénes somos?', 
-        description: 'Somos un grupo de empresas dedicadas a las TICs que trabajamos y colaboramos estratégicamente para la obtención de beneficios mutuos con los cuales brindamos a nuestros asociados oportunidades enfocadas a mejoras en sus procesos, certificaciones, capacidades, recursos; con la intención de alcanzar proyecciones a nivel local, nacional e internacional en beneficio de la comunidad Chihuahuense.', 
+        description: 'Somos un grupo de empresas dedicadas a las TIC que colaboramos estratégicamente para obtener beneficios mutuos. A través de nuestra labor, brindamos a nuestros asociados oportunidades enfocadas en mejorar sus procesos, certificaciones, capacidades y recursos, con el objetivo de alcanzar proyecciones a nivel local, nacional e internacional, en beneficio de la comunidad chihuahuense.',
         button1: 'Asóciate con nosotros',
         button2: 'Living Lab CUU',
     }, 
