@@ -148,13 +148,13 @@ export default function Footer(){
                                 </p>
                             </a>
                         </li>
-                        <li>
+                        {/* <li>
                             <Link href={text.Links.news_url}>
                                 <p className="text-small-1 hover:underline hover:underline-offset-2 hover:font-semibold">
                                     {text.Links.news}
                                 </p>
                             </Link>
-                        </li>
+                        </li> */}
                         <li>
                             <Link href={text.Links.contact_url}>
                                 <p className="text-small-1 hover:underline hover:underline-offset-2 hover:font-semibold">
