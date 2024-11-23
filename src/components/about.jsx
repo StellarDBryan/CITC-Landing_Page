@@ -187,7 +187,7 @@ export default function About(){
                         <h2 className="text-h1 font-semibold text-blue-dark-citc">{text.about.title}</h2>
                         <p className="text-regular font-semibold text-center">{text.about.description}</p>
                         <div className="w-auto h-auto flex items-center justify-center space-x-3">
-                            <Link href="/contacto">
+                            <Link href="/contact">
                                 <AboutButton>{text.about.button1}</AboutButton>
                             </Link>
                             <a href='https://livinglab.io/home?&v=latest' target="_blank" rel="noopener noreferrer">
