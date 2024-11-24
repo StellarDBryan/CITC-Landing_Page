@@ -9,7 +9,7 @@ export const InfiniteMovingCards = ({
   items,
   direction,
   speed = "slow",
-  pauseOnHover = true,
+  pauseOnHover = false,
   className
 }) => {
   const containerRef = React.useRef(null);
