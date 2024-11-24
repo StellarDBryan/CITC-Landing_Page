@@ -24,7 +24,7 @@ const text = {
             'bg_alt': 'Living Lab CUU',
             'icon': '/images/icons/service_white.png',
             'icon_alt': 'Service Icon',
-        }, 
+        },  
         'news': {
             'title': 'Noticias',
             'intro': '¡Entérate de nuestras ultimas tendencias!', 
@@ -34,6 +34,16 @@ const text = {
             'bg_alt': 'Conference on Living Lab CUU',
             'icon': '/images/icons/news_white.png',
             'icon_alt': 'News Icon',
+        }, 
+        'about': {
+            'title': 'Nosotros',
+            'intro': '¿Quiénes somos y que proponemos?', 
+            'go_to': 'Ir a ', 
+            'description': '¡Conóce acerca de nosotros y descubre el alcance de nuestra iniciativa en Chihuahua!',
+            'bg_img': '/images/photos/events/events_06.jpeg', 
+            'bg_alt': 'Presidente del CITC',
+            'icon': '/images/icons/about_icon.png',
+            'icon_alt': 'About Icon', 
         }, 
         'contact': {
             'title': 'Contacto',
@@ -137,18 +147,18 @@ export function Services(){
                                 img_position={'73% 95%'}
                             />
                         </Link>
-                        {/* Cambiar tarjeta por una de ABOUT PAGE */}
-                        <Link href="/news" className="w-auto h-auto">
+                        <Link href="/about" className="w-auto h-auto">
                             <ServiceCardLP 
-                                title={text.services.news.title}
-                                text_intro={text.services.news.intro}
-                                go_to_text={text.services.news.go_to}
-                                text_description={text.services.news.description}
-                                bg_img={text.services.news.bg_img}
-                                bg_alt={text.services.news.bg_alt}
-                                icon={text.services.news.icon}
-                                icon_alt={text.services.news.icon_alt}
-                                img_position={'50% 80%'}
+                                title={text.services.about.title}
+                                text_intro={text.services.about.intro}
+                                go_to_text={text.services.about.go_to}
+                                text_description={text.services.about.description}
+                                bg_img={text.services.about.bg_img}
+                                bg_alt={text.services.about.bg_alt}
+                                icon={text.services.about.icon}
+                                icon_alt={text.services.about.icon_alt}
+                                icon_className={'filter invert'}
+                                img_position={'60% 80%'}
                             />
                         </Link>
                         <Link href="/contact" className="w-auto h-auto">

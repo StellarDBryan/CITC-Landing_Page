@@ -40,7 +40,7 @@ export function SolutionCard({ img_src, img_alt, img_w, img_h, solution_text, re
     );
 }
 
-export function ServiceCardLP({ title, text_intro, go_to_text, text_description, bg_img, bg_alt, icon, icon_alt, img_position}){
+export function ServiceCardLP({ title, text_intro, go_to_text, text_description, bg_img, bg_alt, icon, icon_alt, icon_className, img_position}){
 
     return (
         <>
@@ -81,6 +81,7 @@ export function ServiceCardLP({ title, text_intro, go_to_text, text_description,
                         alt={icon_alt}
                         width={150}
                         height={150}
+                        className={icon_className}
                     />
                 </CardBody>
                 <CardFooter className="z-10 transform group-hover:scale-75 transition-all ease-in-out delay-100 duration-300 opacity-100 mt-auto flex group-hover:opacity-0">
