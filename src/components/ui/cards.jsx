@@ -10,7 +10,7 @@ export function SolutionCard({ img_src, img_alt, img_w, img_h, solution_text, re
 
     return (
         <>
-            <Card className="bg-white-darker w-[300px] h-full max-h-[400px] p-5 flex flex-col justify-center rounded-3xl shadow-xl">
+            <Card className="bg-gray-clear-citc bg-opacity-50 w-[300px] h-full max-h-[400px] p-5 flex flex-col justify-center rounded-3xl">
                 <CardBody className="w-auto space-y-5 flex flex-col items-center">
                     <Image 
                         src={img_src}
@@ -18,21 +18,16 @@ export function SolutionCard({ img_src, img_alt, img_w, img_h, solution_text, re
                         width={img_w}
                         height={img_h}
                     />
-                    <p className="font-semibold text-regular w-auto text-center max-h-10">{solution_text}</p>
+                    <p className="font-semibold text-h6 text-gray-dark-citc w-auto text-center max-h-10">{solution_text}</p>
                 </CardBody>
                 <CardFooter className="flex flex-col justify-end items-end h-full w-auto max-h-[80px]">
                     <a href={redirection_url} className="w-full" target="_blank" rel="noopener noreferrer">
-                        <Button
-                            fullWidth
-                            endContent={
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                                </svg>
-                            }
-                            className="bg-gray-clear-citc p-2 flex flex-row justify-center rounded-full space-x-3 overflow-hidden drop-shadow-md hover:drop-shadow-lg"
-                        >
-                            <p className="font-semibold text-regular">{button_text}</p>
-                        </Button>
+                        <button className="btn btn-ghost glass group w-full bg-inherit text-inherit hover:bg-blue-dark-citc hover:text-gray-clear-citc flex flex-row rounded-full">
+                            <p className="font-bold text-regular">{button_text}</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24" className="transform group-hover:translate-x-2 transition-transform ease-in-out duration-200">
+                                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.5 12h15m0 0l-5.625-6m5.625 6l-5.625 6"/>
+                            </svg>
+                        </button>
                     </a>
                 </CardFooter>
             </Card>
