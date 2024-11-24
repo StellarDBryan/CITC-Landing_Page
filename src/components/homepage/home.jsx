@@ -16,8 +16,9 @@ const text = {
     'services': {
         'intro': 'Descubre todo lo que tenemos por ofrecer',
         'services': {
+            'title': 'Servicios',
             'intro': '¡Ven a conocernos en nuestras instalaciones!', 
-            'go_to': 'Ir a Servicios →',
+            'go_to': 'Ir a ',
             'description': 'Conoce nuestras instalaciones y apoyos que ofrecemos para el impulso tecnológico en Chihuahua',
             'bg_img': '/images/photos/workspace/LivingLabCUU_01.jpg', 
             'bg_alt': 'Living Lab CUU',
@@ -25,8 +26,9 @@ const text = {
             'icon_alt': 'Service Icon',
         }, 
         'news': {
+            'title': 'Noticias',
             'intro': '¡Entérate de nuestras ultimas tendencias!', 
-            'go_to': 'Ir a Noticias →',
+            'go_to': 'Ir a ',
             'description': 'Mantente al día con las novedades, eventos y logros que impulsan la tecnología en Chihuahua',
             'bg_img': '/images/photos/events/events_03.jpeg', 
             'bg_alt': 'Conference on Living Lab CUU',
@@ -34,8 +36,9 @@ const text = {
             'icon_alt': 'News Icon',
         }, 
         'contact': {
+            'title': 'Contacto',
             'intro': '¡Conéctate con nosotros y apoya el ecosistema tecnológico!', 
-            'go_to': 'Ir a Contacto →',
+            'go_to': 'Ir a ',
             'description': 'Contáctanos y descubre cómo podemos impulsar juntos la innovación ',
             'bg_img': '/images/photos/events/events_02.jpeg', 
             'bg_alt': 'Cluster members in Living Lab CUU',
@@ -123,6 +126,7 @@ export function Services(){
                     <div className="w-full h-auto flex flex-row flex-wrap items'center justify-center space-x-10">
                         <Link href="/services" className="w-auto h-auto">
                             <ServiceCardLP 
+                                title={text.services.services.title}
                                 text_intro={text.services.services.intro}
                                 go_to_text={text.services.services.go_to}
                                 text_description={text.services.services.description}
@@ -136,6 +140,7 @@ export function Services(){
                         {/* Cambiar tarjeta por una de ABOUT PAGE */}
                         <Link href="/news" className="w-auto h-auto">
                             <ServiceCardLP 
+                                title={text.services.news.title}
                                 text_intro={text.services.news.intro}
                                 go_to_text={text.services.news.go_to}
                                 text_description={text.services.news.description}
@@ -148,6 +153,7 @@ export function Services(){
                         </Link>
                         <Link href="/contact" className="w-auto h-auto">
                             <ServiceCardLP 
+                                title={text.services.contact.title}
                                 text_intro={text.services.contact.intro}
                                 go_to_text={text.services.contact.go_to}
                                 text_description={text.services.contact.description}

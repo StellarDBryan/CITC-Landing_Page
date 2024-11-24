@@ -40,27 +40,41 @@ export function SolutionCard({ img_src, img_alt, img_w, img_h, solution_text, re
     );
 }
 
-export function ServiceCardLP({ text_intro, go_to_text, text_description, bg_img, bg_alt, icon, icon_alt, img_position}){
+export function ServiceCardLP({ title, text_intro, go_to_text, text_description, bg_img, bg_alt, icon, icon_alt, img_position}){
 
     return (
         <>
             <Card
                 isPressable
                 isHoverable
-                className="relativ group shadow-2xl rounded-3xl w-[350px] h-[500px] overflow-hidden text-gray-clear-citc"
+                className="relative group shadow-2xl rounded-3xl w-[350px] h-[500px] overflow-hidden text-gray-clear-citc"
             >
                 <Image
                     src={bg_img}
                     alt={bg_alt}
                     fill
-                    className="object-cover filter group-hover:blur-sm"
+                    className="object-cover transition-all ease-out delay-100 duration-500 filter group-hover:blur-sm"
                     style={{
                         objectPosition: `${img_position}`
                     }}
                 />
-                <div className="absolute inset-0 group-hover:bg-regular-dark group-hover:opacity-80 bg-gradient-to-t from-regular-dark from-10% to-transparent to-40%" />
-                <CardBody className="hidden h-full w-full group-hover:flex space-y-5 items-center justify-center">
-                    <h5 className="font-semibold text-h5">{go_to_text}</h5>
+                <div className="absolute inset-0 transition-opacity ease-in-out delay-100 duration-300 opacity-70 group-hover:opacity-0 bg-gradient-to-t from-regular-dark from-10% to-transparent to-25%" />
+                <div className="absolute inset-0 transition-opacity ease-in-out delay-100 duration-300 bg-regular-dark opacity-0 group-hover:opacity-70" />
+                <CardHeader className="absolute transition-opacity bg-opacity-70 group-hover:bg-opacity-0s flex flex-row w-full items-center justify-center py-5 bg-gradient-to-b from-regular-dark to-transparent">
+                    <h4 className="text-h4 font-bold text-gray-clear-citc flex flex-row transform group-hover:scale-75 group-hover:opacity-0 transition-all ease-in-out delay-100 duration-300">
+                        {title}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" className="mx-2">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.5 12h15m0 0l-5.625-6m5.625 6l-5.625 6"/>
+                        </svg>
+                    </h4>
+                </CardHeader>
+                <CardBody className="absolute h-full w-full flex space-y-5 items-center justify-center transform scale-90 group-hover:scale-100 opacity-0 group-hover:opacity-100 transition-all ease-in-out delay-100 duration-300">
+                    <h5 className="font-semibold text-h5 flex flex-row items-center">
+                        {go_to_text}{title}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" className="mx-2">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.5 12h15m0 0l-5.625-6m5.625 6l-5.625 6"/>
+                        </svg>
+                    </h5>
                     <p className="text-h6 font-medium">{text_description}</p>
                     <Image 
                         src={icon}
@@ -69,8 +83,8 @@ export function ServiceCardLP({ text_intro, go_to_text, text_description, bg_img
                         height={150}
                     />
                 </CardBody>
-                <CardFooter className="z-10 mt-auto group-hover:hidden">
-                    <h5 className="font-semibold text-h5">{text_intro}</h5>
+                <CardFooter className="z-10 transform group-hover:scale-75 transition-all ease-in-out delay-100 duration-300 opacity-100 mt-auto flex group-hover:opacity-0">
+                    <h6 className="font-semibold text-h6">{text_intro}</h6>
                 </CardFooter>
             </Card>
         </>
