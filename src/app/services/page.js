@@ -130,9 +130,11 @@ export default function Servicios(){
                                         {text.citc.button_11}
                                     </ServiceButton>
                                 </Link>
-                                <ServiceButton>
-                                    {text.citc.button_12}
-                                </ServiceButton>
+                                <Link href={'/services#Allies'} className='w-auto h-auto'>
+                                    <ServiceButton>
+                                        {text.citc.button_12}
+                                    </ServiceButton>
+                                </Link>
                             </>
                         }
                         visuals={<Conections />}
@@ -194,7 +196,7 @@ export default function Servicios(){
                         </a>
                     </div>
                 </div>
-                <div className='flex flex-col items-center justify-around space-y-3 w-auto h-auto pb-5'>
+                <div className='flex flex-col text-regular-dark items-center justify-around space-y-3 w-auto h-auto pb-5'>
                     <FeaturesSectionDemo features={text.livingLab.features} icons={livingLabIcons} />
                     <p className='text-regular text-center font-medium p-5 max-w-[80%]'>
                         {text.livingLab.closing}

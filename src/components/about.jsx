@@ -68,7 +68,7 @@ const text = {
         universities: 'Universidades',
     },
     associates: {
-        intro: 'Se parte de los que impulsan la tecnología e innvación en la región', 
+        intro: 'Se parte de los que impulsan la tecnología e innovación en la región', 
     }, 
 };
 
@@ -224,7 +224,7 @@ export function Allies(){
 
     return(
         <>
-            <section className="text-regular-dark flex flex-col items-center justify-center lg:space-y-5">
+            <section id="Allies" className="text-regular-dark flex flex-col items-center justify-center lg:space-y-5">
                 <h2 className="text-h2 font-bold text-blue-dark-citc">{text.allies.title}</h2>
                 <h5 className="text-blue-dark-citc text-h5 font-medium">{text.allies.intro}</h5>
                 <AlliesShowcase type={text.allies.associates} alliesImages={alliesImages.associates} />
