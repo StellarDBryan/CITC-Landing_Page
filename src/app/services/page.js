@@ -130,7 +130,7 @@ export default function Servicios(){
                                         {text.citc.button_11}
                                     </ServiceButton>
                                 </Link>
-                                <Link href={'/services#Allies'} className='w-auto h-auto'>
+                                <Link href={'/about#Allies'} className='w-auto h-auto'>
                                     <ServiceButton>
                                         {text.citc.button_12}
                                     </ServiceButton>
