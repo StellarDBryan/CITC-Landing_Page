@@ -10,19 +10,13 @@ import { NavButton } from './buttons';
 
 const text = {
     'español': {
-        'home': 'Inicio', 
-        'services': 'Servicios', 
-        'news': 'Noticias', 
-        'contact': 'Contacto', 
-        'login': 'Iniciar Sesión', 
+        home: 'Inicio', 
+        services: 'Servicios', 
+        about: 'Nosotros',
+        news: 'Noticias', 
+        contact: 'Contacto', 
+        login: 'Iniciar Sesión', 
     }, 
-    'english': {
-        'home': 'Home', 
-        'services': 'Servicios', 
-        'news': 'News', 
-        'contact': 'Contact', 
-        'login': 'Login'
-    }
 }
 
 
@@ -102,14 +96,14 @@ export function Navbar() {
                 <div className='relative z-10 px-3 h-[90px] w-full flex items-center justify-center flex-row'>
                     <Link href="/">
                         <Image 
-                            src="/images/citc_logos/CITC_horiz-04.png"
+                            src="/images/logos/citc/CITC_horiz-04.png"
                             alt="CITC Logo" 
                             width={250} 
                             height={10} 
                             className='lg:mx-4 lg:mb-2 w-auto hidden group-hover:block max-w-[230px] max-h-[160px]' 
                         />
                         <Image 
-                            src={`/images/citc_logos/CITC_horiz${(hasScrolled && isLandingPage) || (pathname != "/") ? '_Mesa_1' : '-04'}.png`} 
+                            src={`/images/logos/citc/CITC_horiz${(hasScrolled && isLandingPage) || (pathname != "/") ? '_Mesa_1' : '-04'}.png`} 
                             alt="CITC Logo" 
                             width={250} 
                             height={10} 
@@ -131,13 +125,13 @@ export function NavButtons({ isSelected, hasScrolled, isLandingPage }) {
                     <NavButton redirect_url="/" isSelected={isSelected} hasScrolled={hasScrolled} isLandingPage={isLandingPage}>
                         {text.español.home}
                     </NavButton>
-                    <NavButton redirect_url="/servicios" isSelected={isSelected} hasScrolled={hasScrolled} isLandingPage={isLandingPage}>
+                    <NavButton redirect_url="/about" isSelected={isSelected} hasScrolled={hasScrolled} isLandingPage={isLandingPage}>
+                        {text.español.about}
+                    </NavButton>
+                    <NavButton redirect_url="/services" isSelected={isSelected} hasScrolled={hasScrolled} isLandingPage={isLandingPage}>
                         {text.español.services}
                     </NavButton>
-                    <NavButton redirect_url="/noticias" isSelected={isSelected} hasScrolled={hasScrolled} isLandingPage={isLandingPage}>
-                        {text.español.news}
-                    </NavButton>
-                    <NavButton redirect_url="/contacto" isSelected={isSelected} hasScrolled={hasScrolled} isLandingPage={isLandingPage}>
+                    <NavButton redirect_url="/contact" isSelected={isSelected} hasScrolled={hasScrolled} isLandingPage={isLandingPage}>
                         {text.español.contact}
                     </NavButton>
                 </div>

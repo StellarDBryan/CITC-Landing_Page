@@ -26,7 +26,7 @@ export const Tabs = ({
   return (<>
     <div
       className={cn(
-        "flex flex-row items-center justify-start [perspective:1000px] relative overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full",
+        "flex flex-row items-center lg:justify-center [perspective:1000px] relative overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full",
         containerClassName
       )}>
       {propTabs.map((tab, idx) => (
@@ -62,7 +62,7 @@ export const Tabs = ({
       active={active}
       key={active.value}
       hovering={hovering}
-      className={cn("mt-32", contentClassName)} />
+      className={cn("my-8", contentClassName)} />
   </>);
 };
 
@@ -78,7 +78,7 @@ export const FadeInDiv = ({
     (<div className="relative w-full h-full">
       {tabs.map((tab, idx) => (
         <motion.div
-          key={tab.value}
+          key={tab.title}
           layoutId={tab.value}
           style={{
             scale: 1 - idx * 0.1,
