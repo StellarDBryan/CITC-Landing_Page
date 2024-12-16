@@ -32,7 +32,9 @@ module.exports = {
       backgroundImage: {
         'navbar-gradient': 
           'linear-gradient(to top, rgba(247, 247, 247, 0) 0%, rgba(247, 247, 247, 0.35) 13%, rgba(247, 247, 247, 0.7) 25%, rgba(247, 247, 247, 0.9) 50%, rgba(247, 247, 247, 1) 100%)',
-        'navbar-hover': 
+        'navbar-mobile': 
+          'linear-gradient(to right, rgba(247, 247, 247, 0) 0%, rgba(247, 247, 247, 0.35) 13%, rgba(247, 247, 247, 0.7) 25%, rgba(247, 247, 247, 0.9) 50%, rgba(247, 247, 247, 1) 100%)',
+          'navbar-hover': 
           'linear-gradient(to top, rgba(19, 111, 178, 0) 0%, rgba(19, 111, 178, 0.35) 13%, rgba(19, 111, 178, 0.7) 25%, rgba(19, 111, 178, 0.9) 50%, rgba(19, 111, 178, 1) 100%)',
         'light-gradient': 
           'linear-gradient(to bottom, rgba(247, 247, 247, 1) 0%, rgba(247, 247, 247, 0.85) 17%, rgba(247, 247, 247, 0.8) 34%, rgba(247, 247, 247, 0.75) 50%, rgba(247, 247, 247, 0.8) 67%, rgba(247, 247, 247, 0.85) 82%, rgba(247, 247, 247, 1) 100%)',
