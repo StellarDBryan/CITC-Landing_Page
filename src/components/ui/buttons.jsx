@@ -17,11 +17,26 @@ export function NavButton({ children, redirect_url, isSelected, hasScrolled, isL
     );
 }
 
+export function MobileLinkBtn({ children, link }){
+
+
+
+    return (
+        <>
+            <a href={link}>
+                <button className='btn text-[1.1rem] w-full bg-inherit hover:bg-inherit text-gray-clear-citc flex flex-row items-center gap-2 border-0 border-gray-clear-citc hover:border-b-2 rounded-none shadow-none'>
+                    {children}
+                </button>
+            </a>
+        </>
+    );
+}
+
 export function MobileNavBtn({ onClick }){
 
     return (
         <>
-            <button className="btn btn-circle bg-inherit glass p-2 w-20 h-20 sm:w-16 sm:h-16 fixed bottom-4 right-4 z-50" onClick={onClick}>
+            <button className="btn btn-circle bg-gray-clear-citc text-blue-dark-citc glass p-[2px] sm:p-2 w-14 h-14 sm:w-16 sm:h-16 fixed bottom-4 right-4 z-50 drop-shadow-xl" onClick={onClick}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" viewBox="0 0 56 56">
                     <path fill="currentColor" fillRule="evenodd" d="M10 36a3 3 0 1 1 0 6a3 3 0 0 1 0-6m35.998 1c1.106 0 2.002.888 2.002 2c0 1.105-.89 2-2.002 2H18.002A1.996 1.996 0 0 1 16 39c0-1.105.89-2 2.002-2zM10 26a3 3 0 1 1 0 6a3 3 0 0 1 0-6m35.998 1c1.106 0 2.002.888 2.002 2c0 1.105-.89 2-2.002 2H18.002A1.996 1.996 0 0 1 16 29c0-1.105.89-2 2.002-2zM10 16a3 3 0 1 1 0 6a3 3 0 0 1 0-6m35.998 1c1.106 0 2.002.888 2.002 2c0 1.105-.89 2-2.002 2H18.002A1.996 1.996 0 0 1 16 19c0-1.105.89-2 2.002-2z"/>
                 </svg>
