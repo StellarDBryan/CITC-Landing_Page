@@ -63,7 +63,7 @@ export default function Home(){
 
     return (
         <>
-            <section className="relative flex object-contain h-screen">
+            <section className="relative flex items-start object-contain h-screen">
                 <div className=" w-auto h-auto">
                     <div className="absolute w-full h-full z-40 bg-gradient-to-b from-transparent from-70% to-gray-clear-citc"/>
                     <div className="absolute w-10/12 h-full z-10 bg-gradient-to-r from-regular-dark to-transparent"/>
@@ -71,17 +71,19 @@ export default function Home(){
                         src="/images/backgrounds/cuu_2.jpg"
                         alt="CUU Image"
                         fill
+                        className="w-full h-full object-cover"
                     />
                 </div>
                 <motion.div 
                     initial={{translateX:-50, opacity:0}}
                     animate={{translateX: 0, opacity: 1}}
                     transition={{type:"spring", duration:1.8, delay:0.2}}
-                    className="flex flex-col lg:ml-14 z-20 items-start justify-center h-5/6 w-3/4 bg-inherit">
+                    className="flex flex-col ml-6 mt-10 sm:mt-0 lg:ml-14 z-20 items-start justify-center sm:h-5/6 sm:w-3/4 bg-inherit">
                         <Image src="/images/logos/citc/CITC_horiz-04.png"
                             alt="CITC Logo"
                             width={600}
-                            height={250}/>
+                            height={250}
+                            className="lg:h-auto lg:w-auto md:w-[450px] sm:w-[400px] w-[320px]" />
                         <h2 className="font-semibold text-h4 text-gray-clear-citc w-2/3">
                             {text.heroSectionIntro}
                         </h2>
