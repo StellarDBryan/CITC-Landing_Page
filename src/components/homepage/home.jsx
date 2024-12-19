@@ -137,7 +137,7 @@ export function Services(){
 
     return (
         <>
-            <section className="w-full h-[600px]">
+            <section className="w-full h-[600px] overflow-hidden">
                 <div className="w-full h-full flex flex-col items-center space-y-5">
                     <h4 className="text-h4 font-semibold text-blue-dark-citc">{text.services.intro}</h4>
                     <div className="w-full h-auto flex flex-row flex-wrap items'center justify-center space-x-10">

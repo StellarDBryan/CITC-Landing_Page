@@ -69,6 +69,8 @@ const StyledWrapper = styled.div`
 
   .example-2 {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
   }
@@ -112,7 +114,7 @@ const StyledWrapper = styled.div`
   }
   .example-2 .icon-content a svg {
     position: relative;
-    z-index: 1;
+    z-index: 0;
     width: 30px;
     height: 30px;
   }

@@ -59,8 +59,8 @@ module.exports = {
       'h5': '25px', 
       'h6': '20px',  
       'regular': '16px',  
-      'small-1': '12.8px', 
-      'small-2': '10.24px',   
+      'sm1': '12.8px', 
+      'sm2': '10.24px',   
     }, 
   },
 
