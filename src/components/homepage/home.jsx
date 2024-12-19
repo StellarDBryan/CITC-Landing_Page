@@ -8,7 +8,7 @@ import Link from "next/link";
 const text = {
     'heroSectionIntro': 'Asociación de empresas tecnológicas impulsando la innovación en Chihuahua',
     'solutions': {
-        'text': 'Impulso al crecimiento tecnológico', 
+        'text': 'Impulsamos el crecimiento tecnológico', 
         's1': 'Conexión con empresas', 
         's2': 'Eventos del Sector de TI e Innovación', 
         's3': 'Espacio de trabajo y cowork', 
@@ -105,8 +105,8 @@ export function Solutions(){
     return (
         <>
             <section className=" bg-[url('/images/backgrounds/LP_02.jpg')] bg-cover bg-center lg:my-10 lg:items-center lg:h-[600px] text-gray-dark-citc">
-                <div className="bg-light-gradient h-full flex flex-col justify-center items-center space-y-10">
-                    <h4 className="font-semibold text-blue-dark-citc text-h4">{text.solutions.text}</h4>
+                <div className="bg-light-gradient h-full px-5 flex flex-col items-center space-y-10">
+                    <h4 className="font-semibold text-blue-dark-citc text-h5 text-center lg:text-h4">{text.solutions.text}</h4>
                     <div className="w-auto h-auto flex flex-wrap space-x-10">
                         <SolutionCard 
                             img_src={'/images/icons/networking_gray.png'}
