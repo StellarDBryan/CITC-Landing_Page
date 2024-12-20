@@ -104,10 +104,10 @@ export function Solutions(){
 
     return (
         <>
-            <section className=" bg-[url('/images/backgrounds/LP_02.jpg')] bg-cover bg-center lg:my-10 lg:items-center lg:h-[600px] text-gray-dark-citc">
-                <div className="bg-light-gradient h-full px-5 flex flex-col items-center space-y-10">
-                    <h4 className="font-semibold text-blue-dark-citc text-h5 text-center lg:text-h4">{text.solutions.text}</h4> 
-                    <div className="w-auto h-auto flex flex-wrap space-x-10"> 
+            <section className=" bg-[url('/images/backgrounds/LP_02.jpg')] bg-cover bg-center lg:my-10 lg:items-center lg:h-[600px] ">
+                <div className="bg-light-gradient h-full px-5 flex flex-col items-center gap-5 lg:gap-10">
+                    <h4 className="font-bold text-blue-dark-citc text-h5 text-center lg:text-h4">{text.solutions.text}</h4> 
+                    <div className="w-full sm:w-auto h-auto flex flex-col md:flex-row items-center justify-around lg:justify-center flex-wrap gap-3 lg:gap-10"> 
                         <SolutionCard 
                             img_src="/images/photos/events/events_01.jpg" 
                             img_alt="Conections Image"
@@ -122,6 +122,7 @@ export function Solutions(){
                             img_src="/images/photos/workspace/LivingLabCUU_01.jpg"
                             img_alt="Workspace Image" 
                             solution_text={text.solutions.s3}
+                            img_position={'75% 95%'}
                         />
                     </div>
                 </div>

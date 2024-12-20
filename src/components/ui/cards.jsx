@@ -6,19 +6,22 @@ import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-export function SolutionCard({ img_src, img_alt, solution_text, redirection_url}){
+export function SolutionCard({ img_src, img_alt, solution_text, img_position, redirection_url}){
 
     return (
         <>
-            <Card className="relative w-[300px] h-[400px] flex flex-col items-center justify-end rounded-3xl drop-shadow-2xl">
+            <Card className="relative group w-full h-[150px] sm:w-[500px] sm:h-[170px] md:w-[230px] md:h-[380px] lg:w-[300px] lg:h-[400px] flex flex-col items-center justify-end rounded-xl md:rounded-3xl drop-shadow-2xl">
                 <Image 
                     src={img_src}
                     alt={img_alt}
                     fill
-                    className="absolute inset-0 w-full h-full object-cover"
+                    className="absolute inset-0 w-full h-full object-cover transform transition-transform duration-200 ease-in-out group-hover:scale-110"
+                    style={{
+                        objectPosition: `${img_position}`
+                    }}
                 /> 
-                <CardFooter className="z-20 flex items-center justify-center bg-gradient-to-t from-regular-dark from-20% w-full h-1/4 text-gray-50">
-                    <h6 className="text-h6 font-semibold text-center">{solution_text}</h6>
+                <CardFooter className="z-20 flex items-center justify-center bg-gradient-to-t from-regular-dark from-20% w-full h-2/5 sm:h-1/4 text-gray-50">
+                    <h6 className="text-[1.1rem] sm:text-h6 font-semibold text-center">{solution_text}</h6>
                 </CardFooter>
             </Card>
         </>
