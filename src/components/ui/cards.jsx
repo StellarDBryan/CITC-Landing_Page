@@ -6,29 +6,19 @@ import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-export function SolutionCard({ img_src, img_alt, img_w, img_h, solution_text, redirection_url, button_text}){
+export function SolutionCard({ img_src, img_alt, solution_text, redirection_url}){
 
     return (
         <>
-            <Card className="bg-gray-clear-citc bg-opacity-50 w-[300px] h-full max-h-[400px] p-5 flex flex-col justify-center rounded-3xl">
-                <CardBody className="w-auto space-y-5 flex flex-col items-center">
-                    <Image 
-                        src={img_src}
-                        alt={img_alt}
-                        width={img_w}
-                        height={img_h}
-                    />
-                    <p className="font-semibold text-h6 text-gray-dark-citc w-auto text-center max-h-10">{solution_text}</p>
-                </CardBody>
-                <CardFooter className="flex flex-col justify-end items-end h-full w-auto max-h-[80px]">
-                    <a href={redirection_url} className="w-full" target="_blank" rel="noopener noreferrer">
-                        <button className="btn btn-ghost glass group w-full bg-inherit text-inherit hover:bg-blue-dark-citc hover:text-gray-clear-citc flex flex-row rounded-full">
-                            <p className="font-bold text-regular">{button_text}</p>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24" className="transform group-hover:translate-x-2 transition-transform ease-in-out duration-200">
-                                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.5 12h15m0 0l-5.625-6m5.625 6l-5.625 6"/>
-                            </svg>
-                        </button>
-                    </a>
+            <Card className="relative w-[300px] h-[400px] flex flex-col items-center justify-end rounded-3xl drop-shadow-2xl">
+                <Image 
+                    src={img_src}
+                    alt={img_alt}
+                    fill
+                    className="absolute inset-0 w-full h-full object-cover"
+                /> 
+                <CardFooter className="z-20 flex items-center justify-center bg-gradient-to-t from-regular-dark from-20% w-full h-1/4 text-gray-50">
+                    <h6 className="text-h6 font-semibold text-center">{solution_text}</h6>
                 </CardFooter>
             </Card>
         </>
