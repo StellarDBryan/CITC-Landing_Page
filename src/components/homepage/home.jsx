@@ -1,9 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { SolutionCard, ServiceCardLP } from "@/components/ui/cards.jsx";
-import { motion } from 'framer-motion';
+import { SolutionCard, ServiceCardLP, ActionAreaCard } from "@/components/ui/cards.jsx";
+import { easeInOut, motion } from 'framer-motion';
 import Link from "next/link";
+import { useState } from "react";
 
 const text = {
     'heroSectionIntro': 'Asociación de empresas tecnológicas impulsando la innovación en Chihuahua',
@@ -13,6 +14,12 @@ const text = {
         's2': 'Eventos del Sector de TI e Innovación', 
         's3': 'Espacio de trabajo y cowork', 
         'button': 'Ver más',
+    },
+    actionAreas: {
+        actionText: 'Clic para ver más →', 
+        taletDevelopment: 'Talent Development', 
+        businessDevelopment: 'Business Development', 
+        livingLab: 'Living Lab'
     },
     'services': {
         'intro': 'Descubre todo lo que tenemos por ofrecer',
@@ -133,52 +140,58 @@ export function Solutions(){
 
 export function Services(){
 
+    
+
     return (
         <>
             <section className="w-full h-[600px] overflow-hidden">
                 <div className="w-full h-full flex flex-col items-center space-y-5">
                     <h4 className="text-h4 font-semibold text-blue-dark-citc">{text.services.intro}</h4>
-                    <div className="w-full h-auto flex flex-row flex-wrap items'center justify-center space-x-10">
-                        <Link href="/services" className="w-auto h-auto">
-                            <ServiceCardLP 
-                                title={text.services.services.title}
-                                text_intro={text.services.services.intro}
-                                go_to_text={text.services.services.go_to}
-                                text_description={text.services.services.description}
-                                bg_img={text.services.services.bg_img}
-                                bg_alt={text.services.services.bg_alt}
-                                icon={text.services.services.icon}
-                                icon_alt={text.services.services.icon_alt}
-                                img_position={'73% 95%'}
-                            />
-                        </Link>
-                        <Link href="/about" className="w-auto h-auto">
-                            <ServiceCardLP 
-                                title={text.services.about.title}
-                                text_intro={text.services.about.intro}
-                                go_to_text={text.services.about.go_to}
-                                text_description={text.services.about.description}
-                                bg_img={text.services.about.bg_img}
-                                bg_alt={text.services.about.bg_alt}
-                                icon={text.services.about.icon}
-                                icon_alt={text.services.about.icon_alt}
-                                icon_className={'filter invert'}
-                                img_position={'60% 80%'}
-                            />
-                        </Link>
-                        <Link href="/contact" className="w-auto h-auto">
-                            <ServiceCardLP 
-                                title={text.services.contact.title}
-                                text_intro={text.services.contact.intro}
-                                go_to_text={text.services.contact.go_to}
-                                text_description={text.services.contact.description}
-                                bg_img={text.services.contact.bg_img}
-                                bg_alt={text.services.contact.bg_alt}
-                                icon={text.services.contact.icon}
-                                icon_alt={text.services.contact.icon_alt}
-                                img_position={'35% 75%'}
-                            />
-                        </Link>
+                    <div className="w-full h-auto flex flex-row flex-wrap items-center justify-center space-x-10">
+                        <ActionAreaCard 
+                            visuals={
+                                <div className="relative flex justify-center text-gray-clear-citc overflow-hidden">
+                                    <Image 
+                                        src="/images/icons/user_icon.png"
+                                        alt="random alt"
+                                        width={500}
+                                        height={500}
+                                        className="w-[150px] absolute z-10 bottom-0"
+                                    />
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="250" height="250" viewBox="0 0 32 32" className="transform transition-transform duration-1000 ease-in-out animate-none group-hover:rotate-[360deg] ">
+                                        <path fill="currentColor" d="m16 2l-4.55 9.22l-10.17 1.47l7.36 7.18L6.9 30l9.1-4.78L25.1 30l-1.74-10.13l7.36-7.17l-10.17-1.48Z"/>
+                                    </svg>
+                                </div>
+                            }
+                            bgColor={'#92d050'}
+                            departmentName={text.actionAreas.taletDevelopment} 
+                            actionText={text.actionAreas.actionText} 
+                        />
+                        <ActionAreaCard 
+                            visuals={
+                                <div className="relative flex w-full h-full justify-center pt-7 text-gray-clear-citc ">
+                                    <Image 
+                                        src="/images/icons/business_icon.png"
+                                        alt="random alt"
+                                        width={500}
+                                        height={500}
+                                        className="w-[200px] h-[150px] absolute z-10 bottom-2 "
+                                    />
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="125" height="125" viewBox="0 0 16 16" 
+                                        className="group-hover:[transform:rotate3d(0,1,0,_360deg)_translateY(-25px)] transition-transform duration-1000 ease-in-out"
+                                    >
+                                        <g fill="currentColor">
+                                            <path d="M5.5 9.511c.076.954.83 1.697 2.182 1.785V12h.6v-.709c1.4-.098 2.218-.846 2.218-1.932c0-.987-.626-1.496-1.745-1.76l-.473-.112V5.57c.6.068.982.396 1.074.85h1.052c-.076-.919-.864-1.638-2.126-1.716V4h-.6v.719c-1.195.117-2.01.836-2.01 1.853c0 .9.606 1.472 1.613 1.707l.397.098v2.034c-.615-.093-1.022-.43-1.114-.9zm2.177-2.166c-.59-.137-.91-.416-.91-.836c0-.47.345-.822.915-.925v1.76h-.005zm.692 1.193c.717.166 1.048.435 1.048.91c0 .542-.412.914-1.135.982V8.518z"/>
+                                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                            <path d="M8 13.5a5.5 5.5 0 1 1 0-11a5.5 5.5 0 0 1 0 11m0 .5A6 6 0 1 0 8 2a6 6 0 0 0 0 12"/>
+                                        </g>
+                                    </svg>
+                                </div>
+                            }
+                            bgColor={'#1270b5'} 
+                            departmentName={text.actionAreas.businessDevelopment} 
+                            actionText={text.actionAreas.actionText} 
+                        />
                     </div>
                 </div>
             </section>

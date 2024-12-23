@@ -78,6 +78,28 @@ export function ServiceCardLP({ title, text_intro, go_to_text, text_description,
             </Card>
         </>
     );
+} 
+
+export function ActionAreaCard({ visuals, bgColor, departmentName, actionText }){ 
+
+    return (
+        <>
+            <div 
+                className={`card text-gray-50 flex flex-col items-center p-5 lg:w-[300px] lg:h-[430px] gap-5 group rounded-2xl drop-shadow-lg hover:drop-shadow-2xl overflow-hidden transition-all duration-200 ease-in-out`}
+                style={{ backgroundColor: bgColor}}
+            >
+                <div className="w-full h-[65%] flex items-center justify-center ">
+                    {visuals}
+                </div>
+                <h4 className="text-h5 lg:w-4/5 font-bold text-center  transition-transform duration-700 ease-in-out group-hover:transform group-hover:-translate-y-3">
+                    {departmentName} 
+                </h4> 
+                <p className="text-p font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
+                    {actionText}
+                </p> 
+            </div>
+        </>
+    );
 }
 
 export function CITC_Card({id, title, content, icon, buttons, visuals }){
