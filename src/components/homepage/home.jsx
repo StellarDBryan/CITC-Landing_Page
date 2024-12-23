@@ -187,9 +187,40 @@ export function Services(){
                                         </g>
                                     </svg>
                                 </div>
-                            }
+                            } 
                             bgColor={'#1270b5'} 
                             departmentName={text.actionAreas.businessDevelopment} 
+                            actionText={text.actionAreas.actionText} 
+                        />
+                        <ActionAreaCard 
+                            visuals={
+                                <div className="relative flex w-full h-full justify-center pt-7 text-gray-clear-citc ">
+                                    <Image 
+                                        src="/images/logos/citc/LivingLabCUU_logo.png"
+                                        alt="random alt"
+                                        width={500}
+                                        height={500}
+                                        className="w-[230px] h-[230px] group-hover:transform group-hover:scale-[0.8] transition-transform duration-700 ease-in-out object-cover absolute z-10 bottom-1 filter grayscale brightness-[7]" 
+                                        style={{
+                                            objectPosition: '0.65% 8%',
+                                        }}
+                                    />
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="270" height="270" viewBox="0 0 24 24" className="group-hover:opacity-100 opacity-0 transition-opacity duration-500 ease-in-out absolute -bottom-[21px] w-[280px] h-[280px]">
+                                        <path fill="none" stroke="currentColor" strokeDasharray="16" strokeDashoffset="20" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.2" d="M12 3c4.97 0 9 4.03 9 9">
+                                            <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.2s" values="16;0"/>
+                                            <animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/>
+                                        </path>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="270" height="270" viewBox="0 0 24 24" className="group-hover:opacity-100 opacity-0 transition-opacity duration-500 ease-in-out absolute -bottom-[21px] w-[280px] h-[280px] transform rotate-[220deg]">
+                                        <path fill="none" stroke="currentColor" strokeDasharray="16" strokeDashoffset="20" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.2" d="M12 3c4.97 0 9 4.03 9 9">
+                                            <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.2s" values="16;0"/>
+                                            <animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/>
+                                        </path>
+                                    </svg>
+                                </div>
+                            } 
+                            bgColor={'#71bfc8'} 
+                            departmentName={text.actionAreas.livingLab} 
                             actionText={text.actionAreas.actionText} 
                         />
                     </div>
