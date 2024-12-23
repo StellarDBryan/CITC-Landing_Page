@@ -211,7 +211,7 @@ export function Services(){
                                             <animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/>
                                         </path>
                                     </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="270" height="270" viewBox="0 0 24 24" className="group-hover:opacity-100 opacity-0 transition-opacity duration-500 ease-in-out absolute -bottom-[21px] w-[280px] h-[280px] transform rotate-[220deg]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="270" height="270" viewBox="0 0 24 24" className="group-hover:opacity-100 opacity-0 transition-opacity duration-500 ease-in-out absolute -bottom-[21px] w-[280px] h-[280px] transform rotate-[180deg]">
                                         <path fill="none" stroke="currentColor" strokeDasharray="16" strokeDashoffset="20" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.2" d="M12 3c4.97 0 9 4.03 9 9">
                                             <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.2s" values="16;0"/>
                                             <animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/>
