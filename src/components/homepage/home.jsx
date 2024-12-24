@@ -114,7 +114,7 @@ export function Solutions(){
             <section className=" bg-[url('/images/backgrounds/LP_02.jpg')] bg-cover bg-center lg:my-10 lg:items-center lg:h-[600px] ">
                 <div className="bg-light-gradient h-full px-5 flex flex-col items-center gap-5 lg:gap-10">
                     <h4 className="font-bold text-blue-dark-citc text-h5 text-center lg:text-h4">{text.solutions.text}</h4> 
-                    <div className="w-full sm:w-auto h-auto flex flex-col md:flex-row items-center justify-around lg:justify-center flex-wrap gap-3 lg:gap-10"> 
+                    <div className="w-full sm:w-auto h-auto flex flex-col md:flex-row items-center justify-around lg:justify-center flex-wrap gap-3 lg:gap-8"> 
                         <SolutionCard 
                             img_src="/images/photos/events/events_01.jpg" 
                             img_alt="Conections Image"
@@ -144,21 +144,21 @@ export function Services(){
 
     return (
         <>
-            <section className="w-full h-[600px] overflow-hidden">
+            <section className="w-full h-auto overflow-hidden">
                 <div className="w-full h-full flex flex-col items-center space-y-5">
                     <h4 className="text-h4 font-semibold text-blue-dark-citc">{text.services.intro}</h4>
-                    <div className="w-full h-auto flex flex-row flex-wrap items-center justify-center space-x-10">
+                    <div className="w-full h-auto flex flex-row flex-wrap items-center justify-center gap-5 md:gap-x-3 lg:gap-x-8">
                         <ActionAreaCard 
                             visuals={
-                                <div className="relative flex justify-center text-gray-clear-citc overflow-hidden">
+                                <div className="relative flex justify-center text-gray-clear-citc overflow-hidden ">
                                     <Image 
                                         src="/images/icons/user_icon.png"
                                         alt="random alt"
                                         width={500}
                                         height={500}
-                                        className="w-[150px] absolute z-10 bottom-0"
+                                        className="w-[150px] absolute z-10 bottom-[2.5rem] sm:bottom-4 md:bottom-1 lg:bottom-0 transform scale-[0.63] sm:scale-[0.67] md:scale-75 lg:scale-100"
                                     />
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="250" height="250" viewBox="0 0 32 32" className="transform transition-transform duration-1000 ease-in-out animate-none group-hover:rotate-[360deg] ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="250" height="250" viewBox="0 0 32 32" className="transform scale-[1.1] sm:scale-[0.7] md:scale-100 transition-transform duration-1000 ease-in-out animate-none group-hover:rotate-[360deg] ">
                                         <path fill="currentColor" d="m16 2l-4.55 9.22l-10.17 1.47l7.36 7.18L6.9 30l9.1-4.78L25.1 30l-1.74-10.13l7.36-7.17l-10.17-1.48Z"/>
                                     </svg>
                                 </div>
@@ -169,16 +169,16 @@ export function Services(){
                         />
                         <ActionAreaCard 
                             visuals={
-                                <div className="relative flex w-full h-full justify-center pt-7 text-gray-clear-citc ">
+                                <div className="relative flex w-full h-full justify-center pt-3 sm:pt-1 md:pt-3 md:pb-0 lg:pt-7 lg:pb-0 text-gray-clear-citc">
                                     <Image 
                                         src="/images/icons/business_icon.png"
                                         alt="random alt"
                                         width={500}
                                         height={500}
-                                        className="w-[200px] h-[150px] absolute z-10 bottom-2 "
+                                        className="w-[100px] h-[70px] sm:w-[200px] sm:h-[140px] md:h-[150px] absolute z-10 bottom-1 sm:-bottom-8 md:-bottom-3 lg:bottom-2 transform scale-100 sm:scale-[0.7] md:scale-[0.8] lg:scale-100"
                                     />
                                     <svg xmlns="http://www.w3.org/2000/svg" width="125" height="125" viewBox="0 0 16 16" 
-                                        className="group-hover:[transform:rotate3d(0,1,0,_360deg)_translateY(-25px)] transition-transform duration-1000 ease-in-out"
+                                        className="group-hover:[transform:rotate3d(0,1,0,_360deg)_translateY(-10px)] md:group-hover:[transform:rotate3d(0,1,0,_360deg)_translateY(-20px)] w-[55px] sm:w-[65px] h-[65px] md:w-[90px] md:h-[90px] lg:w-[115px] lg:h-[115px] lg:group-hover:[transform:rotate3d(0,1,0,_360deg)_translateY(-25px)] transition-transform duration-1000 ease-in-out "
                                     >
                                         <g fill="currentColor">
                                             <path d="M5.5 9.511c.076.954.83 1.697 2.182 1.785V12h.6v-.709c1.4-.098 2.218-.846 2.218-1.932c0-.987-.626-1.496-1.745-1.76l-.473-.112V5.57c.6.068.982.396 1.074.85h1.052c-.076-.919-.864-1.638-2.126-1.716V4h-.6v.719c-1.195.117-2.01.836-2.01 1.853c0 .9.606 1.472 1.613 1.707l.397.098v2.034c-.615-.093-1.022-.43-1.114-.9zm2.177-2.166c-.59-.137-.91-.416-.91-.836c0-.47.345-.822.915-.925v1.76h-.005zm.692 1.193c.717.166 1.048.435 1.048.91c0 .542-.412.914-1.135.982V8.518z"/>
@@ -200,18 +200,16 @@ export function Services(){
                                         alt="random alt"
                                         width={500}
                                         height={500}
-                                        className="w-[230px] h-[230px] group-hover:transform group-hover:scale-[0.8] transition-transform duration-700 ease-in-out object-cover absolute z-10 bottom-1 filter grayscale brightness-[7]" 
-                                        style={{
-                                            objectPosition: '0.65% 8%',
-                                        }}
+                                        className="w-[113px] h-[113px] sm:w-[160px] object-[2%_8%] sm:object-[0.65%_8%] sm:h-[160px] md:w-[190px] md:h-[190px] lg:w-[230px] lg:h-[230px] group-hover:transform group-hover:scale-[0.85] sm:group-hover:scale-[0.8] transition-transform duration-700 ease-in-out object-cover absolute z-10 bottom-3 sm:-bottom-4 md:bottom-0 lg:bottom-1 filter grayscale brightness-[7]" 
+                                        
                                     />
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="270" height="270" viewBox="0 0 24 24" className="group-hover:opacity-100 opacity-0 transition-opacity duration-500 ease-in-out absolute -bottom-[21px] w-[280px] h-[280px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="270" height="270" viewBox="0 0 24 24" className="group-hover:opacity-100 opacity-0 transition-opacity duration-500 ease-in-out absolute -bottom-2 sm:-bottom-[30px] md:-bottom-[18px] lg:-bottom-[21px] w-[150px] h-[150px] sm:w-[190px] sm:h-[190px] md:w-[220px] md:h-[220px] lg:w-[280px] lg:h-[280px]">
                                         <path fill="none" stroke="currentColor" strokeDasharray="16" strokeDashoffset="20" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.2" d="M12 3c4.97 0 9 4.03 9 9">
                                             <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.2s" values="16;0"/>
                                             <animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/>
                                         </path>
                                     </svg>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="270" height="270" viewBox="0 0 24 24" className="group-hover:opacity-100 opacity-0 transition-opacity duration-500 ease-in-out absolute -bottom-[21px] w-[280px] h-[280px] transform rotate-[180deg]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="270" height="270" viewBox="0 0 24 24" className="group-hover:opacity-100 opacity-0 transition-opacity duration-500 ease-in-out absolute -bottom-2 sm:-bottom-[30px] md:-bottom-[18px] lg:-bottom-[21px] w-[150px] h-[150px] sm:w-[190px] sm:h-[190px] md:w-[220px] md:h-[220px] lg:w-[280px] lg:h-[280px] transform rotate-[180deg]">
                                         <path fill="none" stroke="currentColor" strokeDasharray="16" strokeDashoffset="20" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.2" d="M12 3c4.97 0 9 4.03 9 9">
                                             <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.2s" values="16;0"/>
                                             <animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/>
