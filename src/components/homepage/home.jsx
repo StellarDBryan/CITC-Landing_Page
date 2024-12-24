@@ -144,7 +144,7 @@ export function Services(){
 
     return (
         <>
-            <section className="w-full h-auto overflow-hidden">
+            <section className="w-full h-auto py-5">
                 <div className="w-full h-full flex flex-col items-center space-y-5">
                     <h4 className="text-h4 font-semibold text-blue-dark-citc">{text.services.intro}</h4>
                     <div className="w-full h-auto flex flex-row flex-wrap items-center justify-center gap-5 md:gap-x-3 lg:gap-x-8">
@@ -156,7 +156,7 @@ export function Services(){
                                         alt="random alt"
                                         width={500}
                                         height={500}
-                                        className="w-[150px] absolute z-10 bottom-[2.5rem] sm:bottom-4 md:bottom-1 lg:bottom-0 transform scale-[0.63] sm:scale-[0.67] md:scale-75 lg:scale-100"
+                                        className="w-[150px] absolute z-10 bottom-9 sm:bottom-4 md:bottom-1 lg:bottom-0 transform scale-[0.63] sm:scale-[0.67] md:scale-75 lg:scale-100"
                                     />
                                     <svg xmlns="http://www.w3.org/2000/svg" width="250" height="250" viewBox="0 0 32 32" className="transform scale-[1.1] sm:scale-[0.7] md:scale-100 transition-transform duration-1000 ease-in-out animate-none group-hover:rotate-[360deg] ">
                                         <path fill="currentColor" d="m16 2l-4.55 9.22l-10.17 1.47l7.36 7.18L6.9 30l9.1-4.78L25.1 30l-1.74-10.13l7.36-7.17l-10.17-1.48Z"/>
@@ -200,7 +200,7 @@ export function Services(){
                                         alt="random alt"
                                         width={500}
                                         height={500}
-                                        className="w-[113px] h-[113px] sm:w-[160px] object-[2%_8%] sm:object-[0.65%_8%] sm:h-[160px] md:w-[190px] md:h-[190px] lg:w-[230px] lg:h-[230px] group-hover:transform group-hover:scale-[0.85] sm:group-hover:scale-[0.8] transition-transform duration-700 ease-in-out object-cover absolute z-10 bottom-3 sm:-bottom-4 md:bottom-0 lg:bottom-1 filter grayscale brightness-[7]" 
+                                        className="w-[113px] h-[113px] sm:w-[160px] object-[1%_8%] sm:object-[0.65%_8%] sm:h-[160px] md:w-[190px] md:h-[190px] lg:w-[230px] lg:h-[230px] group-hover:transform group-hover:scale-[0.85] sm:group-hover:scale-[0.8] transition-transform duration-700 ease-in-out object-cover absolute z-10 bottom-3 sm:-bottom-4 md:bottom-0 lg:bottom-1 filter grayscale brightness-[7]" 
                                         
                                     />
                                     <svg xmlns="http://www.w3.org/2000/svg" width="270" height="270" viewBox="0 0 24 24" className="group-hover:opacity-100 opacity-0 transition-opacity duration-500 ease-in-out absolute -bottom-2 sm:-bottom-[30px] md:-bottom-[18px] lg:-bottom-[21px] w-[150px] h-[150px] sm:w-[190px] sm:h-[190px] md:w-[220px] md:h-[220px] lg:w-[280px] lg:h-[280px]">
