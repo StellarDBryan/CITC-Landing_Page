@@ -8,7 +8,7 @@ export function NavButton({ children, redirect_url, isSelected, hasScrolled, isL
         <>
             <Link href={redirect_url}>
                 <button
-                    className={`btn btn-ghost md:text-[1.1rem] lg:text-h6 font-semibold rounded-none ${(redirect_url === isSelected) ? (((hasScrolled && isLandingPage) || (isSelected != "/")) ? 'border-b-2 border-solid border-regular-dark group-hover:border-gray-clear-citc' : 'border-b-2 border-solid border-gray-clear-citc') : 'border-b-0'} hover:bg-transparent hover:border-b-2 hover:border-solid border-x-0 border-t-0 hover:border-gray-clear-citc`}
+                    className={`btn btn-ghost text-nowrap md:text-[1.1rem] lg:text-h6 font-semibold rounded-none ${(redirect_url === isSelected) ? (((hasScrolled && isLandingPage) || (isSelected != "/")) ? 'border-b-2 border-solid border-regular-dark group-hover:border-gray-clear-citc' : 'border-b-2 border-solid border-gray-clear-citc') : 'border-b-0'} hover:bg-transparent hover:border-b-2 hover:border-solid border-x-0 border-t-0 hover:border-gray-clear-citc`}
                 >
                     {children}
                 </button>
@@ -24,7 +24,7 @@ export function MobileLinkBtn({ children, link }){
     return (
         <>
             <a href={link}>
-                <button className='btn text-[1.1rem] w-full bg-inherit hover:bg-inherit text-gray-clear-citc flex flex-row items-center gap-2 border-0 border-gray-clear-citc hover:border-b-2 rounded-none shadow-none'>
+                <button className='btn text-[1rem] w-full bg-inherit hover:bg-inherit text-gray-clear-citc flex flex-row items-center gap-2 border-0 border-gray-clear-citc hover:border-b-2 rounded-none shadow-none'>
                     {children}
                 </button>
             </a>

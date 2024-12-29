@@ -12,7 +12,9 @@ import { transparent } from 'tailwindcss/colors';
 const text = {
     'español': {
         home: 'Inicio', 
-        services: 'Servicios', 
+        livingLab: 'Living Lab', 
+        talent: 'Talent', 
+        business: 'Business', 
         about: 'Nosotros',
         news: 'Noticias', 
         contact: 'Contacto', 
@@ -95,11 +97,14 @@ export function NavButtons({ isSelected, hasScrolled, isLandingPage }) {
                     <NavButton redirect_url="/" isSelected={isSelected} hasScrolled={hasScrolled} isLandingPage={isLandingPage}>
                         {text.español.home}
                     </NavButton>
-                    <NavButton redirect_url="/about" isSelected={isSelected} hasScrolled={hasScrolled} isLandingPage={isLandingPage}>
-                        {text.español.about}
+                    <NavButton redirect_url="/talent" isSelected={isSelected} hasScrolled={hasScrolled} isLandingPage={isLandingPage}>
+                        {text.español.talent}
                     </NavButton>
-                    <NavButton redirect_url="/services" isSelected={isSelected} hasScrolled={hasScrolled} isLandingPage={isLandingPage}>
-                        {text.español.services}
+                    <NavButton redirect_url="/business" isSelected={isSelected} hasScrolled={hasScrolled} isLandingPage={isLandingPage}>
+                        {text.español.business}
+                    </NavButton>
+                    <NavButton redirect_url="/livinglab" isSelected={isSelected} hasScrolled={hasScrolled} isLandingPage={isLandingPage}>
+                        {text.español.livingLab}
                     </NavButton>
                     <NavButton redirect_url="/contact" isSelected={isSelected} hasScrolled={hasScrolled} isLandingPage={isLandingPage}>
                         {text.español.contact}
@@ -153,18 +158,25 @@ export function MobileNavbar(){
                     </svg>
                     {text.español.home}
                 </MobileLinkBtn>
-                <MobileLinkBtn link="/about">
+                <MobileLinkBtn link="/talent">
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
                         <circle cx="12" cy="6" r="4" fill="currentColor"/>
                         <path fill="currentColor" d="M20 17.5c0 2.485 0 4.5-8 4.5s-8-2.015-8-4.5S7.582 13 12 13s8 2.015 8 4.5"/>
                     </svg>
-                    {text.español.about}
+                    {text.español.talent}
                 </MobileLinkBtn>
-                <MobileLinkBtn link="services">
+                <MobileLinkBtn link="/business">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
+                        <circle cx="12" cy="6" r="4" fill="currentColor"/>
+                        <path fill="currentColor" d="M20 17.5c0 2.485 0 4.5-8 4.5s-8-2.015-8-4.5S7.582 13 12 13s8 2.015 8 4.5"/>
+                    </svg>
+                    {text.español.business}
+                </MobileLinkBtn>
+                <MobileLinkBtn link="/livinglab">
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 512 512">
                         <path fill="currentColor" d="M507.068 188.5c-18.305-50.06-78.104-66.608-119.336-39.208l-55.238-45.86C347.424 54.955 312.545 1.63 258.318.057c-55.846-1.62-94.39 52.747-78.826 103.31l-55.277 45.891c-42.492-28.237-103.813-9.494-120.367 42.404C-11.444 239.605 20.796 286.595 66 294.728l21.387 76.738c-38.19 32.88-37.263 96.126 7.468 126.514c44.314 30.104 102.873 8.432 120.096-38.207h81.964c17.847 48.875 80.026 69.33 123.81 35.53c42.17-32.553 40.07-94.432 1.737-125.498l22.079-74.826c47.395-7.553 80.411-57.571 62.527-106.48M293.596 415.783h-75.27c-8.408-41.328-48.919-69.346-90.473-62.973l-17.49-62.761c42.473-17.089 61.169-67.067 42.522-107.414l50.678-42.072c29.563 25.716 74.975 26.034 104.818.034l50.722 42.111c-18.598 40.235.075 89.356 41.183 106.797l-18.577 62.955c-41.13-5.136-79.856 23.192-88.113 63.323"/>
                     </svg>
-                    {text.español.services}
+                    {text.español.livingLab}
                 </MobileLinkBtn>
                 <MobileLinkBtn link="/contact">
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
