@@ -93,7 +93,7 @@ export function NavButtons({ isSelected, hasScrolled, isLandingPage }) {
 
     return(
         <>
-            <div className="font-medium px-10 h-full lg:w-[50%] flex flex-row items-center justify-around space-x-3 lg:space-x-10">
+            <div className="font-medium px-3 h-full lg:w-[50%] flex flex-row items-center justify-around space-x-1 lg:space-x-5">
                     <NavButton redirect_url="/" isSelected={isSelected} hasScrolled={hasScrolled} isLandingPage={isLandingPage}>
                         {text.español.home}
                     </NavButton>
