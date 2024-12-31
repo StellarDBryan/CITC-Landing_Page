@@ -149,6 +149,7 @@ export function Services(){
                     <h4 className="text-[1.3rem] w-4/5 sm:w-auto sm:text-h5 lg:text-h4 text-center font-bold text-blue-dark-citc">{text.services.intro}</h4>
                     <div className="w-full h-auto flex flex-row flex-wrap items-center justify-center gap-5 md:gap-x-3 lg:gap-x-8">
                         <ActionAreaCard 
+                            link="/talent"
                             visuals={
                                 <div className="relative flex justify-center text-gray-clear-citc overflow-hidden ">
                                     <Image 
@@ -168,6 +169,7 @@ export function Services(){
                             actionText={text.actionAreas.actionText} 
                         />
                         <ActionAreaCard 
+                            link="/business"
                             visuals={
                                 <div className="relative flex w-full h-full justify-center pt-3 sm:pt-1 md:pt-3 md:pb-0 lg:pt-7 lg:pb-0 text-gray-clear-citc">
                                     <Image 
@@ -193,6 +195,7 @@ export function Services(){
                             actionText={text.actionAreas.actionText} 
                         />
                         <ActionAreaCard 
+                            link="/livinglab"
                             visuals={
                                 <div className="relative flex w-full h-full justify-center pt-7 text-gray-clear-citc ">
                                     <Image 

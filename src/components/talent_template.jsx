@@ -5,6 +5,18 @@ const content = {
         title: 'Talent Development', 
         intro: 'Fortalecemos el talento local a través de programas educativos, eventos y comunidad tecnológica. '
     }, 
+    programs: {
+        title: 'Programas', 
+        collaborators: 'Colaboradores', 
+        content: [
+            {
+                name: 'Full Stack Fundations', 
+                description: 'Full-Stack Foundations es un diplomado diseñado para formar a la próxima generación de desarrolladores web con un enfoque integral y práctico. A través de módulos especializados, los participantes adquieren conocimientos en tecnologías clave como HTML, CSS, JavaScript, frameworks modernos y bases de datos, mientras desarrollan proyectos reales que fortalecen sus habilidades técnicas y colaborativas. Este programa está orientado a personas con interés en la tecnología que buscan iniciar o potenciar su carrera en el desarrollo de software.', 
+                results: [{name: 'Generaciones', number: 4}, {name: 'Estudiantes', number: 62}, {name: 'Graduados', number: 42}, {name: 'En Proceso', number: 12}], 
+
+            }, 
+        ], 
+    }, 
 };
 
 export default function HeroSection(){
@@ -32,6 +44,75 @@ export default function HeroSection(){
                     className="w-[600px] h-[260px] sm:w-[500px] sm:h-auto md:w-[450px] md:h-[450px] lg:w-[600px] lg:h-[600px] object-cover opacity-100 md:opacity-80"
                 />
             </section>
+        </>
+    );
+} 
+
+export function Programs(){
+
+    return (
+        <>
+            <section className="w-full h-screen flex flex-col items-center"> 
+                <h2 className="text-[5.5rem] font-extrabold text-[#92d050]">Programas</h2> 
+                <ProgramCard reverse={false} />
+            </section>
+        </>
+    );
+}
+
+function ProgramCard({ reverse, collaborators }){
+
+    return (
+        <>
+            <div className="flex flex-col w-4/5 gap-2">
+                <div className={`flex ${reverse ? 'flex-row-reverse' : 'flex-row'} items-center gap-10`}>
+                    <h3 className="text-h3 font-bold text-nowrap text-lime-600">{content.programs.content[0].name}</h3> 
+                    <div className="w-full h-1 bg-neutral-600 rounded-full" /> 
+                </div>
+                <div className={`flex ${reverse ? 'flex-row-reverse' : 'flex-row'} items-center justify-between w-full`}>
+                    <div className="flex flex-col w-1/2 gap-3">
+                        <p className="text-[1.1rem] font-medium">
+                            {content.programs.content[0].description}
+                        </p>
+                        <div className="flex flex-row flex-wrap w-full h-auto gap-x-3 gap-y-1">
+                            {content.programs.content[0].results.map((result, id) => {
+                                return (
+                                    <p key={id} className="text-[1.25rem] flex flex-row items-center text-nowrap text-neutral-600 font-medium gap-2">
+                                        <span className=" font-bold text-lime-600">{result.number}</span>
+                                        <span>{result.name}</span>
+                                    </p>
+                                );
+                            })}
+                        </div>
+                        <div className="flex flex-col w-full gap-2">
+                            <h6 className="text-[1.25rem] font-bold text-lime-600">{content.programs.collaborators}</h6>
+                            <div className="flex flex-row flex-wrap w-full gap-5">
+                                <Image 
+                                    src="/images/logos/talent/proyectoT_logo.png"
+                                    alt="Proyecto T Logo"
+                                    width={220}
+                                    height={200}
+                                    className="object-contain"
+                                />
+                                <Image 
+                                    src="/images/logos/talent/inadet_logo.png"
+                                    alt="INADET/CENALTEC Logo"
+                                    width={290}
+                                    height={220}
+                                />
+                            </div>
+                        </div> 
+                    </div>
+                    <div className="relative flex items-center justify-center w-2/5 h-full rounded-3xl overflow-hidden">
+                        <Image 
+                            src={'/images/photos/workspace/LivingLabCUU_01.jpg'}
+                            alt="FSF Image"
+                            fill
+                            className="object-cover"
+                        />
+                    </div>
+                </div>
+            </div>
         </>
     );
 }

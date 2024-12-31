@@ -1,4 +1,4 @@
-import HeroSection from "@/components/talent_template";
+import HeroSection, { Programs } from "@/components/talent_template";
 
 export default function Home(){
 
@@ -6,6 +6,7 @@ export default function Home(){
         <>
             <div>
                 <HeroSection />
+                <Programs />
             </div>
         </>
     );

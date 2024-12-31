@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@nextui-org/button";
 import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
 import { motion } from "framer-motion";
@@ -80,26 +81,28 @@ export function ServiceCardLP({ title, text_intro, go_to_text, text_description,
     );
 } 
 
-export function ActionAreaCard({ visuals, bgColor, departmentName, actionText }){ 
+export function ActionAreaCard({ link, visuals, bgColor, departmentName, actionText }){ 
 
     return (
         <>
-            <div 
-                className={`card text-white sm:text-gray-50 flex flex-row justify-around md:justify-start md:flex-col items-center py-2 px-5 sm:p-5 w-[85%] h-[150px] sm:w-[550px] sm:h-[170px] md:w-[235px] md:h-[400px] lg:w-[300px] lg:h-[430px] gap-1 sm:gap-5 group rounded-2xl drop-shadow-lg hover:drop-shadow-2xl overflow-hidden transition-all duration-200 ease-in-out`}
-                style={{ backgroundColor: bgColor}}
-            >
-                <div className="w-2/5 sm:w-1/2 h-full md:w-full md:h-[55%] lg:h-[65%] flex items-center justify-center ">
-                    {visuals}
+            <Link href={link} className="w-full sm:w-auto flex justify-center h-auto group">
+                <div 
+                    className={`card text-white sm:text-gray-50 flex flex-row justify-around md:justify-start md:flex-col items-center py-2 px-5 sm:p-5 w-[85%] h-[150px] sm:w-[550px] sm:h-[170px] md:w-[235px] md:h-[400px] lg:w-[300px] lg:h-[430px] gap-1 sm:gap-5 group rounded-2xl drop-shadow-lg hover:drop-shadow-2xl overflow-hidden transition-all duration-200 ease-in-out`}
+                    style={{ backgroundColor: bgColor}}
+                >
+                    <div className="w-2/5 sm:w-1/2 h-full md:w-full md:h-[55%] lg:h-[65%] flex items-center justify-center ">
+                        {visuals} 
+                    </div>
+                    <div className="flex flex-col items-center justify-center sm:pt-5 md:pt-0 md:justify-between h-full w-1/2 md:w-full md:h-[35%]">
+                        <h4 className="text-[1.2rem] sm:text-h5 lg:w-4/5 font-bold text-center  transition-transform duration-700 ease-in-out group-hover:transform group-hover:-translate-y-3">
+                            {departmentName} 
+                        </h4> 
+                        <p className="hidden sm:inline text-p font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
+                            {actionText} 
+                        </p> 
+                    </div>
                 </div>
-                <div className="flex flex-col items-center justify-center sm:pt-5 md:pt-0 md:justify-between h-full w-1/2 md:w-full md:h-[35%]">
-                    <h4 className="text-[1.2rem] sm:text-h5 lg:w-4/5 font-bold text-center  transition-transform duration-700 ease-in-out group-hover:transform group-hover:-translate-y-3">
-                        {departmentName} 
-                    </h4> 
-                    <p className="hidden sm:inline text-p font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
-                        {actionText}
-                    </p> 
-                </div>
-            </div>
+            </Link>
         </>
     );
 }
