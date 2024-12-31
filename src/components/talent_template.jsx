@@ -1,4 +1,5 @@
-import Image from "next/image";
+import Image from "next/image"; 
+import { ImgCarousel } from "./carousel"; 
 
 const content = {
     heroSection: {
@@ -13,7 +14,18 @@ const content = {
                 name: 'Full Stack Fundations', 
                 description: 'Full-Stack Foundations es un diplomado diseñado para formar a la próxima generación de desarrolladores web con un enfoque integral y práctico. A través de módulos especializados, los participantes adquieren conocimientos en tecnologías clave como HTML, CSS, JavaScript, frameworks modernos y bases de datos, mientras desarrollan proyectos reales que fortalecen sus habilidades técnicas y colaborativas. Este programa está orientado a personas con interés en la tecnología que buscan iniciar o potenciar su carrera en el desarrollo de software.', 
                 results: [{name: 'Generaciones', number: 4}, {name: 'Estudiantes', number: 62}, {name: 'Graduados', number: 42}, {name: 'En Proceso', number: 12}], 
-
+                images: [
+                    '/images/photos/workspace/LivingLabCUU_01.jpg', 
+                    '/images/photos/workspace/LivingLabCUU_02.JPG', 
+                    '/images/photos/workspace/LivingLabCUU_03.JPG', 
+                    '/images/photos/workspace/LivingLabCUU_04.JPG', 
+                    '/images/photos/workspace/LivingLabCUU_05.jpg', 
+                    '/images/photos/workspace/LivingLabCUU_06.JPG', 
+                    '/images/photos/workspace/LivingLabCUU_07.JPG', 
+                    '/images/photos/workspace/LivingLabCUU_08.JPG', 
+                    '/images/photos/workspace/LivingLabCUU_09.JPG', 
+                    '/images/photos/workspace/LivingLabCUU_10.JPG',  
+                ], 
             }, 
         ], 
     }, 
@@ -103,14 +115,9 @@ function ProgramCard({ reverse, collaborators }){
                             </div>
                         </div> 
                     </div>
-                    <div className="relative flex items-center justify-center w-2/5 h-full rounded-3xl overflow-hidden">
-                        <Image 
-                            src={'/images/photos/workspace/LivingLabCUU_01.jpg'}
-                            alt="FSF Image"
-                            fill
-                            className="object-cover"
-                        />
-                    </div>
+                    <div className="relative flex items-center justify-center w-[45%] h-full rounded-3xl overflow-hidden ">
+                        <ImgCarousel images={content.programs.content[0].images} />
+                    </div> 
                 </div>
             </div>
         </>
