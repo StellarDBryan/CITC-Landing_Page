@@ -64,8 +64,8 @@ export function Programs(){
 
     return (
         <>
-            <section className="w-full h-screen flex flex-col items-center"> 
-                <h2 className="text-[5.5rem] font-extrabold text-[#92d050]">Programas</h2> 
+            <section className="w-full h-auto py-10 flex flex-col items-center"> 
+                <h2 className="text-[3rem] sm:text-[3.5rem] md:text-[4.5rem] lg:text-[5.5rem] font-extrabold text-[#92d050]">Programas</h2> 
                 <ProgramCard reverse={false} />
             </section>
         </>
@@ -76,20 +76,20 @@ function ProgramCard({ reverse, collaborators }){
 
     return (
         <>
-            <div className="flex flex-col w-4/5 gap-2">
-                <div className={`flex ${reverse ? 'flex-row-reverse' : 'flex-row'} items-center gap-10`}>
-                    <h3 className="text-h3 font-bold text-nowrap text-lime-600">{content.programs.content[0].name}</h3> 
+            <div className="flex flex-col h-auto w-[85%] sm:w-[90%] lg:w-4/5 gap-2">
+                <div className={`flex ${reverse ? 'flex-row-reverse' : 'flex-row'} items-center gap-3 md:gap-10`}>
+                    <h3 className="text-h6 sm:text-h5 md:text-h4 lg:text-h3 font-bold text-nowrap text-lime-600">{content.programs.content[0].name}</h3> 
                     <div className="w-full h-1 bg-neutral-600 rounded-full" /> 
                 </div>
-                <div className={`flex ${reverse ? 'flex-row-reverse' : 'flex-row'} items-center justify-between w-full`}>
-                    <div className="flex flex-col w-1/2 gap-3">
-                        <p className="text-[1.1rem] font-medium">
+                <div className={`flex ${reverse ? 'flex-row-reverse' : 'flex-row'} flex-wrap items-center justify-center gap-8 lg:gap-0 lg:justify-between w-full`}>
+                    <div className="flex flex-col w-full lg:w-1/2 gap-3">
+                        <p className="text-[0.95rem] sm:text-[0.9rem] md:text-p lg:text-[1.1rem] font-medium">
                             {content.programs.content[0].description}
                         </p>
                         <div className="flex flex-row flex-wrap w-full h-auto gap-x-3 gap-y-1">
                             {content.programs.content[0].results.map((result, id) => {
                                 return (
-                                    <p key={id} className="text-[1.25rem] flex flex-row items-center text-nowrap text-neutral-600 font-medium gap-2">
+                                    <p key={id} className="text-[0.95rem] sm:text-[1rem] md:text-[1.1rem] lg:text-[1.25rem] flex flex-row items-center text-nowrap text-neutral-600 font-medium gap-2">
                                         <span className=" font-bold text-lime-600">{result.number}</span>
                                         <span>{result.name}</span>
                                     </p>
@@ -97,25 +97,26 @@ function ProgramCard({ reverse, collaborators }){
                             })}
                         </div>
                         <div className="flex flex-col w-full gap-2">
-                            <h6 className="text-[1.25rem] font-bold text-lime-600">{content.programs.collaborators}</h6>
+                            <h6 className="text-[1rem] md:text-[1.1rem] lg:text-[1.25rem] font-bold text-lime-600">{content.programs.collaborators}</h6>
                             <div className="flex flex-row flex-wrap w-full gap-5">
                                 <Image 
                                     src="/images/logos/talent/proyectoT_logo.png"
                                     alt="Proyecto T Logo"
                                     width={220}
                                     height={200}
-                                    className="object-contain"
+                                    className="object-contain w-[180px] sm:w-[150px] md:w-[200px] lg:w-auto"
                                 />
                                 <Image 
                                     src="/images/logos/talent/inadet_logo.png"
                                     alt="INADET/CENALTEC Logo"
                                     width={290}
                                     height={220}
+                                    className="w-[270px] sm:w-[200px] md:w-[250px] lg:w-auto"
                                 />
                             </div>
                         </div> 
                     </div>
-                    <div className="relative flex items-center justify-center w-[45%] h-full rounded-3xl overflow-hidden ">
+                    <div className="flex items-center justify-center w-auto lg:w-[45%] h-full rounded-3xl overflow-hidden ">
                         <ImgCarousel images={content.programs.content[0].images} />
                     </div> 
                 </div>

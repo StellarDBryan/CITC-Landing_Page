@@ -61,11 +61,11 @@ export function ImgCarousel({ images }){
             setPage([newPage-images.length], newDirection);
     };
 
-    const MotionImage = motion(Image);
+    const MotionImage = motion.create(Image);
   
     return (
-        <div className='w-full h-full overflow-hidden flex flex-row items-center justify-center '>
-            <button className="absolute z-10 left-0 btn btn-circle text-gray-50 border-none group rounded-full bg-neutral-800/60 hover:bg-neutral-800/80 lg:ml-2" onClick={() => {paginate(-1)}}>
+        <div className='w-[350px] h-[300px] md:w-[450px] md:h-[350px] lg:w-[550px] lg:h-[450px] relative overflow-hidden flex flex-row items-center justify-center '>
+            <button className="absolute z-10 left-0 btn btn-circle text-gray-50 border-none group rounded-full bg-neutral-800/60 hover:bg-neutral-800/80 ml-2" onClick={() => {paginate(-1)}}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className='rotate-180'>
                     <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M4.5 12h15m0 0l-5.625-6m5.625 6l-5.625 6"/>
                 </svg>
@@ -100,7 +100,7 @@ export function ImgCarousel({ images }){
                     }}
                 />
             </div>
-            <button className="absolute z-10 right-0 btn btn-circle text-gray-50 border-none group rounded-full bg-neutral-800/60 hover:bg-neutral-800/80 lg:mr-2" onClick={() => {paginate(1)}}>
+            <button className="absolute z-10 right-0 btn btn-circle text-gray-50 border-none group rounded-full bg-neutral-800/60 hover:bg-neutral-800/80 mr-2" onClick={() => {paginate(1)}}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24">
                     <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M4.5 12h15m0 0l-5.625-6m5.625 6l-5.625 6"/>
                 </svg>
