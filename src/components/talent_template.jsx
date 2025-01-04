@@ -14,6 +14,87 @@ const content = {
                 name: 'Full Stack Fundations', 
                 description: 'Full-Stack Foundations es un diplomado diseñado para formar a la próxima generación de desarrolladores web con un enfoque integral y práctico. A través de módulos especializados, los participantes adquieren conocimientos en tecnologías clave como HTML, CSS, JavaScript, frameworks modernos y bases de datos, mientras desarrollan proyectos reales que fortalecen sus habilidades técnicas y colaborativas. Este programa está orientado a personas con interés en la tecnología que buscan iniciar o potenciar su carrera en el desarrollo de software.', 
                 results: [{name: 'Generaciones', number: 4}, {name: 'Estudiantes', number: 62}, {name: 'Graduados', number: 42}, {name: 'En Proceso', number: 12}], 
+                collaborators: () => (
+                    <>
+                        <Image 
+                            src="/images/logos/talent/proyectoT_logo.png"
+                            alt="Proyecto T Logo"
+                            width={220}
+                            height={200}
+                            className="object-contain w-[180px] sm:w-[150px] md:w-[200px] lg:w-auto"
+                        />
+                        <Image 
+                            src="/images/logos/talent/inadet_logo.png"
+                            alt="INADET/CENALTEC Logo"
+                            width={290}
+                            height={220}
+                            className="w-[270px] sm:w-[200px] md:w-[250px] lg:w-auto"
+                        /> 
+                    </>
+                ), 
+                images: [
+                    '/images/photos/workspace/LivingLabCUU_01.jpg', 
+                    '/images/photos/workspace/LivingLabCUU_02.JPG', 
+                    '/images/photos/workspace/LivingLabCUU_03.JPG', 
+                    '/images/photos/workspace/LivingLabCUU_04.JPG', 
+                    '/images/photos/workspace/LivingLabCUU_05.jpg', 
+                    '/images/photos/workspace/LivingLabCUU_06.JPG', 
+                    '/images/photos/workspace/LivingLabCUU_07.JPG', 
+                    '/images/photos/workspace/LivingLabCUU_08.JPG', 
+                    '/images/photos/workspace/LivingLabCUU_09.JPG', 
+                    '/images/photos/workspace/LivingLabCUU_10.JPG',  
+                ], 
+            }, 
+            {
+                name: 'Python Programming', 
+                description: 'El diplomado de Python Programming está diseñado para proporcionar una introducción sólida al desarrollo con Python, uno de los lenguajes de programación más versátiles y demandados en la industria tecnológica. A través de un enfoque práctico, los participantes adquieren habilidades esenciales en la programación con Python, incluyendo estructuras de datos, manipulación de archivos, y fundamentos de desarrollo web. Este diplomado es ideal tanto para principiantes como para profesionales que deseen ampliar sus conocimientos y explorar las diversas aplicaciones de Python en áreas como análisis de datos, automatización y machine learning.', 
+                results: [{name: 'Generacion', number: 1}, {name: 'Estudiantes', number: 13}, {name: 'Graduados', number: 10}], 
+                collaborators: () => (
+                    <>
+                        <Image 
+                            src="/images/logos/talent/inadet_logo.png"
+                            alt="INADET/CENALTEC Logo"
+                            width={290}
+                            height={220}
+                            className="w-[270px] sm:w-[200px] md:w-[250px] lg:w-auto"
+                        /> 
+                    </>
+                ), 
+                images: [
+                    '/images/photos/workspace/LivingLabCUU_01.jpg', 
+                    '/images/photos/workspace/LivingLabCUU_02.JPG', 
+                    '/images/photos/workspace/LivingLabCUU_03.JPG', 
+                    '/images/photos/workspace/LivingLabCUU_04.JPG', 
+                    '/images/photos/workspace/LivingLabCUU_05.jpg', 
+                    '/images/photos/workspace/LivingLabCUU_06.JPG', 
+                    '/images/photos/workspace/LivingLabCUU_07.JPG', 
+                    '/images/photos/workspace/LivingLabCUU_08.JPG', 
+                    '/images/photos/workspace/LivingLabCUU_09.JPG', 
+                    '/images/photos/workspace/LivingLabCUU_10.JPG',  
+                ], 
+            }, 
+            {
+                name: 'Girls In Tech', 
+                description: 'El programa Girls in Tech tiene como objetivo empoderar a jóvenes mujeres de entre 12 y 17 años, brindándoles herramientas y experiencias que despierten su interés por la tecnología y el desarrollo personal. Con la participación de 50 chicas, el programa incluye cinco talleres dinámicos: IoT, impresión 3D, Python, creación de páginas web y propósito de vida. Este esfuerzo busca fomentar la creatividad, la confianza y la exploración de nuevas oportunidades en el ámbito tecnológico, construyendo una base sólida para su futuro.', 
+                results: [{name: 'Participantes', number: 50}, {name: 'Talleres', number: 5}], 
+                collaborators: () => (
+                    <>
+                        <Image 
+                            src="/images/logos/talent/cdJuarezConsulado.png"
+                            alt="Consulado de Cd. Juarez Logo"
+                            width={125}
+                            height={125}
+                            className="w-[100px] lg:w-auto"
+                        /> 
+                        <Image 
+                            src="/images/logos/talent/esquinaFranklin_logo.png"
+                            alt="Esquina Franklin Logo"
+                            width={220}
+                            height={220}
+                            className="object-contain w-[160px] lg:w-[210px]"
+                        /> 
+                    </>
+                ), 
                 images: [
                     '/images/photos/workspace/LivingLabCUU_01.jpg', 
                     '/images/photos/workspace/LivingLabCUU_02.JPG', 
@@ -62,32 +143,48 @@ export default function HeroSection(){
 
 export function Programs(){
 
+    let reverse = false;
+
     return (
         <>
-            <section className="w-full h-auto py-10 flex flex-col items-center"> 
-                <h2 className="text-[3rem] sm:text-[3.5rem] md:text-[4.5rem] lg:text-[5.5rem] font-extrabold text-[#92d050]">Programas</h2> 
-                <ProgramCard reverse={false} />
+            <section className="w-full h-auto py-10 flex flex-col gap-3 items-center"> 
+                <h2 className="text-[3rem] sm:text-[3.5rem] md:text-[4.5rem] lg:text-[5.5rem] font-extrabold text-[#92d050]">{content.programs.title}</h2> 
+                <div className="w-full h-auto flex flex-col items-center gap-10">
+                    {content.programs.content.map((program, id) => {
+                        const isReverse = id % 2 === 0 ? reverse : !reverse;
+                        return (
+                            <ProgramCard 
+                            key={id}
+                            reverse={isReverse} 
+                            name={program.name} 
+                            description={program.description} 
+                            results={program.results} 
+                            collaborators={program.collaborators}
+                            images={program.images} />
+                        );
+                    })} 
+                </div>
             </section>
         </>
     );
 }
 
-function ProgramCard({ reverse, collaborators }){
+function ProgramCard({ reverse, name, description, results, collaborators, images }){
 
     return (
         <>
             <div className="flex flex-col h-auto w-[85%] sm:w-[90%] lg:w-4/5 gap-2">
                 <div className={`flex ${reverse ? 'flex-row-reverse' : 'flex-row'} items-center gap-3 md:gap-10`}>
-                    <h3 className="text-h6 sm:text-h5 md:text-h4 lg:text-h3 font-bold text-nowrap text-lime-600">{content.programs.content[0].name}</h3> 
+                    <h3 className="text-h6 sm:text-h5 md:text-h4 lg:text-h3 font-bold text-nowrap text-lime-600">{name}</h3> 
                     <div className="w-full h-1 bg-neutral-600 rounded-full" /> 
                 </div>
                 <div className={`flex ${reverse ? 'flex-row-reverse' : 'flex-row'} flex-wrap items-center justify-center gap-8 lg:gap-0 lg:justify-between w-full`}>
                     <div className="flex flex-col w-full lg:w-1/2 gap-3">
                         <p className="text-[0.95rem] sm:text-[0.9rem] md:text-p lg:text-[1.1rem] font-medium">
-                            {content.programs.content[0].description}
+                            {description}
                         </p>
                         <div className="flex flex-row flex-wrap w-full h-auto gap-x-3 gap-y-1">
-                            {content.programs.content[0].results.map((result, id) => {
+                            {results.map((result, id) => {
                                 return (
                                     <p key={id} className="text-[0.95rem] sm:text-[1rem] md:text-[1.1rem] lg:text-[1.25rem] flex flex-row items-center text-nowrap text-neutral-600 font-medium gap-2">
                                         <span className=" font-bold text-lime-600">{result.number}</span>
@@ -99,25 +196,12 @@ function ProgramCard({ reverse, collaborators }){
                         <div className="flex flex-col w-full gap-2">
                             <h6 className="text-[1rem] md:text-[1.1rem] lg:text-[1.25rem] font-bold text-lime-600">{content.programs.collaborators}</h6>
                             <div className="flex flex-row flex-wrap w-full gap-5">
-                                <Image 
-                                    src="/images/logos/talent/proyectoT_logo.png"
-                                    alt="Proyecto T Logo"
-                                    width={220}
-                                    height={200}
-                                    className="object-contain w-[180px] sm:w-[150px] md:w-[200px] lg:w-auto"
-                                />
-                                <Image 
-                                    src="/images/logos/talent/inadet_logo.png"
-                                    alt="INADET/CENALTEC Logo"
-                                    width={290}
-                                    height={220}
-                                    className="w-[270px] sm:w-[200px] md:w-[250px] lg:w-auto"
-                                />
+                                {collaborators()}
                             </div>
                         </div> 
                     </div>
                     <div className="flex items-center justify-center w-auto lg:w-[45%] h-full rounded-3xl overflow-hidden ">
-                        <ImgCarousel images={content.programs.content[0].images} />
+                        <ImgCarousel images={images} />
                     </div> 
                 </div>
             </div>
