@@ -188,7 +188,7 @@ export function MobileNavbar(){
                     {text.español.contact}
                 </MobileLinkBtn>
             </motion.nav>
-            <MobileNavBtn onClick={handleClick} />
+            <MobileNavBtn onClick={handleClick} isPressed={isPressed} />
         </>
     );
 }
