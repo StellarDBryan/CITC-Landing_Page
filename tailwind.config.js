@@ -32,6 +32,8 @@ module.exports = {
       backgroundImage: {
         'navbar-gradient': 
           'linear-gradient(to top, rgba(247, 247, 247, 0) 0%, rgba(247, 247, 247, 0.35) 13%, rgba(247, 247, 247, 0.7) 25%, rgba(247, 247, 247, 0.9) 50%, rgba(247, 247, 247, 1) 100%)',
+        'navbar-mobile': 
+          'linear-gradient(to right, rgba(247, 247, 247, 0) 0%, rgba(247, 247, 247, 0.35) 13%, rgba(247, 247, 247, 0.7) 25%, rgba(247, 247, 247, 0.9) 50%, rgba(247, 247, 247, 1) 100%)',
         'navbar-hover': 
           'linear-gradient(to top, rgba(19, 111, 178, 0) 0%, rgba(19, 111, 178, 0.35) 13%, rgba(19, 111, 178, 0.7) 25%, rgba(19, 111, 178, 0.9) 50%, rgba(19, 111, 178, 1) 100%)',
         'light-gradient': 
@@ -57,8 +59,8 @@ module.exports = {
       'h5': '25px', 
       'h6': '20px',  
       'regular': '16px',  
-      'small-1': '12.8px', 
-      'small-2': '10.24px',   
+      'sm1': '12.8px', 
+      'sm2': '10.24px',   
     }, 
   },
 

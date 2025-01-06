@@ -329,7 +329,7 @@ export function AssociatesLanding(){
 
     return (
         <>
-            <section className="w-full h-[600px] flex flex-col items-center justify-center">
+            <section className="w-full h-[600px] overflow-hidden flex flex-col items-center justify-center">
                 <h4 className="lg:my-5 text-h4 font-semibold text-blue-dark-citc">{text.associates.intro}</h4>
                 <InfiniteMovingCards items={associate_logos_1} direction="right" />
                 <InfiniteMovingCards items={associate_logos_2} direction="left" />

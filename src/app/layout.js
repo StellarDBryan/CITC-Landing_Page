@@ -1,4 +1,4 @@
-import { Navbar } from "@/components/ui/navbar";
+import { Navbar, MobileNavbar } from "@/components/ui/navbar";
 import Footer from "@/components/footer";
 import { Montserrat } from 'next/font/google';
 import "./globals.css";
@@ -23,6 +23,7 @@ export default function RootLayout({ children, lang = "es" }) {
       <body>
         <header>
           <Navbar />
+          <MobileNavbar />
         </header>
         <main>
           {children}

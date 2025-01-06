@@ -1,34 +1,28 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@nextui-org/button";
 import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-export function SolutionCard({ img_src, img_alt, img_w, img_h, solution_text, redirection_url, button_text}){
+export function SolutionCard({ img_src, img_alt, solution_text, img_position, redirection_url}){
 
     return (
         <>
-            <Card className="bg-gray-clear-citc bg-opacity-50 w-[300px] h-full max-h-[400px] p-5 flex flex-col justify-center rounded-3xl">
-                <CardBody className="w-auto space-y-5 flex flex-col items-center">
-                    <Image 
-                        src={img_src}
-                        alt={img_alt}
-                        width={img_w}
-                        height={img_h}
-                    />
-                    <p className="font-semibold text-h6 text-gray-dark-citc w-auto text-center max-h-10">{solution_text}</p>
-                </CardBody>
-                <CardFooter className="flex flex-col justify-end items-end h-full w-auto max-h-[80px]">
-                    <a href={redirection_url} className="w-full" target="_blank" rel="noopener noreferrer">
-                        <button className="btn btn-ghost glass group w-full bg-inherit text-inherit hover:bg-blue-dark-citc hover:text-gray-clear-citc flex flex-row rounded-full">
-                            <p className="font-bold text-regular">{button_text}</p>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24" className="transform group-hover:translate-x-2 transition-transform ease-in-out duration-200">
-                                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.5 12h15m0 0l-5.625-6m5.625 6l-5.625 6"/>
-                            </svg>
-                        </button>
-                    </a>
+            <Card className="relative group w-full h-[150px] sm:w-[500px] sm:h-[170px] md:w-[230px] md:h-[380px] lg:w-[300px] lg:h-[400px] flex flex-col items-center justify-end rounded-xl md:rounded-3xl drop-shadow-2xl">
+                <Image 
+                    src={img_src}
+                    alt={img_alt}
+                    fill
+                    className="absolute inset-0 w-full h-full object-cover transform transition-transform duration-200 ease-in-out group-hover:scale-110"
+                    style={{
+                        objectPosition: `${img_position}`
+                    }}
+                /> 
+                <CardFooter className="z-20 flex items-center justify-center bg-gradient-to-t from-regular-dark from-20% w-full h-2/5 sm:h-1/4 text-gray-50">
+                    <h6 className="text-[1.1rem] sm:text-h6 font-semibold text-center">{solution_text}</h6>
                 </CardFooter>
             </Card>
         </>
@@ -83,6 +77,32 @@ export function ServiceCardLP({ title, text_intro, go_to_text, text_description,
                     <h6 className="font-semibold text-h6">{text_intro}</h6>
                 </CardFooter>
             </Card>
+        </>
+    );
+} 
+
+export function ActionAreaCard({ link, visuals, bgColor, departmentName, actionText }){ 
+
+    return (
+        <>
+            <Link href={link} className="w-full sm:w-auto flex justify-center h-auto group">
+                <div 
+                    className={`card text-white sm:text-gray-50 flex flex-row justify-around md:justify-start md:flex-col items-center py-2 px-5 sm:p-5 w-[85%] h-[150px] sm:w-[550px] sm:h-[170px] md:w-[235px] md:h-[400px] lg:w-[300px] lg:h-[430px] gap-1 sm:gap-5 group rounded-2xl drop-shadow-lg hover:drop-shadow-2xl overflow-hidden transition-all duration-200 ease-in-out`}
+                    style={{ backgroundColor: bgColor}}
+                >
+                    <div className="w-2/5 sm:w-1/2 h-full md:w-full md:h-[55%] lg:h-[65%] flex items-center justify-center ">
+                        {visuals} 
+                    </div>
+                    <div className="flex flex-col items-center justify-center sm:pt-5 md:pt-0 md:justify-between h-full w-1/2 md:w-full md:h-[35%]">
+                        <h4 className="text-[1.2rem] sm:text-h5 lg:w-4/5 font-bold text-center  transition-transform duration-700 ease-in-out group-hover:transform group-hover:-translate-y-3">
+                            {departmentName} 
+                        </h4> 
+                        <p className="hidden sm:inline text-p font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
+                            {actionText} 
+                        </p> 
+                    </div>
+                </div>
+            </Link>
         </>
     );
 }
