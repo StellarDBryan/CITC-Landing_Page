@@ -12,7 +12,7 @@ import { transparent } from 'tailwindcss/colors';
 const text = {
     'español': {
         home: 'Inicio', 
-        livingLab: 'Living Lab', 
+        livingLab: 'LivingLab', 
         talent: 'Talent', 
         business: 'Business', 
         about: 'Nosotros',
@@ -126,13 +126,11 @@ export function MobileNavbar(){
         <>
             <motion.nav
                 initial={{
-                    backgroundColor: 'transparent', 
-                    x: 100, 
+                    x: 210, 
                 }}
                 animate={{
-                    backgroundColor: 'rgba(19, 111, 178)',
                     width: 180, 
-                    translateX: (isPressed) ? -100 : 100,
+                    translateX: (isPressed) ? -210 : 210,
                     paddingLeft: (isPressed) ? 15 : 0,
                     paddingRight: (isPressed) ? 15 : 0,
                     paddingBottom: 90, 
@@ -141,7 +139,7 @@ export function MobileNavbar(){
                     ease: 'easeInOut',
                     duration: 0.4,
                 }}
-                className="fixed right-0 pb-24 h-full w-[200px] flex flex-col items-center gap-5 justify-end md:hidden z-50 overflow-hidden drop-shadow-2xl"
+                className="fixed right-0 pb-24 h-full w-[200px] bg-gradient-to-b from-blue-900 to-blue-light-citc flex flex-col items-center gap-5 justify-end md:hidden z-50 overflow-hidden drop-shadow-2xl"
             >
                 <a href='/'>
                     <Image 
@@ -153,29 +151,34 @@ export function MobileNavbar(){
                     /> 
                 </a>
                 <MobileLinkBtn link="/">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
                         <path fill="currentColor" d="M12 3s-6.186 5.34-9.643 8.232A1.04 1.04 0 0 0 2 12a1 1 0 0 0 1 1h2v7a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-4h4v4a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-7h2a1 1 0 0 0 1-1a.98.98 0 0 0-.383-.768C18.184 8.34 12 3 12 3"/>
                     </svg>
                     {text.español.home}
                 </MobileLinkBtn>
                 <MobileLinkBtn link="/talent">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
-                        <circle cx="12" cy="6" r="4" fill="currentColor"/>
-                        <path fill="currentColor" d="M20 17.5c0 2.485 0 4.5-8 4.5s-8-2.015-8-4.5S7.582 13 12 13s8 2.015 8 4.5"/>
-                    </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+                            <g fill="none" fillRule="evenodd">
+                                <path d="m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z"/>
+                                <path fill="currentColor" d="M11 2a5 5 0 1 0 0 10a5 5 0 0 0 0-10m0 11c-2.395 0-4.575.694-6.178 1.672c-.8.488-1.484 1.064-1.978 1.69C2.358 16.976 2 17.713 2 18.5c0 .845.411 1.511 1.003 1.986c.56.45 1.299.748 2.084.956C6.665 21.859 8.771 22 11 22q.346 0 .685-.005a1 1 0 0 0 .89-1.428A6 6 0 0 1 12 18c0-1.252.383-2.412 1.037-3.373a1 1 0 0 0-.72-1.557Q11.671 13 11 13m7.864.997a1 1 0 0 0-1.728 0l-.91 1.562l-1.766.382a1 1 0 0 0-.534 1.644l1.204 1.348l-.182 1.798a1 1 0 0 0 1.398 1.016l1.654-.73l1.654.73a1 1 0 0 0 1.398-1.016l-.182-1.799l1.204-1.347a1 1 0 0 0-.534-1.644l-1.766-.382z"/>
+                            </g>
+                        </svg>
                     {text.español.talent}
                 </MobileLinkBtn>
                 <MobileLinkBtn link="/business">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
-                        <circle cx="12" cy="6" r="4" fill="currentColor"/>
-                        <path fill="currentColor" d="M20 17.5c0 2.485 0 4.5-8 4.5s-8-2.015-8-4.5S7.582 13 12 13s8 2.015 8 4.5"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M17 3.34A10 10 0 1 1 2 12l.005-.324A10 10 0 0 1 17 3.34M12 6a1 1 0 0 0-1 1a3 3 0 1 0 0 6v2a1.02 1.02 0 0 1-.866-.398l-.068-.101a1 1 0 0 0-1.732.998a3 3 0 0 0 2.505 1.5H11a1 1 0 0 0 .883.994L12 18a1 1 0 0 0 1-1l.176-.005A3 3 0 0 0 13 11V9c.358-.012.671.14.866.398l.068.101a1 1 0 0 0 1.732-.998A3 3 0 0 0 13.161 7H13a1 1 0 0 0-1-1m1 7a1 1 0 0 1 0 2zm-2-4v2a1 1 0 0 1 0-2"/>
                     </svg>
                     {text.español.business}
                 </MobileLinkBtn>
                 <MobileLinkBtn link="/livinglab">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 512 512">
-                        <path fill="currentColor" d="M507.068 188.5c-18.305-50.06-78.104-66.608-119.336-39.208l-55.238-45.86C347.424 54.955 312.545 1.63 258.318.057c-55.846-1.62-94.39 52.747-78.826 103.31l-55.277 45.891c-42.492-28.237-103.813-9.494-120.367 42.404C-11.444 239.605 20.796 286.595 66 294.728l21.387 76.738c-38.19 32.88-37.263 96.126 7.468 126.514c44.314 30.104 102.873 8.432 120.096-38.207h81.964c17.847 48.875 80.026 69.33 123.81 35.53c42.17-32.553 40.07-94.432 1.737-125.498l22.079-74.826c47.395-7.553 80.411-57.571 62.527-106.48M293.596 415.783h-75.27c-8.408-41.328-48.919-69.346-90.473-62.973l-17.49-62.761c42.473-17.089 61.169-67.067 42.522-107.414l50.678-42.072c29.563 25.716 74.975 26.034 104.818.034l50.722 42.111c-18.598 40.235.075 89.356 41.183 106.797l-18.577 62.955c-41.13-5.136-79.856 23.192-88.113 63.323"/>
-                    </svg>
+                    <Image 
+                        src="/images/logos/citc/LivingLab_icon.png"
+                        alt='LivingLab Logo'
+                        width={25}
+                        height={25}
+                        className='filter grayscale brightness-200'
+                    />
                     {text.español.livingLab}
                 </MobileLinkBtn>
                 <MobileLinkBtn link="/contact">
@@ -185,7 +188,7 @@ export function MobileNavbar(){
                     {text.español.contact}
                 </MobileLinkBtn>
             </motion.nav>
-            <MobileNavBtn onClick={handleClick} />
+            <MobileNavBtn onClick={handleClick} isPressed={isPressed} />
         </>
     );
 }

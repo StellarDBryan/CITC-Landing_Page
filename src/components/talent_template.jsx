@@ -216,7 +216,7 @@ export function Programs(){
 
     return (
         <>
-            <section className="w-full h-auto py-10 flex flex-col gap-3 items-center"> 
+            <section className="w-full h-auto py-10 flex flex-col gap-3 items-center text-regular-dark"> 
                 <h2 className="text-[2.5rem] sm:text-[3rem] md:text-[4rem] lg:text-[5rem] text-center font-extrabold text-[#92d050]">{content.programs.title}</h2> 
                 <div className="w-full h-auto flex flex-col items-center gap-10">
                     {content.programs.content.map((program, id) => {
@@ -282,7 +282,7 @@ export function GirlsInTech(){
 
     return (
         <>
-            <section className="w-full bg-gradient-to-b from-transparent via-violet-200/90 to-transparent h-auto py-10 flex items-center justify-center"> 
+            <section className="w-full text-regular-dark bg-gradient-to-b from-transparent via-violet-200/90 to-transparent h-auto py-10 flex items-center justify-center"> 
                 <div className="flex flex-col h-auto w-[85%] sm:w-[90%] lg:w-4/5 gap-2">
                     <div className="flex flex-row items-center gap-3 md:gap-10">
                         <div className="w-full h-1 bg-purple-500 rounded-full" /> 
@@ -326,7 +326,7 @@ export function Community(){
 
     return (
         <>
-            <section className="w-full h-auto py-10 gap-5 lg:gap-10 flex flex-col items-center">
+            <section className="w-full h-auto py-10 gap-5 lg:gap-10 flex flex-col items-center text-regular-dark">
                 <h2 className="text-[1.8rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3.5rem] text-center font-extrabold text-[#92d050]">{content.community.title}</h2> 
                 <p className="text-[0.95rem] md:text-[1rem] lg:text-[1.1rem] font-medium sm:text-center w-4/5">{content.community.description}</p>
                 <div className="flex flex-col items-center lg:items-start lg:flex-row w-4/5 gap-5">
