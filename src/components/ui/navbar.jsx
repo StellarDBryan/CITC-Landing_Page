@@ -137,7 +137,7 @@ export function MobileNavbar(){
                 }} 
                 transition={{
                     ease: 'easeInOut',
-                    duration: 0.5,
+                    duration: 0.4,
                 }}
                 className="fixed right-0 pb-24 h-full w-[200px] bg-gradient-to-b from-blue-900 to-blue-light-citc flex flex-col items-center gap-5 justify-end md:hidden z-50 overflow-hidden drop-shadow-2xl"
             >

@@ -23,11 +23,11 @@ export function MobileLinkBtn({ children, link }){
 
     return (
         <>
-            <a href={link}>
-                <button className='btn text-[1rem] w-full bg-inherit hover:bg-inherit text-gray-clear-citc flex flex-row items-center gap-2 border-0 border-gray-clear-citc hover:border-b-2 rounded-none shadow-none'>
+            <Link href={link}>
+                <button className='btn text-[1rem] w-full bg-inherit hover:bg-inherit text-gray-clear-citc flex flex-row items-center gap-2 border-0 border-gray-clear-citc hover:border-gray-clear-citc hover:border-b-2 rounded-none shadow-none'>
                     {children}
                 </button>
-            </a>
+            </Link>
         </>
     );
 }
