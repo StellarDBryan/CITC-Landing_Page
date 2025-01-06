@@ -142,6 +142,43 @@ const content = {
             '/images/photos/workspace/LivingLabCUU_10.JPG',  
         ], 
     }, 
+    community: {
+        title: 'Empoderando a la Comunidad', 
+        description: 'En el CITC, creemos firmemente en el poder de la colaboración y el aprendizaje compartido. A través de nuestras comunidades estudiantiles y eventos, inspiramos a las nuevas generaciones a desarrollar habilidades tecnológicas, explorar su creatividad y prepararse para enfrentar los desafíos del futuro. ¡Juntos estamos construyendo un ecosistema innovador en Chihuahua!', 
+        communities_title: 'Comunidades Estudiantiles y Tecnológicas', 
+        communities: [
+            {
+                name: 'Club Bisoncoders (ITCHII)', 
+                logo: '/images/logos/talent/BISONCODERS.png', 
+                className: 'w-[170px]', 
+            }, 
+            {
+                name: 'Super Happy Dev House', 
+                logo: '/images/logos/talent/shdh.png', 
+                className: 'w-[120px]', 
+            }, 
+            {
+                name: 'ConectaTech @Discord', 
+                logo: '/images/logos/talent/conectaTech.png', 
+                className: 'w-[130px]', 
+            }, 
+        ], 
+        events_title: 'Eventos de Innovación y Aprendizaje', 
+        events: [
+            {
+                logo: '/images/logos/talent/escuelitaMaker.png', 
+                className: 'w-[200px] h-auto', 
+            }, 
+            {
+                logo: '/images/logos/talent/iweek.png', 
+                className: 'w-[190px] h-auto filter grayscale brightness-[0.2] ', 
+            }, 
+            {
+                logo: '/images/logos/talent/etherfuse.jpg', 
+                className: 'w-[220px] h-auto', 
+            }, 
+        ], 
+    }
 };
 
 export default function HeroSection(){
@@ -281,6 +318,49 @@ export function GirlsInTech(){
                     </div>
                 </div> 
             </section> 
+        </>
+    );
+} 
+
+export function Community(){
+
+    return (
+        <>
+            <section className="w-full h-auto py-10 gap-5 lg:gap-10 flex flex-col items-center">
+                <h2 className="text-[1.8rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3.5rem] text-center font-extrabold text-[#92d050]">{content.community.title}</h2> 
+                <p className="text-[0.95rem] md:text-[1rem] lg:text-[1.1rem] font-medium sm:text-center w-4/5">{content.community.description}</p>
+                <div className="flex flex-col items-center lg:items-start lg:flex-row w-4/5 gap-5">
+                    <Logos logos={content.community.communities} title={content.community.communities_title} />
+                    <Logos logos={content.community.events} title={content.community.events_title} />
+                </div>
+            </section>
+        </>
+    );
+} 
+
+function Logos({ logos, title }){
+
+    return(
+        <>
+            <div className="flex flex-col w-full lg:w-1/2 gap-5">
+                <span className="text-h6 md:text-h5 font-bold text-center text-lime-700">{title}</span>
+                <div className="w-full h-full flex flex-row justify-around flex-wrap gap-5">
+                    {logos.map((logo, id) => (
+                        <div key={id} className="flex max-w-[200px] flex-col gap-2 items-center justify-center">
+                            <Image 
+                                src={logo.logo}
+                                alt={`${logo.name} Logo`}
+                                width={500}
+                                height={500}
+                                className={logo.className}
+                            />
+                            {logo.name 
+                                ? <span className="text-sm1 md:text-p font-medium text-center text-wrap">{logo.name}</span> 
+                                : ''}
+                        </div>
+                    ))}
+                </div>
+            </div>
         </>
     );
 }
