@@ -22,7 +22,7 @@ export default function HeroSection(){
                     <h5 className="font-semibold text-center md:text-start text-h6 lg:text-h5">{content.heroSection.intro}</h5>
                 </div>
                 <Image 
-                    src="/images/backgrounds/businessImg.png"
+                    src="/images/backgrounds/businessImg.png" 
                     alt="Business Image"
                     width={600}
                     height={600}
