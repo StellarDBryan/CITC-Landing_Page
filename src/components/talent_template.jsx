@@ -33,16 +33,11 @@ const content = {
                     </>
                 ), 
                 images: [
-                    '/images/photos/workspace/LivingLabCUU_01.jpg', 
-                    '/images/photos/workspace/LivingLabCUU_02.JPG', 
-                    '/images/photos/workspace/LivingLabCUU_03.JPG', 
-                    '/images/photos/workspace/LivingLabCUU_04.JPG', 
-                    '/images/photos/workspace/LivingLabCUU_05.jpg', 
-                    '/images/photos/workspace/LivingLabCUU_06.JPG', 
-                    '/images/photos/workspace/LivingLabCUU_07.JPG', 
-                    '/images/photos/workspace/LivingLabCUU_08.JPG', 
-                    '/images/photos/workspace/LivingLabCUU_09.JPG', 
-                    '/images/photos/workspace/LivingLabCUU_10.JPG',  
+                    '/images/photos/fsf_diplome/FSF_01.jpeg', 
+                    '/images/photos/fsf_diplome/FSF_02.jpeg',  
+                    '/images/photos/fsf_diplome/FSF_03.jpeg',  
+                    '/images/photos/fsf_diplome/FSF_04.jpeg',  
+                    '/images/photos/fsf_diplome/FSF_05.jpeg',  
                 ], 
             }, 
             {
@@ -61,16 +56,12 @@ const content = {
                     </>
                 ), 
                 images: [
-                    '/images/photos/workspace/LivingLabCUU_01.jpg', 
-                    '/images/photos/workspace/LivingLabCUU_02.JPG', 
-                    '/images/photos/workspace/LivingLabCUU_03.JPG', 
-                    '/images/photos/workspace/LivingLabCUU_04.JPG', 
-                    '/images/photos/workspace/LivingLabCUU_05.jpg', 
-                    '/images/photos/workspace/LivingLabCUU_06.JPG', 
-                    '/images/photos/workspace/LivingLabCUU_07.JPG', 
-                    '/images/photos/workspace/LivingLabCUU_08.JPG', 
-                    '/images/photos/workspace/LivingLabCUU_09.JPG', 
-                    '/images/photos/workspace/LivingLabCUU_10.JPG',  
+                    '/images/photos/python_diplome/Py_01.jpeg',  
+                    '/images/photos/python_diplome/Py_02.jpeg',  
+                    '/images/photos/python_diplome/Py_03.jpeg',  
+                    '/images/photos/python_diplome/Py_04.jpeg',  
+                    '/images/photos/python_diplome/Py_05.jpeg',  
+                    '/images/photos/python_diplome/Py_06.jpeg',  
                 ], 
             }, 
         ], 
@@ -313,7 +304,13 @@ export function GirlsInTech(){
                             </div> 
                         </div>
                         <div className="flex items-center justify-center w-auto lg:w-[45%] h-full rounded-3xl overflow-hidden ">
-                            <ImgCarousel images={content.girlsInTech.images} />
+                            <Image 
+                                src="/images/backgrounds/girlsInTech.jpg" 
+                                alt="Girls in Tech image"
+                                width={500}
+                                height={500}
+                                className="object-cover object-bottom rounded-3xl w-[350px] h-[300px] md:w-[450px] md:h-[350px] lg:w-[550px] lg:h-[450px]"
+                            />
                         </div> 
                     </div>
                 </div> 
