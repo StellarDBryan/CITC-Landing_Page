@@ -16,6 +16,39 @@ const content = {
             "/images/photos/ci2/CI2_03.jpeg", 
         ], 
     }, 
+    techPlug: {
+        title: "Industry + Tech Solution Plug",
+        description: "Industry Tech Plug es una iniciativa del Centro de Industria Inteligente (CI2) que conecta a la comunidad industrial y tecnológica a través de eventos clave. Hasta la fecha, hemos organizado 9 eventos que han reunido a 105 participantes, fortaleciendo la colaboración y el desarrollo de soluciones innovadoras.", 
+        images: [
+            "/images/photos/ci2/CI2_01.jpg", 
+            "/images/photos/ci2/CI2_02.jpeg", 
+            "/images/photos/ci2/CI2_03.jpeg", 
+        ],  
+        results: [{ quantity: 9, name: "Eventos"}, { quantity: 105, name: "Participantes"}], 
+        successStoriesTitle: "Casos de Éxito", 
+        successStories: [
+            { 
+                name: "Kiuey", 
+                logo: '/images/logos/business/Kiuey_logo.png', 
+                className: 'w-[150px]', 
+            },
+            { 
+                name: "PID Electronics", 
+                logo: '/images/logos/associates/PIDElectronics_edited.png', 
+                className: 'w-[210px]', 
+            },
+            { 
+                name: "Eqkor Industrial Supplier", 
+                logo: '/images/logos/business/Eqkor_logo.png', 
+                className: 'w-[180px]', 
+            },
+            { 
+                name: "Empresys", 
+                logo: '/images/logos/business/Empresys_logo.png', 
+                className: 'w-[220px]', 
+            }, 
+        ], 
+    }, 
 }; 
 
 export default function HeroSection(){
@@ -88,6 +121,52 @@ export function CI2(){
                         </div>
                         <div className="flex items-center justify-center w-auto lg:w-[45%] h-full rounded-3xl overflow-hidden ">
                             <ImgCarousel images={content.ci2.images} />
+                        </div> 
+                    </div>
+                </div>
+            </section>
+        </>
+    );
+} 
+
+export function TechPlug(){
+
+    return(
+        <>
+            <section className="w-full h-auto flex flex-col py-10 items-center overflow-hidden">
+                <div className="flex flex-col text-regular-dark w-4/5 gap-7">
+                    <h3 className="text-[3.5rem] text-blue-light-citc font-extrabold text-center">{content.techPlug.title}</h3>
+                    <div className="flex flex-row items-center justify-around w-full gap-5">
+                        <div className="flex flex-col items-center w-1/2 gap-5">
+                            <p className="text-[1.1rem] font-medium">{content.techPlug.description}</p>
+                            <div className="flex flex-row flex-wrap w-full gap-5 justify-center items-center">
+                                {content.techPlug.results.map((result, id)=> (
+                                    <p key={id} className="text-h6 flex flex-row flex-nowrap gap-2 font-bold text-neutral-500">
+                                        <span className="text-blue-light-citc">{result.quantity}</span>
+                                        {result.name}
+                                    </p>
+                                ))}
+                            </div>
+                            <div className="flex flex-col w-full items-center gap-5">
+                                <h6 className="text-h5 font-bold text-blue-light-citc">
+                                    {content.techPlug.successStoriesTitle}
+                                </h6>
+                                <div className="flex flex-row flex-wrap gap-5 items-center justify-around">
+                                    {content.techPlug.successStories.map((success, id) => (
+                                        <Image 
+                                            key={id}
+                                            src={success.logo}
+                                            alt={`${success.name} Logo`}
+                                            width={200}
+                                            height={200}
+                                            className={success.className}
+                                        />
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex items-center justify-center w-auto lg:w-[45%] h-full rounded-3xl overflow-hidden ">
+                            <ImgCarousel images={content.techPlug.images} />
                         </div> 
                     </div>
                 </div>

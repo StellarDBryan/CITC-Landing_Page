@@ -1,4 +1,4 @@
-import HeroSection, { CI2 } from "@/components/business_template";
+import HeroSection, { CI2, TechPlug } from "@/components/business_template";
 
 export default function Home(){
 
@@ -7,6 +7,7 @@ export default function Home(){
             <div>
                 <HeroSection />
                 <CI2 />
+                <TechPlug />
             </div>
         </>
     );
