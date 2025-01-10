@@ -10,11 +10,6 @@ const content = {
     ci2: {
         title: "Centro de Industria Inteligente (CI2)", 
         description: "En CI2 conectamos las necesidades de la industria manufacturera global con proveedores locales de soluciones tecnológicas.\n Trabajamos para mejorar la competitividad de la industria manufacturera local mediante el uso de tecnología y automatización.", 
-        images: [
-            "/images/photos/ci2/CI2_01.jpg", 
-            "/images/photos/ci2/CI2_02.jpeg", 
-            "/images/photos/ci2/CI2_03.jpeg", 
-        ], 
     }, 
     techPlug: {
         title: "Industry + Tech Solution Plug",
@@ -81,48 +76,45 @@ export function CI2(){
 
     return (
         <>
-            <section className="flex items-center justify-center py-10 text-regular-dark">
-                <div className="flex flex-col h-auto w-[85%] sm:w-[90%] lg:w-4/5 gap-3 sm:gap-5">
-                    <div className="flex flex-col sm:flex-row sm:items-center gap-3 md:gap-10">
-                        <h3 className="text-h6 sm:text-h5 md:text-h4 lg:text-h3 font-bold sm:text-nowrap text-blue-light-citc">{content.ci2.title}</h3> 
-                        <div className="w-full h-1 bg-blue-900 rounded-full" /> 
-                    </div> 
-                    <div className="flex flex-row flex-wrap items-center justify-center gap-8 lg:gap-0 lg:justify-between w-full">
-                        <div className="flex flex-col sm:items-center lg:items-start w-full lg:w-1/2 gap-3">
-                            <p className="text-[0.95rem] sm:text-[0.9rem] md:text-p lg:text-[1.1rem] font-medium">
-                                {content.ci2.description} 
-                            </p>
-                            <Image 
-                                src="/images/logos/members/CI2_logo.png"
-                                alt="CI2 Logo"
-                                width={300}
-                                height={300}
-                                className="w-[300px]"
-                            />
-                            <div className="flex flex-col md:items-center lg:items-start w-full gap-2">
-                                <h6 className="text-[1rem] md:text-[1.1rem] lg:text-[1.25rem] font-bold text-blue-light-citc">{content.formBy}</h6>
-                                <div className="flex flex-row md:justify-center lg:justify-start flex-wrap w-full gap-5">
-                                    <Image 
-                                        src="/images/logos/members/ClusterAutomatizacion.png"
-                                        alt="CAIC Logo"
-                                        width={500}
-                                        height={500}
-                                        className="w-[120px]"
-                                    /> 
-                                    <Image 
-                                        src="/images/logos/members/ChihuahuaFutura.png"
-                                        alt="Chihuahua Futura Logo"
-                                        width={500}
-                                        height={500}
-                                        className="object-contain w-[150px]"
-                                    /> 
-                                </div>
-                            </div> 
-                        </div>
-                        <div className="flex items-center justify-center w-auto lg:w-[45%] h-full rounded-3xl overflow-hidden ">
-                            <ImgCarousel images={content.ci2.images} />
+            <section className="flex w-full items-center justify-center py-10 lg:py-16 text-regular-dark">
+                <div className="flex flex-col lg:flex-row flex-nowrap w-[85%] sm:w-[90%] lg:w-4/5 items-center justify-center gap-5 lg:gap-10">
+                    <div className="flex flex-col w-full sm:w-4/5 lg:w-2/5 gap-5">
+                        <div className="flex flex-col sm:items-center gap-3 ">
+                            <h3 className="text-h5 sm:text-h4 lg:text-h3 font-bold text-blue-light-citc">{content.ci2.title}</h3> 
+                            <div className="w-full h-1 bg-blue-900 rounded-full" /> 
                         </div> 
+                        <p className="text-[0.95rem] sm:text-[0.9rem] md:text-p lg:text-[1.1rem] font-medium">
+                            {content.ci2.description} 
+                        </p>
                     </div>
+                    <div className="flex flex-col justify-center gap-5">
+                        <Image 
+                            src="/images/logos/members/CI2_logo.png"
+                            alt="CI2 Logo"
+                            width={300}
+                            height={300}
+                            className="w-[300px] md:w-[350px] lg:w-[400px]"
+                        />
+                        <div className="flex flex-col">
+                            <h6 className="text-[1.1rem] lg:text-[1.25rem] font-bold text-blue-light-citc">{content.formBy}</h6>
+                            <div className="flex flex-row md:justify-center lg:justify-start flex-wrap w-full gap-5">
+                                <Image 
+                                    src="/images/logos/members/ClusterAutomatizacion.png"
+                                    alt="CAIC Logo"
+                                    width={500}
+                                    height={500}
+                                    className="w-[120px] md:w-[150px]"
+                                /> 
+                                <Image 
+                                    src="/images/logos/members/ChihuahuaFutura.png"
+                                    alt="Chihuahua Futura Logo"
+                                    width={500}
+                                    height={500}
+                                    className="object-contain w-[150px] md:w-[190px]"
+                                /> 
+                            </div>
+                        </div> 
+                    </div> 
                 </div>
             </section>
         </>
