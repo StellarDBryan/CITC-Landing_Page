@@ -30,22 +30,22 @@ const content = {
             { 
                 name: "Kiuey", 
                 logo: '/images/logos/business/Kiuey_logo.png', 
-                className: 'w-[150px]', 
+                className: 'w-[110px] md:w-[150px]', 
             },
             { 
                 name: "PID Electronics", 
                 logo: '/images/logos/associates/PIDElectronics_edited.png', 
-                className: 'w-[210px]', 
+                className: 'w-[180px] md:w-[210px]', 
             },
             { 
                 name: "Eqkor Industrial Supplier", 
                 logo: '/images/logos/business/Eqkor_logo.png', 
-                className: 'w-[180px]', 
+                className: 'w-[140px] md:w-[180px]', 
             },
             { 
                 name: "Empresys", 
                 logo: '/images/logos/business/Empresys_logo.png', 
-                className: 'w-[220px]', 
+                className: 'w-[190px] md:w-[220px]', 
             }, 
         ], 
     }, 
@@ -134,14 +134,14 @@ export function TechPlug(){
     return(
         <>
             <section className="w-full h-auto flex flex-col py-10 items-center overflow-hidden">
-                <div className="flex flex-col text-regular-dark w-4/5 gap-7">
-                    <h3 className="text-[3.5rem] text-blue-light-citc font-extrabold text-center">{content.techPlug.title}</h3>
-                    <div className="flex flex-row items-center justify-around w-full gap-5">
-                        <div className="flex flex-col items-center w-1/2 gap-5">
-                            <p className="text-[1.1rem] font-medium">{content.techPlug.description}</p>
+                <div className="flex flex-col text-regular-dark w-[85%] sm:w-[90%] lg:w-4/5 gap-3 sm:gap-7">
+                    <h3 className="text-[2rem] sm:text-[3rem] lg:text-[3.5rem] text-blue-light-citc font-extrabold text-center">{content.techPlug.title}</h3>
+                    <div className="flex flex-col lg:flex-row items-center justify-around w-full gap-8 lg:gap-5">
+                        <div className="flex flex-col items-center w-full lg:w-1/2 gap-5">
+                            <p className="text-[0.95rem] md:text[1rem] text-start sm:text-center md:text-start lg:text-[1.1rem] font-medium">{content.techPlug.description}</p>
                             <div className="flex flex-row flex-wrap w-full gap-5 justify-center items-center">
                                 {content.techPlug.results.map((result, id)=> (
-                                    <p key={id} className="text-h6 flex flex-row flex-nowrap gap-2 font-bold text-neutral-500">
+                                    <p key={id} className="text-[1.1rem] sm:text-h6 flex flex-row flex-nowrap gap-2 font-bold text-neutral-500">
                                         <span className="text-blue-light-citc">{result.quantity}</span>
                                         {result.name}
                                     </p>
@@ -151,7 +151,7 @@ export function TechPlug(){
                                 <h6 className="text-h5 font-bold text-blue-light-citc">
                                     {content.techPlug.successStoriesTitle}
                                 </h6>
-                                <div className="flex flex-row flex-wrap gap-5 items-center justify-around">
+                                <div className="flex flex-row flex-wrap gap-7 sm:gap-5 items-center justify-around">
                                     {content.techPlug.successStories.map((success, id) => (
                                         <Image 
                                             key={id}
@@ -165,7 +165,7 @@ export function TechPlug(){
                                 </div>
                             </div>
                         </div>
-                        <div className="flex items-center justify-center w-auto lg:w-[45%] h-full rounded-3xl overflow-hidden ">
+                        <div className="flex items-center justify-center w-full sm:w-auto lg:w-[45%] h-full rounded-3xl overflow-hidden ">
                             <ImgCarousel images={content.techPlug.images} />
                         </div> 
                     </div>
