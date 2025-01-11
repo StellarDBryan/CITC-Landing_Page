@@ -84,17 +84,14 @@ const content = {
                     }
                 ], 
                 images: [
-                    "/images/photos/tech_plug/TP_01.jpg", 
-                    "/images/photos/tech_plug/TP_02.jpeg", 
-                    "/images/photos/tech_plug/TP_03.jpeg", 
-                    "/images/photos/tech_plug/TP_04.jpeg", 
-                    "/images/photos/tech_plug/TP_05.jpg", 
-                    "/images/photos/tech_plug/TP_06.jpg", 
-                    "/images/photos/tech_plug/TP_07.jpg", 
-                    "/images/photos/tech_plug/TP_08.jpg", 
-                    "/images/photos/tech_plug/TP_09.jpg", 
-                    "/images/photos/tech_plug/TP_10.jpg", 
-                    "/images/photos/tech_plug/TP_11.jpg", 
+                    "/images/photos/cibersecuritySummits/2024/CS24_01.jpeg", 
+                    "/images/photos/cibersecuritySummits/2024/CS24_02.jpeg", 
+                    "/images/photos/cibersecuritySummits/2024/CS24_03.jpeg", 
+                    "/images/photos/cibersecuritySummits/2024/CS24_04.jpeg", 
+                    "/images/photos/cibersecuritySummits/2024/CS24_05.jpeg", 
+                    "/images/photos/cibersecuritySummits/2024/CS24_06.jpeg", 
+                    "/images/photos/cibersecuritySummits/2024/CS24_07.jpeg", 
+                    "/images/photos/cibersecuritySummits/2024/CS24_08.jpeg", 
                 ], 
                 stream_link: 'https://www.facebook.com/Chihuahuafutura/videos/summit-de-ciberseguridad-2024/484067451316349/?rdid=SZ8zU3rEmM5vpBTE', 
             }, 
@@ -117,21 +114,22 @@ const content = {
                     }
                 ], 
                 images: [
-                    "/images/photos/tech_plug/TP_01.jpg", 
-                    "/images/photos/tech_plug/TP_02.jpeg", 
-                    "/images/photos/tech_plug/TP_03.jpeg", 
-                    "/images/photos/tech_plug/TP_04.jpeg", 
-                    "/images/photos/tech_plug/TP_05.jpg", 
-                    "/images/photos/tech_plug/TP_06.jpg", 
-                    "/images/photos/tech_plug/TP_07.jpg", 
-                    "/images/photos/tech_plug/TP_08.jpg", 
-                    "/images/photos/tech_plug/TP_09.jpg", 
-                    "/images/photos/tech_plug/TP_10.jpg", 
-                    "/images/photos/tech_plug/TP_11.jpg", 
+                    "/images/photos/cibersecuritySummits/2023/CS23_01.jpeg", 
+                    "/images/photos/cibersecuritySummits/2023/CS23_02.jpeg", 
+                    "/images/photos/cibersecuritySummits/2023/CS23_03.jpeg", 
+                    "/images/photos/cibersecuritySummits/2023/CS23_04.jpeg", 
+                    "/images/photos/cibersecuritySummits/2023/CS23_05.jpeg", 
+                    "/images/photos/cibersecuritySummits/2023/CS23_06.jpeg", 
+                    "/images/photos/cibersecuritySummits/2023/CS23_07.jpeg", 
+                    "/images/photos/cibersecuritySummits/2023/CS23_08.jpeg", 
                 ], 
                 stream_link: 'https://www.facebook.com/reel/1568577367305233', 
             }
         ], 
+    }, 
+    internationalAllies: {
+        title: "Red de Aliados Internacionales", 
+        description: "El CITC colabora con empresas y organizaciones de todo el mundo para fortalecer el ecosistema tecnológico de Chihuahua. Juntos, impulsamos la innovación, el intercambio de conocimientos y el desarrollo global.", 
     }, 
 }; 
 
@@ -330,8 +328,8 @@ function SummitEdition({ reverse, edition }){
     return (
         <div className={`flex flex-col lg:${reverse ? 'flex-row-reverse' : 'flex-row'} h-auto w-full gap-10`}>
             <div className="flex flex-col items-center w-full lg:w-1/2 gap-3">
-                <div className="w-full flex flex-col items-center lg:items-start">
-                    <h3 className="text-[1.8rem] md:text-[2rem] w-auto lg:w-full lg:text-[3rem] font-bold text-nowrap whitespace-pre text-blue-dark-citc">{content.cibersecuritySummit.edition_title} {edition.date}</h3> 
+                <div className="w-full flex flex-col items-center">
+                    <h3 className="text-[1.8rem] md:text-[2rem] w-auto lg:text-[3rem] font-bold text-nowrap whitespace-pre text-blue-dark-citc">{content.cibersecuritySummit.edition_title} {edition.date}</h3> 
                     <div className="w-full h-1 bg-blue-900 rounded-full" /> 
                 </div>
                 <div className="flex flex-row justify-center lg:items-center lg:justify-start lg:flex-col flex-wrap w-full h-auto gap-x-5 gap-y-1">
@@ -357,5 +355,26 @@ function SummitEdition({ reverse, edition }){
                 <ImgCarousel images={edition.images} />
             </div> 
         </div> 
+    );
+}
+
+export function InternationalAllies(){
+
+    return (
+        <>
+            <section className="w-full h-auto py-10 flex justify-center text-regular-dark">
+                <div className="w-3/5 h-auto flex flex-col items-center gap-10">
+                    <div className="flex flex-col items-center gap-2">
+                        <h2 className="text-[2rem] sm:text-[3rem] lg:text-[3.2rem] text-center font-extrabold text-blue-light-citc">{content.internationalAllies.title}</h2>
+                        <p className="text-[1rem] md:text-[1.05rem] lg:text-[1.3rem] text-center font-medium whitespace-pre-wrap">
+                            {content.internationalAllies.description}
+                        </p>
+                    </div>
+                    <div className="flex flex-col items-center w-full gap-10">
+                        
+                    </div>
+                </div>
+            </section>
+        </>
     );
 }
