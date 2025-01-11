@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import { ImgCarousel } from "./carousel";
-import { ServiceButton } from "./ui/buttons";
+import { ServiceButton } from "./ui/buttons"; 
+import { BusinessForm } from "./forms";
 
 const content = { 
     formBy: "Formado por...", 
@@ -130,6 +131,28 @@ const content = {
     internationalAllies: {
         title: "Red de Aliados Internacionales", 
         description: "El CITC colabora con empresas y organizaciones de todo el mundo para fortalecer el ecosistema tecnológico de Chihuahua. Juntos, impulsamos la innovación, el intercambio de conocimientos y el desarrollo global.", 
+        allies: [
+            {
+                name: "Canada", 
+                image: "/images/flags/canada_flag.png", 
+                className: 'w-[300px]', 
+            }, 
+            
+            {
+                name: "Suecia", 
+                image: "/images/flags/sweden_flag.png", 
+                className: 'w-[240px]', 
+            }, 
+            
+            {
+                name: "Israel", 
+                image: "/images/flags/israel_flag.png", 
+                className: 'w-[230px]', 
+            }, 
+        ], 
+    }, 
+    form: {
+     intro: "¿Quieres ser parte de nuestras iniciativas globales? ¡Conecta con nosotros y ayuda a construir un futuro tecnológico más conectado!", 
     }, 
 }; 
 
@@ -370,10 +393,35 @@ export function InternationalAllies(){
                             {content.internationalAllies.description}
                         </p>
                     </div>
-                    <div className="flex flex-col items-center w-full gap-10">
-                        
+                    <div className="flex flex-row items-center justify-around w-full gap-10">
+                        {content.internationalAllies.allies.map((allie, id) => (
+                            <div key={id} className="flex flex-col items-center gap-3 w-[300px]">
+                                <Image 
+                                    src={allie.image}
+                                    alt={`${allie.name} Image`}
+                                    width={500}
+                                    height={500}
+                                    className={allie.className}
+                                />
+                                <span className="text-[1.7rem] font-bold text-blue-light-citc">
+                                    {allie.name}
+                                </span>
+                            </div>
+                        ))}
                     </div>
                 </div>
+            </section>
+        </>
+    );
+}
+
+export function Form(){
+
+    return (
+        <>
+            <section className="w-full py-10 gap-10 h-auto flex flex-col items-center overflow-hidden">
+                <h4 className="text-[1.8rem] font-bold text-blue-dark-citc w-3/5 text-center">{content.form.intro}</h4>
+                <BusinessForm />
             </section>
         </>
     );
