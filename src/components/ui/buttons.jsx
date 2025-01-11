@@ -52,21 +52,15 @@ export function MobileNavBtn({ onClick, isPressed }){
 
 export function ServiceButton({ children }){
 
-    const [hover, setHover] = useState(false);
-
     return(
         <>
-            <button className="btn glass border border-solid border-regular-dark hover:border-inherit max-w-96 group rounded-full text-regular-dark hover:text-gray-clear-citc hover:bg-blue-dark-citc hover:border-blue-dark-citc"
-                onMouseEnter={() => setHover(true)} 
-                onMouseLeave={() => setHover(false)}
-            >
+            <button className="btn text-[1.05rem] px-6 py-2 whitespace-pre glass border-inherit border-solid hover:border-inherit group rounded-full text-blue-dark-citc hover:text-gray-clear-citc hover:bg-blue-dark-citc hover:border-blue-dark-citc">
                 {children}
-                <motion.svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"
-                    className=""
-                    animate={{translateX:hover ? 5 : 0}}
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                    className="transform group-hover:translate-x-1 transition-transform ease-in-out duration-200"
                 >
-                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.5 12h15m0 0l-5.625-6m5.625 6l-5.625 6"/>
-                </motion.svg>
+                    <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M4.5 12h15m0 0l-5.625-6m5.625 6l-5.625 6"/>
+                </svg>
             </button>
         </>
     );
