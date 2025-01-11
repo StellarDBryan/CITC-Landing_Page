@@ -52,6 +52,10 @@ const content = {
             }, 
         ], 
     }, 
+    c3: {
+        title: "Centro de Ciberseguridad Chihuahua (C3)", 
+        description: "El Centro de Ciberseguridad Chihuahua (C3) se dedica a fortalecer la conciencia sobre los riesgos de ciberseguridad en las empresas locales y en la sociedad en general. Nos enfocamos en brindar las herramientas, conocimientos y estrategias necesarias para proteger la información y los sistemas ante las amenazas digitales crecientes. A través de iniciativas educativas, colaboraciones estratégicas y programas de capacitación, buscamos posicionar a Chihuahua como un referente en la protección y seguridad digital.", 
+    }, 
 }; 
 
 export default function HeroSection(){
@@ -175,3 +179,44 @@ export function TechPlug(){
     );
 } 
 
+export function C3(){
+
+    return (
+        <>
+            <section className="flex w-full items-center justify-center py-10 lg:py-16 text-regular-dark">
+                <div className="flex flex-col lg:flex-row-reverse flex-nowrap w-[85%] sm:w-[90%] lg:w-4/5 items-center justify-center gap-5 lg:gap-10">
+                    <div className="flex flex-col w-full sm:w-4/5 lg:w-[55%] gap-5">
+                        <div className="flex flex-col sm:items-center gap-3 ">
+                            <h3 className="text-h5 sm:text-h4 lg:text-h3 font-bold text-blue-light-citc">{content.c3.title}</h3> 
+                            <div className="w-full h-1 bg-blue-900 rounded-full" /> 
+                        </div> 
+                        <p className="text-[0.95rem] sm:text-[0.9rem] md:text-p lg:text-[1.1rem] font-medium">
+                            {content.c3.description} 
+                        </p>
+                    </div>
+                    <div className="flex flex-col justify-center gap-5">
+                        <Image 
+                            src="/images/logos/business/C3_logo.png"
+                            alt="CI2 Logo"
+                            width={300}
+                            height={300}
+                            className="w-[300px] md:w-[350px] lg:w-[450px]"
+                        />
+                        <div className="flex flex-col">
+                            <h6 className="text-[1.1rem] lg:text-[1.25rem] font-bold text-blue-light-citc">{content.formBy}</h6>
+                            <div className="flex flex-row md:justify-center lg:justify-start flex-wrap w-full gap-5">
+                                <Image 
+                                    src="/images/logos/members/ChihuahuaFutura.png"
+                                    alt="Chihuahua Futura Logo"
+                                    width={500}
+                                    height={500}
+                                    className="object-contain w-[150px] md:w-[200px]"
+                                /> 
+                            </div>
+                        </div> 
+                    </div> 
+                </div>
+            </section>
+        </>
+    );
+} 
