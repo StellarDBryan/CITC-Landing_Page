@@ -19,17 +19,17 @@ const content = {
         title: "Industry + Tech Solution Plug",
         description: "Industry Tech Plug es una iniciativa del Centro de Industria Inteligente (CI2) que conecta a la comunidad industrial y tecnológica a través de eventos clave. Hasta la fecha, hemos organizado 9 eventos que han reunido a 105 participantes, fortaleciendo la colaboración y el desarrollo de soluciones innovadoras.", 
         images: [
-            "/images/photos/tech_plug/TP_01.jpg", 
+            "/images/photos/tech_plug/TP_01.JPG", 
             "/images/photos/tech_plug/TP_02.jpeg", 
             "/images/photos/tech_plug/TP_03.jpeg", 
             "/images/photos/tech_plug/TP_04.jpeg", 
-            "/images/photos/tech_plug/TP_05.jpg", 
-            "/images/photos/tech_plug/TP_06.jpg", 
-            "/images/photos/tech_plug/TP_07.jpg", 
-            "/images/photos/tech_plug/TP_08.jpg", 
-            "/images/photos/tech_plug/TP_09.jpg", 
-            "/images/photos/tech_plug/TP_10.jpg", 
-            "/images/photos/tech_plug/TP_11.jpg", 
+            "/images/photos/tech_plug/TP_05.JPG", 
+            "/images/photos/tech_plug/TP_06.JPG", 
+            "/images/photos/tech_plug/TP_07.JPG", 
+            "/images/photos/tech_plug/TP_08.JPG", 
+            "/images/photos/tech_plug/TP_09.JPG", 
+            "/images/photos/tech_plug/TP_10.JPG", 
+            "/images/photos/tech_plug/TP_11.JPG", 
         ],  
         results: [{ quantity: 9, name: "Eventos"}, { quantity: 105, name: "Participantes"}], 
         successStoriesTitle: "Casos de Éxito", 
@@ -304,8 +304,8 @@ export function C3(){
                     </div>
                     <div className="flex flex-col justify-center gap-5">
                         <Image 
-                            src="/images/logos/business/C3_logo.png"
-                            alt="CI2 Logo"
+                            src="/images/logos/business/c3_logo.png"
+                            alt="C3 Logo"
                             width={300}
                             height={300}
                             className="w-[300px] md:w-[350px] lg:w-[450px]"
