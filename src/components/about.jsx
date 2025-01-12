@@ -68,7 +68,7 @@ const text = {
         universities: 'Universidades',
     },
     associates: {
-        intro: 'Se parte de los que impulsan la tecnología e innovación en la región', 
+        intro: 'Nuestros socios, el motor de la innovación tecnológica en Chihuahua', 
     }, 
 };
 
@@ -261,34 +261,42 @@ export function AssociatesLanding(){
         {
             name: '360Solutions', 
             image: '/images/logos/associates/360Solutions_edited.png', 
+            className: 'w-[230px]', 
         },
         {
             name: 'AdNConsulting', 
             image: '/images/logos/associates/AdNConsulting.png', 
+            className: 'w-[200px]', 
         }, 
         {
             name: 'BuildBinder', 
             image: '/images/logos/associates/BuildBinder_edited.png', 
+            className: 'w-[200px]', 
         }, 
         {
             name: 'AutoZone', 
             image: '/images/logos/associates/DataZone_edited.png', 
+            className: 'w-[230px]', 
         }, 
         {
             name: 'IntegralVending', 
             image: '/images/logos/associates/IntegralVending_edited.png', 
+            className: 'w-[200px]', 
         }, 
         {
             name: 'Intelectix', 
             image: '/images/logos/associates/Intelectix_edited.png', 
+            className: 'w-[170px]', 
         }, 
         {
             name: 'JobSistemas', 
             image: '/images/logos/associates/JobSistemas_edited.png', 
+            className: 'w-[210px]', 
         }, 
         {
             name: 'LeadingTech', 
             image: '/images/logos/associates/LeadingTech_edited.png', 
+            className: 'w-[200px]', 
         }, 
     ];
 
@@ -296,43 +304,53 @@ export function AssociatesLanding(){
         {
             name: 'Madata', 
             image: '/images/logos/associates/madata_edited.png', 
+            className: 'w-[150px]', 
         }, 
         {
             name: 'Pax', 
             image: '/images/logos/associates/pax_edited.png', 
+            className: 'w-[150px]', 
         }, 
         {
             name: 'PIDElectronics', 
             image: '/images/logos/associates/PIDElectronics_edited.png', 
+            className: 'w-[150px]', 
         }, 
         {
             name: 'PPAPManger', 
             image: '/images/logos/associates/PPAPManger_edited.png', 
+            className: 'w-[150px]', 
         },
         {
             name: 'Resideo', 
             image: '/images/logos/associates/resideo_edited.png', 
+            className: 'w-[150px]', 
         }, 
         {
             name: 'Sitek', 
             image: '/images/logos/associates/Sitek_edited.png', 
+            className: 'w-[150px]', 
         }, 
         {
             name: 'TGC', 
             image: '/images/logos/associates/TGC_edited.png', 
+            className: 'w-[150px]', 
         }, 
         {
             name: 'Tisco', 
             image: '/images/logos/associates/Tisco_edited.png', 
+            className: 'w-[150px]', 
         },
     ];
 
     return (
         <>
-            <section className="w-full h-[600px] overflow-hidden flex flex-col items-center justify-center">
-                <h4 className="lg:my-5 text-h4 font-semibold text-blue-dark-citc">{text.associates.intro}</h4>
-                <InfiniteMovingCards items={associate_logos_1} direction="right" />
-                <InfiniteMovingCards items={associate_logos_2} direction="left" />
+            <section className="w-[85%] sm:w-[90%] lg:w-4/5 mx-auto h-auto gap-3 md:gap-5 py-10 flex flex-col items-center justify-center">
+                <h4 className="text-[1.3rem] sm:text-[1.75rem] md:text-[2rem] lg:text-[2.5rem] text-center font-extrabold text-blue-dark-citc">{text.associates.intro}</h4>
+                <div className="flex flex-col">
+                    <InfiniteMovingCards items={associate_logos_1} direction="right" />
+                    <InfiniteMovingCards items={associate_logos_2} direction="left" />
+                </div>
             </section>
         </>
     );
