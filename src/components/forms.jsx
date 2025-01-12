@@ -249,7 +249,7 @@ export default function ContactForm() {
     );
 }
 
-export function BusinessForm() {
+export function BusinessForm({ content }) {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -333,7 +333,7 @@ export function BusinessForm() {
     };
     return(
             <div className="w-full flex justify-center">
-                <div className=" lg:mx-auto ">
+                <div className="w-[90%] sm:w-auto lg:mx-auto ">
                     <div className="px-6 lg:px-8">
                         <div className="mx-auto max-w-xl lg:mx-0 w-full">
                             <form onSubmit={handleSubmit} className="">
@@ -341,9 +341,9 @@ export function BusinessForm() {
                                     <div>
                                         <label
                                             htmlFor="first-name"
-                                            className="block text-sm font-semibold leading-6 text-gray-900 dark:text-white"
+                                            className="block text-sm font-semibold leading-6 text-regular-dark whitespace-pre"
                                         >
-                                            Nombre*
+                                            {content.name} *
                                         </label>
                                         <div className="mt-2.5">
                                             <input
@@ -353,17 +353,18 @@ export function BusinessForm() {
                                                 autoComplete="given-name"
                                                 value={formData.name}
                                                 onChange={handleChange}
-                                                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-light-citc sm:text-sm sm:leading-6 dark:bg-customGray"
+                                                className="block w-full rounded-md border-0 px-3.5 py-2 text-regular-dark shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-light-citc sm:text-sm sm:leading-6 dark:bg-customGray"
                                                 required
+                                                placeholder={content.name}
                                             />
                                         </div>
                                     </div>
                                     <div className="">
                                         <label
                                             htmlFor="email"
-                                            className="block text-sm font-semibold leading-6 text-gray-900 dark:text-white"
+                                            className="block text-sm font-semibold leading-6 whitespace-pre text-regular-dark "
                                         >
-                                            Correo*
+                                            {content.email} *
                                         </label>
                                         <div className="mt-2.5">
                                             <input
@@ -375,15 +376,16 @@ export function BusinessForm() {
                                                 onChange={handleChange}
                                                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-light-citc sm:text-sm sm:leading-6 dark:bg-customGray"
                                                 required
+                                                placeholder={content.email}
                                             />
                                         </div>
                                     </div>
                                     <div className="">
                                         <label
                                             htmlFor="company"
-                                            className="block text-sm font-semibold leading-6 text-gray-900 dark:text-white"
+                                            className="block text-sm font-semibold leading-6 whitespace-pre text-regular-dark"
                                         >
-                                            Compañia*
+                                            {content.company} *
                                         </label>
                                         <div className="mt-2.5">
                                             <input
@@ -395,6 +397,7 @@ export function BusinessForm() {
                                                 onChange={handleChange}
                                                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-light-citc sm:text-sm sm:leading-6 dark:bg-customGray"
                                                 required
+                                                placeholder={content.company}
                                             />
                                         </div>
                                     </div>
@@ -403,7 +406,7 @@ export function BusinessForm() {
                                             htmlFor="phone"
                                             className="block text-sm font-semibold leading-6 text-gray-900 dark:text-white"
                                         >
-                                            Telefono
+                                            {content.phone}
                                         </label>
                                         <div className="relative mt-2.5">
                                             <input
@@ -413,6 +416,7 @@ export function BusinessForm() {
                                                 autoComplete="tel"
                                                 value={formData.phone}
                                                 onChange={handleChange}
+                                                placeholder={content.phone}
                                                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-light-citc sm:text-sm sm:leading-6 dark:bg-customGray"
                                             />
                                         </div>
@@ -420,9 +424,9 @@ export function BusinessForm() {
                                     <div className="sm:col-span-2">
                                         <label
                                             htmlFor="message"
-                                            className="block text-sm font-semibold leading-6 text-gray-900 dark:text-white"
+                                            className="block text-sm font-semibold leading-6 whitespace-pre text-regular-dark "
                                         >
-                                            Mensaje*
+                                            {content.message} *
                                         </label>
                                         <div className="mt-2.5">
                                             <textarea
@@ -431,7 +435,7 @@ export function BusinessForm() {
                                                 rows={4}
                                                 value={formData.message}
                                                 onChange={handleChange}
-                                                placeholder='Cuéntanos cómo te gustaría colaborar'
+                                                placeholder={content.message_placeholder}
                                                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-light-citc sm:text-sm sm:leading-6 dark:bg-customGray"
                                                 required
                                             />
@@ -446,8 +450,8 @@ export function BusinessForm() {
                                         {success ? 'Enviado' : 'Enviar'}
                                     </button>
                                     {success && (
-                                        <p className="mt-4 text-sm text-green-500">
-                                            Formulario enviado con éxito.
+                                        <p className="mt-4 text-sm text-green-500"> 
+                                            {content.success_message}
                                         </p>
                                     )}
                                 </div>

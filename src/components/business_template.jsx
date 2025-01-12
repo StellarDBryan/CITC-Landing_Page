@@ -154,6 +154,15 @@ const content = {
     form: {
         question: "¿Quieres ser parte de nuestras iniciativas globales?", 
         intro: "¡Conecta con nosotros y ayuda a construir un futuro tecnológico más conectado!", 
+        data: {
+            name: "Nombre", 
+            email: "Correo", 
+            company: "Empresa/Organización", 
+            phone: "Teléfono", 
+            message: "Mensaje", 
+            message_placeholder: "Cuéntanos cómo te gustaría colaborar", 
+            success_message: "Envío completado con éxito", 
+        }, 
     }, 
 }; 
 
@@ -421,10 +430,10 @@ export function Form(){
     return (
         <>
             <section className="w-full py-10 gap-5 h-auto flex flex-col items-center overflow-hidden">
-                <h4 className="text-[2rem] font-bold text-blue-dark-citc w-4/5 text-center">{content.form.question}</h4>
-                <h6 className="text-[1.5rem] font-bold text-blue-light-citc/70 w-4/5 text-center">{content.form.intro}</h6>
-                <BusinessForm />
-            </section>
+                <h4 className="text-[1.7rem] sm:text-[2rem] font-bold text-blue-dark-citc w-[85%] sm:w-4/5 text-center">{content.form.question}</h4>
+                <h6 className="text-[1.25rem] sm:text-[1.5rem] font-bold text-blue-light-citc/70 w-4/5 text-center">{content.form.intro}</h6>
+                <BusinessForm content={content.form.data} />
+            </section> 
         </>
     );
 }
