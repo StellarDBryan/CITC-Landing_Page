@@ -135,24 +135,25 @@ const content = {
             {
                 name: "Canada", 
                 image: "/images/flags/canada_flag.png", 
-                className: 'w-[300px]', 
+                className: 'w-[130px] sm:w-[300px]', 
             }, 
             
             {
                 name: "Suecia", 
                 image: "/images/flags/sweden_flag.png", 
-                className: 'w-[240px]', 
+                className: 'w-[120px] sm:w-[240px]', 
             }, 
             
             {
                 name: "Israel", 
                 image: "/images/flags/israel_flag.png", 
-                className: 'w-[230px]', 
+                className: 'w-[120px] sm:w-[230px]', 
             }, 
         ], 
     }, 
     form: {
-     intro: "¿Quieres ser parte de nuestras iniciativas globales? ¡Conecta con nosotros y ayuda a construir un futuro tecnológico más conectado!", 
+        question: "¿Quieres ser parte de nuestras iniciativas globales?", 
+        intro: "¡Conecta con nosotros y ayuda a construir un futuro tecnológico más conectado!", 
     }, 
 }; 
 
@@ -386,16 +387,16 @@ export function InternationalAllies(){
     return (
         <>
             <section className="w-full h-auto py-10 flex justify-center text-regular-dark">
-                <div className="w-3/5 h-auto flex flex-col items-center gap-10">
+                <div className="w-[85%] sm:w-3/5 h-auto flex flex-col items-center gap-10">
                     <div className="flex flex-col items-center gap-2">
                         <h2 className="text-[2rem] sm:text-[3rem] lg:text-[3.2rem] text-center font-extrabold text-blue-light-citc">{content.internationalAllies.title}</h2>
                         <p className="text-[1rem] md:text-[1.05rem] lg:text-[1.3rem] text-center font-medium whitespace-pre-wrap">
                             {content.internationalAllies.description}
                         </p>
                     </div>
-                    <div className="flex flex-row items-center justify-around w-full gap-10">
+                    <div className="flex flex-row flex-wrap sm:flex-nowrap items-center justify-around w-full gap-2 sm:gap-10">
                         {content.internationalAllies.allies.map((allie, id) => (
-                            <div key={id} className="flex flex-col items-center gap-3 w-[300px]">
+                            <div key={id} className="flex flex-col items-center gap-3 w-[100px] sm:w-[300px] overflow-hidden">
                                 <Image 
                                     src={allie.image}
                                     alt={`${allie.name} Image`}
@@ -403,7 +404,7 @@ export function InternationalAllies(){
                                     height={500}
                                     className={allie.className}
                                 />
-                                <span className="text-[1.7rem] font-bold text-blue-light-citc">
+                                <span className="text-[1.3rem] sm:text-[1.7rem] font-bold text-blue-light-citc">
                                     {allie.name}
                                 </span>
                             </div>
@@ -419,8 +420,9 @@ export function Form(){
 
     return (
         <>
-            <section className="w-full py-10 gap-10 h-auto flex flex-col items-center overflow-hidden">
-                <h4 className="text-[1.8rem] font-bold text-blue-dark-citc w-3/5 text-center">{content.form.intro}</h4>
+            <section className="w-full py-10 gap-5 h-auto flex flex-col items-center overflow-hidden">
+                <h4 className="text-[2rem] font-bold text-blue-dark-citc w-4/5 text-center">{content.form.question}</h4>
+                <h6 className="text-[1.5rem] font-bold text-blue-light-citc/70 w-4/5 text-center">{content.form.intro}</h6>
                 <BusinessForm />
             </section>
         </>

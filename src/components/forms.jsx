@@ -332,7 +332,7 @@ export function BusinessForm() {
         return errorMessage;
     };
     return(
-            <div className="w-full flex">
+            <div className="w-full flex justify-center">
                 <div className=" lg:mx-auto ">
                     <div className="px-6 lg:px-8">
                         <div className="mx-auto max-w-xl lg:mx-0 w-full">
