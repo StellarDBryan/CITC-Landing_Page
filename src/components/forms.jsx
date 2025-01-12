@@ -341,7 +341,7 @@ export function BusinessForm({ content }) {
                                     <div>
                                         <label
                                             htmlFor="first-name"
-                                            className="block text-sm font-semibold leading-6 text-regular-dark whitespace-pre"
+                                            className="block text-[1.1rem] font-semibold leading-6 text-blue-dark-citc whitespace-pre"
                                         >
                                             {content.name} *
                                         </label>
@@ -353,7 +353,7 @@ export function BusinessForm({ content }) {
                                                 autoComplete="given-name"
                                                 value={formData.name}
                                                 onChange={handleChange}
-                                                className="block w-full rounded-md border-0 px-3.5 py-2 text-regular-dark shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-light-citc sm:text-sm sm:leading-6 dark:bg-customGray"
+                                                className="block w-full rounded-md border-0 px-3.5 py-2 text-blue-dark-citc shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-light-citc sm:text-[1.1rem] sm:leading-6 dark:bg-customGray"
                                                 required
                                                 placeholder={content.name}
                                             />
@@ -362,7 +362,7 @@ export function BusinessForm({ content }) {
                                     <div className="">
                                         <label
                                             htmlFor="email"
-                                            className="block text-sm font-semibold leading-6 whitespace-pre text-regular-dark "
+                                            className="block text-[1.1rem] font-semibold leading-6 whitespace-pre text-blue-dark-citc "
                                         >
                                             {content.email} *
                                         </label>
@@ -374,7 +374,7 @@ export function BusinessForm({ content }) {
                                                 autoComplete="email"
                                                 value={formData.email}
                                                 onChange={handleChange}
-                                                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-light-citc sm:text-sm sm:leading-6 dark:bg-customGray"
+                                                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-light-citc sm:text-[1.1rem] sm:leading-6 dark:bg-customGray"
                                                 required
                                                 placeholder={content.email}
                                             />
@@ -383,7 +383,7 @@ export function BusinessForm({ content }) {
                                     <div className="">
                                         <label
                                             htmlFor="company"
-                                            className="block text-sm font-semibold leading-6 whitespace-pre text-regular-dark"
+                                            className="block text-[1.1rem] font-semibold leading-6 whitespace-pre text-blue-dark-citc"
                                         >
                                             {content.company} *
                                         </label>
@@ -395,7 +395,7 @@ export function BusinessForm({ content }) {
                                                 autoComplete="organization"
                                                 value={formData.company}
                                                 onChange={handleChange}
-                                                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-light-citc sm:text-sm sm:leading-6 dark:bg-customGray"
+                                                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-light-citc sm:text-[1.1rem] sm:leading-6 dark:bg-customGray"
                                                 required
                                                 placeholder={content.company}
                                             />
@@ -404,7 +404,7 @@ export function BusinessForm({ content }) {
                                     <div className="">
                                         <label
                                             htmlFor="phone"
-                                            className="block text-sm font-semibold leading-6 text-gray-900 dark:text-white"
+                                            className="block text-[1.1rem] font-semibold leading-6 text-blue-dark-citc"
                                         >
                                             {content.phone}
                                         </label>
@@ -417,14 +417,14 @@ export function BusinessForm({ content }) {
                                                 value={formData.phone}
                                                 onChange={handleChange}
                                                 placeholder={content.phone}
-                                                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-light-citc sm:text-sm sm:leading-6 dark:bg-customGray"
+                                                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-light-citc sm:text-[1.1rem] sm:leading-6 dark:bg-customGray"
                                             />
                                         </div>
                                     </div>
                                     <div className="sm:col-span-2">
                                         <label
                                             htmlFor="message"
-                                            className="block text-sm font-semibold leading-6 whitespace-pre text-regular-dark "
+                                            className="block text-[1.1rem] font-semibold leading-6 whitespace-pre text-blue-dark-citc "
                                         >
                                             {content.message} *
                                         </label>
@@ -436,7 +436,7 @@ export function BusinessForm({ content }) {
                                                 value={formData.message}
                                                 onChange={handleChange}
                                                 placeholder={content.message_placeholder}
-                                                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-light-citc sm:text-sm sm:leading-6 dark:bg-customGray"
+                                                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-light-citc sm:text-[1.1rem] sm:leading-6 dark:bg-customGray"
                                                 required
                                             />
                                         </div>
@@ -450,7 +450,7 @@ export function BusinessForm({ content }) {
                                         {success ? 'Enviado' : 'Enviar'}
                                     </button>
                                     {success && (
-                                        <p className="mt-4 text-sm text-green-500"> 
+                                        <p className="mt-4 text-[1.1rem] text-green-500"> 
                                             {content.success_message}
                                         </p>
                                     )}

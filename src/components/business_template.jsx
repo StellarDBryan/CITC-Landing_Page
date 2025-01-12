@@ -429,7 +429,7 @@ export function Form(){
 
     return (
         <>
-            <section className="w-full py-10 gap-5 h-auto flex flex-col items-center overflow-hidden">
+            <section className="w-full bg-gradient-to-t from-blue-light-citc/70 to-transparent to-30% sm:to-40% py-10 gap-5 h-auto flex flex-col items-center overflow-hidden">
                 <h4 className="text-[1.7rem] sm:text-[2rem] font-bold text-blue-dark-citc w-[85%] sm:w-4/5 text-center">{content.form.question}</h4>
                 <h6 className="text-[1.25rem] sm:text-[1.5rem] font-bold text-blue-light-citc/70 w-4/5 text-center">{content.form.intro}</h6>
                 <BusinessForm content={content.form.data} />
