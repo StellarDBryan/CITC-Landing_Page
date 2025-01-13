@@ -20,7 +20,8 @@ module.exports = {
         'white-darker': '#ECECEC',
         'regular-dark': '#1E1E1E', 
         'blue-light-citc': '#136FB2', 
-        'blue-dark-citc': '#125193',
+        'blue-dark-citc': '#125193', 
+        'citc-livinglab': '#71bfc8', 
       },
       transitionProperty: {
         'color': 'background-color, border-color, color',

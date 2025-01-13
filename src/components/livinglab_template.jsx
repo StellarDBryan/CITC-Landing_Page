@@ -1,13 +1,10 @@
 "use client";
 
-import { Tabs } from "@/components/ui/tabs";
 import { ImgCarousel } from '@/components/carousel';
 import Link from 'next/link';
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from 'next/image'; 
-import { CITC_Card } from "@/components/ui/cards";
 import { ServiceButton } from "@/components/ui/buttons";
-import { CITCMovingCards } from "@/components/ui/infinite_moving_cards";
 import { FeaturesSectionDemo } from '@/components/ui/feature_section';
 
 const text = {
@@ -63,9 +60,16 @@ const text = {
 }
 
 const content = {
+    livinglab_url: '', 
     heroSection: {
         title: "LivingLab", 
         intro: "El epicentro de la innovación y la tecnología colaborativa en la región", 
+    }, 
+    whatIs: {
+        title: "¿Qué es el LivingLab Chihuahua?", 
+        description: "El LivingLab Chihuahua es una colaboración estratégica entre el Municipio de Chihuahua y el Chihuahua IT Clúster, diseñada para fomentar el emprendimiento, la innovación y la tecnología en la región. Este centro de encuentro reúne a comunidades tecnológicas, emprendedores y actores clave del ecosistema para crear soluciones innovadoras y fortalecer la economía digital local.", 
+        officialSite: 'Sitio Oficial',
+        button: 'Ir al ', 
     }, 
 };
 
@@ -124,34 +128,47 @@ export default function HeroSection(){
             </section>
         </>
     );
+} 
+
+export function WhatIs(){
+
+    return(
+        <>
+            <section className='w-4/5 mx-auto py-12 h-screen gap-3 flex flex-col items-center'>
+                <h4 className='text-[3rem] text-center font-extrabold text-citc-livinglab'>{content.whatIs.title}</h4>
+                <div className='flex flex-col items-center w-4/5 gap-5'>
+                    <div className='flex flex-row flex-nowrap items-center justify-center gap-5'>
+                        <Image 
+                            src="/images/logos/citc/CITC_horiz_Mesa_1.png" 
+                            alt='CITC Logo'
+                            width={500}
+                            height={500}
+                            className='object-cover w-[290px]'
+                        /> 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" className='text-cyan-600 w-[50px]'>
+                            <path fill="currentColor" d="M18 12.998h-5v5a1 1 0 0 1-2 0v-5H6a1 1 0 0 1 0-2h5v-5a1 1 0 0 1 2 0v5h5a1 1 0 0 1 0 2"/>
+                        </svg>
+                        <Image 
+                            src="/images/logos/livinglab/GobMunicipalCUU.png" 
+                            alt='CITC Logo'
+                            width={500}
+                            height={500}
+                            className='object-cover w-[290px]'
+                        /> 
+                    </div>
+                    <p className='text-[1.1rem] text-center font-medium text-regular-dark'>{content.whatIs.description}</p>
+                    <a href='https://livinglab.io/home?&v=latest' target="_blank" rel="noopener noreferrer">
+                        <ServiceButton>
+                            {content.whatIs.button} {content.whatIs.officialSite}
+                        </ServiceButton>
+                    </a>
+                </div>
+            </section>
+        </>
+    );
 }
 
 export function Page(){
-
-    const workspaceImg = [
-        '/images/photos/workspace/LivingLabCUU_01.jpg', 
-        '/images/photos/workspace/LivingLabCUU_02.JPG', 
-        '/images/photos/workspace/LivingLabCUU_03.JPG', 
-        '/images/photos/workspace/LivingLabCUU_04.JPG', 
-        '/images/photos/workspace/LivingLabCUU_05.jpg', 
-        '/images/photos/workspace/LivingLabCUU_06.JPG', 
-        '/images/photos/workspace/LivingLabCUU_07.JPG', 
-        '/images/photos/workspace/LivingLabCUU_08.JPG', 
-        '/images/photos/workspace/LivingLabCUU_09.JPG', 
-        '/images/photos/workspace/LivingLabCUU_10.JPG', 
-    ]; 
-
-    const eventsImg = [
-        '/images/photos/events/events_01.jpg', 
-        '/images/photos/events/events_02.jpeg', 
-        '/images/photos/events/events_03.jpeg', 
-        '/images/photos/events/events_04.jpeg', 
-        '/images/photos/events/events_05.JPG', 
-        '/images/photos/events/events_06.jpeg', 
-        '/images/photos/events/events_07.jpeg', 
-        '/images/photos/events/events_08.jpeg', 
-        '/images/photos/events/events_09.jpeg', 
-    ];
 
     const livingLabIcons = [
         <svg key="0" xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 24 24"><path fill="currentColor" d="M17 9h2V7h-2zm0 4h2v-2h-2zm0 4h2v-2h-2zM1 21V11l7-5l7 5v10h-5v-6H6v6zm16 0V10l-7-5.05V3h13v18z"/></svg>, 
@@ -165,84 +182,12 @@ export function Page(){
     return(
         <>
             <section className="w-full lg:h-auto space-y-5 flex flex-col overflow-hidden items-center justify-center dark:text-gray-clear-citc">
-                <div className='relative flex items-center w-full lg:h-[70vh]'>
-                    <Image 
-                        src="/images/photos/events/events_01.jpg"
-                        alt="Events Image"
-                        fill
-                        objectFit='cover'
-                        className='[mask-image:linear-gradient(to_top,transparent,white_20%,white_80%,transparent)]'
-                        style={{ objectPosition: '0% 45%', opacity: 1}}
-                    />
-                    <div className='flex flex-col lg:w-[50vw] lg:pl-20 h-full justify-center p-5 z-20 bg-gradient-to-r from-gray-clear-citc from-50% rounded-lg'>
-                        <h3 className='text-h1 text-blue-dark-citc font-bold items-center justify-center'>{text.citc.title}</h3>
-                        <h6 className='text-h6 text-regular-dark font-semibold lg:w-9/12'>{text.citc.intro}</h6>
-                    </div>
-                </div>
-                <div className="flex flex-col items-center justify-center">
-                    <CITC_Card id="Conection" title={text.citc.subtitle_1} content={text.citc.content_1} 
-                        icon={
-                            <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 24 24">
-                                <path fill="currentColor" 
-                                    d="M21.71 8.71c1.25-1.25.68-2.71 0-3.42l-3-3c-1.26-1.25-2.71-.68-3.42 0L13.59 4H11C9.1 4 8 5 7.44 6.15L3 10.59v4l-.71.7c-1.25 1.26-.68 2.71 0 3.42l3 3c.54.54 1.12.74 1.67.74c.71 0 1.36-.35 1.75-.74l2.7-2.71H15c1.7 0 2.56-1.06 2.87-2.1c1.13-.3 1.75-1.16 2-2C21.42 14.5 22 13.03 22 12V9h-.59zM20 12c0 .45-.19 1-1 1h-1v1c0 .45-.19 1-1 1h-1v1c0 .45-.19 1-1 1h-4.41l-3.28 3.28c-.31.29-.49.12-.6.01l-2.99-2.98c-.29-.31-.12-.49-.01-.6L5 15.41v-4l2-2V11c0 1.21.8 3 3 3s3-1.79 3-3h7zm.29-4.71L18.59 9H11v2c0 .45-.19 1-1 1s-1-.55-1-1V8c0-.46.17-2 2-2h3.41l2.28-2.28c.31-.29.49-.12.6-.01l2.99 2.98c.29.31.12.49.01.6"/>
-                            </svg>
-                        }
-                        buttons={
-                            <>
-                                <Link href={'/contact'} className='w-auto h-auto'>
-                                    <ServiceButton>
-                                        {text.citc.button_11}
-                                    </ServiceButton>
-                                </Link>
-                                <Link href={'/about#Allies'} className='w-auto h-auto'>
-                                    <ServiceButton>
-                                        {text.citc.button_12}
-                                    </ServiceButton>
-                                </Link>
-                            </>
-                        }
-                        visuals={<Conections />}
-                    />
-                    <CITC_Card id="Workspace" title={text.citc.subtitle_2} content={text.citc.content_2} 
-                        icon={
-                            <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 24 24">
-                                <path fill="currentColor" 
-                                    d="M17 9h2V7h-2zm0 4h2v-2h-2zm0 4h2v-2h-2zM1 21V11l7-5l7 5v10h-5v-6H6v6zm16 0V10l-7-5.05V3h13v18z"/>
-                            </svg>
-                        }
-                        buttons={
-                            <Link href={'#LivingLabCUU'} className='w-auto h-auto'>
-                                <ServiceButton>
-                                    {text.citc.button_2}
-                                </ServiceButton>
-                            </Link>
-                        }
-                        visuals={<ImgCarousel images={workspaceImg} />}
-                    />
-                    <CITC_Card id="Events" title={text.citc.subtitle_3} content={text.citc.content_3} 
-                        icon={
-                            <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 36 36">
-                                <path fill="currentColor" 
-                                    d="M10 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1" class="clr-i-solid clr-i-solid-path-1"/>
-                            <path fill="currentColor" d="M26 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1" class="clr-i-solid clr-i-solid-path-2"/><path fill="currentColor" d="M32.25 6h-4v3a2.2 2.2 0 0 1-4.4 0V6H12.2v3a2.2 2.2 0 0 1-4.4 0V6h-4A1.78 1.78 0 0 0 2 7.81v22.38A1.78 1.78 0 0 0 3.75 32h28.5A1.78 1.78 0 0 0 34 30.19V7.81A1.78 1.78 0 0 0 32.25 6m-6.31 10.58l-9.67 9.67L11 20.94A1.36 1.36 0 0 1 12.9 19l3.38 3.38L24 14.66a1.36 1.36 0 1 1 1.93 1.93Z" class="clr-i-solid clr-i-solid-path-3"/><path fill="none" d="M0 0h36v36H0z"/></svg>
-                        }
-                        buttons={
-                            <a href='https://www.facebook.com/ChihITCluster/?locale=es_LA' target="_blank" rel="noopener noreferrer">
-                                <ServiceButton>
-                                    {text.citc.button_3}
-                                </ServiceButton>
-                            </a>
-                        }
-                        visuals={<ImgCarousel images={eventsImg} />}
-                    />
-                </div>
                 <div id='LivingLabCUU' className='relative flex items-center w-full lg:h-[70vh] '>
                     <Image 
                         src="/images/photos/workspace/LivingLabCUU_01.png"
                         alt="LivingLabCUU Image"
                         fill
-                        objectFit='cover'
-                        className='[mask-image:linear-gradient(to_top,transparent,white_20%,white_80%,transparent)]'
+                        className='object-cover [mask-image:linear-gradient(to_top,transparent,white_20%,white_80%,transparent)]'
                         style={{ objectPosition: 'center left', opacity: 1}}
                     />
                     <div className='flex flex-col lg:w-[50vw] lg:pl-20 lg:space-y-5 h-full justify-center p-5 z-20 bg-gradient-to-r from-gray-clear-citc from-70% rounded-lg'>
@@ -270,111 +215,6 @@ export function Page(){
                     </p>
                 </div>
             </section>
-        </>
-    );
-}
-
-export function Conections(){
-
-    const associates = [
-        {
-            name: '360Solutions', 
-            image: '/images/logos/associates/360Solutions_edited.png', 
-        },
-        {
-            name: 'AdNConsulting', 
-            image: '/images/logos/associates/AdNConsulting.png', 
-        }, 
-        {
-            name: 'BuildBinder', 
-            image: '/images/logos/associates/BuildBinder_edited.png', 
-        }, 
-        {
-            name: 'AutoZone', 
-            image: '/images/logos/associates/DataZone_edited.png', 
-        }, 
-        {
-            name: 'IntegralVending', 
-            image: '/images/logos/associates/IntegralVending_edited.png', 
-        }, 
-        {
-            name: 'Intelectix', 
-            image: '/images/logos/associates/Intelectix_edited.png', 
-        }, 
-        {
-            name: 'JobSistemas', 
-            image: '/images/logos/associates/JobSistemas_edited.png', 
-        }, 
-        {
-            name: 'LeadingTech', 
-            image: '/images/logos/associates/LeadingTech_edited.png', 
-        }, 
-        {
-            name: 'Madata', 
-            image: '/images/logos/associates/madata_edited.png', 
-        }, 
-        {
-            name: 'Pax', 
-            image: '/images/logos/associates/pax_edited.png', 
-        }, 
-        {
-            name: 'PIDElectronics', 
-            image: '/images/logos/associates/PIDElectronics_edited.png', 
-        }, 
-        {
-            name: 'PPAPManger', 
-            image: '/images/logos/associates/PPAPManger_edited.png', 
-        },
-        {
-            name: 'Resideo', 
-            image: '/images/logos/associates/resideo_edited.png', 
-        }, 
-        {
-            name: 'Sitek', 
-            image: '/images/logos/associates/Sitek_edited.png', 
-        }, 
-        {
-            name: 'TGC', 
-            image: '/images/logos/associates/TGC_edited.png', 
-        }, 
-        {
-            name: 'Tisco', 
-            image: '/images/logos/associates/Tisco_edited.png', 
-        },
-    ];
-    const universities = [
-        {
-            name: 'ITCHII', 
-            image: '/images/logos/universities/ITCHII.png', 
-        }, 
-        {
-            name: 'Tec Milenio CUU', 
-            image: '/images/logos/universities/TecMilenio.png', 
-        }, 
-        {
-            name: 'ULSA CUU', 
-            image: '/images/logos/universities/ULSA.png', 
-        }, 
-    ];
-
-    return(
-        <>
-            <div className="lg:max-w-[45vw] flex flex-col h-full overflow-hidden">
-                <h5 className="w-full text-center text-h5 font-semibold text-blue-dark-citc">{text.citc.associates}</h5>
-                <motion.div 
-                    initial={{scale: 0.8}}
-                    className="w-auto h-auto max-h-52"
-                >
-                    <CITCMovingCards items={associates} direction="right" speed='slow' />
-                </motion.div>
-                <h5 className="w-full text-center text-h5 font-semibold text-blue-dark-citc">{text.citc.universities}</h5>
-                <motion.div 
-                    initial={{scale: 0.8}}
-                    className="w-auto h-auto max-h-52"
-                >
-                    <CITCMovingCards items={universities} direction="left" speed='normal' />
-                </motion.div>
-            </div>
         </>
     );
 }

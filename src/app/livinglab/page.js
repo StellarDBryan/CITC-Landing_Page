@@ -1,12 +1,12 @@
-import HeroSection, { Page, Conections } from "@/components/livinglab_template";
+import HeroSection, { WhatIs, Page } from "@/components/livinglab_template";
 
 export default function LivingLab(){
 
     return(
         <>
             <HeroSection />
+            <WhatIs />
             <Page />
-            <Conections />
         </>
     );
 }
