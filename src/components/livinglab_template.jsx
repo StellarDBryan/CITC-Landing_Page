@@ -73,49 +73,52 @@ export default function HeroSection(){
 
     return(
         <>
-            <section className="w-full h-screen flex flex-row overflow-hidden gap-10 p-10 items-center justify-around bg-gradient-to-b from-[#71bfc8] from-50% sm:from-40% md:from-60% lg:from-70%">
-                <div className="flex flex-col w-full md:w-[45vw] items-center md:items-start md:justify-center text-gray-50 md:mb-[15vh] gap-4 sm:gap-0">
-                    <div className="flex flex-col gap-5 items-center sm:flex-row sm:items-center sm:justify-center md:justify-start sm:ml-[7vw] md:ml-0">
+            <section className="w-full h-screen flex flex-col items-center md:flex-row overflow-hidden gap-0 md:gap-10 p-5 sm:p-10 md:items-center md:justify-around bg-gradient-to-b from-[#71bfc8] from-50% sm:from-40% md:from-60% lg:from-70%">
+                <div className="flex flex-col w-full md:w-[45vw] items-center md:items-start md:justify-center text-gray-50 md:mb-[15vh] gap-4 ">
+                    <div className="flex flex-col gap-2 lg:gap-5 items-center sm:flex-row sm:items-center sm:justify-center md:justify-start ">
                         <Image 
                             src="/images/logos/citc/LivingLab_icon.png"
                             alt="LivingLab Logo"
                             width={300}
                             height={300}
-                            className="filter grayscale brightness-[5] w-[170px]"
+                            className="filter grayscale brightness-[5] w-[115px] lg:w-[170px]"
                         />
                         <h3 className="font-extrabold text-center sm:text-start text-h4 sm:text-h3 lg:text-h2">{content.heroSection.title}</h3>
                     </div>
                     <h5 className="font-semibold text-center md:text-start text-h6 lg:text-h5">{content.heroSection.intro}</h5>
                 </div>
-                <div className="relative w-[500px] h-[500px] rounded-full overflow-visible">
-                    <div className="w-[550px] h-[550px] absolute -top-[25px] -left-[25px] bg-radial-gradient rounded-full" />
+                <div className="relative w-[500px] h-[500px] sm:w-[500px] sm:h-[500px] rounded-full overflow-visible transform scale-[0.5] sm:scale-[0.7] lg:scale-[1] ">
+                    <div className="w-[550px] h-[550px] absolute -top-[25px] sm:-top-[60px] md:-top-[25px] -left-[25px] bg-radial-gradient rounded-full" />
                     <Image 
                         src="/images/photos/workspace/LivingLabCUU_01.png"
                         alt="LivingLab photo"
                         width={300}
                         height={300}
-                        className="rounded-full filter saturate-[1.30] shadow-2xl brightness-150 absolute z-10 bottom-[50px] left-[50px] ring-gray-100 ring-[10px] ring-offset-2 w-[400px] h-[400px] object-right object-cover"
+                        className="rounded-full filter saturate-[1.30] shadow-2xl brightness-150 absolute z-10 -bottom-5 left-12 sm:bottom-[50px] sm:left-[50px] ring-gray-100 ring-[10px] ring-offset-2 w-[400px] h-[400px] object-right object-cover"
                     />
                     <Image 
                         src="/images/photos/workspace/LivingLabCUU_03.JPG"
                         alt="LivingLab photo"
                         width={300}
                         height={300}
-                        className="rounded-full absolute drop-shadow-2xl object-right -top-11 -left-7 ring-gray-100 ring-[7px] ring-offset-2 w-[200px] h-[200px] object-cover"
+                        className="rounded-full absolute drop-shadow-2xl object-right bottom-auto sm:-top-11 -left-7 ring-gray-100 ring-[7px] ring-offset-2 w-[200px] h-[200px] object-cover"
                     />
                     <Image 
                         src="/images/photos/workspace/LivingLabCUU_07.JPG"
                         alt="LivingLab photo"
                         width={300}
                         height={300}
-                        className="rounded-full absolute z-20 drop-shadow-2xl -bottom-7 -left-20 object-right ring-gray-100 ring-[8px] ring-offset-2 w-[250px] h-[250px] object-cover"
+                        className="rounded-full absolute z-20 drop-shadow-2xl -bottom-12 -left-20 object-right ring-gray-100 ring-[8px] ring-offset-2 w-[250px] h-[250px] object-cover"
+                        style={{
+                            objectPosition: '20% 50%', 
+                        }}
                     />
                     <Image 
                         src="/images/photos/workspace/LivingLabCUU_08.JPG"
                         alt="LivingLab photo"
                         width={300}
                         height={300}
-                        className="rounded-full absolute z-20 drop-shadow-2xl -bottom-8 -right-12 object-right ring-gray-100 ring-[6px] ring-offset-2 w-[190px] h-[190px] object-cover"
+                        className="rounded-full absolute z-20 drop-shadow-2xl -bottom-8 -right-12 md:-right-24 lg:-right-12 object-right ring-gray-100 ring-[6px] ring-offset-2 w-[190px] h-[190px] object-cover"
                     />
                 </div>
             </section>
@@ -161,7 +164,7 @@ export function Page(){
 
     return(
         <>
-            <section className="w-full lg:h-auto space-y-5 flex flex-col items-center justify-center dark:text-gray-clear-citc">
+            <section className="w-full lg:h-auto space-y-5 flex flex-col overflow-hidden items-center justify-center dark:text-gray-clear-citc">
                 <div className='relative flex items-center w-full lg:h-[70vh]'>
                     <Image 
                         src="/images/photos/events/events_01.jpg"
