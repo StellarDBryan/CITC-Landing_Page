@@ -126,7 +126,7 @@ export function Solutions(){
                             solution_text={text.solutions.s2}
                         />
                         <SolutionCard
-                            img_src="/images/photos/workspace/LivingLabCUU_01.jpg"
+                            img_src="/images/photos/workspace/LivingLabCUU_01.png"
                             img_alt="Workspace Image" 
                             solution_text={text.solutions.s3}
                             img_position={'75% 95%'}
