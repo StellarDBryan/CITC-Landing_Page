@@ -42,7 +42,6 @@ export default function Footer(){
         'social': {
             'title': 'Redes Sociales',
             'facebook': 'https://www.facebook.com/ChihITCluster/?locale=es_LA', 
-            'instagram': 'https://www.instagram.com/livinglab_cuu/', 
             'twitter': 'https://x.com/ChihuahuaIT',
             'linkedin': 'https://www.linkedin.com/company/chihuahuait/?originalSubdomain=mx', 
             'whatsapp': 'https://wa.me/5216143898301', 
@@ -108,7 +107,6 @@ export default function Footer(){
                         </div>
                         <SocialButtons 
                             facebook={text.social.facebook}
-                            instagram={text.social.instagram}
                             twitter={text.social.twitter}
                             linkedin={text.social.linkedin}
                             whatsapp={text.social.whatsapp}
