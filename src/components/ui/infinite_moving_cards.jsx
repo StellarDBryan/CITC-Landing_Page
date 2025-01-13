@@ -8,8 +8,8 @@ import React, { useEffect, useState } from "react";
 export const InfiniteMovingCards = ({
   items,
   direction,
-  speed = "slow",
-  pauseOnHover = false,
+  speed = "normal",
+  pauseOnHover =false,
   className
 }) => {
   const containerRef = React.useRef(null);
@@ -59,28 +59,27 @@ export const InfiniteMovingCards = ({
     (<div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20  max-w-7xl overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+        "scroller relative z-20 max-w-[19rem] sm:max-w-[37rem] md:max-w-[45rem] lg:max-w-[60rem] object-contain overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
         className
       )}>
       <ul
         ref={scrollerRef}
         className={cn(
-          " flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap",
+          " flex min-w-full shrink-0 gap-0 py-4 w-max flex-nowrap",
           start && "animate-scroll ",
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}>
         {items.map((item, idx) => (
           <li
-            className="lg:w-[300px] lg:h-[200px] relative rounded-2xl p-5 flex-shrink-0 bg-gray-clear-citc overflow-hidden"
+            className="card w-auto max-h-[300px] flex items-center justify-center rounded-2xl p-5 flex-shrink-0 bg-transparent dark:bg-gray-clear-citc overflow-hidden"
             key={item.name}>
-            <Card className="w-full h-full flex items-center justify-center">
-                <Image 
-                    src={item.image}
-                    alt={item.name}
-                    fill
-                    className="object-contain"
-                />
-            </Card>
+            <Image 
+                  src={item.image}
+                  alt={item.name}
+                  width={500}
+                  height={500}
+                  className={`${item.className}`}
+              />
           </li>
         ))}
       </ul>

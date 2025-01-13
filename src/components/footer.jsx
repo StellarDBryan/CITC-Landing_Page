@@ -5,6 +5,7 @@ import SocialButtons from "./ui/social_buttons.jsx";
 export default function Footer(){
 
     const text = {
+        copyright_text: "© 2024 Chihuahua IT Cluster. Todos los derechos reservados.", 
         'ContactInfo': {
             'title': 'Información de Contacto',
             'direction_title': 'Dirección',
@@ -15,20 +16,21 @@ export default function Footer(){
             'tel_title': 'Teléfono', 
             'tel': ' +52 1 614 389 8301', 
             'email_title': 'Email', 
-            'email': ' administracion@chihuahuait.org', 
+            email: 'info@chihuahuait.org', 
+            mail: 'mailto:info@chihuahuait.org'
         }, 
         'Links': {
             'title': 'Links', 
             'about': 'Nosotros',  
             'about_url': '/about', 
-            'workspace': 'Espacio', 
-            'workspace_url': '/services#Workspace',
-            'events': 'Eventos', 
-            'events_url': '/services#Events', 
-            'living_lab': 'Living Lab CUU', 
-            'living_lab_url': 'https://livinglab.io/home?&v=latest', 
-            'news': 'Noticias', 
-            'news_url': '/news', 
+            'LivingLab': 'LivingLab', 
+            'LivingLab_url': '/livinglab',
+            'Talent': 'Talent Development', 
+            'Talent_url': '/talent', 
+            'Business': 'Business Development', 
+            'Business_url': '/business', 
+            'LivingLabSite': 'Sitio Oficial LivingLab', 
+            'LivingLabSite_url': 'https://livinglab.io/home?&v=latest', 
             'contact': 'Contacto', 
             'contact_url': '/contact'
         }, 
@@ -40,7 +42,6 @@ export default function Footer(){
         'social': {
             'title': 'Redes Sociales',
             'facebook': 'https://www.facebook.com/ChihITCluster/?locale=es_LA', 
-            'instagram': 'https://www.instagram.com/livinglab_cuu/', 
             'twitter': 'https://x.com/ChihuahuaIT',
             'linkedin': 'https://www.linkedin.com/company/chihuahuait/?originalSubdomain=mx', 
             'whatsapp': 'https://wa.me/5216143898301', 
@@ -51,15 +52,15 @@ export default function Footer(){
         <>
             <footer className="footer bg-blue-dark-citc p-5 md:p-7 pb-10 sm:pb-0 gap-x-5 grid grid-cols-1 sm:grid-rows-2 sm:grid-cols-2 md:grid-rows-none md:grid-cols-3 justify-around text-gray-clear-citc z-50">
                 <div className="h-full flex flex-col items-center sm:items-start sm:justify-start ">
-                    <Link href="/" className="relative w-[250px] h-[120px] md:w-[280px] md:h-[160px] overflow-y-hidden ">
+                    <Link href="/" className="relative w-[250px] h-[120px] md:w-[230px] md:h-[160px] lg:w-[300px] overflow-y-hidden ">
                         <Image 
                             src="/images/logos/citc/CITC_horiz-04.png"
                             alt="CITC Logo"
                             fill
-                            className="w-full h-full object-cover sm:object-contain"
+                            className="w-full h-full object-contain"
                         /> 
                     </Link>
-                    <small className="text-sm1 text-center sm:text-start lg:text-[0.9rem]">© 2024 Chihuahua IT Cluster. Todos los derechos reservados.</small>
+                    <small className="text-sm1 text-center sm:text-start lg:text-[0.9rem]">{text.copyright_text}</small>
                 </div>
                 <div className="h-full grid grid-rows-2 space-y-3">
                     <ul className="space-y-1">
@@ -77,7 +78,7 @@ export default function Footer(){
                         <li>
                             <p className="text-sm1 lg:text-[0.9rem] ">
                                 <span className="font-semibold">{text.ContactInfo.ubication_title}: </span>
-                                <a href={text.ContactInfo.googleMapsURL} className="underline underline-offset-2 font-medium hover:font-semibold"  target="_blank" rel="noopener noreferrer">
+                                <a href={text.ContactInfo.googleMapsURL} className="link font-medium hover:text-blue-200"  target="_blank" rel="noopener noreferrer">
                                     {text.ContactInfo.ubication}
                                 </a> 
                             </p>
@@ -88,8 +89,11 @@ export default function Footer(){
                             </p>
                         </li>
                         <li>
-                            <p className="text-sm1 lg:text-[0.9rem] ">
-                                <span className="font-semibold">{text.ContactInfo.email_title}: </span>{text.ContactInfo.email}
+                            <p className="text-sm1 lg:text-[0.9rem] whitespace-pre">
+                                <span className="font-semibold">{text.ContactInfo.email_title}: </span>
+                                <a href={`mailto:${text.ContactInfo.email}`} className="link font-medium hover:text-blue-200"  target="_blank" rel="noopener noreferrer">
+                                    {text.ContactInfo.email}
+                                </a> 
                             </p>
                         </li>
                     </ul>
@@ -103,7 +107,6 @@ export default function Footer(){
                         </div>
                         <SocialButtons 
                             facebook={text.social.facebook}
-                            instagram={text.social.instagram}
                             twitter={text.social.twitter}
                             linkedin={text.social.linkedin}
                             whatsapp={text.social.whatsapp}
@@ -123,42 +126,42 @@ export default function Footer(){
                             </li>
                             <li>
                                 <Link href={text.Links.about_url}>
-                                    <p className="text-sm1 lg:text-[0.9rem] hover:underline hover:underline-offset-2 hover:font-semibold">
+                                    <p className="text-sm1 lg:text-[0.9rem] font-medium hover:link hover:text-blue-200">
                                         {text.Links.about}
                                     </p>
                                 </Link>
                             </li>
                             <li>
-                                <Link href={text.Links.workspace_url}>
-                                    <p className="text-sm1 lg:text-[0.9rem] hover:underline hover:underline-offset-2 hover:font-semibold">
-                                        {text.Links.workspace}
+                                <Link href={text.Links.Talent_url}>
+                                    <p className="text-sm1 lg:text-[0.9rem] font-medium hover:link hover:text-blue-200">
+                                        {text.Links.Talent}
                                     </p>
                                 </Link>
                             </li>
                             <li>
-                                <Link href={text.Links.events_url}>
-                                    <p className="text-sm1 lg:text-[0.9rem] hover:underline hover:underline-offset-2 hover:font-semibold">
-                                        {text.Links.events}
+                                <Link href={text.Links.Business_url}>
+                                    <p className="text-sm1 lg:text-[0.9rem] font-medium hover:link hover:text-blue-200">
+                                        {text.Links.Business}
                                     </p>
                                 </Link>
                             </li>
                             <li>
-                                <a href={text.Links.living_lab_url} target="_blank" rel="noopener noreferrer">
-                                    <p className="text-sm1 lg:text-[0.9rem] hover:underline hover:underline-offset-2 hover:font-semibold">
-                                        {text.Links.living_lab}
+                                <Link href={text.Links.LivingLab_url}>
+                                    <p className="text-sm1 lg:text-[0.9rem] font-medium hover:link hover:text-blue-200">
+                                        {text.Links.LivingLab}
+                                    </p>
+                                </Link>
+                            </li>
+                            <li>
+                                <a href={text.Links.LivingLabSite_url} target="_blank" rel="noopener noreferrer">
+                                    <p className="text-sm1 lg:text-[0.9rem] font-medium hover:link hover:text-blue-200">
+                                        {text.Links.LivingLabSite}
                                     </p>
                                 </a>
                             </li>
-                            {/* <li>
-                                <Link href={text.Links.news_url}>
-                                    <p className="text-sm1 lg:text-[0.9rem] hover:underline hover:underline-offset-2 hover:font-semibold">
-                                        {text.Links.news}
-                                    </p>
-                                </Link>
-                            </li> */}
                             <li>
                                 <Link href={text.Links.contact_url}>
-                                    <p className="text-sm1 lg:text-[0.9rem] hover:underline hover:underline-offset-2 hover:font-semibold">
+                                    <p className="text-sm1 lg:text-[0.9rem] font-medium hover:link hover:text-blue-200">
                                         {text.Links.contact}
                                     </p>
                                 </Link>
@@ -176,14 +179,14 @@ export default function Footer(){
                             </li>
                             <li>
                                 <a href="">
-                                    <p className="text-sm1 lg:text-[0.9rem] hover:underline hover:underline-offset-2 hover:font-semibold">
+                                    <p className="text-sm1 lg:text-[0.9rem] font-medium hover:link hover:text-blue-200">
                                         {text.Legal.terms}
                                     </p>
                                 </a>
                             </li>
                             <li>
                                 <a href="">
-                                    <p className="text-sm1 lg:text-[0.9rem] hover:underline hover:underline-offset-2 hover:font-semibold">
+                                    <p className="text-sm1 lg:text-[0.9rem] font-medium hover:link hover:text-blue-200">
                                         {text.Legal.privacy}
                                     </p>
                                 </a>
