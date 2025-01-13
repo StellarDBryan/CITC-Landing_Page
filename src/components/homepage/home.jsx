@@ -116,7 +116,7 @@ export function Solutions(){
                     <h4 className="font-bold text-blue-dark-citc text-h5 text-center lg:text-h4">{text.solutions.text}</h4> 
                     <div className="w-full sm:w-auto h-auto flex flex-col md:flex-row items-center justify-around lg:justify-center flex-wrap gap-3 lg:gap-8"> 
                         <SolutionCard 
-                            img_src="/images/photos/tech_plug/TP_01.jpg" 
+                            img_src="/images/photos/tech_plug/TP_01.JPG" 
                             img_alt="Conections Image"
                             solution_text={text.solutions.s1}
                         />
