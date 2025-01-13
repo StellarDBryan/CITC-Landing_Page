@@ -8,8 +8,8 @@ import React, { useEffect, useState } from "react";
 export const InfiniteMovingCards = ({
   items,
   direction,
-  speed = "fast",
-  pauseOnHover = true,
+  speed = "normal",
+  pauseOnHover =false,
   className
 }) => {
   const containerRef = React.useRef(null);
@@ -65,13 +65,13 @@ export const InfiniteMovingCards = ({
       <ul
         ref={scrollerRef}
         className={cn(
-          " flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap",
+          " flex min-w-full shrink-0 gap-0 py-4 w-max flex-nowrap",
           start && "animate-scroll ",
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}>
         {items.map((item, idx) => (
           <li
-            className="card w-auto max-h-[300px] border border-solid border-black flex items-center justify-center rounded-2xl p-5 flex-shrink-0 bg-transparent dark:bg-gray-clear-citc overflow-hidden"
+            className="card w-auto max-h-[300px] flex items-center justify-center rounded-2xl p-5 flex-shrink-0 bg-transparent dark:bg-gray-clear-citc overflow-hidden"
             key={item.name}>
             <Image 
                   src={item.image}

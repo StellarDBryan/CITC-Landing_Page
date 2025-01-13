@@ -261,42 +261,42 @@ export function AssociatesLanding(){
         {
             name: '360Solutions', 
             image: '/images/logos/associates/360Solutions_edited.png', 
-            className: 'w-[230px]', 
+            className: 'w-[170px] sm:w-[200px] lg:w-[250px]', 
         },
         {
             name: 'AdNConsulting', 
             image: '/images/logos/associates/AdNConsulting.png', 
-            className: 'w-[200px]', 
+            className: 'w-[130px] sm:w-[170px] lg:w-[200px]', 
         }, 
         {
             name: 'BuildBinder', 
             image: '/images/logos/associates/BuildBinder_edited.png', 
-            className: 'w-[200px]', 
+            className: 'w-[140px] sm:w-[170px] lg:w-[200px]', 
         }, 
         {
             name: 'AutoZone', 
             image: '/images/logos/associates/DataZone_edited.png', 
-            className: 'w-[230px]', 
+            className: 'w-[190px] sm:w-[210px] lg:w-[240px]', 
         }, 
         {
             name: 'IntegralVending', 
             image: '/images/logos/associates/IntegralVending_edited.png', 
-            className: 'w-[200px]', 
+            className: 'w-[150px] sm:w-[165px] lg:w-[200px]', 
         }, 
         {
             name: 'Intelectix', 
             image: '/images/logos/associates/Intelectix_edited.png', 
-            className: 'w-[170px]', 
+            className: 'w-[130px] sm:w-[145px] lg:w-[165px]', 
         }, 
         {
             name: 'JobSistemas', 
             image: '/images/logos/associates/JobSistemas_edited.png', 
-            className: 'w-[210px]', 
+            className: 'w-[150px] sm:w-[190px] lg:w-[210px]', 
         }, 
         {
             name: 'LeadingTech', 
             image: '/images/logos/associates/LeadingTech_edited.png', 
-            className: 'w-[200px]', 
+            className: 'w-[140px] sm:w-[160px] lg:w-[190px]', 
         }, 
     ];
 
@@ -304,50 +304,50 @@ export function AssociatesLanding(){
         {
             name: 'Madata', 
             image: '/images/logos/associates/madata_edited.png', 
-            className: 'w-[150px]', 
+            className: 'w-[160px] sm:w-[170px] lg:w-[190px]', 
         }, 
         {
             name: 'Pax', 
             image: '/images/logos/associates/pax_edited.png', 
-            className: 'w-[150px]', 
+            className: 'w-[160px] sm:w-[170px] lg:w-[190px]', 
         }, 
         {
             name: 'PIDElectronics', 
             image: '/images/logos/associates/PIDElectronics_edited.png', 
-            className: 'w-[150px]', 
+            className: 'w-[190px] sm:w-[220px] lg:w-[260px]', 
         }, 
         {
             name: 'PPAPManger', 
             image: '/images/logos/associates/PPAPManger_edited.png', 
-            className: 'w-[150px]', 
+            className: 'w-[190px] sm:w-[210px] lg:w-[240px]', 
         },
         {
             name: 'Resideo', 
             image: '/images/logos/associates/resideo_edited.png', 
-            className: 'w-[150px]', 
+            className: 'w-[170px] sm:w-[180px] lg:w-[210px]', 
         }, 
         {
             name: 'Sitek', 
             image: '/images/logos/associates/Sitek_edited.png', 
-            className: 'w-[150px]', 
+            className: 'w-[160px] sm:w-[170px] lg:w-[200px]', 
         }, 
         {
             name: 'TGC', 
             image: '/images/logos/associates/TGC_edited.png', 
-            className: 'w-[150px]', 
+            className: 'w-[180px] sm:w-[210px] lg:w-[240px]', 
         }, 
         {
             name: 'Tisco', 
             image: '/images/logos/associates/Tisco_edited.png', 
-            className: 'w-[150px]', 
+            className: 'w-[160px] sm:w-[180px] lg:w-[200px]', 
         },
     ];
 
     return (
         <>
-            <section className="w-[85%] sm:w-[90%] lg:w-4/5 mx-auto h-auto gap-3 md:gap-5 py-10 flex flex-col items-center justify-center">
-                <h4 className="text-[1.3rem] sm:text-[1.75rem] md:text-[2rem] lg:text-[2.5rem] text-center font-extrabold text-blue-dark-citc">{text.associates.intro}</h4>
-                <div className="flex flex-col">
+            <section className="w-[85%] sm:w-[90%] lg:w-[75%] mx-auto h-auto -space-y-5 md:-space-y-10 md:gap-5 py-10 flex flex-col items-center justify-center">
+                <h4 className="text-[1.3rem] sm:text-[1.75rem] md:text-[2rem] lg:text-[2.5rem] text-center font-bold text-blue-dark-citc">{text.associates.intro}</h4>
+                <div className="flex flex-col -space-y-9 lg:-space-y-5">
                     <InfiniteMovingCards items={associate_logos_1} direction="right" />
                     <InfiniteMovingCards items={associate_logos_2} direction="left" />
                 </div>
