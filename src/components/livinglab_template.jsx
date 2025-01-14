@@ -30,7 +30,44 @@ const text = {
         'officialSite': 'Sitio Oficial',
         'button': 'Ir al ', 
         'closing': 'Tenemos distintos planes para el acceso a distintos servicios que ofrecemos en Living Lab CUU. Ve precios, disponibilidad y todos lo detalles en su ',
+    }
+}
+
+const livingLabIcons = [
+    <svg key="0" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 16 16"><path fill="currentColor" d="M14 15V4h-3V1H2v14H0v1h7v-3h2v3h7v-1zm-8-4H4V9h2zm0-3H4V6h2zm0-3H4V3h2zm3 6H7V9h2zm0-3H7V6h2zm0-3H7V3h2zm4 6h-2V9h2zm0-3h-2V6h2z"/></svg>, 
+    <svg key="1" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 14 14"><path fill="currentColor" fillRule="evenodd" d="m6.547 10.263l-2.81-2.81c.309-.517.617-1.052.922-1.584c1.016-1.766 2.008-3.49 2.938-4.387c2.524-2.524 5.981-1.06 5.981-1.06s1.463 3.457-1.06 5.981c-.89.922-2.587 1.9-4.34 2.908c-.546.315-1.097.632-1.631.952m2.14-6.532a1.582 1.582 0 1 1 3.164 0a1.582 1.582 0 0 1-3.163 0Zm-4.09-.232c-1.418-.377-2.749.321-3.93 1.404a.48.48 0 0 0 .089.765l1.905 1.148l.002-.004c.275-.46.582-.993.894-1.533c.355-.617.716-1.243 1.04-1.78m2.587 7.84l1.148 1.905a.48.48 0 0 0 .765.088c1.083-1.18 1.782-2.512 1.404-3.93c-.522.314-1.07.63-1.613.943l-.083.048c-.548.316-1.091.628-1.616.943zM2.622 9.343a2 2 0 0 1 1.402 3.46c-.222.212-.569.378-.89.506a11 11 0 0 1-1.1.358c-.367.1-.717.18-.982.233a6 6 0 0 1-.336.059l-.133.013a.5.5 0 0 1-.198-.022a.5.5 0 0 1-.241-.156a.5.5 0 0 1-.11-.22a.6.6 0 0 1-.012-.176c.003-.04.009-.086.015-.128c.013-.088.033-.203.06-.334c.053-.264.135-.612.235-.977c.1-.364.222-.754.359-1.095c.128-.321.294-.667.506-.888a2 2 0 0 1 1.425-.633" clipRule="evenodd"/></svg>, 
+    <svg key="2" xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 24 24"><path fill="currentColor" d="M17 9h2V7h-2zm0 4h2v-2h-2zm0 4h2v-2h-2zM1 21V11l7-5l7 5v10h-5v-6H6v6zm16 0V10l-7-5.05V3h13v18z"/></svg>, 
+    <svg key="3" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path fill="currentColor" d="M8 4a2 2 0 1 1-4 0a2 2 0 0 1 4 0M5 16v6H3V10a3 3 0 0 1 5.106-2.137l2.374 2.243l2.313-2.313l1.414 1.414l-3.687 3.687L9 11.46V22H7v-6zm5-11h9v9h-9v2h4.365l2.824 6h2.21l-2.823-6H20a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H10z"/></svg>, 
+    <svg key="4" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 512 512"><path fill="currentColor" d="M244.4 69.8L174.5 0h-58.2l69.8 69.8zm151.2 0L325.8 0h-58.2l69.8 69.8zM418.9 0l69.8 69.8H512V0zm0 162.9h-93.1l69.8-69.8h-58.2l-69.8 69.8h-93.1l69.8-69.8h-58.2l-69.8 69.8h-93l69.8-69.8H0v372.4C0 491.1 20.9 512 46.5 512h418.9c25.7 0 46.5-20.9 46.5-46.5V93.1h-23.3zM23.3 0H0v69.8h93.1z"/></svg>, 
+    <svg key="5" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path fill="currentColor" d="M21 17V8H7v9zm0-14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h1V1h2v2h8V1h2v2zM3 21h14v2H3a2 2 0 0 1-2-2V9h2zm16-6h-4v-4h4z"/></svg>, 
+    <svg key="6" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" strokeLinejoin="round" strokeWidth="4"><path fill="currentColor" d="M2 17.4L23.022 9l21.022 8.4l-21.022 8.4z"/><path strokeLinecap="round" d="M44.044 17.51v9.223m-32.488-4.908v12.442S16.366 39 23.022 39c6.657 0 11.467-4.733 11.467-4.733V21.825"/></g></svg>, 
+    <svg key="7" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path fill="currentColor" d="M2.976.922S2.007.747 2.007 2.11s.23 18.06.23 18.06s.394.666.542.635c.147-.032 2.647-.36 2.68-.364l.017-.003l.014-4.015l.028-9.2l4.412.013l-.004-.32l-4.407-.055l.006-1.62l5.224.108l.012-.338l-5.235-.152l.003-.878s-.06-.675.368-.675c.427 0 11.286.378 11.286.378s.356.012.368.258v.687l-1.107.115l-.01.439l-4.37-.134l-.006.328l4.391.09l-.005 1.508l-2.452-.01l-.003.282l2.471.007l.003.206h1.09c.004 2.57.008 5.445.006 7.727c.563.157 1.439.435 1.439.435l-1.459.21c0 .224.003.574.005.926l-.966-.35l-.68.083l1.648.59l.002.368l2.155-.292l-.008-14.8s.012-.549-.586-.566C18.512 1.774 2.976.922 2.976.922M9.484 4.32l-.005.553l1.354.031l-.03.872l-.823-.02l.023 1.804l.295-.03l.008.351l1.006.03v.568q.015 0 .024.01t.011.024v.013l.248.12a.03.03 0 0 1 .016.014a.03.03 0 0 1 .002.02l-.002.006l.433.121l-.021-2.054l.017-.018c.022 0 1.805-.008 1.805-.018l.002-.95l-1.867.012l.031-1.335zm4.36 2.482l-1.683.017l.02 1.916l1.662-.045zm-2.532 1.71l-.163.158l.218.21l.213-.204l-.268-.13zm2.522 5.695c-.03 0-8.185.899-8.185.899l3.324 1.723l9.934-1.212s-5.043-1.41-5.073-1.41m-8.237.928l.01.496l.225.114l.643.02l2.206 1.168l-.268.185l.428.29l1.36-.114l.343-.186l6.543-.795l.374.062l-.032-.517l-8.491 1.044zm.674 1.286l-.733.02l-.01 4.014l.872-.176l-.038-.935l3.406 2.495s-.027.454.032.873c.059.418.637.372.637.372l1.344-.28l.209-.242l8.272-1.529l.219.207l1.205-.248c.123-.026.22-.201.283-.315c.065-.114-.025-1.808-.005-2.34c.017-.446-.082-.426-.134-.439l-.787.135s-.217.056-.326.01c-.181-.077-.161-.207-.161-.207s.01-.222-.07-.47s-.267-.211-.267-.211l-7.362.996s-.386.058-.722.141l-1.873-.993l-.043.023a.034.033 0 0 1-.015.004l-.546.047l2.097 1.068c-.003.006-.038.008-.038.015c-.102.885-.21.992-.482 1.033l-1.44.196l-3.202-2.117z"/></svg>, 
+    <svg key="8" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path fill="currentColor" d="M14.754 10c.966 0 1.75.784 1.75 1.75v4.749a4.501 4.501 0 0 1-9.002 0V11.75c0-.966.783-1.75 1.75-1.75zm-7.623 0a2.7 2.7 0 0 0-.62 1.53l-.01.22v4.749c0 .847.192 1.649.534 2.365Q6.539 18.999 6 19a4 4 0 0 1-4-4.001V11.75a1.75 1.75 0 0 1 1.606-1.744L3.75 10zm9.744 0h3.375c.966 0 1.75.784 1.75 1.75V15a4 4 0 0 1-5.03 3.866c.3-.628.484-1.32.525-2.052l.009-.315V11.75c0-.665-.236-1.275-.63-1.75M12 3a3 3 0 1 1 0 6a3 3 0 0 1 0-6m6.5 1a2.5 2.5 0 1 1 0 5a2.5 2.5 0 0 1 0-5m-13 0a2.5 2.5 0 1 1 0 5a2.5 2.5 0 0 1 0-5"/></svg>, 
+]; 
+
+const content = {
+    livinglab_url: '', 
+    heroSection: {
+        title: "LivingLab", 
+        intro: "El epicentro de la innovación y la tecnología colaborativa en la región", 
+    }, 
+    whatIs: {
+        title: "¿Qué es el LivingLab Chihuahua?", 
+        description: "El LivingLab Chihuahua es una colaboración estratégica entre el Municipio de Chihuahua y el Chihuahua IT Clúster, diseñada para fomentar el emprendimiento, la innovación y la tecnología en la región. Este centro de encuentro reúne a comunidades tecnológicas, emprendedores y actores clave del ecosistema para crear soluciones innovadoras y fortalecer la economía digital local.", 
+        officialSite: 'Sitio Oficial',
+        button: 'Ir al ', 
+    }, 
+    services: {
+        title: "¡En LivingLab Chihuahua estámos para apoyarte en tu crecimiento!", 
         features: [
+            {
+                title: "Corporate Suites",
+                description: "Espacios privados diseñados para empresas que buscan privacidad y un ambiente profesional dentro del LivingLab."
+            },
+            {
+                title: "Startup Launchpad",
+                description: "Espacios dedicados para startups que buscan establecerse y crecer en un entorno tecnológico colaborativo. Ideales para aterrizar proyectos e impulsar innovación."
+            },
             {
                 title: "Espacio de Trabajo",
                 description: "Ofrecemos un entorno colaborativo exclusivo y equipado con tecnología de punta para que empresas y emprendedores desarrollen sus proyectos y trabajen en equipo de manera eficiente y productiva."
@@ -38,6 +75,10 @@ const text = {
             {
                 title: "Salas de reuniones",
                 description: "Disponemos de un auditorio y salas equipadas con las herramientas necesarias para llevar a cabo reuniones estratégicas, presentaciones y sesiones de trabajo en un ambiente profesional y cómodo."
+            },
+            {
+                title: "Media Studio",
+                description: "Sala equipada para grabación y transmisión multimedia, perfecta para crear contenido profesional y transmitir eventos en vivo."
             },
             {
                 title: "Eventos",
@@ -55,21 +96,7 @@ const text = {
                 title: "Cowork",
                 description: "Brindamos un espacio de trabajo para la comunidad, en el cual se podrá hacer networking con más empresas. Un espacio diseñado para inspirar colaboración, innovación y crecimiento. Conéctate con empresas y profesionales, amplía tu red de contactos, y trabaja en un ambiente que impulsa tu éxito."
             }
-        ]
-    }
-}
-
-const content = {
-    livinglab_url: '', 
-    heroSection: {
-        title: "LivingLab", 
-        intro: "El epicentro de la innovación y la tecnología colaborativa en la región", 
-    }, 
-    whatIs: {
-        title: "¿Qué es el LivingLab Chihuahua?", 
-        description: "El LivingLab Chihuahua es una colaboración estratégica entre el Municipio de Chihuahua y el Chihuahua IT Clúster, diseñada para fomentar el emprendimiento, la innovación y la tecnología en la región. Este centro de encuentro reúne a comunidades tecnológicas, emprendedores y actores clave del ecosistema para crear soluciones innovadoras y fortalecer la economía digital local.", 
-        officialSite: 'Sitio Oficial',
-        button: 'Ir al ', 
+        ] 
     }, 
 };
 
@@ -134,7 +161,7 @@ export function WhatIs(){
 
     return(
         <>
-            <section className='w-[85%] sm:w-[90%] lg:w-4/5 mx-auto py-12 h-screen gap-3 flex flex-col items-center'>
+            <section className='w-[85%] sm:w-[90%] lg:w-4/5 mx-auto py-12 gap-3 flex flex-col items-center'>
                 <h4 className='text-[1.5rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] text-center font-extrabold text-citc-livinglab'>{content.whatIs.title}</h4>
                 <div className='flex flex-col items-center w-4/5 gap-6 sm:gap-5'>
                     <div className='flex flex-col items-center sm:flex-row sm:flex-nowrap sm:items-center w-full sm:justify-center gap-1 sm:gap-5'>
@@ -166,18 +193,21 @@ export function WhatIs(){
             </section>
         </>
     );
+} 
+
+export function Services(){
+
+    return(
+        <>
+            <section className='w-4/5 mx-auto flex flex-col items-center '>
+                <h4 className='text-[1.5rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] text-center font-extrabold text-citc-livinglab'>{content.services.title}</h4>
+                <FeaturesSectionDemo features={content.services.features} icons={livingLabIcons} />
+            </section>
+        </>
+    );
 }
 
 export function Page(){
-
-    const livingLabIcons = [
-        <svg key="0" xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 24 24"><path fill="currentColor" d="M17 9h2V7h-2zm0 4h2v-2h-2zm0 4h2v-2h-2zM1 21V11l7-5l7 5v10h-5v-6H6v6zm16 0V10l-7-5.05V3h13v18z"/></svg>, 
-        <svg key="1" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path fill="currentColor" d="M8 4a2 2 0 1 1-4 0a2 2 0 0 1 4 0M5 16v6H3V10a3 3 0 0 1 5.106-2.137l2.374 2.243l2.313-2.313l1.414 1.414l-3.687 3.687L9 11.46V22H7v-6zm5-11h9v9h-9v2h4.365l2.824 6h2.21l-2.823-6H20a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H10z"/></svg>, 
-        <svg key="2" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path fill="currentColor" d="M21 17V8H7v9zm0-14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h1V1h2v2h8V1h2v2zM3 21h14v2H3a2 2 0 0 1-2-2V9h2zm16-6h-4v-4h4z"/></svg>, 
-        <svg key="3" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" strokeLinejoin="round" strokeWidth="4"><path fill="currentColor" d="M2 17.4L23.022 9l21.022 8.4l-21.022 8.4z"/><path strokeLinecap="round" d="M44.044 17.51v9.223m-32.488-4.908v12.442S16.366 39 23.022 39c6.657 0 11.467-4.733 11.467-4.733V21.825"/></g></svg>, 
-        <svg key="4" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path fill="currentColor" d="M2.976.922S2.007.747 2.007 2.11s.23 18.06.23 18.06s.394.666.542.635c.147-.032 2.647-.36 2.68-.364l.017-.003l.014-4.015l.028-9.2l4.412.013l-.004-.32l-4.407-.055l.006-1.62l5.224.108l.012-.338l-5.235-.152l.003-.878s-.06-.675.368-.675c.427 0 11.286.378 11.286.378s.356.012.368.258v.687l-1.107.115l-.01.439l-4.37-.134l-.006.328l4.391.09l-.005 1.508l-2.452-.01l-.003.282l2.471.007l.003.206h1.09c.004 2.57.008 5.445.006 7.727c.563.157 1.439.435 1.439.435l-1.459.21c0 .224.003.574.005.926l-.966-.35l-.68.083l1.648.59l.002.368l2.155-.292l-.008-14.8s.012-.549-.586-.566C18.512 1.774 2.976.922 2.976.922M9.484 4.32l-.005.553l1.354.031l-.03.872l-.823-.02l.023 1.804l.295-.03l.008.351l1.006.03v.568q.015 0 .024.01t.011.024v.013l.248.12a.03.03 0 0 1 .016.014a.03.03 0 0 1 .002.02l-.002.006l.433.121l-.021-2.054l.017-.018c.022 0 1.805-.008 1.805-.018l.002-.95l-1.867.012l.031-1.335zm4.36 2.482l-1.683.017l.02 1.916l1.662-.045zm-2.532 1.71l-.163.158l.218.21l.213-.204l-.268-.13zm2.522 5.695c-.03 0-8.185.899-8.185.899l3.324 1.723l9.934-1.212s-5.043-1.41-5.073-1.41m-8.237.928l.01.496l.225.114l.643.02l2.206 1.168l-.268.185l.428.29l1.36-.114l.343-.186l6.543-.795l.374.062l-.032-.517l-8.491 1.044zm.674 1.286l-.733.02l-.01 4.014l.872-.176l-.038-.935l3.406 2.495s-.027.454.032.873c.059.418.637.372.637.372l1.344-.28l.209-.242l8.272-1.529l.219.207l1.205-.248c.123-.026.22-.201.283-.315c.065-.114-.025-1.808-.005-2.34c.017-.446-.082-.426-.134-.439l-.787.135s-.217.056-.326.01c-.181-.077-.161-.207-.161-.207s.01-.222-.07-.47s-.267-.211-.267-.211l-7.362.996s-.386.058-.722.141l-1.873-.993l-.043.023a.034.033 0 0 1-.015.004l-.546.047l2.097 1.068c-.003.006-.038.008-.038.015c-.102.885-.21.992-.482 1.033l-1.44.196l-3.202-2.117z"/></svg>, 
-        <svg key="5" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path fill="currentColor" d="M14.754 10c.966 0 1.75.784 1.75 1.75v4.749a4.501 4.501 0 0 1-9.002 0V11.75c0-.966.783-1.75 1.75-1.75zm-7.623 0a2.7 2.7 0 0 0-.62 1.53l-.01.22v4.749c0 .847.192 1.649.534 2.365Q6.539 18.999 6 19a4 4 0 0 1-4-4.001V11.75a1.75 1.75 0 0 1 1.606-1.744L3.75 10zm9.744 0h3.375c.966 0 1.75.784 1.75 1.75V15a4 4 0 0 1-5.03 3.866c.3-.628.484-1.32.525-2.052l.009-.315V11.75c0-.665-.236-1.275-.63-1.75M12 3a3 3 0 1 1 0 6a3 3 0 0 1 0-6m6.5 1a2.5 2.5 0 1 1 0 5a2.5 2.5 0 0 1 0-5m-13 0a2.5 2.5 0 1 1 0 5a2.5 2.5 0 0 1 0-5"/></svg>, 
-    ]; 
 
     return(
         <>
@@ -206,7 +236,7 @@ export function Page(){
                     </div>
                 </div>
                 <div className='flex flex-col text-regular-dark items-center justify-around space-y-3 w-auto h-auto pb-5'>
-                    <FeaturesSectionDemo features={text.livingLab.features} icons={livingLabIcons} />
+                    
                     <p className='text-regular text-center font-medium p-5 max-w-[80%]'>
                         {text.livingLab.closing}
                         <a href='https://livinglab.io/home?&v=latest' target="_blank" rel="noopener noreferrer" className='underline underline-offset-2 hover:text-blue-dark-citc hover:font-bold'>
