@@ -7,31 +7,6 @@ import Image from 'next/image';
 import { ServiceButton } from "@/components/ui/buttons";
 import { FeaturesSectionDemo } from '@/components/ui/feature_section';
 
-const text = {
-    'citc': {
-        'title': 'Servicios',
-        'intro': 'Explora y descubre nuestros servicios que impulsan el desarrollo tecnológico en Chihuahua y conecta al sector IT ',
-        'subtitle_1': 'Conexión', 
-        'associates': 'Nuestros socios',
-        'universities': 'Universidades con las que contactamos',
-        'content_1': '¡Establece conexiones clave!\n Acércate con empresas líderes del sector de TI y universidades. Facilitamos relaciones estratégicas que potencian tu crecimiento profesional y empresarial. \n Contactamos con distintas instituciones con las que tenemos convenio para que nuestros socios tengan más cercanía y contacto directo con la comunidad estudiantil y empresarial. \n Empieza por contactarnos en el apartado de Contacto. ',
-        'button_11': 'Contactar',
-        'button_12': 'Ver todos los aliados',
-        'subtitle_2': 'Espacio', 
-        'button_2': 'Ver Living Lab CUU',
-        'content_2': '¡Trabaja y colabora en el corazón del Networking de Chihuahua!\n Nuestro Living Lab CUU es más que un espacio de coworking; es un hub de innovación donde las ideas florecen y las oportunidades surgen. \nNuestras instalaciones cuentan con distintos planes de servicio de renta por el espacio, desde tener una oficina exclusiva para ti, como hasta usar nuestro auditorio y el espacio de cowork. \nCheca cada servicio en el apartado de Living Lab CUU. ', 
-        'subtitle_3': 'Eventos', 
-        'content_3': '¡Sé parte de eventos que transforman la industria IT!\n Desde conferencias hasta hackathones, fomentamos el aprendizaje, la innovación y el crecimiento en cada encuentro. \n Por medio de nuestras redes sociales y el Living Lab, promocionamos distintos eventos empresariales y de innovación, y ofrecemos nuestro espacio como sede para estas iniciativas. \n ¡Contáctanos y conoce muchos más eventos en nuestras redes sociales!', 
-        'button_3': 'Ver eventos en redes',
-    }, 
-    'livingLab': {
-        'title': 'Living Lab CUU', 
-        'intro': 'El Laboratorio de Innovación Tecnológica de Chihuahua. Un espacio donde la tecnología y la creatividad se unen para impulsar proyectos y fomentar la colaboración', 
-        'officialSite': 'Sitio Oficial',
-        'button': 'Ir al ', 
-    }
-}
-
 const livingLabIcons = [
     <svg key="0" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 16 16"><path fill="currentColor" d="M14 15V4h-3V1H2v14H0v1h7v-3h2v3h7v-1zm-8-4H4V9h2zm0-3H4V6h2zm0-3H4V3h2zm3 6H7V9h2zm0-3H7V6h2zm0-3H7V3h2zm4 6h-2V9h2zm0-3h-2V6h2z"/></svg>, 
     <svg key="1" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 14 14"><path fill="currentColor" fillRule="evenodd" d="m6.547 10.263l-2.81-2.81c.309-.517.617-1.052.922-1.584c1.016-1.766 2.008-3.49 2.938-4.387c2.524-2.524 5.981-1.06 5.981-1.06s1.463 3.457-1.06 5.981c-.89.922-2.587 1.9-4.34 2.908c-.546.315-1.097.632-1.631.952m2.14-6.532a1.582 1.582 0 1 1 3.164 0a1.582 1.582 0 0 1-3.163 0Zm-4.09-.232c-1.418-.377-2.749.321-3.93 1.404a.48.48 0 0 0 .089.765l1.905 1.148l.002-.004c.275-.46.582-.993.894-1.533c.355-.617.716-1.243 1.04-1.78m2.587 7.84l1.148 1.905a.48.48 0 0 0 .765.088c1.083-1.18 1.782-2.512 1.404-3.93c-.522.314-1.07.63-1.613.943l-.083.048c-.548.316-1.091.628-1.616.943zM2.622 9.343a2 2 0 0 1 1.402 3.46c-.222.212-.569.378-.89.506a11 11 0 0 1-1.1.358c-.367.1-.717.18-.982.233a6 6 0 0 1-.336.059l-.133.013a.5.5 0 0 1-.198-.022a.5.5 0 0 1-.241-.156a.5.5 0 0 1-.11-.22a.6.6 0 0 1-.012-.176c.003-.04.009-.086.015-.128c.013-.088.033-.203.06-.334c.053-.264.135-.612.235-.977c.1-.364.222-.754.359-1.095c.128-.321.294-.667.506-.888a2 2 0 0 1 1.425-.633" clipRule="evenodd"/></svg>, 
@@ -55,6 +30,21 @@ const content = {
         title: "¿Qué es el LivingLab Chihuahua?", 
         description: "El LivingLab Chihuahua es una colaboración estratégica entre el Municipio de Chihuahua y el Chihuahua IT Clúster, diseñada para fomentar el emprendimiento, la innovación y la tecnología en la región. Este centro de encuentro reúne a comunidades tecnológicas, emprendedores y actores clave del ecosistema para crear soluciones innovadoras y fortalecer la economía digital local.", 
         button: 'Ir al ', 
+    }, 
+    showcase: {
+        title: "Un espacio donde la tecnología y la creatividad se unen para impulsar proyectos y fomentar la colaboración", 
+        images: [
+            '/images/photos/livinglab/LivingLabCUU_01.png', 
+            '/images/photos/livinglab/LivingLabCUU_02.JPG', 
+            '/images/photos/livinglab/LivingLabCUU_03.JPG', 
+            '/images/photos/livinglab/LivingLabCUU_04.JPG', 
+            '/images/photos/livinglab/LivingLabCUU_05.jpg', 
+            '/images/photos/livinglab/LivingLabCUU_06.JPG', 
+            '/images/photos/livinglab/LivingLabCUU_07.JPG', 
+            '/images/photos/livinglab/LivingLabCUU_08.JPG', 
+            '/images/photos/livinglab/LivingLabCUU_09.JPG', 
+            '/images/photos/livinglab/LivingLabCUU_10.JPG', 
+        ], 
     }, 
     services: {
         title: "¡En LivingLab Chihuahua estámos para apoyarte en tu crecimiento!", 
@@ -274,6 +264,22 @@ export function WhatIs(){
     );
 } 
 
+export function Showcase(){
+
+    return(
+        <>
+            <section className='w-[85%] sm:w-[90%] lg:w-4/5 flex flex-col py-10 items-center gap-5 lg:flex-row mx-auto lg:items-center lg:justify-around overflow-hidden'>
+                <h4 className='text-[1.2rem] sm:text-[1.5rem] md:text-[1.8rem] lg:text-[2.25rem] font-bold text-center text-citc-livinglab lg:w-1/2 z-10'>
+                    {content.showcase.title}
+                </h4>
+                <div className='w-full sm:w-auto flex items-center justify-center rounded-3xl overflow-hidden'>
+                    <ImgCarousel images={content.showcase.images} />
+                </div>
+            </section>
+        </>
+    );
+}
+
 export function Services(){
 
     return(
@@ -355,40 +361,19 @@ export function Impact(){
     );
 }
 
-export function Page(){
+export function CallToAction(){
 
     return(
         <>
-            <section className="w-full lg:h-auto space-y-5 flex flex-col overflow-hidden items-center justify-center dark:text-gray-clear-citc">
-                <div id='LivingLabCUU' className='relative flex items-center w-full lg:h-[70vh] '>
-                    <Image 
-                        src="/images/photos/workspace/LivingLabCUU_01.png"
-                        alt="LivingLabCUU Image"
-                        fill
-                        className='object-cover [mask-image:linear-gradient(to_top,transparent,white_20%,white_80%,transparent)]'
-                        style={{ objectPosition: 'center left', opacity: 1}}
-                    />
-                    <div className='flex flex-col lg:w-[50vw] lg:pl-20 lg:space-y-5 h-full justify-center p-5 z-20 bg-gradient-to-r from-gray-clear-citc from-70% rounded-lg'>
-                        <Image 
-                            src="/images/logos/citc/LivingLabCUU_logo.png"
-                            alt="Living Lab CUU Logo"
-                            width={500}
-                            height={500}
-                        />
-                        <h6 className='text-h6 text-regular-dark font-semibold lg:w-9/12'>{text.livingLab.intro}</h6>
-                        <a href='https://livinglab.io/home?&v=latest' target="_blank" rel="noopener noreferrer" className="inline-block w-auto rounded-full">
-                            <ServiceButton>
-                                {text.livingLab.button}{text.livingLab.officialSite}
-                            </ServiceButton>
-                        </a>
-                    </div>
-                </div>
-                <div className='flex flex-col text-regular-dark items-center justify-around space-y-3 w-auto h-auto pb-5'>
-                    
-                    
-                </div>
+            <section className=''>
+                <Image 
+                    src="/images/logos/citc/LivingLab_icon.png"
+                    alt='LivingLab Logo'
+                    width={600}
+                    height={600}
+                    className='absolute -left-10 -bottom-10 w-[400px] filter grayscale brightness-[0] opacity-10'
+                />
             </section>
         </>
     );
 }
-
