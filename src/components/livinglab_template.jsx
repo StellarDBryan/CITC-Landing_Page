@@ -29,7 +29,6 @@ const text = {
         'intro': 'El Laboratorio de Innovación Tecnológica de Chihuahua. Un espacio donde la tecnología y la creatividad se unen para impulsar proyectos y fomentar la colaboración', 
         'officialSite': 'Sitio Oficial',
         'button': 'Ir al ', 
-        'closing': 'Tenemos distintos planes para el acceso a distintos servicios que ofrecemos en Living Lab CUU. Ve precios, disponibilidad y todos lo detalles en su ',
     }
 }
 
@@ -46,7 +45,8 @@ const livingLabIcons = [
 ]; 
 
 const content = {
-    livinglab_url: '', 
+    livinglab_url: 'https://livinglab.io/home?&v=latest', 
+    officialSite_text: 'Sitio Oficial',
     heroSection: {
         title: "LivingLab", 
         intro: "El epicentro de la innovación y la tecnología colaborativa en la región", 
@@ -54,7 +54,6 @@ const content = {
     whatIs: {
         title: "¿Qué es el LivingLab Chihuahua?", 
         description: "El LivingLab Chihuahua es una colaboración estratégica entre el Municipio de Chihuahua y el Chihuahua IT Clúster, diseñada para fomentar el emprendimiento, la innovación y la tecnología en la región. Este centro de encuentro reúne a comunidades tecnológicas, emprendedores y actores clave del ecosistema para crear soluciones innovadoras y fortalecer la economía digital local.", 
-        officialSite: 'Sitio Oficial',
         button: 'Ir al ', 
     }, 
     services: {
@@ -96,7 +95,9 @@ const content = {
                 title: "Cowork",
                 description: "Brindamos un espacio de trabajo para la comunidad, en el cual se podrá hacer networking con más empresas. Un espacio diseñado para inspirar colaboración, innovación y crecimiento. Conéctate con empresas y profesionales, amplía tu red de contactos, y trabaja en un ambiente que impulsa tu éxito."
             }
-        ] 
+        ], 
+        details_text: 'Tenemos distintos planes para el acceso a distintos servicios que ofrecemos en Living Lab CUU. Ve precios, disponibilidad y todos lo detalles en su ',
+
     }, 
 };
 
@@ -184,9 +185,9 @@ export function WhatIs(){
                         /> 
                     </div>
                     <p className='text-[0.9rem] md:text-[1rem] lg:text-[1.1rem] text-start sm:text-center font-medium text-regular-dark'>{content.whatIs.description}</p>
-                    <a href='https://livinglab.io/home?&v=latest' target="_blank" rel="noopener noreferrer">
+                    <a href={content.livinglab_url} target="_blank" rel="noopener noreferrer">
                         <ServiceButton>
-                            {content.whatIs.button} {content.whatIs.officialSite}
+                            {content.whatIs.button} {content.officialSite_text}
                         </ServiceButton>
                     </a>
                 </div>
@@ -199,9 +200,15 @@ export function Services(){
 
     return(
         <>
-            <section className='w-[85%] sm:w-[90%] lg:w-4/5 mx-auto flex flex-col items-center '>
-                <h4 className='text-[1.5rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] text-center font-extrabold text-citc-livinglab'>{content.services.title}</h4>
+            <section className='w-[85%] sm:w-[90%] lg:w-4/5 mx-auto py-11 flex flex-col items-center gap-5'>
+                <h4 className='text-[1.4rem] sm:text-[1.75rem] md:text-[2.25rem] lg:text-[2.75rem] text-center font-extrabold text-citc-livinglab'>{content.services.title}</h4>
                 <FeaturesSectionDemo features={content.services.features} icons={livingLabIcons} />
+                <p className='text-[0.95rem] lg:text-[1rem] text-center font-medium sm:w-[90%] lg:w-4/5'>
+                    {content.services.details_text}
+                    <a href={content.livinglab_url} target="_blank" rel="noopener noreferrer" className='link hover:text-cyan-600 font-bold'>
+                        {content.officialSite_text}
+                    </a>.
+                </p>
             </section>
         </>
     );
@@ -237,12 +244,7 @@ export function Page(){
                 </div>
                 <div className='flex flex-col text-regular-dark items-center justify-around space-y-3 w-auto h-auto pb-5'>
                     
-                    <p className='text-regular text-center font-medium p-5 max-w-[80%]'>
-                        {text.livingLab.closing}
-                        <a href='https://livinglab.io/home?&v=latest' target="_blank" rel="noopener noreferrer" className='underline underline-offset-2 hover:text-blue-dark-citc hover:font-bold'>
-                            {text.livingLab.officialSite}
-                        </a>
-                    </p>
+                    
                 </div>
             </section>
         </>

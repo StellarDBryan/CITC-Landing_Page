@@ -4,7 +4,7 @@ export function FeaturesSectionDemo({ features, icons }) {
   
   return (
     (<div
-      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  relative z-10 py-10 max-w-7xl mx-auto">
+      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  relative z-10 py-0 md:py-5 lg:py-7 max-w-7xl mx-auto">
       {features.map((feature, index) => (
         <Feature key={feature.title} icon={icons[index]} {...feature} index={index} />
       ))}
@@ -46,7 +46,7 @@ const Feature = ({
         </span>
       </div>
       <p
-        className="text-[0.9rem] md:text-[1rem] font-medium text-neutral-600 max-w-xs relative z-10 px-10">
+        className="text-[0.95rem] md:text-[1rem] font-medium text-neutral-600 max-w-xs relative z-10 px-10">
         {description}
       </p>
     </div>)
