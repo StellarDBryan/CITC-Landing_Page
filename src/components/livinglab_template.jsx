@@ -134,16 +134,16 @@ export function WhatIs(){
 
     return(
         <>
-            <section className='w-4/5 mx-auto py-12 h-screen gap-3 flex flex-col items-center'>
-                <h4 className='text-[3rem] text-center font-extrabold text-citc-livinglab'>{content.whatIs.title}</h4>
-                <div className='flex flex-col items-center w-4/5 gap-5'>
-                    <div className='flex flex-row flex-nowrap items-center justify-center gap-5'>
+            <section className='w-[85%] sm:w-[90%] lg:w-4/5 mx-auto py-12 h-screen gap-3 flex flex-col items-center'>
+                <h4 className='text-[1.5rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] text-center font-extrabold text-citc-livinglab'>{content.whatIs.title}</h4>
+                <div className='flex flex-col items-center w-4/5 gap-6 sm:gap-5'>
+                    <div className='flex flex-col items-center sm:flex-row sm:flex-nowrap sm:items-center w-full sm:justify-center gap-1 sm:gap-5'>
                         <Image 
                             src="/images/logos/citc/CITC_horiz_Mesa_1.png" 
                             alt='CITC Logo'
                             width={500}
                             height={500}
-                            className='object-cover w-[290px]'
+                            className='object-cover w-[200px] h-16 sm:h-auto md:w-[230px] lg:w-[290px]'
                         /> 
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" className='text-cyan-600 w-[50px]'>
                             <path fill="currentColor" d="M18 12.998h-5v5a1 1 0 0 1-2 0v-5H6a1 1 0 0 1 0-2h5v-5a1 1 0 0 1 2 0v5h5a1 1 0 0 1 0 2"/>
@@ -153,10 +153,10 @@ export function WhatIs(){
                             alt='CITC Logo'
                             width={500}
                             height={500}
-                            className='object-cover w-[290px]'
+                            className='object-cover w-[200px] md:w-[230px] lg:w-[290px]'
                         /> 
                     </div>
-                    <p className='text-[1.1rem] text-center font-medium text-regular-dark'>{content.whatIs.description}</p>
+                    <p className='text-[0.9rem] md:text-[1rem] lg:text-[1.1rem] text-start sm:text-center font-medium text-regular-dark'>{content.whatIs.description}</p>
                     <a href='https://livinglab.io/home?&v=latest' target="_blank" rel="noopener noreferrer">
                         <ServiceButton>
                             {content.whatIs.button} {content.whatIs.officialSite}
