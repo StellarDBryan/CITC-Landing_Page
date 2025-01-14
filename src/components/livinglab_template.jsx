@@ -97,7 +97,43 @@ const content = {
             }
         ], 
         details_text: 'Tenemos distintos planes para el acceso a distintos servicios que ofrecemos en Living Lab CUU. Ve precios, disponibilidad y todos lo detalles en su ',
-
+    }, 
+    community: {
+        title: "Un Hogar para la Innovación y la Ciencia", 
+        description: "En LivingLab Chihuahua, ofrecemos un espacio inclusivo y colaborativo donde comunidades de innovación, tecnología y ciencia encuentran el entorno ideal para conectar, compartir conocimientos y transformar ideas en realidades. Desde meetups hasta hackatones y eventos especializados, apoyamos la creatividad y el crecimiento colectivo.", 
+        logos: [
+            {
+                logo: '/images/logos/livinglab/startUpGrind_logo.png', 
+                className: 'w-[180px] md:w-[200px]', 
+            }, 
+            {
+                logo: '/images/logos/talent/escuelitaMaker.png', 
+                className: 'w-[180px] md:w-[200px]', 
+            }, 
+            {
+                logo: '/images/logos/livinglab/nasaSpaceAppsCUU.png', 
+                className: 'w-[120px] md:w-[140px]', 
+            }, 
+            {
+                logo: '/images/logos/livinglab/startUpCUU.png', 
+                name: 'StartUp Chihuahua', 
+                className: 'w-[110px] md:w-[130px]', 
+            }, 
+            {
+                logo: '/images/logos/talent/shdh.png', 
+                name: 'Super Happy Dev House', 
+                className: 'w-[80px] md:w-[120px]', 
+            }, 
+            {
+                logo: '/images/logos/livinglab/ligaAstronomicaCUU.png', 
+                name: 'Liga Astronómica CUU', 
+                className: 'w-[100px] md:w-[130px]', 
+            }, 
+            {
+                logo: '/images/logos/livinglab/activo2030CUU.png', 
+                className: 'w-[100px] md:w-[120px]', 
+            }, 
+        ], 
     }, 
 };
 
@@ -210,6 +246,45 @@ export function Services(){
                     </a>.
                 </p>
             </section>
+        </>
+    );
+}
+
+export function Community(){
+
+    return (
+        <>
+            <section className="w-[85%] sm:w-[90%] lg:w-4/5 mx-auto h-auto py-10 gap-5 flex flex-col items-center text-regular-dark">
+                <h2 className="text-[1.5rem] sm:text-[2rem] lg:text-[3rem] text-center font-extrabold text-citc-livinglab">{content.community.title}</h2> 
+                <p className="text-[0.95rem] md:text-[1rem] lg:text-[1.1rem] font-medium sm:text-center w-full sm:w-[90%] lg:w-4/5">{content.community.description}</p>
+                <div className="w-[90%] flex flex-row items-center justify-around flex-wrap gap-y-5 gap-x-1 md:gap-x-8">
+                    {content.community.logos.map((logo, id) => (
+                        <div key={id} className="flex max-w-[200px] flex-col gap-2 items-center justify-center">
+                            <Image 
+                                src={logo.logo}
+                                alt={`${logo.name} Logo`}
+                                width={500}
+                                height={500}
+                                className={logo.className}
+                            />
+                            {logo.name 
+                                ? <span className="text-sm1 md:text-p font-medium text-center text-wrap">{logo.name}</span> 
+                                : ''}
+                        </div>
+                    ))}
+                </div>
+            </section>
+        </>
+    );
+} 
+
+function Logos({ logos, title }){
+
+    return(
+        <>
+            <div className="flex flex-col w-full lg:w-1/2 gap-5">
+                
+            </div>
         </>
     );
 }

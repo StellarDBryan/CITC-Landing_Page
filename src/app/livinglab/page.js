@@ -1,4 +1,4 @@
-import HeroSection, { WhatIs, Services, Page } from "@/components/livinglab_template";
+import HeroSection, { WhatIs, Services, Community, Page } from "@/components/livinglab_template";
 
 export default function LivingLab(){
 
@@ -7,6 +7,7 @@ export default function LivingLab(){
             <HeroSection />
             <WhatIs />
             <Services />
+            <Community />
             <Page />
         </>
     );
