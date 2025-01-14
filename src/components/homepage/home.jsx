@@ -150,13 +150,11 @@ export function Solutions(){
 
 export function Services(){
 
-    
-
     return (
         <>
             <section className="w-full h-auto py-5">
-                <div className="w-full h-full flex flex-col items-center space-y-5">
-                    <h4 className="text-[1.3rem] w-4/5 sm:w-auto sm:text-h5 lg:text-h4 text-center font-bold text-blue-dark-citc">{text.services.intro}</h4>
+                <div className="w-full h-full flex flex-col items-center gap-5 lg:gap-7">
+                    <h4 className="text-[1.5rem] w-4/5 sm:w-auto sm:text-[2rem] lg:text-[2.5rem] text-center font-bold text-blue-dark-citc">{text.services.intro}</h4>
                     <div className="w-full h-auto flex flex-row flex-wrap items-center justify-center gap-5 md:gap-x-3 lg:gap-x-8">
                         <ActionAreaCard 
                             link="/talent"
