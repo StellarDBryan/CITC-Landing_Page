@@ -4,7 +4,7 @@ import { ImgCarousel } from '@/components/carousel';
 import Link from 'next/link';
 import { motion } from "framer-motion";
 import Image from 'next/image'; 
-import { ServiceButton } from "@/components/ui/buttons";
+import { LivingLabBtn } from "@/components/ui/buttons";
 import { FeaturesSectionDemo } from '@/components/ui/feature_section';
 
 const livingLabIcons = [
@@ -167,6 +167,11 @@ const content = {
         totalReach_number: 18974, 
         people: "Personas", 
     }, 
+    callToAction: {
+        title: "El LivingLab Chihuahua está listo para impulsar tus ideas", 
+        subtitle: "¡Únete a nuestra comunidad y reserva tu espacio hoy!", 
+        button: "Reservar ahora", 
+    }, 
 };
 
 export default function HeroSection(){
@@ -254,9 +259,9 @@ export function WhatIs(){
                     </div>
                     <p className='text-[0.9rem] md:text-[1rem] lg:text-[1.1rem] text-start sm:text-center font-medium text-regular-dark'>{content.whatIs.description}</p>
                     <a href={content.livinglab_url} target="_blank" rel="noopener noreferrer">
-                        <ServiceButton>
+                        <LivingLabBtn>
                             {content.whatIs.button} {content.officialSite_text}
-                        </ServiceButton>
+                        </LivingLabBtn>
                     </a>
                 </div>
             </section>
@@ -365,13 +370,29 @@ export function CallToAction(){
 
     return(
         <>
-            <section className=''>
+            <section className='w-full h-screen relative bg-gradient-to-b from-transparent to-citc-livinglab to-40% flex items-center justify-center px-[10%] py-10 overflow-hidden'>
+                <div className='flex flex-col w-3/5 items-center gap-5'>
+                    <h2 className='text-[2.5rem] text-center font-extrabold text-gray-50'>{content.callToAction.title}</h2>
+                    <p className='text-[1.75rem] text-center font-semibold text-gray-50'>{content.callToAction.subtitle}</p>
+                    <a href={content.livinglab_url} target="_blank" rel="noopener noreferrer">
+                        <LivingLabBtn>
+                            {content.callToAction.button}
+                        </LivingLabBtn>
+                    </a>
+                </div>
                 <Image 
                     src="/images/logos/citc/LivingLab_icon.png"
                     alt='LivingLab Logo'
                     width={600}
                     height={600}
-                    className='absolute -left-10 -bottom-10 w-[400px] filter grayscale brightness-[0] opacity-10'
+                    className='absolute right-0 top-20 w-[300px] filter grayscale brightness-[5] opacity-70' 
+                />
+                <Image 
+                    src="/images/logos/citc/LivingLab_icon.png"
+                    alt='LivingLab Logo'
+                    width={600}
+                    height={600}
+                    className='absolute -left-24 -bottom-16 w-[500px] filter grayscale brightness-[5] opacity-70' 
                 />
             </section>
         </>
