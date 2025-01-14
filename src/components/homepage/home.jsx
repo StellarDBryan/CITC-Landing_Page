@@ -111,25 +111,35 @@ export function Solutions(){
 
     return (
         <>
-            <section className=" bg-[url('/images/backgrounds/LP_02.jpg')] bg-cover bg-center lg:my-10 lg:items-center lg:h-[600px] ">
-                <div className="bg-light-gradient h-full px-5 flex flex-col items-center gap-5 lg:gap-10">
-                    <h4 className="font-bold text-blue-dark-citc text-h5 text-center lg:text-h4">{text.solutions.text}</h4> 
+            <section className="relative flex items-center justify-center py-10 lg:items-center lg:h-[600px] ">
+                <Image 
+                    src='/images/backgrounds/LP_02.jpg'
+                    alt="Solutions Background"
+                    fill
+                    className="absolute inset-0 w-full h-full"
+                />
+                <div className="absolute object-contain inset-0 w-full h-full z-10 bg-gradient-to-b from-gray-clear-citc/100 via-gray-clear-citc/50 to-gray-clear-citc/100" />
+                <div className="h-full px-5 flex flex-col items-center gap-5 lg:gap-7 z-20">
+                    <h4 className="font-extrabold text-blue-dark-citc text-center text-[1.5rem] md:text-[2rem] lg:text-[2.5rem]">{text.solutions.text}</h4> 
                     <div className="w-full sm:w-auto h-auto flex flex-col md:flex-row items-center justify-around lg:justify-center flex-wrap gap-3 lg:gap-8"> 
                         <SolutionCard 
                             img_src="/images/photos/tech_plug/TP_01.JPG" 
                             img_alt="Conections Image"
                             solution_text={text.solutions.s1}
+                            img_className={'filter staturate-[3] brightness-[1.1]'}
                         />
                         <SolutionCard 
-                            img_src="/images/photos/tech_plug/TP_04.jpeg"
+                            img_src="/images/photos/cibersecuritySummits/2024/CS24_01.jpeg"
                             img_alt="Events Image"
                             solution_text={text.solutions.s2}
+                            img_className={'filter staturate-[3] brightness-[1.1]'}
                         />
                         <SolutionCard
-                            img_src="/images/photos/workspace/LivingLabCUU_01.png"
+                            img_src="/images/photos/livinglab/LivingLabCUU_01.png"
                             img_alt="Workspace Image" 
                             solution_text={text.solutions.s3}
                             img_position={'75% 95%'}
+                            img_className={'filter staturate-[2] brightness-[1.4]'}
                         />
                     </div>
                 </div>

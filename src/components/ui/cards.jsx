@@ -7,16 +7,16 @@ import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-export function SolutionCard({ img_src, img_alt, solution_text, img_position, redirection_url}){
+export function SolutionCard({ img_src, img_alt, solution_text, img_position, img_className, redirection_url}){
 
     return (
         <>
-            <Card className="relative group w-full h-[150px] sm:w-[500px] sm:h-[170px] md:w-[230px] md:h-[380px] lg:w-[300px] lg:h-[400px] flex flex-col items-center justify-end rounded-xl md:rounded-3xl drop-shadow-2xl">
+            <Card className="relative group w-full h-[175px] sm:w-[500px] sm:h-[200px] md:w-[230px] md:h-[380px] lg:w-[300px] lg:h-[400px] flex flex-col items-center justify-end rounded-xl md:rounded-3xl drop-shadow-2xl">
                 <Image 
                     src={img_src}
                     alt={img_alt}
                     fill
-                    className="absolute inset-0 w-full h-full object-cover transform transition-transform duration-200 ease-in-out group-hover:scale-110"
+                    className={`absolute inset-0 w-full h-full object-cover transform transition-transform duration-200 ease-in-out group-hover:scale-110 ${img_className}`}
                     style={{
                         objectPosition: `${img_position}`
                     }}
