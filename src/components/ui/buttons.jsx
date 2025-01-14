@@ -54,7 +54,7 @@ export function ServiceButton({ children }){
 
     return(
         <>
-            <button className="btn text-[1.05rem] px-6 py-2 whitespace-pre glass border-inherit border-solid hover:border-inherit group rounded-full text-blue-dark-citc hover:text-gray-clear-citc hover:bg-blue-dark-citc hover:border-blue-dark-citc">
+            <button className="btn text-[1.05rem] px-6 py-2 whitespace-pre glass border-inherit border-solid hover:border-inherit bg-gray-clear-citc group rounded-full text-blue-dark-citc hover:text-gray-clear-citc hover:bg-blue-dark-citc hover:border-blue-dark-citc">
                 {children}
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
                     className="transform group-hover:translate-x-1 transition-transform ease-in-out duration-200"

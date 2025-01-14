@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { InfiniteMovingCards } from "@/components/ui/infinite_moving_cards";
 import { AlliedCard, AboutCard, TeamMemberCard } from "./ui/cards";
-import { AboutButton } from "./ui/buttons";
+import { ServiceButton } from '@/components/ui/buttons';
 
 const text = {
     about: {
@@ -181,18 +181,25 @@ export default function About(){
 
     return (
         <>
-            <section id="AboutUs" className="relative bg-[url('/images/backgrounds/LP_01.jpg')] bg-cover bg-center lg:my-10 lg:items-center lg:h-auto text-regular-dark">
-                <div className="p-10 w-full h-full bg-light-gradient flex flex-row items-center justify-center space-x-30">
-                    <div className="rounded-3xl p-3 lg:mx-10 space-y-5 lg:w-5/12">
-                        <h2 className="text-h1 font-semibold text-blue-dark-citc">{text.about.title}</h2>
-                        <p className="text-regular font-semibold text-center">{text.about.description}</p>
-                        <div className="w-auto h-auto flex items-center justify-center space-x-3">
+            <section id="AboutUs" className="relative w-full px-[7.5%] sm:px-[5%] lg:px-[10%] py-12 flex justify-center items-center text-neutral-600">
+                <Image 
+                    src='/images/backgrounds/LP_01.jpg'
+                    alt="About Background"
+                    fill
+                    className="absolute object-cover inset-0 w-full h-full"
+                />
+                <div className="absolute object-contain inset-0 w-full h-full z-10 bg-gradient-to-b from-gray-clear-citc/100 via-gray-clear-citc/70 to-gray-clear-citc/100" />
+                <div className="w-full h-full flex flex-col items-center lg:flex-row lg:items-center lg:justify-around z-20">
+                    <div className="flex flex-col items-center backdrop-blur sm:backdrop-blur-sm rounded-3xl p-3 gap-2 sm:gap-5">
+                        <h2 className="text-[2.5rem] sm:text-[3rem] lg:text-[3.5rem] text-center font-extrabold text-blue-dark-citc">{text.about.title}</h2>
+                        <p className="text-[1rem] lg:text-[1.1rem] font-semibold text-center">{text.about.description}</p>
+                        <div className="w-auto h-auto flex flex-row flex-wrap items-center justify-around gap-3">
                             <Link href="/contact">
-                                <AboutButton>{text.about.button1}</AboutButton>
+                                <ServiceButton>{text.about.button1}</ServiceButton>
                             </Link>
-                            <a href='https://livinglab.io/home?&v=latest' target="_blank" rel="noopener noreferrer">
-                                <AboutButton>{text.about.button2}</AboutButton>
-                            </a>
+                            <Link href='/livinglab'>
+                                <ServiceButton>{text.about.button2}</ServiceButton>
+                            </Link>
                         </div>
                     </div>
                     <Image 
@@ -200,7 +207,7 @@ export default function About(){
                         alt="Chihuahua IT Cluster Logo"
                         width={432}
                         height={460}
-                        className="opacity-60"
+                        className="opacity-60 w-[300px] lg:w-[400px]"
                     />
                 </div>
             </section>
