@@ -370,10 +370,10 @@ export function CallToAction(){
 
     return(
         <>
-            <section className='w-full h-screen relative bg-gradient-to-b from-transparent to-citc-livinglab to-40% flex items-center justify-center px-[10%] py-10 overflow-hidden'>
-                <div className='flex flex-col w-3/5 items-center gap-5'>
-                    <h2 className='text-[2.5rem] text-center font-extrabold text-gray-50'>{content.callToAction.title}</h2>
-                    <p className='text-[1.75rem] text-center font-semibold text-gray-50'>{content.callToAction.subtitle}</p>
+            <section className='w-full h-screen relative bg-gradient-to-b from-transparent to-citc-livinglab to-40% flex items-center justify-center px-[7.5%] md:px-[5%] lg:px-[10%] py-10 overflow-hidden'>
+                <div className='flex flex-col w-full sm:w-4/5 md:w-3/5 items-center gap-5 z-20'>
+                    <h2 className='text-[1.5rem] md:text-[2rem] lg:text-[2.5rem] text-center font-extrabold text-gray-50'>{content.callToAction.title}</h2>
+                    <p className='text-[1.2rem] md:text-[1.5rem] lg:text-[1.75rem] text-center font-semibold text-gray-50'>{content.callToAction.subtitle}</p>
                     <a href={content.livinglab_url} target="_blank" rel="noopener noreferrer">
                         <LivingLabBtn>
                             {content.callToAction.button}
@@ -385,14 +385,14 @@ export function CallToAction(){
                     alt='LivingLab Logo'
                     width={600}
                     height={600}
-                    className='absolute right-0 top-20 w-[300px] filter grayscale brightness-[5] opacity-70' 
+                    className='absolute -right-5 top-12 sm:-right-5 sm:top-20 md:-right-8 md:top-20 lg:-right-2 lg:top-20 w-[170px] sm:w-[200px] md:w-[250px] lg:w-[300px] filter grayscale brightness-[5] opacity-50' 
                 />
                 <Image 
                     src="/images/logos/citc/LivingLab_icon.png"
                     alt='LivingLab Logo'
                     width={600}
                     height={600}
-                    className='absolute -left-24 -bottom-16 w-[500px] filter grayscale brightness-[5] opacity-70' 
+                    className='absolute -left-16 -bottom-10 sm:-left-20 sm:-bottom-10 md:-left-32 md:-bottom-14 lg:-left-28 lg:-bottom-16 w-[300px] sm:w-[350px] md:w-[430px] lg:w-[500px] filter grayscale brightness-[5] opacity-50' 
                 />
             </section>
         </>
