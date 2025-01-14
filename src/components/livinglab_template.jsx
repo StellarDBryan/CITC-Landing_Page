@@ -199,7 +199,7 @@ export function Services(){
 
     return(
         <>
-            <section className='w-4/5 mx-auto flex flex-col items-center '>
+            <section className='w-[85%] sm:w-[90%] lg:w-4/5 mx-auto flex flex-col items-center '>
                 <h4 className='text-[1.5rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] text-center font-extrabold text-citc-livinglab'>{content.services.title}</h4>
                 <FeaturesSectionDemo features={content.services.features} icons={livingLabIcons} />
             </section>
