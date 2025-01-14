@@ -468,3 +468,217 @@ export function BusinessForm({ content }) {
             </div>
     );
 }
+
+export function TalentForm({ content }) {
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        message: '' 
+    });
+    const [success, setSuccess] = useState(false);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        const errorMessage = validateForm();
+        if (errorMessage) {
+            alert(errorMessage);
+            return;
+        }
+
+        try {
+            const response = await fetch('/api/formulario', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                setSuccess(true);
+                setFormData({
+                    name: '',
+                    email: '',
+                    company: '',
+                    phone: '',
+                    message: ''
+                });
+            } else {
+                console.error('Error al enviar el formulario');
+            }
+        } catch (error) {
+            console.error('Error al enviar el formulario', error);
+        }
+    };
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prevState => ({
+            ...prevState,
+            [name]: value
+        }));
+    };
+
+    const validateForm = () => {
+        const { name, email, company, phone, message } = formData;
+        const nameRegex = /^[A-Za-z]{1,30}$/;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const phoneRegex = /^\d{0,15}$/;
+        let errorMessage = "";
+
+        if (!nameRegex.test(name)) {
+            errorMessage += "Nombre no válido (solo letras, máximo 30 caracteres).\n";
+        }
+
+        if (!emailRegex.test(email)) {
+            errorMessage += "Correo no válido.\n";
+        }
+
+        if (company.length > 50) {
+            errorMessage += "Compañia no puede tener más de 50 caracteres.\n";
+        }
+
+        if (!phoneRegex.test(phone)) {
+            errorMessage += "Teléfono no válido (solo números, máximo 15 caracteres).\n";
+        }
+
+        if (!message) {
+            errorMessage += "Mensaje es obligatorio.\n";
+        }
+
+        return errorMessage;
+    };
+    return(
+            <div className="w-full flex justify-center">
+                <div className="w-[90%] sm:w-auto lg:mx-auto ">
+                    <div className="px-6 lg:px-8">
+                        <div className="mx-auto max-w-xl lg:mx-0 w-full">
+                            <form onSubmit={handleSubmit} className="">
+                                <div className="grid grid-cols-1 gap-x-8 gap-y-6">
+                                    <div>
+                                        <label
+                                            htmlFor="first-name"
+                                            className="block text-[1.1rem] font-semibold leading-6 text-lime-600 whitespace-pre"
+                                        >
+                                            {content.name} *
+                                        </label>
+                                        <div className="mt-2.5">
+                                            <input
+                                                type="text"
+                                                name="name"
+                                                id="name"
+                                                autoComplete="given-name"
+                                                value={formData.name}
+                                                onChange={handleChange}
+                                                className="block w-full rounded-md border-0 px-3.5 py-2 text-regular-dark shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-lime-600 sm:text-[1.1rem] sm:leading-6 dark:bg-customGray"
+                                                required
+                                                placeholder={content.name}
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className="">
+                                        <label
+                                            htmlFor="email"
+                                            className="block text-[1.1rem] font-semibold leading-6 text-lime-600 whitespace-pre"
+                                        >
+                                            {content.email} *
+                                        </label>
+                                        <div className="mt-2.5">
+                                            <input
+                                                id="email"
+                                                name="email"
+                                                type="email"
+                                                autoComplete="email"
+                                                value={formData.email}
+                                                onChange={handleChange}
+                                                className="block w-full rounded-md border-0 px-3.5 py-2 text-regular-dark shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-lime-600 sm:text-[1.1rem] sm:leading-6 dark:bg-customGray"
+                                                required
+                                                placeholder={content.email}
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className="">
+                                        <label
+                                            htmlFor="company"
+                                            className="block text-[1.1rem] font-semibold leading-6 text-lime-600 whitespace-pre"
+                                        >
+                                            {content.company} *
+                                        </label>
+                                        <div className="mt-2.5">
+                                            <input
+                                                type="text"
+                                                name="company"
+                                                id="company"
+                                                autoComplete="organization"
+                                                value={formData.company}
+                                                onChange={handleChange}
+                                                className="block w-full rounded-md border-0 px-3.5 py-2 text-regular-dark shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-lime-600 sm:text-[1.1rem] sm:leading-6 dark:bg-customGray"
+                                                required
+                                                placeholder={content.company}
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className="">
+                                        <label
+                                            htmlFor="phone"
+                                            className="block text-[1.1rem] font-semibold leading-6 text-lime-600 whitespace-pre"
+                                        >
+                                            {content.phone}
+                                        </label>
+                                        <div className="relative mt-2.5">
+                                            <input
+                                                type="text"
+                                                name="phone"
+                                                id="phone"
+                                                autoComplete="tel"
+                                                value={formData.phone}
+                                                onChange={handleChange}
+                                                placeholder={content.phone}
+                                                className="block w-full rounded-md border-0 px-3.5 py-2 text-regular-dark shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-lime-600 sm:text-[1.1rem] sm:leading-6 dark:bg-customGray"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className="sm:col-span-2">
+                                        <label
+                                            htmlFor="message"
+                                            className="block text-[1.1rem] font-semibold leading-6 text-lime-600 whitespace-pre"
+                                        >
+                                            {content.message} *
+                                        </label>
+                                        <div className="mt-2.5">
+                                            <textarea
+                                                id="message"
+                                                name="message"
+                                                rows={4}
+                                                value={formData.message}
+                                                onChange={handleChange}
+                                                placeholder={content.message_placeholder}
+                                                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-lime-600 sm:text-[1.1rem] sm:leading-6 dark:bg-customGray"
+                                                required
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="mt-10">
+                                    <button
+                                        type="submit"
+                                        className="block w-full rounded-md bg-lime-600 px-3.5 py-2.5 text-center text-h6 font-semibold text-gray-50 shadow-sm hover:bg-gray-100 hover:text-lime-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-dark-citc transition-all duration-200 ease-in-out"
+                                    >
+                                        {success ? 'Enviado' : 'Enviar'}
+                                    </button>
+                                    {success && (
+                                        <p className="mt-4 text-[1.1rem] text-green-500"> 
+                                            {content.success_message}
+                                        </p>
+                                    )}
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    );
+}

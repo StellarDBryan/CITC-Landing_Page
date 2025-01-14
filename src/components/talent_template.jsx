@@ -1,5 +1,6 @@
 import Image from "next/image"; 
 import { ImgCarousel } from "./carousel"; 
+import { TalentForm } from "./forms";
 
 const content = {
     heroSection: {
@@ -207,6 +208,19 @@ const content = {
                 className: 'w-[250px] sm:w-[270px] lg:w-[300px]',  
             }, 
         ], 
+    }, 
+    form: {
+        title: "¿Te interesa colaborar en el desarrollo de talento y fortalecer el ecosistema tecnológico?", 
+        intro: "¡Estamos listos para conectar contigo y trabajar juntos hacia un futuro innovador!", 
+        data: {
+            name: "Nombre", 
+            email: "Correo", 
+            company: "Organización/Institución", 
+            phone: "Teléfono", 
+            message: "Mensaje", 
+            message_placeholder: "Cuéntanos cómo te gustaría colaborar o qué ideas tienes en mente.", 
+            success_message: "Envío completado con éxito", 
+        }, 
     }, 
 };
 
@@ -427,3 +441,16 @@ export function Allies(){
         </>
     );
 } 
+
+export function Form(){
+
+    return (
+        <>
+            <section className="w-full bg-gradient-to-t from-[#92d050]/70 to-transparent to-40% sm:to-50% py-10 gap-5 h-auto flex flex-col items-center overflow-hidden">
+                <h4 className="text-[1.4rem] md:text-[2rem] font-bold text-lime-600 w-[85%] sm:w-4/5 text-center">{content.form.title}</h4>
+                <h6 className="text-[1.15rem] md:text-[1.5rem] font-bold text-lime-600/70 w-4/5 text-center">{content.form.intro}</h6>
+                <TalentForm content={content.form.data} />
+            </section> 
+        </>
+    );
+}
