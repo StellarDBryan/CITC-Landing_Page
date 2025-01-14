@@ -1,4 +1,4 @@
-import HeroSection, { Programs, GirlsInTech, Community } from "@/components/talent_template";
+import HeroSection, { Programs, GirlsInTech, Community, Allies } from "@/components/talent_template";
 
 export default function Home(){
 
@@ -9,7 +9,8 @@ export default function Home(){
                 <Programs />
                 <GirlsInTech />
                 <Community />
-            </div>
+                <Allies />
+            </div> 
         </>
     );
 }

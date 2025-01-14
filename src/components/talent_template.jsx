@@ -169,7 +169,45 @@ const content = {
                 className: 'w-[220px] h-auto', 
             }, 
         ], 
-    }
+    }, 
+    allies: {
+        title: "Colaborando para Desarrollar el Talento del Mañana", 
+        description: "Desde el CITC, trabajamos en conjunto con el ecosistema tecnológico para impulsar el desarrollo del talento en áreas de innovación, tecnología y ciencia. A través de alianzas estratégicas y programas colaborativos, conectamos a profesionales, empresas y estudiantes para generar oportunidades de crecimiento y fortalecer la comunidad.", 
+        logos: [
+            {
+                logo: '/images/logos/universities/itch2.png', 
+                className: 'w-[155px] sm:w-[190px] lg:w-[220px]',  
+            }, 
+            {
+                logo: '/images/logos/universities/ULSA.png', 
+                className: 'w-[140px] sm:w-[180px] lg:w-[210px]',  
+            }, 
+            {
+                logo: '/images/logos/universities/TecMilenio.png', 
+                className: 'w-[160px] sm:w-[190px] lg:w-[220px]',  
+            }, 
+            {
+                logo: '/images/logos/universities/centroCulturalUniversitario.png', 
+                className: 'w-[150px] sm:w-[180px] lg:w-[210px]',  
+            }, 
+            {
+                logo: '/images/logos/universities/utch.png', 
+                className: 'w-[120px] sm:w-[150px] lg:w-[180px]',  
+            }, 
+            {
+                logo: '/images/logos/universities/utchSur.png', 
+                className: 'w-[110px] sm:w-[130px] lg:w-[160px]',  
+            }, 
+            {
+                logo: '/images/logos/talent/proyectoT_logo.png', 
+                className: 'w-[160px] sm:w-[210px] lg:w-[240px]',  
+            }, 
+            {
+                logo: '/images/logos/talent/inadet_logo.png', 
+                className: 'w-[250px] sm:w-[270px] lg:w-[300px]',  
+            }, 
+        ], 
+    }, 
 };
 
 export default function HeroSection(){
@@ -361,3 +399,31 @@ function Logos({ logos, title }){
         </>
     );
 }
+
+export function Allies(){
+
+    return (
+        <>
+            <section className="w-[85%] sm:w-[90%] lg:w-4/5 mx-auto h-auto py-10 gap-5 flex flex-col items-center text-regular-dark">
+                <h2 className="text-[1.5rem] sm:text-[2rem] lg:text-[3rem] text-center font-extrabold text-[#92d050]">{content.allies.title}</h2> 
+                <p className="text-[0.95rem] md:text-[1rem] lg:text-[1.1rem] font-medium sm:text-center w-full sm:w-[90%] lg:w-4/5">{content.allies.description}</p>
+                <div className="w-full sm:w-[90%] flex flex-row items-center justify-around flex-wrap gap-y-5 gap-x-1 md:gap-x-8">
+                    {content.allies.logos.map((logo, id) => (
+                        <div key={id} className="flex flex-col gap-2 items-center justify-center">
+                            <Image 
+                                src={logo.logo}
+                                alt={`${logo.name} Logo`}
+                                width={500}
+                                height={500}
+                                className={logo.className}
+                            />
+                            {logo.name 
+                                ? <span className="text-sm1 md:text-p font-medium text-center text-wrap">{logo.name}</span> 
+                                : ''}
+                        </div>
+                    ))}
+                </div>
+            </section>
+        </>
+    );
+} 
