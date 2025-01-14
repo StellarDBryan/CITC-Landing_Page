@@ -135,6 +135,48 @@ const content = {
             }, 
         ], 
     }, 
+    impact: {
+        title: "Impulsando el Futuro, Transformando Vidas", 
+        description: "LivingLab Chihuahua ha sido un catalizador de innovación y crecimiento, conectando a personas y comunidades a través de iniciativas que inspiran y transforman. Desde talleres hasta eventos de gran escala, medimos nuestro impacto en historias de éxito y en las cifras que respaldan nuestro compromiso con el desarrollo tecnológico y científico.", 
+        metrics: [
+            {
+                name: "Casa Abierta", 
+                number: 4068, 
+                icon: ()=>(
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 16 16" className="w-[50px] md:w-[80px]"><g fill="currentColor"><path d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.707L8 2.207L1.354 8.853a.5.5 0 1 1-.708-.707z"/><path d="m14 9.293l-6-6l-6 6V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5zm-6-.811c1.664-1.673 5.825 1.254 0 5.018c-5.825-3.764-1.664-6.691 0-5.018"/></g></svg>
+                ), 
+            }, 
+            {
+                name: "Talleres", 
+                number: 5269, 
+                icon: ()=>(
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" className="w-[50px] md:w-[80px]"><path fill="none" stroke="currentColor" strokeWidth="2" d="M19 7s-5 7-12.5 7c-2 0-5.5 1-5.5 5v4h11v-4c0-2.5 3-1 7-8l-1.5-1.5M3 5V2h20v14h-3M11 1h4v2h-4zM6.5 14a3.5 3.5 0 1 0 0-7a3.5 3.5 0 0 0 0 7Z"/></svg> 
+                ), 
+            }, 
+            {
+                name: "Reuniones", 
+                number: 5252, 
+                icon: ()=>(
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" className="w-[50px] md:w-[80px]"><path fill="none" stroke="currentColor" d="M5 13.5h14m-7 0V24M6.5 11V6.5H5.328a3 3 0 0 0-2.906 2.255L.5 16.25v.25h7V18c0 1.5 0 2.5.75 4c0 0 .75 1.5 1.75 1.5M17.5 11V6.5h1.172a3 3 0 0 1 2.906 2.255L23.5 16.25v.25h-7V18c0 1.5 0 2.5-.75 4c0 0-.75 1.5-1.75 1.5m-7.65-19s-1.6-1-1.6-2.25a1.747 1.747 0 1 1 3.496 0C8.246 3.5 6.65 4.5 6.65 4.5zm11.3 0s1.6-1 1.6-2.25A1.75 1.75 0 0 0 17.5.5c-.966 0-1.746.784-1.746 1.75c0 1.25 1.596 2.25 1.596 2.25z"/></svg>                ), 
+            }, 
+            {
+                name: "Conferencias", 
+                number: 4315, 
+                icon: ()=>(
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" className="w-[50px] md:w-[80px]"><path fill="currentColor" d="M8 4a2 2 0 1 1-4 0a2 2 0 0 1 4 0M5 16v6H3V10a3 3 0 0 1 5.106-2.137l2.374 2.243l2.313-2.313l1.414 1.414l-3.687 3.687L9 11.46V22H7v-6zm5-11h9v9h-9v2h4.365l2.824 6h2.21l-2.823-6H20a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H10z"/></svg>
+                ), 
+            }, 
+            {
+                name: "Espacio de Coworking", 
+                number: 70, 
+                icon: ()=>(
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" className="w-[50px] md:w-[80px]"><path fill="currentColor" d="M8 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8m9 0a3 3 0 1 0 0-6a3 3 0 0 0 0 6M4.25 14A2.25 2.25 0 0 0 2 16.25v.25S2 21 8 21c1.399 0 2.472-.245 3.294-.62a4.73 4.73 0 0 1-.794-2.63c0-1.49.687-2.82 1.76-3.692a2.3 2.3 0 0 0-.51-.058zm18.25 3.75A3.75 3.75 0 0 0 18.75 14l-.102.007a.75.75 0 0 0 .102 1.493l.154.005A2.25 2.25 0 0 1 18.75 20l-.003.005l-.102.007a.75.75 0 0 0 .108 1.493V21.5l.2-.005A3.75 3.75 0 0 0 22.5 17.75m-6.5-3a.75.75 0 0 0-.75-.75l-.2.005a3.75 3.75 0 0 0 .2 7.495l.102-.007A.75.75 0 0 0 15.25 20l-.154-.005a2.25 2.25 0 0 1 .154-4.495l.102-.007A.75.75 0 0 0 16 14.75m3.5 3a.75.75 0 0 0-.75-.75h-3.5l-.102.007a.75.75 0 0 0 .102 1.493h3.5l.102-.007a.75.75 0 0 0 .648-.743"/></svg>                ), 
+            },
+        ], 
+        totalReach_text: "Alcance Total", 
+        totalReach_number: 18974, 
+        people: "Personas", 
+    }, 
 };
 
 export default function HeroSection(){
@@ -278,13 +320,37 @@ export function Community(){
     );
 } 
 
-function Logos({ logos, title }){
+export function Impact(){
 
     return(
         <>
-            <div className="flex flex-col w-full lg:w-1/2 gap-5">
-                
-            </div>
+            <section className='flex flex-col items-center w-[85%] sm:w-[90%] lg:w-4/5 py-12 h-auto mx-auto gap-3 md:gap-5'>
+                <h2 className="text-[1.5rem] sm:text-[2rem] lg:text-[3rem] text-center font-extrabold text-citc-livinglab">{content.impact.title}</h2> 
+                <p className="text-[0.95rem] md:text-[1rem] lg:text-[1.1rem] font-medium sm:text-center w-full sm:w-[90%] lg:w-4/5">{content.impact.description}</p>
+                <div className='flex flex-row flex-wrap items-center justify-around gap-y-2 gap-x-5 md:gap-10 text-cyan-600/70'>
+                    {content.impact.metrics.map((metric, id) => (
+                        <div key={id} className='flex flex-col items-center gap-0 md:gap-1'>
+                            {metric.icon ? metric.icon() : ''}
+                            <span className='text-[1.2rem] md:text-[1.4rem] text-center font-bold '>
+                                {metric.name}
+                            </span>
+                            <span className='text-[1.5rem] md:text-[2rem] font-bold text-neutral-400'>
+                                {metric.number}
+                            </span>
+                        </div>
+                    ))}
+                </div>
+                <div className='flex flex-col itemx-center md:items-start md:flex-row md:flex-wrap gap-2 md:gap-5'>
+                    <h3 className='text-[1.7rem] sm:text-[2rem] md:text-[2.5rem] font-extrabold text-cyan-600'>{content.impact.totalReach_text}:</h3> 
+                    <div className='text-[1.7rem] sm:text-[2rem] md:text-[2.5rem] text-neutral-400 flex-row flex-wrap gap-10'>
+                        <span className='font-bold'>
+                            {content.impact.totalReach_number}
+                        </span> <span className='font-medium'>
+                            {content.impact.people}
+                        </span>
+                    </div>
+                </div>
+            </section>
         </>
     );
 }
