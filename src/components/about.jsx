@@ -16,8 +16,14 @@ const text = {
     misionVision: {
         mision: 'Mision',
         mision_text: 'Nuestra misión es fomentar el crecimiento y la innovación en la industria de tecnología de Chihuahua.',
+        mision_icon: () => (
+            <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 14 14" className="text-blue-dark-citc"><path fill="currentColor" fillRule="evenodd" d="M7.527 9.331a5 5 0 0 0 1.49-1.319a2 2 0 0 1-.273-.661l-.019-.088a1.29 1.29 0 0 0-1.042-.998c-2.072-.36-2.072-3.334 0-3.695a1.29 1.29 0 0 0 1.03-.948a5 5 0 1 0-6.187 7.709V10.5a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1V9.331Zm-5 3.919a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 0 1.5h-3.5a.75.75 0 0 1-.75-.75m7.28-11.533C9.99.881 11.18.876 11.37 1.71l.009.04l.018.078a2.4 2.4 0 0 0 1.921 1.812c.872.152.872 1.404 0 1.556a2.4 2.4 0 0 0-1.925 1.827l-.023.102c-.19.835-1.381.83-1.565-.007l-.019-.087A2.38 2.38 0 0 0 7.87 5.194c-.871-.151-.871-1.401 0-1.553a2.38 2.38 0 0 0 1.915-1.826L9.8 1.75z" clipRule="evenodd"/></svg>
+        ), 
         vision: 'Vision',
         vision_text: 'Nuestra visión es ser líderes en el desarrollo de tecnología, impulsando la economía local y global.',
+        vision_icon: () => (
+            <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 20 20" className="text-blue-dark-citc"><path fill="currentColor" d="M7.987 4.18a12.2 12.2 0 0 0-.669 2.32h5.364a12.2 12.2 0 0 0-.67-2.32c-.301-.733-.648-1.294-1.008-1.663C10.646 2.149 10.307 2 10 2s-.646.149-1.004.517c-.36.37-.707.93-1.009 1.663m-.096-1.899c-.314.426-.59.941-.828 1.518c-.32.78-.58 1.694-.762 2.701H2.804a8.02 8.02 0 0 1 5.087-4.219m4.219 0c.313.426.59.941.827 1.518c.32.78.58 1.694.762 2.701h3.497a8.02 8.02 0 0 0-5.087-4.219M17.602 7.5H13.85c.075.612.124 1.25.142 1.906a2.997 2.997 0 0 1 4.002.925Q18 10.166 18 10a8 8 0 0 0-.398-2.5M13 10q0 .174-.003.345a3 3 0 0 0-.456 2.155H7.158A19 19 0 0 1 7 10c0-.875.056-1.715.158-2.5h5.684c.102.785.158 1.625.158 2.5m-.318 3.5q-.07.358-.151.695A2.5 2.5 0 0 0 11 16.5c0 .29.038.58.115.862a3 3 0 0 1-.11.121c-.359.368-.698.517-1.005.517s-.646-.149-1.004-.517c-.36-.37-.707-.93-1.009-1.663a12.2 12.2 0 0 1-.669-2.32zM7.89 17.719A8.02 8.02 0 0 1 2.804 13.5h3.497c.182 1.007.441 1.922.762 2.7c.237.578.514 1.093.828 1.519M2.398 12.5H6.15A21 21 0 0 1 6 10c0-.866.052-1.705.15-2.5H2.398A8 8 0 0 0 2 10c0 .873.14 1.713.398 2.5M17.5 12a2 2 0 1 1-4 0a2 2 0 0 1 4 0m1.5 4.5c0 1.245-1 2.5-3.5 2.5S12 17.75 12 16.5a1.5 1.5 0 0 1 1.5-1.5h4a1.5 1.5 0 0 1 1.5 1.5"/></svg>
+        ), 
     }, 
     team: {
         title: 'Consejo del CITC', 
@@ -219,9 +225,9 @@ export function MisionVision(){
 
     return (
         <>
-            <section className="flex p-5 flex-row flex-wrap w-full items-center justify-center space-x-5">
-                <AboutCard title={text.misionVision.mision} text={text.misionVision.mision_text} />
-                <AboutCard title={text.misionVision.vision} text={text.misionVision.vision_text} />
+            <section className="flex w-full px-[7.5%] sm:px-[5%] lg:px-[10%] flex-col items-center md:flex-row md:items-center md:justify-center gap-0 md:gap-5">
+                <AboutCard title={text.misionVision.mision} text={text.misionVision.mision_text} icon={text.misionVision.mision_icon} />
+                <AboutCard title={text.misionVision.vision} text={text.misionVision.vision_text} icon={text.misionVision.vision_icon} />
             </section>
         </>
     );
