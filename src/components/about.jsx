@@ -27,7 +27,7 @@ const text = {
     }, 
     team: {
         title: 'Consejo del CITC', 
-        intro: 'Conoce a nuestro equipo', 
+        intro: '¡Conóce a nuestro equipo!', 
         members: [
             {
                 name: 'Luis Alonso Ramos', 
@@ -373,10 +373,10 @@ export function Team(){
 
     return(
         <>
-            <section className="text-regular-dark w-full h-auto flex flex-col items-center justify-center lg:space-y-5">
-                <h2 className="text-h2 font-bold text-blue-dark-citc">{text.team.title}</h2>
-                <h5 className="text-blue-dark-citc text-h5 font-medium">{text.team.intro}</h5>
-                <div className="flex flex-row flex-wrap items-center justify-around w-3/5 space-y-3">
+            <section className="text-regular-dark mx-auto w-[85%] sm:w-[90%] lg:w-4/5 h-auto flex flex-col items-center gap-3">
+                <h2 className="text-h4 sm:text-h3 text-center md:text-h2 font-extrabold text-blue-dark-citc">{text.team.title}</h2>
+                <h5 className="text-neutral-600 text-[1.1rem] md:text-h5 font-semibold">{text.team.intro}</h5>
+                <div className="flex flex-row flex-wrap items-center justify-around w-full gap-5">
                     {
                         text.team.members.map((member, id) => (
                             <TeamMemberCard 
