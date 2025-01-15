@@ -195,21 +195,21 @@ export default function HeroSection(){
                 <div className="relative w-[500px] h-[500px] sm:w-[500px] sm:h-[500px] rounded-full overflow-visible transform scale-[0.5] sm:scale-[0.7] lg:scale-[1] ">
                     <div className="w-[550px] h-[550px] absolute -top-[25px] sm:-top-[60px] md:-top-[25px] -left-[25px] bg-radial-gradient rounded-full" />
                     <Image 
-                        src="/images/photos/workspace/LivingLabCUU_01.png"
+                        src="/images/photos/livinglab/LivingLabCUU_01.png"
                         alt="LivingLab photo"
                         width={300}
                         height={300}
                         className="rounded-full filter saturate-[1.30] shadow-2xl brightness-150 absolute z-10 -bottom-5 left-12 sm:bottom-[50px] sm:left-[50px] ring-gray-100 ring-[10px] ring-offset-2 w-[400px] h-[400px] object-right object-cover"
                     />
                     <Image 
-                        src="/images/photos/workspace/LivingLabCUU_03.JPG"
+                        src="/images/photos/livinglab/LivingLabCUU_03.JPG"
                         alt="LivingLab photo"
                         width={300}
                         height={300}
                         className="rounded-full absolute drop-shadow-2xl object-right bottom-auto sm:-top-11 -left-7 ring-gray-100 ring-[7px] ring-offset-2 w-[200px] h-[200px] object-cover"
                     />
                     <Image 
-                        src="/images/photos/workspace/LivingLabCUU_07.JPG"
+                        src="/images/photos/livinglab/LivingLabCUU_07.JPG"
                         alt="LivingLab photo"
                         width={300}
                         height={300}
@@ -219,7 +219,7 @@ export default function HeroSection(){
                         }}
                     />
                     <Image 
-                        src="/images/photos/workspace/LivingLabCUU_08.JPG"
+                        src="/images/photos/livinglab/LivingLabCUU_08.JPG"
                         alt="LivingLab photo"
                         width={300}
                         height={300}
@@ -292,7 +292,7 @@ export function Services(){
             <section className='w-[85%] sm:w-[90%] lg:w-4/5 mx-auto py-11 flex flex-col items-center gap-5'>
                 <h4 className='text-[1.4rem] sm:text-[1.75rem] md:text-[2.25rem] lg:text-[2.75rem] text-center font-extrabold text-citc-livinglab'>{content.services.title}</h4>
                 <FeaturesSectionDemo features={content.services.features} icons={livingLabIcons} />
-                <p className='text-[0.95rem] lg:text-[1rem] text-center font-medium sm:w-[90%] lg:w-4/5'>
+                <p className='text-[0.95rem] text-regular-dark lg:text-[1rem] text-center font-medium sm:w-[90%] lg:w-4/5'>
                     {content.services.details_text}
                     <a href={content.livinglab_url} target="_blank" rel="noopener noreferrer" className='link hover:text-cyan-600 font-bold'>
                         {content.officialSite_text}
@@ -337,7 +337,7 @@ export function Impact(){
         <>
             <section className='flex flex-col items-center w-[85%] sm:w-[90%] lg:w-4/5 py-12 h-auto mx-auto gap-3 md:gap-5'>
                 <h2 className="text-[1.5rem] sm:text-[2rem] lg:text-[3rem] text-center font-extrabold text-citc-livinglab">{content.impact.title}</h2> 
-                <p className="text-[0.95rem] md:text-[1rem] lg:text-[1.1rem] font-medium sm:text-center w-full sm:w-[90%] lg:w-4/5">{content.impact.description}</p>
+                <p className="text-[0.95rem] text-regular-dark md:text-[1rem] lg:text-[1.1rem] font-medium sm:text-center w-full sm:w-[90%] lg:w-4/5">{content.impact.description}</p>
                 <div className='flex flex-row flex-wrap items-center justify-around gap-y-2 gap-x-5 md:gap-10 text-cyan-600/70'>
                     {content.impact.metrics.map((metric, id) => (
                         <div key={id} className='flex flex-col items-center gap-0 md:gap-1'>
