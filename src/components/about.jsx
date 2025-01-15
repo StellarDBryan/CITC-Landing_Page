@@ -71,8 +71,8 @@ const text = {
         intro: 'Agradecemos a todos todos nuestros aliados por apoyarnos a impulsar al sector IT',
         associates: 'Socios', 
         members: 'Afiliados', 
-        universities: 'Universidades',
-    },
+        universities: 'Educativos',
+    }, 
     associates: {
         intro: 'Nuestros socios, el motor de la innovación tecnológica en Chihuahua', 
     }, 
@@ -83,102 +83,141 @@ const alliesImages = {
         {
             name: '360Solutions', 
             image: '/images/logos/associates/360Solutions_edited.png', 
+            className: 'w-[180px] md:w-[200px]', 
         }, 
         {
             name: 'AdNConsulting', 
             image: '/images/logos/associates/AdNConsulting.png', 
+            className: 'w-[130px] md:w-[180px]', 
         }, 
         {
             name: 'BuildBinder', 
             image: '/images/logos/associates/BuildBinder_edited.png', 
+            className: 'w-[100px] md:w-[150px]', 
         }, 
         {
             name: 'AutoZone', 
             image: '/images/logos/associates/DataZone_edited.png', 
+            className: 'w-[170px] md:w-[200px]', 
         }, 
         {
             name: 'IntegralVending', 
             image: '/images/logos/associates/IntegralVending_edited.png', 
+            className: 'w-[130px] md:w-[160px]', 
         }, 
         {
             name: 'Intelectix', 
             image: '/images/logos/associates/Intelectix_edited.png', 
+            className: 'w-[110px] md:w-[140px]', 
         }, 
         {
             name: 'JobSistemas', 
             image: '/images/logos/associates/JobSistemas_edited.png', 
+            className: 'w-[120px] md:w-[160px]', 
         }, 
         {
             name: 'LeadingTech', 
             image: '/images/logos/associates/LeadingTech_edited.png', 
+            className: 'w-[110px] md:w-[160px]', 
         }, 
         {
             name: 'Madata', 
             image: '/images/logos/associates/madata_edited.png', 
+            className: 'w-[130px] md:w-[160px]', 
         }, 
         {
             name: 'Pax', 
             image: '/images/logos/associates/pax_edited.png', 
+            className: 'w-[130px] md:w-[170px]', 
         }, 
         {
             name: 'PIDElectronics', 
             image: '/images/logos/associates/PIDElectronics_edited.png', 
+            className: 'w-[160px] md:w-[200px]', 
         }, 
         {
             name: 'PPAPManger', 
             image: '/images/logos/associates/PPAPManger_edited.png', 
+            className: 'w-[180px] md:w-[200px]', 
         },
         {
             name: 'Resideo', 
             image: '/images/logos/associates/resideo_edited.png', 
+            className: 'w-[150px] md:w-[180px]', 
         }, 
         {
             name: 'Sitek', 
             image: '/images/logos/associates/Sitek_edited.png', 
+            className: 'w-[140px] md:w-[170px]', 
         }, 
         {
             name: 'TGC', 
             image: '/images/logos/associates/TGC_edited.png', 
+            className: 'w-[150px] md:w-[190px]', 
         }, 
         {
             name: 'Tisco', 
             image: '/images/logos/associates/Tisco_edited.png', 
+            className: 'w-[150px] md:w-[180px]', 
         },
     ],
     members: [
         {
             name: 'Red Emprende', 
             image: '/images/logos/members/RedEmprende.png',
+            className: 'w-[170px] lg:w-[200px]', 
         },
         {
             name: 'Chihuahua Futura', 
             image: '/images/logos/members/ChihuahuaFutura.png',
+            className: 'w-[190px] lg:w-[210px]', 
         },
         {
             name: 'Cluster Automatizacion e Integracion Chihuahua', 
             image: '/images/logos/members/ClusterAutomatizacion.png',
+            className: 'w-[160px] lg:w-[180px]', 
         },
         {
             name: 'MxTI', 
             image: '/images/logos/members/MXTI.png',
+            className: 'w-[130px] lg:w-[150px]', 
         },
         {
             name: 'Ilum', 
             image: '/images/logos/members/Ilum.png',
+            className: 'w-[120px] lg:w-[130px]', 
         },
     ],
     universities: [
         {
             name: 'ITCHII', 
-            image: '/images/logos/universities/ITCHII.png', 
+            image: '/images/logos/universities/itch2.png', 
+            className: 'w-[220px]', 
         }, 
         {
             name: 'Tec Milenio CUU', 
             image: '/images/logos/universities/TecMilenio.png', 
+            className: 'w-[210px]', 
         }, 
         {
             name: 'ULSA CUU', 
             image: '/images/logos/universities/ULSA.png', 
+            className: 'w-[210px]', 
+        },  
+        {
+            name: 'UTCH', 
+            image: '/images/logos/universities/utch.png', 
+            className: 'w-[150px]', 
+        },  
+        {
+            name: 'UTCH SUR', 
+            image: '/images/logos/universities/utchSur.png', 
+            className: 'w-[140px]', 
+        },  
+        {
+            name: 'Centro Cultural Universitario', 
+            image: '/images/logos/universities/centroCulturalUniversitario.png', 
+            className: 'w-[210px]', 
         }, 
     ],
 }
@@ -237,9 +276,9 @@ export function Allies(){
 
     return(
         <>
-            <section id="Allies" className="text-regular-dark flex flex-col items-center justify-center lg:space-y-5">
-                <h2 className="text-h2 font-bold text-blue-dark-citc">{text.allies.title}</h2>
-                <h5 className="text-blue-dark-citc text-h5 font-medium">{text.allies.intro}</h5>
+            <section id="Allies" className="w-[85%] sm:w-[90%] lg:w-4/5 mx-auto flex flex-col items-center justify-center gap-5">
+                <h2 className="text-h4 md:text-h2 text-center font-extrabold text-blue-dark-citc">{text.allies.title}</h2>
+                <h5 className="text-neutral-600 text-[1.1rem] md:text-h5 text-center font-semibold">{text.allies.intro}</h5>
                 <AlliesShowcase type={text.allies.associates} alliesImages={alliesImages.associates} />
                 <AlliesShowcase type={text.allies.members} alliesImages={alliesImages.members} />
                 <AlliesShowcase type={text.allies.universities} alliesImages={alliesImages.universities} />
@@ -252,13 +291,20 @@ export function AlliesShowcase({ type, alliesImages }){
 
     return(
         <>
-            <div className="flex flex-col w-full items-center justify-center lg:space-y-0">
-                <h3 className="text-h3 text-blue-dark-citc font-semibold">{type}</h3>
-                <div className="flex flex-wrap p-5 justify-around lg:w-3/4">
+            <div className="flex flex-col w-full items-center justify-center">
+                <h3 className="text-h4 md:text-h3 text-blue-dark-citc font-bold">{type}</h3>
+                <div className="flex flex-wrap p-5 justify-around w-full gap-5">
                     {
                         alliesImages.map((allied, id) => (
                             <>
-                                <AlliedCard key={id} image={allied.image} name={allied.name} />
+                                <Image 
+                                    key={id}
+                                    src={allied.image}
+                                    alt={`${allied.name} Logo`}
+                                    width={300}
+                                    height={300}
+                                    className={`object-contain ${allied.className ? allied.className : ''}`}
+                                />
                             </>
                         ))
                     }
@@ -392,4 +438,4 @@ export function Team(){
             </section>
         </>
     );
-}
+} 
