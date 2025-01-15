@@ -7,16 +7,16 @@ import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-export function SolutionCard({ img_src, img_alt, solution_text, img_position, redirection_url}){
+export function SolutionCard({ img_src, img_alt, solution_text, img_position, img_className, redirection_url}){
 
     return (
         <>
-            <Card className="relative group w-full h-[150px] sm:w-[500px] sm:h-[170px] md:w-[230px] md:h-[380px] lg:w-[300px] lg:h-[400px] flex flex-col items-center justify-end rounded-xl md:rounded-3xl drop-shadow-2xl">
+            <Card className="relative group w-full h-[175px] sm:w-[500px] sm:h-[200px] md:w-[230px] md:h-[380px] lg:w-[300px] lg:h-[400px] flex flex-col items-center justify-end rounded-xl md:rounded-3xl drop-shadow-2xl">
                 <Image 
                     src={img_src}
                     alt={img_alt}
                     fill
-                    className="absolute inset-0 w-full h-full object-cover transform transition-transform duration-200 ease-in-out group-hover:scale-110"
+                    className={`absolute inset-0 w-full h-full object-cover transform transition-transform duration-200 ease-in-out group-hover:scale-110 ${img_className}`}
                     style={{
                         objectPosition: `${img_position}`
                     }}
@@ -172,13 +172,14 @@ export function AlliedCard({ image, name }){
     );
 }
 
-export function AboutCard({ title, text }){
+export function AboutCard({ title, text, icon }){
 
     return(
         <>
-            <div className="card p-3 flex items-center justify-center w-1/3">
-                <h3 className="card-title text-h3 text-blue-dark-citc font-bold text-center mt-5">{title}</h3>
-                <h5 className="card-body text-h6 text-regular-dark font-medium text-center">{text}</h5>
+            <div className="card p-3 flex flex-col items-center lg:w-[400px]">
+                {icon ? icon() : ''}
+                <h3 className="card-title text-[2.5rem] text-blue-dark-citc font-bold text-center mt-5">{title}</h3>
+                <h5 className="card-body text-[1.1rem] text-regular-dark font-medium text-center">{text}</h5>
             </div>
         </>
     );
@@ -188,32 +189,33 @@ export function TeamMemberCard({ name, role, img, xAccount, linkedIn}){
 
     return(
         <>
-            <div className="card p-5 flex flex-col items-center justify-center space-y-2 text-h6 text-gray-dark-citc font-medium">
-                <div className="avatar rounded-full w-[15rem] h-[15rem] relative object-contain overflow-hidden">
+            <div className="card md:p-5 flex flex-row items-center w-full sm:w-[420px] md:w-auto md:flex-col md:items-center gap-5 md:gap-2 text-gray-dark-citc font-medium">
+                <div className="avatar rounded-full w-[100px] h-[100px] sm:w-[150px] sm:h-[150px] lg:w-[180px] lg:h-[180px] relative object-contain overflow-hidden">
                     <Image src={img} alt={`Foto de ${name}`} fill />
                 </div>
-                <div className="flex flex-col justify-center items-center">
-                    <h5 className="text-h5 text-blue-dark-citc font-bold">{name}</h5>
-                    <h6 className="text-h6 font-semibold">{role}</h6>
+                <div className="flex flex-col justify-center items-start md:items-center">
+                    <h5 className="text-[1.1rem] sm:text-[1.3rem] text-blue-dark-citc font-bold">{name}</h5>
+                    <h6 className="text-[0.95rem] sm:text-[1.1rem] font-semibold">{role}</h6>
+                    <div className="flex flex-row w-full md:w-1/2 justify-center gap-3 items-center md:justify-around">
+                        <a href={xAccount} target="_blank" rel="noopener noreferrer" >
+                            <button className="btn btn-ghost btn-circle">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24">
+                                    <path fill="currentColor" 
+                                        d="m17.687 3.063l-4.996 5.711l-4.32-5.711H2.112l7.477 9.776l-7.086 8.099h3.034l5.469-6.25l4.78 6.25h6.102l-7.794-10.304l6.625-7.571zm-1.064 16.06L5.654 4.782h1.803l10.846 14.34z"/>
+                                </svg>
+                            </button>
+                        </a>
+                        <a href={linkedIn} target="_blank" rel="noopener noreferrer">
+                            <button className="btn btn-ghost btn-circle">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" viewBox="0 0 24 24">
+                                    <path fill="currentColor" 
+                                        d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"/>
+                                </svg>
+                            </button>
+                        </a>
+                    </div>
                 </div>
-                <div className="flex flex-row w-1/2 items-center justify-around">
-                    <a href={xAccount} target="_blank" rel="noopener noreferrer" >
-                        <button className="btn btn-ghost btn-circle">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24">
-                                <path fill="currentColor" 
-                                    d="m17.687 3.063l-4.996 5.711l-4.32-5.711H2.112l7.477 9.776l-7.086 8.099h3.034l5.469-6.25l4.78 6.25h6.102l-7.794-10.304l6.625-7.571zm-1.064 16.06L5.654 4.782h1.803l10.846 14.34z"/>
-                            </svg>
-                        </button>
-                    </a>
-                    <a href={linkedIn} target="_blank" rel="noopener noreferrer">
-                        <button className="btn btn-ghost btn-circle">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" viewBox="0 0 24 24">
-                                <path fill="currentColor" 
-                                    d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"/>
-                            </svg>
-                        </button>
-                    </a>
-                </div>
+                
             </div>
         </>
     );

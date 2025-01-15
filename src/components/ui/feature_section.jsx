@@ -4,7 +4,7 @@ export function FeaturesSectionDemo({ features, icons }) {
   
   return (
     (<div
-      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  relative z-10 py-10 max-w-7xl mx-auto">
+      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  relative z-10 py-0 md:py-5 lg:py-7 max-w-7xl mx-auto">
       {features.map((feature, index) => (
         <Feature key={feature.title} icon={icons[index]} {...feature} index={index} />
       ))}
@@ -39,14 +39,14 @@ const Feature = ({
       </div>
       <div className="text-h6 font-bold mb-2 relative z-10 px-10">
         <div
-          className="absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-neutral-300 group-hover/feature:bg-blue-500 transition-all duration-200 origin-center" />
+          className="absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-neutral-300 group-hover/feature:bg-citc-livinglab transition-all duration-200 origin-center" />
         <span
-          className="group-hover/feature:translate-x-2 group-hover/feature:text-blue-dark-citc transition duration-200 inline-block text-neutral-800">
+          className="group-hover/feature:translate-x-2 group-hover/feature:text-cyan-600 transition duration-200 inline-block text-neutral-800">
           {title}
         </span>
       </div>
       <p
-        className="text-regular text-neutral-600 max-w-xs relative z-10 px-10">
+        className="text-[0.95rem] md:text-[1rem] font-medium text-neutral-600 max-w-xs relative z-10 px-10">
         {description}
       </p>
     </div>)

@@ -20,7 +20,8 @@ module.exports = {
         'white-darker': '#ECECEC',
         'regular-dark': '#1E1E1E', 
         'blue-light-citc': '#136FB2', 
-        'blue-dark-citc': '#125193',
+        'blue-dark-citc': '#125193', 
+        'citc-livinglab': '#71bfc8', 
       },
       transitionProperty: {
         'color': 'background-color, border-color, color',
@@ -38,7 +39,9 @@ module.exports = {
           'linear-gradient(to top, rgba(19, 111, 178, 0) 0%, rgba(19, 111, 178, 0.35) 13%, rgba(19, 111, 178, 0.7) 25%, rgba(19, 111, 178, 0.9) 50%, rgba(19, 111, 178, 1) 100%)',
         'light-gradient': 
           'linear-gradient(to bottom, rgba(247, 247, 247, 1) 0%, rgba(247, 247, 247, 0.85) 17%, rgba(247, 247, 247, 0.8) 34%, rgba(247, 247, 247, 0.75) 50%, rgba(247, 247, 247, 0.8) 67%, rgba(247, 247, 247, 0.85) 82%, rgba(247, 247, 247, 1) 100%)',
-      }, 
+        'radial-gradient': 
+          'radial-gradient(circle, rgb(243,241,246) 50%, transparent 70%)', 
+        }, 
       animation: {
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",

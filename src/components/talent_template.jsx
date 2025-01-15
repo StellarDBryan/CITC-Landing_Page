@@ -1,5 +1,6 @@
 import Image from "next/image"; 
 import { ImgCarousel } from "./carousel"; 
+import { TalentForm } from "./forms";
 
 const content = {
     heroSection: {
@@ -169,7 +170,58 @@ const content = {
                 className: 'w-[220px] h-auto', 
             }, 
         ], 
-    }
+    }, 
+    allies: {
+        title: "Colaborando para Desarrollar el Talento del Mañana", 
+        description: "Desde el CITC, trabajamos en conjunto con el ecosistema tecnológico para impulsar el desarrollo del talento en áreas de innovación, tecnología y ciencia. A través de alianzas estratégicas y programas colaborativos, conectamos a profesionales, empresas y estudiantes para generar oportunidades de crecimiento y fortalecer la comunidad.", 
+        logos: [
+            {
+                logo: '/images/logos/universities/itch2.png', 
+                className: 'w-[155px] sm:w-[190px] lg:w-[220px]',  
+            }, 
+            {
+                logo: '/images/logos/universities/ULSA.png', 
+                className: 'w-[140px] sm:w-[180px] lg:w-[210px]',  
+            }, 
+            {
+                logo: '/images/logos/universities/TecMilenio.png', 
+                className: 'w-[160px] sm:w-[190px] lg:w-[220px]',  
+            }, 
+            {
+                logo: '/images/logos/universities/centroCulturalUniversitario.png', 
+                className: 'w-[150px] sm:w-[180px] lg:w-[210px]',  
+            }, 
+            {
+                logo: '/images/logos/universities/utch.png', 
+                className: 'w-[120px] sm:w-[150px] lg:w-[180px]',  
+            }, 
+            {
+                logo: '/images/logos/universities/utchSur.png', 
+                className: 'w-[110px] sm:w-[130px] lg:w-[160px]',  
+            }, 
+            {
+                logo: '/images/logos/talent/proyectoT_logo.png', 
+                className: 'w-[160px] sm:w-[210px] lg:w-[240px]',  
+            }, 
+            {
+                logo: '/images/logos/talent/inadet_logo.png', 
+                className: 'w-[250px] sm:w-[270px] lg:w-[300px]',  
+            }, 
+        ], 
+    }, 
+    form: {
+        title: "¿Te interesa colaborar en el desarrollo de talento y fortalecer el ecosistema tecnológico?", 
+        intro: "¡Estamos listos para conectar contigo y trabajar juntos hacia un futuro innovador!", 
+        data: {
+            name: "Nombre", 
+            email: "Correo", 
+            company: "Organización/Institución", 
+            phone: "Teléfono", 
+            message: "Mensaje", 
+            message_placeholder: "Cuéntanos cómo te gustaría colaborar o qué ideas tienes en mente.", 
+            success_message: "Envío completado con éxito", 
+        }, 
+    }, 
 };
 
 export default function HeroSection(){
@@ -358,6 +410,47 @@ function Logos({ logos, title }){
                     ))}
                 </div>
             </div>
+        </>
+    );
+}
+
+export function Allies(){
+
+    return (
+        <>
+            <section className="w-[85%] sm:w-[90%] lg:w-4/5 mx-auto h-auto py-10 gap-5 flex flex-col items-center text-regular-dark">
+                <h2 className="text-[1.5rem] sm:text-[2rem] lg:text-[3rem] text-center font-extrabold text-[#92d050]">{content.allies.title}</h2> 
+                <p className="text-[0.95rem] md:text-[1rem] lg:text-[1.1rem] font-medium sm:text-center w-full sm:w-[90%] lg:w-4/5">{content.allies.description}</p>
+                <div className="w-full sm:w-[90%] flex flex-row items-center justify-around flex-wrap gap-y-5 gap-x-1 md:gap-x-8">
+                    {content.allies.logos.map((logo, id) => (
+                        <div key={id} className="flex flex-col gap-2 items-center justify-center">
+                            <Image 
+                                src={logo.logo}
+                                alt={`${logo.name} Logo`}
+                                width={500}
+                                height={500}
+                                className={logo.className}
+                            />
+                            {logo.name 
+                                ? <span className="text-sm1 md:text-p font-medium text-center text-wrap">{logo.name}</span> 
+                                : ''}
+                        </div>
+                    ))}
+                </div>
+            </section>
+        </>
+    );
+} 
+
+export function Form(){
+
+    return (
+        <>
+            <section className="w-full bg-gradient-to-t from-[#92d050]/70 to-transparent to-40% sm:to-50% py-10 gap-5 h-auto flex flex-col items-center overflow-hidden">
+                <h4 className="text-[1.4rem] md:text-[2rem] font-bold text-lime-600 w-[85%] sm:w-4/5 text-center">{content.form.title}</h4>
+                <h6 className="text-[1.15rem] md:text-[1.5rem] font-bold text-lime-600/70 w-4/5 text-center">{content.form.intro}</h6>
+                <TalentForm content={content.form.data} />
+            </section> 
         </>
     );
 }

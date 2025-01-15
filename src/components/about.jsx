@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { InfiniteMovingCards } from "@/components/ui/infinite_moving_cards";
 import { AlliedCard, AboutCard, TeamMemberCard } from "./ui/cards";
-import { AboutButton } from "./ui/buttons";
+import { ServiceButton } from '@/components/ui/buttons';
 
 const text = {
     about: {
@@ -16,12 +16,18 @@ const text = {
     misionVision: {
         mision: 'Mision',
         mision_text: 'Nuestra misión es fomentar el crecimiento y la innovación en la industria de tecnología de Chihuahua.',
+        mision_icon: () => (
+            <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 14 14" className="text-blue-dark-citc"><path fill="currentColor" fillRule="evenodd" d="M7.527 9.331a5 5 0 0 0 1.49-1.319a2 2 0 0 1-.273-.661l-.019-.088a1.29 1.29 0 0 0-1.042-.998c-2.072-.36-2.072-3.334 0-3.695a1.29 1.29 0 0 0 1.03-.948a5 5 0 1 0-6.187 7.709V10.5a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1V9.331Zm-5 3.919a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 0 1.5h-3.5a.75.75 0 0 1-.75-.75m7.28-11.533C9.99.881 11.18.876 11.37 1.71l.009.04l.018.078a2.4 2.4 0 0 0 1.921 1.812c.872.152.872 1.404 0 1.556a2.4 2.4 0 0 0-1.925 1.827l-.023.102c-.19.835-1.381.83-1.565-.007l-.019-.087A2.38 2.38 0 0 0 7.87 5.194c-.871-.151-.871-1.401 0-1.553a2.38 2.38 0 0 0 1.915-1.826L9.8 1.75z" clipRule="evenodd"/></svg>
+        ), 
         vision: 'Vision',
         vision_text: 'Nuestra visión es ser líderes en el desarrollo de tecnología, impulsando la economía local y global.',
+        vision_icon: () => (
+            <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 20 20" className="text-blue-dark-citc"><path fill="currentColor" d="M7.987 4.18a12.2 12.2 0 0 0-.669 2.32h5.364a12.2 12.2 0 0 0-.67-2.32c-.301-.733-.648-1.294-1.008-1.663C10.646 2.149 10.307 2 10 2s-.646.149-1.004.517c-.36.37-.707.93-1.009 1.663m-.096-1.899c-.314.426-.59.941-.828 1.518c-.32.78-.58 1.694-.762 2.701H2.804a8.02 8.02 0 0 1 5.087-4.219m4.219 0c.313.426.59.941.827 1.518c.32.78.58 1.694.762 2.701h3.497a8.02 8.02 0 0 0-5.087-4.219M17.602 7.5H13.85c.075.612.124 1.25.142 1.906a2.997 2.997 0 0 1 4.002.925Q18 10.166 18 10a8 8 0 0 0-.398-2.5M13 10q0 .174-.003.345a3 3 0 0 0-.456 2.155H7.158A19 19 0 0 1 7 10c0-.875.056-1.715.158-2.5h5.684c.102.785.158 1.625.158 2.5m-.318 3.5q-.07.358-.151.695A2.5 2.5 0 0 0 11 16.5c0 .29.038.58.115.862a3 3 0 0 1-.11.121c-.359.368-.698.517-1.005.517s-.646-.149-1.004-.517c-.36-.37-.707-.93-1.009-1.663a12.2 12.2 0 0 1-.669-2.32zM7.89 17.719A8.02 8.02 0 0 1 2.804 13.5h3.497c.182 1.007.441 1.922.762 2.7c.237.578.514 1.093.828 1.519M2.398 12.5H6.15A21 21 0 0 1 6 10c0-.866.052-1.705.15-2.5H2.398A8 8 0 0 0 2 10c0 .873.14 1.713.398 2.5M17.5 12a2 2 0 1 1-4 0a2 2 0 0 1 4 0m1.5 4.5c0 1.245-1 2.5-3.5 2.5S12 17.75 12 16.5a1.5 1.5 0 0 1 1.5-1.5h4a1.5 1.5 0 0 1 1.5 1.5"/></svg>
+        ), 
     }, 
     team: {
         title: 'Consejo del CITC', 
-        intro: 'Conoce a nuestro equipo', 
+        intro: '¡Conóce a nuestro equipo!', 
         members: [
             {
                 name: 'Luis Alonso Ramos', 
@@ -65,8 +71,8 @@ const text = {
         intro: 'Agradecemos a todos todos nuestros aliados por apoyarnos a impulsar al sector IT',
         associates: 'Socios', 
         members: 'Afiliados', 
-        universities: 'Universidades',
-    },
+        universities: 'Educativos',
+    }, 
     associates: {
         intro: 'Nuestros socios, el motor de la innovación tecnológica en Chihuahua', 
     }, 
@@ -77,102 +83,141 @@ const alliesImages = {
         {
             name: '360Solutions', 
             image: '/images/logos/associates/360Solutions_edited.png', 
+            className: 'w-[180px] md:w-[200px]', 
         }, 
         {
             name: 'AdNConsulting', 
             image: '/images/logos/associates/AdNConsulting.png', 
+            className: 'w-[130px] md:w-[180px]', 
         }, 
         {
             name: 'BuildBinder', 
             image: '/images/logos/associates/BuildBinder_edited.png', 
+            className: 'w-[100px] md:w-[150px]', 
         }, 
         {
             name: 'AutoZone', 
             image: '/images/logos/associates/DataZone_edited.png', 
+            className: 'w-[170px] md:w-[200px]', 
         }, 
         {
             name: 'IntegralVending', 
             image: '/images/logos/associates/IntegralVending_edited.png', 
+            className: 'w-[130px] md:w-[160px]', 
         }, 
         {
             name: 'Intelectix', 
             image: '/images/logos/associates/Intelectix_edited.png', 
+            className: 'w-[110px] md:w-[140px]', 
         }, 
         {
             name: 'JobSistemas', 
             image: '/images/logos/associates/JobSistemas_edited.png', 
+            className: 'w-[120px] md:w-[160px]', 
         }, 
         {
             name: 'LeadingTech', 
             image: '/images/logos/associates/LeadingTech_edited.png', 
+            className: 'w-[110px] md:w-[160px]', 
         }, 
         {
             name: 'Madata', 
             image: '/images/logos/associates/madata_edited.png', 
+            className: 'w-[130px] md:w-[160px]', 
         }, 
         {
             name: 'Pax', 
             image: '/images/logos/associates/pax_edited.png', 
+            className: 'w-[130px] md:w-[170px]', 
         }, 
         {
             name: 'PIDElectronics', 
             image: '/images/logos/associates/PIDElectronics_edited.png', 
+            className: 'w-[160px] md:w-[200px]', 
         }, 
         {
             name: 'PPAPManger', 
             image: '/images/logos/associates/PPAPManger_edited.png', 
+            className: 'w-[180px] md:w-[200px]', 
         },
         {
             name: 'Resideo', 
             image: '/images/logos/associates/resideo_edited.png', 
+            className: 'w-[150px] md:w-[180px]', 
         }, 
         {
             name: 'Sitek', 
             image: '/images/logos/associates/Sitek_edited.png', 
+            className: 'w-[140px] md:w-[170px]', 
         }, 
         {
             name: 'TGC', 
             image: '/images/logos/associates/TGC_edited.png', 
+            className: 'w-[150px] md:w-[190px]', 
         }, 
         {
             name: 'Tisco', 
             image: '/images/logos/associates/Tisco_edited.png', 
+            className: 'w-[150px] md:w-[180px]', 
         },
     ],
     members: [
         {
             name: 'Red Emprende', 
             image: '/images/logos/members/RedEmprende.png',
+            className: 'w-[170px] lg:w-[200px]', 
         },
         {
             name: 'Chihuahua Futura', 
             image: '/images/logos/members/ChihuahuaFutura.png',
+            className: 'w-[190px] lg:w-[210px]', 
         },
         {
             name: 'Cluster Automatizacion e Integracion Chihuahua', 
             image: '/images/logos/members/ClusterAutomatizacion.png',
+            className: 'w-[160px] lg:w-[180px]', 
         },
         {
             name: 'MxTI', 
             image: '/images/logos/members/MXTI.png',
+            className: 'w-[130px] lg:w-[150px]', 
         },
         {
             name: 'Ilum', 
             image: '/images/logos/members/Ilum.png',
+            className: 'w-[120px] lg:w-[130px]', 
         },
     ],
     universities: [
         {
             name: 'ITCHII', 
-            image: '/images/logos/universities/ITCHII.png', 
+            image: '/images/logos/universities/itch2.png', 
+            className: 'w-[220px]', 
         }, 
         {
             name: 'Tec Milenio CUU', 
             image: '/images/logos/universities/TecMilenio.png', 
+            className: 'w-[210px]', 
         }, 
         {
             name: 'ULSA CUU', 
             image: '/images/logos/universities/ULSA.png', 
+            className: 'w-[210px]', 
+        },  
+        {
+            name: 'UTCH', 
+            image: '/images/logos/universities/utch.png', 
+            className: 'w-[150px]', 
+        },  
+        {
+            name: 'UTCH SUR', 
+            image: '/images/logos/universities/utchSur.png', 
+            className: 'w-[140px]', 
+        },  
+        {
+            name: 'Centro Cultural Universitario', 
+            image: '/images/logos/universities/centroCulturalUniversitario.png', 
+            className: 'w-[210px]', 
         }, 
     ],
 }
@@ -181,18 +226,25 @@ export default function About(){
 
     return (
         <>
-            <section id="AboutUs" className="relative bg-[url('/images/backgrounds/LP_01.jpg')] bg-cover bg-center lg:my-10 lg:items-center lg:h-auto text-regular-dark">
-                <div className="p-10 w-full h-full bg-light-gradient flex flex-row items-center justify-center space-x-30">
-                    <div className="rounded-3xl p-3 lg:mx-10 space-y-5 lg:w-5/12">
-                        <h2 className="text-h1 font-semibold text-blue-dark-citc">{text.about.title}</h2>
-                        <p className="text-regular font-semibold text-center">{text.about.description}</p>
-                        <div className="w-auto h-auto flex items-center justify-center space-x-3">
+            <section id="AboutUs" className="relative w-full px-[7.5%] sm:px-[5%] lg:px-[10%] py-12 flex justify-center items-center text-neutral-600">
+                <Image 
+                    src='/images/backgrounds/LP_01.jpg'
+                    alt="About Background"
+                    fill
+                    className="absolute object-cover inset-0 w-full h-full"
+                />
+                <div className="absolute object-contain inset-0 w-full h-full z-10 bg-gradient-to-b from-gray-clear-citc/100 via-gray-clear-citc/70 to-gray-clear-citc/100" />
+                <div className="w-full h-full flex flex-col items-center lg:flex-row lg:items-center lg:justify-around z-20">
+                    <div className="flex flex-col items-center backdrop-blur sm:backdrop-blur-sm rounded-3xl p-3 gap-2 sm:gap-5">
+                        <h2 className="text-[2.5rem] sm:text-[3rem] lg:text-[3.5rem] text-center font-extrabold text-blue-dark-citc">{text.about.title}</h2>
+                        <p className="text-[1rem] lg:text-[1.1rem] font-semibold text-center">{text.about.description}</p>
+                        <div className="w-auto h-auto flex flex-row flex-wrap items-center justify-around gap-3">
                             <Link href="/contact">
-                                <AboutButton>{text.about.button1}</AboutButton>
+                                <ServiceButton>{text.about.button1}</ServiceButton>
                             </Link>
-                            <a href='https://livinglab.io/home?&v=latest' target="_blank" rel="noopener noreferrer">
-                                <AboutButton>{text.about.button2}</AboutButton>
-                            </a>
+                            <Link href='/livinglab'>
+                                <ServiceButton>{text.about.button2}</ServiceButton>
+                            </Link>
                         </div>
                     </div>
                     <Image 
@@ -200,7 +252,7 @@ export default function About(){
                         alt="Chihuahua IT Cluster Logo"
                         width={432}
                         height={460}
-                        className="opacity-60"
+                        className="opacity-60 w-[300px] lg:w-[400px]"
                     />
                 </div>
             </section>
@@ -212,9 +264,9 @@ export function MisionVision(){
 
     return (
         <>
-            <section className="flex p-5 flex-row flex-wrap w-full items-center justify-center space-x-5">
-                <AboutCard title={text.misionVision.mision} text={text.misionVision.mision_text} />
-                <AboutCard title={text.misionVision.vision} text={text.misionVision.vision_text} />
+            <section className="flex w-full px-[7.5%] sm:px-[5%] lg:px-[10%] flex-col items-center md:flex-row md:items-center md:justify-center gap-0 md:gap-5">
+                <AboutCard title={text.misionVision.mision} text={text.misionVision.mision_text} icon={text.misionVision.mision_icon} />
+                <AboutCard title={text.misionVision.vision} text={text.misionVision.vision_text} icon={text.misionVision.vision_icon} />
             </section>
         </>
     );
@@ -224,9 +276,9 @@ export function Allies(){
 
     return(
         <>
-            <section id="Allies" className="text-regular-dark flex flex-col items-center justify-center lg:space-y-5">
-                <h2 className="text-h2 font-bold text-blue-dark-citc">{text.allies.title}</h2>
-                <h5 className="text-blue-dark-citc text-h5 font-medium">{text.allies.intro}</h5>
+            <section id="Allies" className="w-[85%] sm:w-[90%] lg:w-4/5 mx-auto flex flex-col items-center justify-center gap-5">
+                <h2 className="text-h4 md:text-h2 text-center font-extrabold text-blue-dark-citc">{text.allies.title}</h2>
+                <h5 className="text-neutral-600 text-[1.1rem] md:text-h5 text-center font-semibold">{text.allies.intro}</h5>
                 <AlliesShowcase type={text.allies.associates} alliesImages={alliesImages.associates} />
                 <AlliesShowcase type={text.allies.members} alliesImages={alliesImages.members} />
                 <AlliesShowcase type={text.allies.universities} alliesImages={alliesImages.universities} />
@@ -239,13 +291,20 @@ export function AlliesShowcase({ type, alliesImages }){
 
     return(
         <>
-            <div className="flex flex-col w-full items-center justify-center lg:space-y-0">
-                <h3 className="text-h3 text-blue-dark-citc font-semibold">{type}</h3>
-                <div className="flex flex-wrap p-5 justify-around lg:w-3/4">
+            <div className="flex flex-col w-full items-center justify-center">
+                <h3 className="text-h4 md:text-h3 text-blue-dark-citc font-bold">{type}</h3>
+                <div className="flex flex-wrap p-5 justify-around w-full gap-5">
                     {
                         alliesImages.map((allied, id) => (
                             <>
-                                <AlliedCard key={id} image={allied.image} name={allied.name} />
+                                <Image 
+                                    key={id}
+                                    src={allied.image}
+                                    alt={`${allied.name} Logo`}
+                                    width={300}
+                                    height={300}
+                                    className={`object-contain ${allied.className ? allied.className : ''}`}
+                                />
                             </>
                         ))
                     }
@@ -360,10 +419,10 @@ export function Team(){
 
     return(
         <>
-            <section className="text-regular-dark w-full h-auto flex flex-col items-center justify-center lg:space-y-5">
-                <h2 className="text-h2 font-bold text-blue-dark-citc">{text.team.title}</h2>
-                <h5 className="text-blue-dark-citc text-h5 font-medium">{text.team.intro}</h5>
-                <div className="flex flex-row flex-wrap items-center justify-around w-3/5 space-y-3">
+            <section className="text-regular-dark mx-auto w-[85%] sm:w-[90%] lg:w-4/5 h-auto flex flex-col items-center gap-3">
+                <h2 className="text-h4 sm:text-h3 text-center md:text-h2 font-extrabold text-blue-dark-citc">{text.team.title}</h2>
+                <h5 className="text-neutral-600 text-[1.1rem] md:text-h5 font-semibold">{text.team.intro}</h5>
+                <div className="flex flex-row flex-wrap items-center justify-around w-full gap-5">
                     {
                         text.team.members.map((member, id) => (
                             <TeamMemberCard 
@@ -379,4 +438,4 @@ export function Team(){
             </section>
         </>
     );
-}
+} 
