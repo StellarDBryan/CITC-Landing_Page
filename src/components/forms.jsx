@@ -105,7 +105,7 @@ export default function ContactForm({ content }) {
                                 <h2 className="text-h5 font-bold tracking-tight text-blue-dark-citc dark:text-white">
                                     {content.title}
                                 </h2>
-                                <p className="mt-3 text-p font-medium leading-7 text-gray-600">
+                                <p className="mt-3 text-p font-medium leading-7 text-gray-600 dark:text-gray-50">
                                     {content.description}
                                 </p>
                                 <form onSubmit={handleSubmit} className="mt-5">
